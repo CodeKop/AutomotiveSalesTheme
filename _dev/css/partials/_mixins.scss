@@ -1,0 +1,86 @@
+@mixin search-box {
+	form {
+		position: relative;
+		display: inline-block;
+
+		.search-input {
+			input[type="text"] {
+				border: none;
+				min-width: 255px;
+				padding: 1.45rem;
+				color: $gray;
+				line-height: 1em;
+				border: $input-btn-border-width solid $input-border-color;
+
+				&:focus {
+					color: $gray-darker;
+					background: white;
+					+ button .search {
+						color: $brand-primary;
+					}
+				}
+			}
+		}
+
+		.search-submit {
+			position: absolute;
+			right: 0;
+			display: inline-block;
+			background: none;
+			border: none;
+			padding: $small-space;
+			color: $gray;
+
+			i {
+				font-size: 0.875em;
+			}
+
+			.search:hover {
+				color: $brand-primary;
+			}
+		}
+	}
+}
+
+@mixin button-primary {
+	background-color: $brand-primary;
+	color: white;
+	border: none;
+
+	.btn-icon {
+		color: white;
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 0.25rem lighten($brand-primary, 50%);
+	}
+
+	&:hover {
+		box-shadow: 0 0 0 0.35rem lighten($brand-primary, 50%);
+		background-color: $brand-primary;
+	}
+}
+
+@mixin box-shadow {
+	box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+@mixin box-shadow-light {
+	box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+@mixin drop-shadow {
+	box-shadow: 3px 5px 25px #aaa;
+}
+
+@mixin drop-shadow-light {
+	box-shadow: 3px 5px 25px #ddd;
+}
+
+@mixin drop-shadow-small {
+	box-shadow: 3px 5px 10px #aaa;
+}
+
+@mixin drop-shadow-small-light {
+	box-shadow: 3px 5px 10px #ddd;
+}

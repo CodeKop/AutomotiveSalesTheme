@@ -1,0 +1,168 @@
+.search-widget {
+  @include search-box;
+}
+
+.header-nav {
+  .search-widget {
+    display: inline-block;
+    padding: 0;
+    margin: 0 $medium-space;
+
+    form {
+      position: static;
+
+      .search-input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 100%;
+        transition: left 0.5s;
+        z-index: 9;
+
+        input[type="text"] {
+          min-width: inherit;
+          width: 100%;
+          font-size: 1em;
+          transition: box-shadow 0.8s;
+          border: none;
+
+          &:focus {
+            box-shadow: 0 0 23px #eee;
+            background-color: #fffcfc;
+          }
+        }
+      }
+
+      .search-actions {
+        z-index: 10;
+      }
+
+      .search-submit {
+        margin: $small-space 0;
+        z-index: -1;
+        background-color: #fff;
+        border: 1px solid #a22;
+        cursor: pointer;
+        border-radius: 100px;
+        transform: scale(0);
+        transition: transform 0.5s, box-shadow 0.5s;
+
+        .icon-submit {
+          display: block;
+          color: #a22;
+          font-size: 1.25em;
+        }
+
+        &:hover {
+          box-shadow: inset 0 0 8px #eee, 0 3px 5px #ddd;
+          text-shadow: 0 0 5px #fff7;
+        }
+      }
+
+      .search-toggle {
+        display: inline-block;
+        padding: $small-space;
+        margin: $small-space 0;
+        background-color: white;
+        z-index: 0;
+        cursor: pointer;
+        transition: transform 0.5s ease-out, box-shadow 0.5s;
+        // border: 1px solid #ddd;
+        border: none;
+        border-radius: 100px;
+
+        .icon-toggle {
+          display: block;
+          font-size: 1.25em;
+        }
+
+        &:hover {
+          box-shadow: 0 3px 5px #ddd;
+        }
+      }
+    }
+
+    &.-open {
+      .search-input {
+        left: 0;
+      }
+
+      .search-submit {
+        transform: scale(1) translateX(calc(-100% - 5px));
+      }
+    }
+  }
+}
+
+#checkout {
+  #search_widget {
+    display: none; /* Not ideal solution by allows to reuse same hooks/templates */
+  }
+}
+
+#pagenotfound {
+  .page-content {
+    #search_widget {
+      width: 100%;
+    }
+  }
+}
+
+.page-not-found {
+  .search-widget {
+    form {
+      display: block;
+
+      .search-input {
+        input[type="text"] {
+          padding: 0.825rem;
+          padding-right: 2.5rem;
+          border-radius: 3px;
+          font-size: 1rem;
+          // border-width: 0 0 1px 0;
+
+          &:focus {
+            border-color: $brand-primary;
+          }
+        }
+      }
+
+      .search-actions {
+        .search-submit {
+          display: inline-block;
+          right: 0.825rem;
+          bottom: 1.325rem;
+          transform: translateY(50%); 
+
+          padding-left: 0;
+          padding-right: 0;
+
+          .fa {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*** Responsive part ***/
+@include media-breakpoint-down(sm) {
+  .header-top {
+    .search-widget {
+      float: none;
+      form {
+        margin: 0 auto;
+        input[type="text"] {
+          min-width: inherit;
+          background: white;
+        }
+      }
+    }
+  }
+}
+// @include media-breakpoint-up(md) {
+// 	.search-widget {
+// 		min-width: 15.63rem;
+// 	}
+// }
