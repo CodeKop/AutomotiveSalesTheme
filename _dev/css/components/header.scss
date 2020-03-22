@@ -128,6 +128,22 @@
 			vertical-align: top;
 		}
 	}
+
+	@include media-breakpoint-down(md) {
+		#_mobile_logo h1 {
+			margin: 0;
+			padding: 0.325rem 0;
+		}
+		#_mobile_logo a {
+			display: block;
+		}
+		#_mobile_logo .logo {
+			display: block;
+			max-width: 330px;
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
 }
 
 // #header {
