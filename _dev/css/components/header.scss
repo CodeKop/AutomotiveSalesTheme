@@ -132,10 +132,10 @@
 	@include media-breakpoint-down(md) {
 		#_mobile_logo h1 {
 			margin: 0;
-			padding: 0.325rem 0;
 		}
 		#_mobile_logo a {
 			display: block;
+			padding: 0.325rem 0.5rem;
 		}
 		#_mobile_logo .logo {
 			display: block;

@@ -108,3 +108,13 @@
     }
   }
 }
+
+#_mobile_top_menu {
+  .category {
+    width: 100%;
+  }
+
+  .category .dropdown-item {
+    padding: $small-space $medium-space;
+  }
+}

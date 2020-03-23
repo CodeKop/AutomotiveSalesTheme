@@ -1,7 +1,7 @@
 {assign var=_counter value=0}
 {function name="menu" nodes=[] depth=0 parent=null}
     {if $nodes|count}
-      <ul class="top-menu d-none flex-column text-left" {if $depth == 0}id="top-menu"{/if} data-depth="{$depth}">
+      <ul class="top-menu d-flex d-md-none flex-column text-left" {if $depth == 0}id="top-menu"{/if} data-depth="{$depth}">
         {foreach from=$nodes item=node}
             <li class="{$node.type}{if $node.current} current {/if}" id="{$node.page_identifier}">
             {assign var=_counter value=$_counter+1}
@@ -15,15 +15,17 @@
                   {assign var=_expand_id value=10|mt_rand:100000}
                   <span class="float-right d-md-none">
                     <span data-target="#top_sub_menu_{$_expand_id}" data-toggle="collapse" class="navbar-toggler collapse-icons">
-                      <i class="material-icons add">&#xE313;</i>
-                      <i class="material-icons remove">&#xE316;</i>
+                      <i class="fa fa-chevron-down add"></i>
+                      <i class="fa fa-chevron-up remove"></i>
+                      {* <i class="material-icons add">&#xE313;</i>
+                      <i class="material-icons remove">&#xE316;</i> *}
                     </span>
                   </span>
                 {/if}
                 {$node.label}
               </a>
               {if $node.children|count}
-              <div {if $depth === 0} class="popover sub-menu js-sub-menu collapse"{else} class="collapse"{/if} id="top_sub_menu_{$_expand_id}">
+              <div {if $depth === 0} class="sub-menu js-sub-menu collapse mx-3"{else} class="collapse"{/if} id="top_sub_menu_{$_expand_id}">
                 {menu nodes=$node.children depth=$node.depth parent=$node}
               </div>
               {/if}

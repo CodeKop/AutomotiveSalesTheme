@@ -55,7 +55,7 @@
       </div>
 
       <div id="mobile_top_menu_wrapper" class="row d-none d-md-none flex-column">
-        <div class="js-top-menu mobile border py-3 mb-3" id="_mobile_top_menu"></div>
+        <div class="js-top-menu mobile border px-0 py-3 mb-3" id="_mobile_top_menu"></div>
         <div class="js-top-menu-bottom">
           <div id="_mobile_currency_selector"></div>
           <div id="_mobile_language_selector"></div>

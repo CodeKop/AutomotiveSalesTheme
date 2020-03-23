@@ -30,10 +30,17 @@ export default class TopMenu extends DropDown {
         return;
       }
     });
+    $('.js-top-menu .category').click((e) => {
+      if (this.el.parent().hasClass('mobile')) {
+        if ($(e.target).is('.collapse-icons .fa')) {
+          e.preventDefault();
+        }
+      }
+    });
     $('#_desktop_top_menu > .menu-header').click((e) => {
       // $(e.currentTarget).siblings('.top-menu').slideToggle();
       var _this = $(e.currentTarget).siblings('.top-menu');
-      _this.toggleClass('d-flex d-none');
+      _this.toggleClass('d-md-flex d-md-none');
     });
     $(window).click((e) => {
       var target = $(e.target),
@@ -42,8 +49,8 @@ export default class TopMenu extends DropDown {
       if ((target !== dropdown) && (dropdown.has(target).length == 0)) {
         // dropdown.children(".top-menu").slideUp();
         var _this = dropdown.children(".top-menu");
-        _this.removeClass('d-flex');
-        _this.addClass('d-none');
+        _this.removeClass('d-md-flex');
+        _this.addClass('d-md-none');
       }
     });
     // this.el.on('click', (e) => {
