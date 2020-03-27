@@ -7,7 +7,7 @@
 {block name='page_content_container'}
   <section id="content" class="page-content page-stores">
 
-    {if count($stores) > 0}
+    {if count($stores) > 1}
       {foreach $stores as $store}
         <article id="store-{$store.id}" class="store-item card rounded">
           <div class="store-item-container clearfix">
