@@ -15,4 +15,4 @@
         {l s=' and find something new to look for.' d='Shop.Theme.Global'}
     </p>
     </div>
-{block}
+{/block}
