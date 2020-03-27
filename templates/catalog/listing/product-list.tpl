@@ -38,7 +38,11 @@
         <div id="js-product-list-top"></div>
 
         <div id="js-product-list">
-          {include file='errors/not-found.tpl'}
+          {if $smarty.get.controller == "search"}
+            {include file='errors/no-results.tpl'}
+          {else}
+            {include file='errors/not-found.tpl'}
+          {/if}
         </div>
 
         <div id="js-product-list-bottom"></div>
