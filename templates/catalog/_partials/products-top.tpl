@@ -13,7 +13,7 @@
         {include file='catalog/_partials/sort-orders.tpl' sort_orders=$listing.sort_orders}
       {/block}
 
-      {if !empty($listing.rendered_facets
+      {if !empty($listing.rendered_facets)}
         <div class="col-sm-3 col-4 d-md-none filter-button">
           <button id="search_filter_toggler" class="btn btn-secondary">
             {l s='Filter' d='Shop.Theme.Actions'}
