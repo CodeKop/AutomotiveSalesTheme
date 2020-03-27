@@ -5,17 +5,23 @@
     <p>{l s='Search again what you are looking for' d='Shop.Theme.Global'}</p> *}
     <div class="warning --left fa fa-minus-circle"></div>
     <div class="warning --right fa fa-minus-circle"></div>
-    <h1 class="page-title">Oh No!</h1>
-    <div class="page-subtitle">
-      <p>{l s='You have reached a dead end.' d='Shop.Theme.Global'}</p>    
-      <p>
-        {l s='Try our ' d='Shop.Theme.Global'}
-        <a href="#" class="font-weight-bold">{l s='search' d='Shop.Theme.Global'}</a>
-        {l s=' or go to our ' d='Shop.Theme.Global'}
-        <a href="{$urls.pages.index}" class="font-weight-bold">{l s='home page' d='Shop.Theme.Global'}</a>
-        .
-      </p>
-    </div>
+
+    {block name='error_title'}
+      <h1 class="page-title">Oh No!</h1>
+    {/block}
+
+    {block name='error_subtitle'}
+      <div class="page-subtitle">
+        <p>{l s='You have reached a dead end.' d='Shop.Theme.Global'}</p>    
+        <p>
+          {l s='Try our ' d='Shop.Theme.Global'}
+          <a href="#" class="font-weight-bold">{l s='search' d='Shop.Theme.Global'}</a>
+          {l s=' or go to our ' d='Shop.Theme.Global'}
+          <a href="{$urls.pages.index}" class="font-weight-bold">{l s='home page' d='Shop.Theme.Global'}</a>
+          .
+        </p>
+      </div>
+    {block}
 
     {block name='search'}
       {hook h='displaySearch'}
