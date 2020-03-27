@@ -21,7 +21,7 @@
           .
         </p>
       </div>
-    {block}
+    {/block}
 
     {block name='search'}
       {hook h='displaySearch'}
