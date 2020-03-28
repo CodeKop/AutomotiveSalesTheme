@@ -249,7 +249,7 @@
   }
 }
 .block-categories {
-  @include drop-shadow-small;
+  @include drop-shadow-small-light;
   border-radius: 8px;
   padding: 1.563rem 1.25rem;
   background: white;
