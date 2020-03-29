@@ -7,7 +7,7 @@
     aria-haspopup="true"
     aria-expanded="false">
     {l s='All brands' d='Shop.Theme.Catalog'}
-    <i class="material-icons float-right">arrow_drop_down</i>
+    <i class="fa fa-chevron-down float-right"></i>
   </button>
   <div class="dropdown-menu">
     {foreach from=$brands item=brand}

@@ -9,10 +9,10 @@
     {include file="module:ps_brandlist/views/templates/_partials/$brand_display_type.tpl" brands=$brands}
     <div class="directions slider-controls">
       <div class="brand-direction-left slider-control-left">
-        <i class="material-icons">&#xE314;</i>
+        <i class="fa fa-chevron-left"></i>
       </div>
       <div class="brand-direction-right slider-control-right">
-        <i class="material-icons">&#xE315;</i>
+        <i class="fa fa-chevron-right"></i>
       </div>
     </div>
   {/if}

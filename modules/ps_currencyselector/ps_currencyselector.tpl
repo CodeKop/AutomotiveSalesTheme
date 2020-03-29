@@ -5,7 +5,6 @@
     <div class="currency-selector dropdown js-dropdown">
       <button data-target="#" data-toggle="dropdown" class="d-none d-md-block btn-unstyle" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
         <span class="expand-more _gray-darker">{$current_currency.iso_code} {$current_currency.sign}</span>
-        {* <i class="material-icons expand-more">&#xE313;</i> *}
         <i  class="ml-1 fa fa-xs fa-chevron-down"></i>
       </button>
       <ul class="dropdown-menu" aria-labelledby="currency-selector-label">

@@ -5,7 +5,7 @@
   </h2>
   {include file="catalog/_partials/productlist.tpl" products=$products}
   <a class="all-product-link float-left float-md-right h4" href="{$allNewProductsLink}">
-    {l s='All new products' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>
+    {l s='All new products' d='Shop.Theme.Catalog'}<i class="fa fa-chevron-right"></i>
   </a>
 </section>
 

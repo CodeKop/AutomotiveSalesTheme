@@ -3,7 +3,7 @@
   <div id="search_filter_controls" class="d-md-none">
       <span id="_mobile_search_filters_clear_all"></span>
       <button class="btn btn-secondary ok">
-        <i class="material-icons rtl-no-flip">&#xE876;</i>
+        <i class="fa fa-check rtl-no-flip"></i>
         {l s='OK' d='Shop.Theme.Actions'}
       </button>
   </div>

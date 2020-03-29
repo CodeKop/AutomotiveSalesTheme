@@ -8,7 +8,7 @@
         title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
         rel="nofollow"
       >
-        <i class="material-icons d-md-none w-100 logged">&#xE7FF;</i>
+        <i class="fa fa-user-circle d-md-none w-100 logged"></i>
         <span class="w-100">{$customerName}</span>
       </a>
       {* If the user is logged in the show the logout button. *}

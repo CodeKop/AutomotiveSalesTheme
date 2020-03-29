@@ -14,7 +14,7 @@
           <div class="d-block d-md-none text-sm-center mobile w-100">
             {hook h='displayNav2'}
             <div class="float-left" id="menu-icon">
-              <i class="material-icons">&#xE5D2;</i>
+              <i class="fa fa-bars"></i>
             </div>
             <div class="float-right" id="_mobile_cart"></div>
             <div class="float-right" id="_mobile_user_info"></div>

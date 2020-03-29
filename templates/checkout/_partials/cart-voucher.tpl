@@ -11,7 +11,7 @@
                   <div class="float-right">
                     <span>{$voucher.reduction_formatted}</span>
                       {if isset($voucher.code) && $voucher.code !== ''}
-                        <a href="{$voucher.delete_url}" data-link-action="remove-voucher"><i class="material-icons">&#xE872;</i></a>
+                        <a href="{$voucher.delete_url}" data-link-action="remove-voucher"><i class="fa fa-trash"></i></a>
                       {/if}
                   </div>
                 </li>
@@ -39,7 +39,7 @@
 
             {block name='cart_voucher_notifications'}
               <div class="alert alert-danger js-error" role="alert">
-                <i class="material-icons">&#xE001;</i><span class="ml-1 js-error-text"></span>
+                <i class="fa fa-exclamation-circle">&#xE001;</i><span class="ml-1 js-error-text"></span>
               </div>
             {/block}
 

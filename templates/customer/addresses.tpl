@@ -15,7 +15,7 @@
   <div class="clearfix"></div>
   <div class="addresses-footer">
     <a href="{$urls.pages.address}" data-link-action="add-address" class="btn-primary">
-      <i class="material-icons btn-icon">&#xE145;</i>
+      <i class="fa fa-plus btn-icon"></i>
       <span class="btn-text">{l s='Create new address' d='Shop.Theme.Actions'}</span>
     </a>
   </div>

@@ -25,7 +25,7 @@
               disabled
             {/if}
           >
-            <i class="material-icons shopping-cart">&#xE547;</i>
+            <i class="fa fa-shopping-cart shopping-cart"></i>
             {l s='Add to cart' d='Shop.Theme.Actions'}
           </button>
         </div>
@@ -38,11 +38,11 @@
       <span id="product-availability">
         {if $product.show_availability && $product.availability_message}
           {if $product.availability == 'available'}
-            <i class="material-icons rtl-no-flip product-available">&#xE5CA;</i>
+            <i class="fa fa-check rtl-no-flip product-available"></i>
           {elseif $product.availability == 'last_remaining_items'}
-            <i class="material-icons product-last-items">&#xE002;</i>
+            <i class="fa fa-exclamation-triangle product-last-items"></i>
           {else}
-            <i class="material-icons product-unavailable">&#xE14B;</i>
+            <i class="fa fa-times-circle product-unavailable"></i>
           {/if}
           {$product.availability_message}
         {/if}

@@ -66,7 +66,7 @@
           <span class="custom-checkbox">
             <label>
               <input name="{$field.name}" type="checkbox" value="1" {if $field.value}checked="checked"{/if} {if $field.required}required{/if}>
-              <span><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
+              <span><i class="fa fa-check rtl-no-flip checkbox-checked"></i></span>
               {$field.label nofilter}
             </label>
           </span>
@@ -123,10 +123,8 @@
                 class="btn"
                 type="button"
                 data-action="show-password"
-                data-text-show="visibility"
-                data-text-hide="visibility_off"
               >
-                <i class="material-icons">visibility</i>
+                <i class="fa fa-eye"></i>
               </button>
             </span>
           </div>

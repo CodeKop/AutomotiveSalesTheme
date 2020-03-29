@@ -12,7 +12,7 @@
         <p>
           <a href="#" data-toggle="collapse" data-target="#cart-summary-product-list">
             {l s='show details' d='Shop.Theme.Actions'}
-            <i class="material-icons">expand_more</i>
+            <i class="fa fa-chevron-down"></i>
           </a>
         </p>
 

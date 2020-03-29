@@ -4,7 +4,7 @@
       <div class="row">
         {foreach $page.admin_notifications as $notif}
           <div class="col-sm-12">
-            <i class="material-icons float-left">&#xE001;</i>
+            <i class="fa fa-exclamation-circle float-left"></i>
             <p class="alert-text">{$notif.message}</p>
           </div>
         {/foreach}

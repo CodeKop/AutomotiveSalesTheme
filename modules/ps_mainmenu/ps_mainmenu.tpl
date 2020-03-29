@@ -17,8 +17,6 @@
                     <span data-target="#top_sub_menu_{$_expand_id}" data-toggle="collapse" class="navbar-toggler collapse-icons">
                       <i class="fa fa-chevron-down add"></i>
                       <i class="fa fa-chevron-up remove"></i>
-                      {* <i class="material-icons add">&#xE313;</i>
-                      <i class="material-icons remove">&#xE316;</i> *}
                     </span>
                   </span>
                 {/if}
@@ -38,7 +36,7 @@
 <div class="menu js-top-menu d-none d-md-inline-block h-100" id="_desktop_top_menu">
     <div class="menu-header d-none d-md-block">
       <span class="menu-header-text">Categories</span>
-      <i class="menu-header-icon material-icons">keyboard_arrow_down</i>
+      <i class="menu-header-icon fa fa-chevron-down"></i>
     </div>
     
     {menu nodes=$menu.children}

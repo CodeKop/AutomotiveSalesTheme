@@ -25,8 +25,8 @@
           {/block}
           {if $imagesCount > 5}
             <div class="arrows js-modal-arrows">
-              <i class="material-icons arrow-up js-modal-arrow-up">&#xE5C7;</i>
-              <i class="material-icons arrow-down js-modal-arrow-down">&#xE5C5;</i>
+              <i class="fa fa-caret-up arrow-up js-modal-arrow-up"></i>
+              <i class="fa fa-caret-down arrow-down js-modal-arrow-down"></i>
             </div>
           {/if}
         </aside>

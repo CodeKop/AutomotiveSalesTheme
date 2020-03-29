@@ -63,7 +63,7 @@
             {if $recyclablePackAllowed}
               <span class="custom-checkbox">
                 <input type="checkbox" id="input_recyclable" name="recyclable" value="1" {if $recyclable} checked {/if}>
-                <span><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
+                <span><i class="fa fa-check rtl-no-flip checkbox-checked"></i></span>
                 <label for="input_recyclable">{l s='I would like to receive my order in recycled packaging.' d='Shop.Theme.Checkout'}</label>
               </span>
             {/if}
@@ -71,7 +71,7 @@
             {if $gift.allowed}
               <span class="custom-checkbox">
                 <input class="js-gift-checkbox" id="input_gift" name="gift" type="checkbox" value="1" {if $gift.isGift}checked="checked"{/if}>
-                <span><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
+                <span><i class="fa fa-check rtl-no-flip checkbox-checked"></i></span>
                 <label for="input_gift">{$gift.label}</label >
               </span>
 
