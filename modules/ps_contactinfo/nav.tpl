@@ -2,7 +2,7 @@
   <div class="contact-link main">
     {if $contact_infos.phone}
       <div class="icon-container">
-        <i class="material-icons">phone</i>
+        <i class="fa fa-phone fa-flip-horizontal"></i>
       </div>
 
       <div class="content-container">
@@ -11,7 +11,7 @@
       </div>
     {else}
       <div class="icon-container">
-        <i class="material-icons">account_circle</i>
+        <i class="fa fa-phone fa-flip-horizontal"></i>
       </div>
 
       <div class="content-container">
