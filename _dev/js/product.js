@@ -74,8 +74,8 @@ $(document).ready(function () {
 
     $quantityInput.TouchSpin({
       verticalbuttons: true,
-      verticalupclass: 'material-icons touchspin-up',
-      verticaldownclass: 'material-icons touchspin-down',
+      verticalupclass: 'fa fa-plus touchspin-up',
+      verticaldownclass: 'fa fa-minus touchspin-down',
       buttondown_class: 'btn btn-touchspin js-touchspin',
       buttonup_class: 'btn btn-touchspin js-touchspin',
       min: parseInt($quantityInput.attr('min'), 10),

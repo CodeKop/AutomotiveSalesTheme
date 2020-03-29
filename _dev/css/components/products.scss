@@ -71,7 +71,7 @@
     height: 2.75rem;
     line-height: inherit;
     padding-top: 0.625rem;
-    .material-icons {
+    .fa {
       line-height: inherit;
     }
   }
@@ -321,7 +321,7 @@
     background: white;
     .close {
       opacity: 1;
-      .material-icons {
+      .fa {
         color: $gray-dark;
       }
     }
@@ -353,7 +353,7 @@
     color: #353943;
     font-size: 1rem;
     font-weight: 400;
-    i.material-icons {
+    i.fa {
       margin-right: $large-space;
       color: $brand-success;
     }
@@ -465,7 +465,7 @@
   margin-top: 0.625rem;
   display: inline-block;
   font-weight: 700;
-  .material-icons {
+  .fa {
     line-height: inherit;
   }
   .product-available {

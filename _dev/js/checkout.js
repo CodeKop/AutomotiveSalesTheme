@@ -26,12 +26,20 @@ function setUpCheckout() {
 function toggleImage() {
   // Arrow show/hide details Checkout page
   $('.card-block .cart-summary-products p a').on('click', function (icon) {
-    icon = $(this).find('i.material-icons');
-    if (icon.text() == 'expand_more') { 
-      icon.text('expand_less'); 
-    } else { 
-      icon.text('expand_more'); 
+    icon = $(this).find('i.fa');
+    
+    if (icon.hasClass('fa-chevron-down')) {
+      icon.removeClass('fa-chevron-down');
+      icon.addClass('fa-chevron-up');
+    } else {
+      icon.removeClass('fa-chevron-up');
+      icon.addClass('fa-chevron-down');
     }
+    // if (icon.text() == 'expand_more') { 
+    //   icon.text('expand_less'); 
+    // } else { 
+    //   icon.text('expand_more'); 
+    // }
   });
 }
 
