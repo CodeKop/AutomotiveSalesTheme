@@ -130,8 +130,8 @@
 		position: absolute;
 		top: 0.5rem;
 		right: 0;
+		display: block;
 		margin: 0;
-		padding: 0.35rem 0;
 
 		font-family: Montserrat;
 		font-weight: lighter;
@@ -139,9 +139,6 @@
 		line-height: 1;
 
 		.fa {
-			width: 1em;
-			height: 1em;
-
 			font-size: inherit;
 			line-height: 1;
 			vertical-align: bottom;
