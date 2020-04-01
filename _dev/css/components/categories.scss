@@ -101,11 +101,14 @@
     background-color: white;
     color: $primary;
   }
-  .select-list:active {
-    @include drop-shadow-small;
-  }
-  .select-list:active + .dropdown-menu {
-    @include drop-shadow-small;
+
+  &:focus-within {
+    .select-title {
+      @include drop-shadow-small;
+    }
+    .dropdown-menu {
+      @include drop-shadow-small;
+    }
   }
 }
 .facet-dropdown {
@@ -271,7 +274,7 @@
 
   .category-sub-menu {
     margin-top: $small-space;
-    
+
     .category-sub-link {
       font-size: $font-size-sm;
     }
