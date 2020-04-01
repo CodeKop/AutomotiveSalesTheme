@@ -75,8 +75,7 @@
     background: white;
     padding: $small-space;
     cursor: pointer;
-    border: $input-btn-border-width solid $input-border-color;
-    @include box-shadow-light;
+    border-radius: 5px 5px 0 0;
   }
   .select-list {
     display: block;
@@ -90,12 +89,26 @@
   }
   .dropdown-menu {
     left: auto;
-    width: 16.88rem;
+    right: 15px;
     background: $gray-lighter;
     border: none;
-    border-radius: 0;
+    border-radius: 0 0 5px 5px;
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
     margin: 0;
+  }
+  .dropdown-menu a:hover {
+    background-color: white;
+    color: $primary;
+  }
+
+  &:focus-within {
+    .select-list {
+      @include drop-shadow-small;
+    }
+
+    .dropdown-menu {
+      @include drop-shadow-small;
+    }
   }
 }
 .facet-dropdown {
