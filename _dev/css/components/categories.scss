@@ -271,10 +271,16 @@
         margin-bottom: $small-space;
       }
     }
+    li .navbar-toggler {
+      .fa {
+        display: block;
+        font-size: 0.825rem;
+        padding: 0.15rem;
+      }
+    }
     li[data-depth="0"] > a {
       width: 100%;
       display: inline-block;
-      margin: 0.3125rem 0 0;
       padding-bottom: 0.1875rem;
     }
     li:not([data-depth="0"]):not([data-depth="1"]) {
