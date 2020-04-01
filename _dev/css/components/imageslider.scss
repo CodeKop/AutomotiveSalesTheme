@@ -54,7 +54,6 @@
       width: 10%;
       z-index: 10;
       opacity: 1 !important;
-      transition: box-shadow 0.35s;
 
       .carousel-control-icon {
         width: auto;
@@ -65,6 +64,7 @@
         border-radius: 100px;
         background-color: #aa2222;
         box-shadow: 0 4px 8px #999;
+        transition: box-shadow 0.35s;
 
         .fa {
           display: block;
@@ -73,7 +73,7 @@
 
       &:hover {
         .carousel-control-icon {
-          box-shadow: 0 0 0 3px #a22;
+          box-shadow: 0 0 0 3px #a22, 0 4px 8px #000;
         }
       }
     }
