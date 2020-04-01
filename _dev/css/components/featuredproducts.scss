@@ -141,8 +141,9 @@
 		.fa {
 			font-size: 0.8em;
 			line-height: 1;
-			padding: 0.125em;
-			vertical-align: middle;
+			padding: 0;
+			vertical-align: top;
+			margin-left: 4px;
 			transition: transform 0.35s;
 		}
 
@@ -159,7 +160,7 @@
 
 		&:hover {
 			.fa {
-				transform: translateX(8px);
+				transform: translateX(4px);
 			}
 
 			&::before {
