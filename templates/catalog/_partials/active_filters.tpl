@@ -1,9 +1,9 @@
 <section id="js-active-search-filters" class="{if $activeFilters|count}active_filters{else}hide{/if}">
-  {block name='active_filters_title'}
-    <h1 class="h6 {if $activeFilters|count}active-filter-title{else}d-none{/if}">{l s='Active filters' d='Shop.Theme.Global'}</h1>
-  {/block}
-
   {if $activeFilters|count}
+    {block name='active_filters_title'}
+      <h1 class="h6 {if $activeFilters|count}active-filter-title{else}d-none{/if}">{l s='Active filters' d='Shop.Theme.Global'}</h1>
+    {/block}
+
     <ul>
       {foreach from=$activeFilters item="filter"}
         {block name='active_filters_item'}
