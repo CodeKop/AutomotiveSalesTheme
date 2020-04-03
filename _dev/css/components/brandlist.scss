@@ -75,7 +75,7 @@
       }
 
       &:hover {
-        @include drop-shadow-small;
+        @include drop-shadow-small-light;
       }
     }
     .brand-direction-left {
