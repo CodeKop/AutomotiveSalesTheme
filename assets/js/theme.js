@@ -1635,7 +1635,6 @@ var Slider = (function () {
 
 		this.el = el;
 		this.options = _jquery2['default'].extend({}, baseOptions, options);
-		console.log(this.options.disabledOpacity);
 	}
 
 	// $(document).ready(() => {
@@ -1777,6 +1776,7 @@ var Slider = (function () {
 				}, 'medium');
 			}
 
+			console.log(this.options.disabledOpacity);
 			if (itemIndex >= itemsMax - itemDispAmnt) {
 				//			itemScrollRight.animate({
 				//				opacity: 0
