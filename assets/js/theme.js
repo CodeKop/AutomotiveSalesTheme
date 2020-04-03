@@ -884,7 +884,7 @@ for (var i in _events2['default'].prototype) {
   var productSelect = new _componentsProductSelect2['default']();
   var searchBar = new _componentsSearchBar2['default']();
   var featuredSlider = new _componentsSlider2['default'](featuredSliderEl);
-  var brandSlider = new _componentsSlider2['default'](brandSliderEl);
+  var brandSlider = new _componentsSlider2['default'](brandSliderEl, { disabledOpacity: 0.4 });
 
   dropDown.init();
   form.init();
@@ -1625,9 +1625,16 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 var Slider = (function () {
 	function Slider(el) {
+		var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
 		_classCallCheck(this, Slider);
 
+		baseOptions = {
+			disabledOpacity: 0
+		};
+
 		this.el = el;
+		this.options = _jquery2['default'].extend({}, baseOptions, options);
 	}
 
 	// $(document).ready(() => {
@@ -1770,12 +1777,15 @@ var Slider = (function () {
 			}
 
 			if (itemIndex >= itemsMax - itemDispAmnt) {
+				//			itemScrollRight.animate({
+				//				opacity: 0
+				//			}, 'medium', () => {
+				//				var _this = itemScrollRight;
+				//				_this.css('visibility', 'hidden');
+				//			});
 				itemScrollRight.animate({
-					opacity: 0
-				}, 'medium', function () {
-					var _this = itemScrollRight;
-					_this.css('visibility', 'hidden');
-				});
+					opacity: this.options.disabledOpacity
+				}, 'medium');
 				itemIndex = itemsMax - itemDispAmnt;
 			} else {
 				itemScrollRight.css('visibility', 'visible');
