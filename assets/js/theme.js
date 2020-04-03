@@ -1629,7 +1629,7 @@ var Slider = (function () {
 
 		_classCallCheck(this, Slider);
 
-		baseOptions = {
+		var baseOptions = {
 			disabledOpacity: 0
 		};
 
