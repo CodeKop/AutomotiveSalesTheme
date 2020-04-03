@@ -93,6 +93,7 @@ export default class Slider {
 
 		console.log(this.options.disabledOpacity);
 		if (itemIndex >= (itemsMax - itemDispAmnt)) {
+			console.log(this.options.disabledOpacity);
 //			itemScrollRight.animate({
 //				opacity: 0
 //			}, 'medium', () => {
