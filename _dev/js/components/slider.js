@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 export default class Slider {
 	constructor(el, options = {}) {
-		baseOptions = {
+		let baseOptions = {
 			disabledOpacity: 0
 		};
 
