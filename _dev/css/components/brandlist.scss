@@ -75,8 +75,24 @@
       }
 
       &:hover {
-        @include drop-shadow;
+        @include drop-shadow-small;
       }
+    }
+    .brand-direction-left {
+    	border-radius: 50px 50px 50px 0;
+    	transform: rotate(45deg);
+
+    	.fa {
+    		transform: rotate(-45deg);
+    	}
+    }
+    .brand-direction-right {
+    	border-radius: 50px 50px 0 50px;
+    	transform: rotate(-45deg);
+
+    	.fa {
+    		transform: rotate(45deg);
+    	}
     }
   }
 }
