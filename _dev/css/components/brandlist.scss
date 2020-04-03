@@ -4,6 +4,7 @@
   padding: 0;
   padding-bottom: 1.85rem;
   margin: 0;
+  font-family: Montserrat;
 
   .facets-scroll {
     background-color: #fff;
@@ -57,7 +58,10 @@
   }
 
   .directions {
-    text-align: center;
+		position: absolute;
+		top: 1.2em;
+		right: 1em;
+
     transform: translateY(-50%);
 
     .brand-direction-left,
@@ -75,24 +79,8 @@
       }
 
       &:hover {
-        @include drop-shadow-small-light;
+				background-color: $gray-lighter;
       }
-    }
-    .brand-direction-left {
-    	border-radius: 50px 50px 50px 0;
-    	transform: rotate(45deg);
-
-    	.fa {
-    		transform: rotate(-45deg);
-    	}
-    }
-    .brand-direction-right {
-    	border-radius: 50px 50px 0 50px;
-    	transform: rotate(-45deg);
-
-    	.fa {
-    		transform: rotate(45deg);
-    	}
     }
   }
 }
