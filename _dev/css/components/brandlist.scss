@@ -5,12 +5,13 @@
   padding-bottom: 1.85rem;
   margin: 0;
   font-family: Montserrat;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.35rem 0;
+  @include drop-shadow-light;
 
-  .facets-scroll {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 1.35rem;
-    @include drop-shadow-light;
+  .facet-header {
+		padding: 0 1.35rem;
   }
 
   .facets {
@@ -59,7 +60,7 @@
 
   .directions {
 		position: absolute;
-		top: 1.2em;
+		top: 2.35rem;
 		right: 1em;
 
     transform: translateY(-50%);
