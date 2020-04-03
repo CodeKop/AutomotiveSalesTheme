@@ -47,7 +47,7 @@ $(document).ready(() => {
   let productSelect = new ProductSelect();
   let searchBar = new SearchBar();
   let featuredSlider = new Slider(featuredSliderEl);
-  let brandSlider = new Slider(brandSliderEl);
+  let brandSlider = new Slider(brandSliderEl, { disabledOpacity: 0.4 });
 
   dropDown.init();
   form.init();

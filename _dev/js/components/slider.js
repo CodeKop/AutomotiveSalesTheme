@@ -1,8 +1,13 @@
 import $ from 'jquery';
 
 export default class Slider {
-	constructor(el) {
+	constructor(el, options = {}) {
+		baseOptions = {
+			disabledOpacity: 0
+		};
+
 		this.el = el;
+		this.options = $.extend({}, baseOptions, options);
 	}
 	init() {
 		var slider = this.el.find('.slider'),
@@ -87,12 +92,15 @@ export default class Slider {
 		}
 
 		if (itemIndex >= (itemsMax - itemDispAmnt)) {
+//			itemScrollRight.animate({
+//				opacity: 0
+//			}, 'medium', () => {
+//				var _this = itemScrollRight;
+//				_this.css('visibility', 'hidden');
+//			});
 			itemScrollRight.animate({
-				opacity: 0
-			}, 'medium', () => {
-				var _this = itemScrollRight;
-				_this.css('visibility', 'hidden');
-			});
+				opacity: this.options.disabledOpacity
+			}, 'medium');
 			itemIndex = itemsMax - itemDispAmnt;
 		} else {
 			itemScrollRight.css('visibility', 'visible');
