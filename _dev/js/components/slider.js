@@ -8,6 +8,7 @@ export default class Slider {
 
 		this.el = el;
 		this.options = $.extend({}, baseOptions, options);
+		console.log(this.options.disabledOpacity);
 	}
 	init() {
 		var slider = this.el.find('.slider'),
