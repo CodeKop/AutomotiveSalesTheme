@@ -6,7 +6,10 @@
 		}
 	}
 	.page-not-found {
-		padding: 1rem;
+		background-color: #fff;
+		border-radius: 8px;
+		@include drop-shadow-light;
+		padding: 1.375rem;
 		font-size: $font-size-sm;
 		color: $gray;
 		max-width: 570px;
