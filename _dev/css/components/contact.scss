@@ -5,8 +5,8 @@
 	h4 {
 		text-transform: capitalize;
 		color: $black;
-    margin-bottom: 2rem;
-    font-family: Noto Sans;
+	    margin-bottom: 2rem;
+		font-family: Noto Sans;
 	}
 	.block {
 		height: auto;
@@ -37,8 +37,12 @@
 		}
 	}
 }
+
 .contact-form {
-	padding: 1rem;
+	background-color: white;
+	border-radius: 8px;
+	@include drop-shadow-small-light;
+	padding: 1.375rem;
 	color: $gray;
 	width: 100%;
 	h3 {
