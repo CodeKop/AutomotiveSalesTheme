@@ -3,8 +3,6 @@
 
     {* <h4>{l s='Sorry for the inconvenience.' d='Shop.Theme.Global'}</h4>
     <p>{l s='Search again what you are looking for' d='Shop.Theme.Global'}</p> *}
-    <div class="warning --left fa fa-minus-circle"></div>
-    <div class="warning --right fa fa-minus-circle"></div>
 
     {block name='error_title'}
       <h1 class="page-title">Oh No!</h1>
