@@ -6,26 +6,15 @@
 		}
 	}
 	.page-not-found {
-		background: white;
 		padding: 1rem;
 		font-size: $font-size-sm;
 		color: $gray;
 		max-width: 570px;
 		margin: 0 auto;
-		border: 5px solid;
-		border-image: repeating-linear-gradient(-45deg, yellow 0, yellow 1px, black 1px, black 3px) 1;
-		border-image-repeat: repeat;
 
 		.warning {
 			font-size: 3rem;
 			color: #a22;
-
-			&.--left {
-				float: left;
-			}
-			&.--right {
-				float: right;
-			}
 		}
 
 		.page-title {
@@ -51,6 +40,10 @@
 			input {
 				width: 100%;
 			}
+		}
+		.page-footer {
+			margin-top: 0.325rem;
+			margin-bottom: 0;
 		}
 	}
 }
