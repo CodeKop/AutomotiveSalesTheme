@@ -1,7 +1,7 @@
 <div id="_desktop_contact_link">
   <div class="contact-link main px-3 py-2 px-md-0 py-md-0">
     {if $contact_infos.phone}
-      <div class="icon-container">
+      <div class="icon-container d-none d-md-block">
         <i class="fa fa-phone fa-flip-horizontal"></i>
       </div>
 
