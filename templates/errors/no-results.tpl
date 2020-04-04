@@ -1,9 +1,5 @@
 {extends file="errors/not-found.tpl"}
 
-{block name='error_title'}
-    <h1 class="page-title" title="Crying Face">Oh No!</h1>
-{/block}
-
 {block name='error_subtitle'}
     <div class="page-subtitle">
     <p>{l s='We couldn\'t  find what you were looking for' d='Shop.Theme.Global'}<span title="Crying Face">(&boxhd;^&boxhd;)</span></p>
