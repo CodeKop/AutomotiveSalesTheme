@@ -20,6 +20,7 @@
             <link rel="alternate" href="{$pageUrl}" hreflang="{$code}">
       {/foreach}
   {/block}
+	<meta name="format-detection" content="telephone=no">
 {/block}
 
 {block name='head_viewport'}
