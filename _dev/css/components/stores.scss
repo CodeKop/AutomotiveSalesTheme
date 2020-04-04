@@ -12,7 +12,7 @@
       }
     }
     .store-item {
-      margin-bottom: 5px;
+      @include drop-shadow-small-light;
     }
     .store-item-container {
       display: flex;
