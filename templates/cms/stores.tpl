@@ -22,7 +22,7 @@
               {/if}
             </div>
             <div class="col-md-4 col-sm-5 col-12 divide-left">
-              <table class="mx-auto">
+              <table class="mx-md-auto">
                 {foreach $store.business_hours as $day}
                 <tr>
                   <th>{$day.day|truncate:4:'.'}</th>
