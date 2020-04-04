@@ -9,7 +9,7 @@
 
     {if count($stores) > 1}
       {foreach $stores as $store}
-        <article id="store-{$store.id}" class="store-item card rounded mb-2 border-none">
+        <article id="store-{$store.id}" class="store-item card rounded mb-2 border-0">
           <div class="store-item-container clearfix">
             <div class="col-md-3 store-picture d-none d-md-inline-block">
               <img src="{$store.image.bySize.stores_default.url}" alt="{$store.image.legend}" title="{$store.image.legend}">
