@@ -6,7 +6,7 @@
       </div>
 
       <div class="content-container">
-        <span class="caption">Call Us Now</span>
+        <span class="caption text-muted">Call Us Now</span>
         <span class="value number-text">{$contact_infos.phone}</span>
       </div>
     {else}
