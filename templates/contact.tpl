@@ -8,6 +8,12 @@
   </div>
 {/block}
 
-{block name='page_content'}
-  {widget name="contactform"}
+{block name='page_content_container'}
+	<section id="content" class="page-home" itemscope itemtype="http://schema.org/ContactPage">
+		{block name='page_content_top'}{/block}
+
+		{block name='page_content'}
+			{widget name="contactform"}
+		{/block}
+	</section
 {/block}
