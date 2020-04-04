@@ -3,6 +3,7 @@
   <button
     class="btn-unstyle select-title"
     rel="nofollow"
+    data-display="static"
     data-toggle="dropdown"
     aria-haspopup="true"
     aria-expanded="false">
