@@ -75,7 +75,7 @@
     background: white;
     padding: $small-space;
     cursor: pointer;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px;
   }
   .select-list {
     display: block;
@@ -101,12 +101,14 @@
     color: $primary;
   }
 
-  &:focus-within {
+  &.show {
     .select-title {
-      @include drop-shadow-small;
+			border-radius: 5px 5px 0 0;
+      @include drop-shadow-small-light;
+      
     }
     .dropdown-menu {
-      @include drop-shadow-small;
+      @include drop-shadow-small-light;
     }
   }
 }
