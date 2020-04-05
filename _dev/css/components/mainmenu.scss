@@ -72,14 +72,17 @@
     }
 
     ul {
-      position: absolute;
-      top: 0;
-      left: 100%;
-      right: -100%;
+      // position: absolute;
+      // top: 0;
+      // left: 100%;
+      // right: -100%;
+      // padding: $small-space 0;
+      // border-radius: 10px;
+      // background-color: white;
+      // box-shadow: 0 3px 5px rgba(0, 0, 0, 0.11);
       padding: $small-space 0;
-      border-radius: 10px;
-      background-color: white;
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.11);
+      border-radius: 8px;
+      @include drop-shadow-small-light;
     }
   }
 
@@ -87,9 +90,10 @@
     position: absolute;
     top: 0;
     left: 100%;
-    right: -100%;
-    padding: $small-space 0;
-    border-radius: 8px;
+    // right: -100%;
+    min-width: 3rem;
+    padding: $small-space;
+    border: none;
   }
 }
 
