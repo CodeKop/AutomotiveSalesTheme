@@ -52,7 +52,7 @@
     min-width: 100%;
     z-index: 99;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.11);
-    border-radius: 0 0 23px 23px;
+    border-radius: 0 0 5px 5px;
     flex-wrap: wrap;
     align-items: stretch;
 
@@ -82,23 +82,6 @@
       border-radius: 10px;
       background-color: white;
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.11);
-    }
-
-    &::before,
-    &::after {
-      position: absolute;
-      top: -10px;
-      background: #fff;
-      width: 20px;
-      height: 20px;
-    }
-    &::before {
-      content: "";
-      right: calc(100% - 10.5px);
-    }
-    &::after {
-      content: "";
-      left: calc(100% - 10.5px);
     }
   }
 }
