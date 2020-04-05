@@ -13,17 +13,20 @@
                 {if $node.children|count}
                   {* Cannot use page identifier as we can have the same page several times *}
                   {assign var=_expand_id value=10|mt_rand:100000}
-                  <span class="float-right d-md-none">
-                    <span data-target="#top_sub_menu_{$_expand_id}" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                  <span class="float-right">
+                    <span data-target="#top_sub_menu_{$_expand_id}" data-toggle="collapse" class="navbar-toggler collapse-icons d-md-none">
                       <i class="fa fa-chevron-down add"></i>
                       <i class="fa fa-chevron-up remove"></i>
+                    </span>
+                    <span class="navbar-toggler d-none d-md-block">
+                      <i class="fa fa-chevron-right"></i>
                     </span>
                   </span>
                 {/if}
                 {$node.label}
               </a>
               {if $node.children|count}
-              <div {if $depth === 0} class="sub-menu js-sub-menu collapse mx-3"{else} class="collapse"{/if} id="top_sub_menu_{$_expand_id}">
+              <div class="sub-menu js-sub-menu collapse mx-3" id="top_sub_menu_{$_expand_id}">
                 {menu nodes=$node.children depth=$node.depth parent=$node}
               </div>
               {/if}
