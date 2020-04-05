@@ -84,3 +84,11 @@
 @mixin drop-shadow-small-light {
 	box-shadow: 3px 5px 10px #ddd;
 }
+
+@mixin drop-shadow-light-no-overflow {
+	box-shadow: 6px 10px 25px -15px #ddd;
+}
+@mixin drop-shadow-light-no-overflow-with-inset {
+	box-shadow: 6px 10px 25px -15px #ddd,
+		inset 5px 0 10px -10px #999;
+}
