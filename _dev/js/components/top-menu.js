@@ -13,11 +13,11 @@ export default class TopMenu extends DropDown {
       if (elmtClass !== currentTargetClass) {
         elmtClass = currentTargetClass;
 
-        if (elmtClass && $(e.target).data('depth') === 0) {
-          // $(`.${elmtClass} .js-sub-menu > .top-menu`).css({
-          //   top: $(`.${elmtClass}`).height() + $(`.${elmtClass}`).position().top
-          // });
-        }
+        //   if (elmtClass && $(e.target).data('depth') === 0) {
+        //     $(`.${elmtClass} .js-sub-menu > .top-menu`).css({
+        //       top: $(`.${elmtClass}`).height() + $(`.${elmtClass}`).position().top
+        //     });
+        //   }
       }
 
       let subMenu = $(e.currentTarget).children('.sub-menu');
