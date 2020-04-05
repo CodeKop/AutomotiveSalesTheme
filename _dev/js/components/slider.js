@@ -83,8 +83,8 @@ export default class Slider {
 	updateScroll(itemWidth) {
 		var itemsMax = this.el.find('.slider').data('products'),
 			itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
-			itemDispAmnt = this.el.find('.slider').width() / itemWidth,
-			itemIndex = this.el.find('.slider').scrollLeft() / itemWidth,
+			itemDispAmnt = Math.round(this.el.find('.slider').width() / itemWidth),
+			itemIndex = Math.round(this.el.find('.slider').scrollLeft() / itemWidth),
 
 			itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
 			itemScrollRight = this.el.find('.slider-controls .slider-control-right');
