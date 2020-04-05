@@ -3,6 +3,7 @@ import $ from 'jquery';
 export default class Slider {
 	constructor(el, options = {}) {
 		let baseOptions = {
+			enabledOpacity: 1,
 			disabledOpacity: 0
 		};
 
@@ -41,28 +42,40 @@ export default class Slider {
 		this.el.find('.slider').scrollLeft(0);
 
 		if (itemsMax <= itemDispAmnt) {
-			itemScrollLeft.animate({
-				opacity: 0
-			}, 0, () => {
-				var _this = itemScrollLeft;
-				_this.css('visibility', 'hidden');
-			});
+			// itemScrollLeft.animate({
+			// 	opacity: 0
+			// }, 0, () => {
+			// 	var _this = itemScrollLeft;
+			// 	_this.css('visibility', 'hidden');
+			// });
 
-			itemScrollRight.animate({
-				opacity: 0
-			}, 0, () => {
-				var _this = itemScrollRight;
-				_this.css('visibility', 'hidden');
-			});
-		} else {
-			itemScrollLeft.css('visibility', 'visible');
+			// itemScrollRight.animate({
+			// 	opacity: 0
+			// }, 0, () => {
+			// 	var _this = itemScrollRight;
+			// 	_this.css('visibility', 'hidden');
+			// });
 			itemScrollLeft.animate({
-				opacity: 1
+				opacity: this.options.disabledOpacity
 			}, 0);
-
-			itemScrollRight.css('visibility', 'visible');
 			itemScrollRight.animate({
-				opacity: 1
+				opacity: this.options.disabledOpacity
+			}, 0);
+		} else {
+			// itemScrollLeft.css('visibility', 'visible');
+			// itemScrollLeft.animate({
+			// 	opacity: 1
+			// }, 0);
+
+			// itemScrollRight.css('visibility', 'visible');
+			// itemScrollRight.animate({
+			// 	opacity: 1
+			// }, 0);
+			itemScrollLeft.animate({
+				opacity: enabledOpacity
+			}, 0);
+			itemScrollRight.animate({
+				opacity: enabledOpacity
 			}, 0);
 		}
 		this.updateScroll();
