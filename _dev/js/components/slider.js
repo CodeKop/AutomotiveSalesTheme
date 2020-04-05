@@ -90,23 +90,27 @@ export default class Slider {
 			itemScrollRight = this.el.find('.slider-controls .slider-control-right');
 
 		if (itemIndex <= 0) {
+			// itemScrollLeft.animate({
+			// 	opacity: 0
+			// }, 'medium', () => {
+			// 	var _this = itemScrollLeft;
+			// 	_this.css('visibility', 'hidden');
+			// });
 			itemScrollLeft.animate({
-				opacity: 0
-			}, 'medium', () => {
-				var _this = itemScrollLeft;
-				_this.css('visibility', 'hidden');
-			});
+				opacity: this.options.disabledOpacity
+			}, 'medium');
 			itemIndex = 0;
 		} else {
-			itemScrollLeft.css('visibility', 'visible');
+			// itemScrollLeft.css('visibility', 'visible');
+			// itemScrollLeft.animate({
+			// 	opacity: 1
+			// }, 'medium');
 			itemScrollLeft.animate({
-				opacity: 1
+				opacity: this.options.enabledOpacity
 			}, 'medium');
 		}
-
-		console.log(this.options.disabledOpacity);
+		
 		if (itemIndex >= (itemsMax - itemDispAmnt)) {
-			console.log(this.options.disabledOpacity);
 //			itemScrollRight.animate({
 //				opacity: 0
 //			}, 'medium', () => {
@@ -118,9 +122,12 @@ export default class Slider {
 			}, 'medium');
 			itemIndex = itemsMax - itemDispAmnt;
 		} else {
-			itemScrollRight.css('visibility', 'visible');
+			// itemScrollRight.css('visibility', 'visible');
+			// itemScrollRight.animate({
+			// 	opacity: 1
+			// }, 'medium');
 			itemScrollRight.animate({
-				opacity: 1
+				opacity: this.options.enabledOpacity
 			}, 'medium');
 		}
 	}
