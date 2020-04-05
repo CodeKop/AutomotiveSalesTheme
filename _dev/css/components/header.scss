@@ -127,6 +127,23 @@
 		> div {
 			vertical-align: top;
 		}
+
+		.links {
+			.wrapper {
+				flex: auto;
+			}
+
+			.links-title {
+				display: none !important;
+			}
+
+			ul.collapse {
+				margin: 0;	
+			}
+			ul.collapse li {
+				display: inline-block;
+			}
+		}
 	}
 
 	@include media-breakpoint-down(md) {
