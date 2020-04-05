@@ -60,7 +60,7 @@
       display: block;
       padding: $small-space $medium-space;
       transition: background 0.25s, box-shadow 0.25s;
-      padding: calc(1.25rem + 20px);
+      padding-right: calc(1.25rem + 20px);
     }
     li > a .menu-icon {
       position: absolute;
