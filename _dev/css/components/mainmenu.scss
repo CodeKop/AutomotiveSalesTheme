@@ -46,7 +46,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    right: 0;
+    min-width: 100;
     padding: $small-space 0;
     background-color: white;
     text-align: center;
@@ -54,12 +54,13 @@
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.11);
     border-radius: 0 0 23px 23px;
     flex-wrap: wrap;
+    align-items: stretch;
 
     li {
       > a {
         display: block;
         padding: $extra-small-space $medium-space;
-        margin: $extra-small-space;
+        margin: $extra-small-space 0;
         border-radius: 100px;
         text-align: center;
         transition: background 0.25s, box-shadow 0.25s;
