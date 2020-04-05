@@ -110,6 +110,7 @@ export default class Slider {
 			}, 'medium');
 		}
 		
+		alert(itemIndex + ', ' + itemsMax + ', ' + itemDispAmnt);
 		if (itemIndex >= (itemsMax - itemDispAmnt)) {
 //			itemScrollRight.animate({
 //				opacity: 0
