@@ -144,6 +144,11 @@
 			ul.collapse li {
 				display: inline-block;
 			}
+			ul.collapse li + li::before {
+				content: "/";
+				font-size: 1rem;
+				margin: 0 0.25rem;
+			}
 		}
 	}
 
