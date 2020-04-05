@@ -1,7 +1,7 @@
 {assign var=_counter value=0}
 {function name="menu" nodes=[] depth=0 parent=null}
     {if $nodes|count}
-      <ul class="top-menu d-flex d-md-none flex-column text-left" {if $depth == 0}id="top-menu"{/if} data-depth="{$depth}">
+      <ul class="top-menu d-flex flex-column text-left" {if $depth == 0}id="top-menu"{/if} data-depth="{$depth}">
         {foreach from=$nodes item=node}
             <li class="{$node.type}{if $node.current} current {/if}" id="{$node.page_identifier}">
             {assign var=_counter value=$_counter+1}
@@ -26,7 +26,7 @@
                 {$node.label}
               </a>
               {if $node.children|count}
-              <div class="sub-menu js-sub-menu collapse mx-3" id="top_sub_menu_{$_expand_id}">
+              <div class="{if $depth === 0}popover sub-menu js-sub-menu collapse mx-3{else}collapse{/if}" id="top_sub_menu_{$_expand_id}">
                 {menu nodes=$node.children depth=$node.depth parent=$node}
               </div>
               {/if}
