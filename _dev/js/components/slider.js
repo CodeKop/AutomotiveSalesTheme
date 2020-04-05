@@ -72,10 +72,10 @@ export default class Slider {
 			// 	opacity: 1
 			// }, 0);
 			itemScrollLeft.animate({
-				opacity: enabledOpacity
+				opacity: this.options.enabledOpacity
 			}, 0);
 			itemScrollRight.animate({
-				opacity: enabledOpacity
+				opacity: this.options.enabledOpacity
 			}, 0);
 		}
 		this.updateScroll();
