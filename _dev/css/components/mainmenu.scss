@@ -56,21 +56,19 @@
     flex-wrap: wrap;
     align-items: stretch;
 
-    li {
-      > a {
-        display: block;
-        padding: $small-space $medium-space;
-        transition: background 0.25s, box-shadow 0.25s;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-
-        &:hover {
-          background-color: #f1f1f1;
-          // box-shadow: 0 2px 6px -2px #999;
-          color: initial;
-        }
-      }
+    li > a {
+      display: block;
+      padding: $small-space $medium-space;
+      transition: background 0.25s, box-shadow 0.25s;
+      padding: calc(1.25rem + 20px);
+    }
+    li > a .menu-icon {
+      position: absolute;
+      right: 1.25rem;
+    }
+    li > a:hover {
+      background-color: #f1f1f1;
+      color: initial;
     }
 
     ul {

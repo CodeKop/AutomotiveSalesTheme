@@ -19,6 +19,9 @@ export default class TopMenu extends DropDown {
           });
         }
       }
+
+      let subMenu = $(e.currentTarget).children('.sub-menu');
+      subMenu.toggleClass('collapse');
     });
     $('#_desktop_top_menu > .top-menu').slideUp(0);
     $('#menu-icon').on('click', function () {
