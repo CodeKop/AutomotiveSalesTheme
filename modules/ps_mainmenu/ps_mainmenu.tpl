@@ -18,7 +18,7 @@
                       <i class="fa fa-chevron-down add"></i>
                       <i class="fa fa-chevron-up remove"></i>
                     </span>
-                    <span class="navbar-toggler d-none d-md-block">
+                    <span class="d-none d-md-block">
                       <i class="fa fa-chevron-right"></i>
                     </span>
                   </span>
