@@ -23,7 +23,7 @@ export default class Slider {
 		this.el.find('.slider-controls .slider-control-left').click((e) => {
 			var itemWidth = this.el.find('.slider .slider-item').outerWidth(true);
 
-			this.el.find('.slider').stop(true, true).animate({
+			this.el.find('.slider').stop(true, false).animate({
 				scrollLeft: '-=' + itemWidth
 			}, 675, () => {
 				this.updateScroll()
@@ -32,7 +32,7 @@ export default class Slider {
 		itemScrollRight.click((e) => {
 			var itemWidth = this.el.find('.slider .slider-item').outerWidth(true);
 
-			this.el.find('.slider').stop(true, true).animate({
+			this.el.find('.slider').stop(true, false).animate({
 				scrollLeft: '+=' + itemWidth
 			}, 675, () => {
 				this.updateScroll()
