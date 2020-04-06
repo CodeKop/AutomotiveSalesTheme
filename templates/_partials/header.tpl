@@ -46,10 +46,10 @@
   <nav class="header-nav m-0">
     <div class="container">
       <div class="row d-none d-md-flex no-gutters position-relative">
-        <div class="col-md-5 col-12 d-flex align-items-center">
+        <div class="col-md-7 col-12 d-flex align-items-center">
           {hook h='displayBar1'}
         </div>
-        <div class="col-md-7 right-nav d-flex flex-row-reverse align-items-center position-static">
+        <div class="col-md-5 right-nav d-flex flex-row-reverse align-items-center position-static">
           {hook h='displayBar2'}
         </div>
       </div>
