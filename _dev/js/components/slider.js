@@ -42,23 +42,10 @@ export default class Slider {
 		this.el.find('.slider').scrollLeft(0);
 
 		if (itemsMax <= itemDispAmnt) {
-			// itemScrollLeft.animate({
-			// 	opacity: 0
-			// }, 0, () => {
-			// 	var _this = itemScrollLeft;
-			// 	_this.css('visibility', 'hidden');
-			// });
-
-			// itemScrollRight.animate({
-			// 	opacity: 0
-			// }, 0, () => {
-			// 	var _this = itemScrollRight;
-			// 	_this.css('visibility', 'hidden');
-			// });
-			itemScrollLeft.animate({
+			itemScrollLeft.stop(true, true).animate({
 				opacity: this.options.disabledOpacity
 			}, 0);
-			itemScrollRight.animate({
+			itemScrollRight.stop(true, true).animate({
 				opacity: this.options.disabledOpacity
 			}, 0);
 		} else {
@@ -71,10 +58,10 @@ export default class Slider {
 			// itemScrollRight.animate({
 			// 	opacity: 1
 			// }, 0);
-			itemScrollLeft.animate({
+			itemScrollLeft.stop(true, true).animate({
 				opacity: this.options.enabledOpacity
 			}, 0);
-			itemScrollRight.animate({
+			itemScrollRight.stop(true, true).animate({
 				opacity: this.options.enabledOpacity
 			}, 0);
 		}
@@ -96,7 +83,7 @@ export default class Slider {
 			// 	var _this = itemScrollLeft;
 			// 	_this.css('visibility', 'hidden');
 			// });
-			itemScrollLeft.animate({
+			itemScrollLeft.stop(true, true).animate({
 				opacity: this.options.disabledOpacity
 			}, 'medium');
 			itemIndex = 0;
@@ -105,28 +92,18 @@ export default class Slider {
 			// itemScrollLeft.animate({
 			// 	opacity: 1
 			// }, 'medium');
-			itemScrollLeft.animate({
+			itemScrollLeft.stop(true, true).animate({
 				opacity: this.options.enabledOpacity
 			}, 'medium');
 		}
 		
 		if (itemIndex >= (itemsMax - itemDispAmnt)) {
-//			itemScrollRight.animate({
-//				opacity: 0
-//			}, 'medium', () => {
-//				var _this = itemScrollRight;
-//				_this.css('visibility', 'hidden');
-//			});
-			itemScrollRight.animate({
+			itemScrollRight.stop(true, true).animate({
 				opacity: this.options.disabledOpacity
 			}, 'medium');
 			itemIndex = itemsMax - itemDispAmnt;
 		} else {
-			// itemScrollRight.css('visibility', 'visible');
-			// itemScrollRight.animate({
-			// 	opacity: 1
-			// }, 'medium');
-			itemScrollRight.animate({
+			itemScrollRight.stop(true, true).animate({
 				opacity: this.options.enabledOpacity
 			}, 'medium');
 		}
