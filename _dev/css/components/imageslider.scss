@@ -1,5 +1,7 @@
 #carousel {
   margin-bottom: 2.3rem;
+  margin-left: -15px;
+  margin-right: -15px;
 
   .carousel-indicators {
     background-color: #0005;
@@ -13,10 +15,10 @@
 
   .carousel-inner {
     margin-bottom: 0;
-    border: 5px solid #fff;
+    // border: 5px solid #fff;
     // box-shadow: 0 10px 35px #aaa;
-    @include drop-shadow;
-    border-radius: 20px;
+    // @include drop-shadow;
+    // border-radius: 20px;
 
     .carousel-item {
       > a {
@@ -25,6 +27,10 @@
         figure {
           margin: 0;
           width: 100%;
+
+          > img {
+            width: 100%;
+          }
 
           .carousel-caption {
             width: 50%;
