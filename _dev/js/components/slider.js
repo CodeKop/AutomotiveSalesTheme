@@ -23,7 +23,7 @@ export default class Slider {
 		this.el.find('.slider-controls .slider-control-left').click((e) => {
 			var itemWidth = this.el.find('.slider .slider-item').outerWidth(true);
 
-			this.el.find('.slider').animate({
+			this.el.find('.slider').stop(true, true).animate({
 				scrollLeft: '-=' + itemWidth
 			}, 675, () => {
 				this.updateScroll()
@@ -32,7 +32,7 @@ export default class Slider {
 		itemScrollRight.click((e) => {
 			var itemWidth = this.el.find('.slider .slider-item').outerWidth(true);
 
-			this.el.find('.slider').animate({
+			this.el.find('.slider').stop(true, true).animate({
 				scrollLeft: '+=' + itemWidth
 			}, 675, () => {
 				this.updateScroll()
@@ -42,10 +42,10 @@ export default class Slider {
 		this.el.find('.slider').scrollLeft(0);
 
 		if (itemsMax <= itemDispAmnt) {
-			itemScrollLeft.stop(true, true).animate({
+			itemScrollLeft.animate({
 				opacity: this.options.disabledOpacity
 			}, 0);
-			itemScrollRight.stop(true, true).animate({
+			itemScrollRight.animate({
 				opacity: this.options.disabledOpacity
 			}, 0);
 		} else {
@@ -58,10 +58,10 @@ export default class Slider {
 			// itemScrollRight.animate({
 			// 	opacity: 1
 			// }, 0);
-			itemScrollLeft.stop(true, true).animate({
+			itemScrollLeft.animate({
 				opacity: this.options.enabledOpacity
 			}, 0);
-			itemScrollRight.stop(true, true).animate({
+			itemScrollRight.animate({
 				opacity: this.options.enabledOpacity
 			}, 0);
 		}
@@ -83,7 +83,7 @@ export default class Slider {
 			// 	var _this = itemScrollLeft;
 			// 	_this.css('visibility', 'hidden');
 			// });
-			itemScrollLeft.stop(true, true).animate({
+			itemScrollLeft.animate({
 				opacity: this.options.disabledOpacity
 			}, 'medium');
 			itemIndex = 0;
@@ -92,18 +92,18 @@ export default class Slider {
 			// itemScrollLeft.animate({
 			// 	opacity: 1
 			// }, 'medium');
-			itemScrollLeft.stop(true, true).animate({
+			itemScrollLeft.animate({
 				opacity: this.options.enabledOpacity
 			}, 'medium');
 		}
 		
 		if (itemIndex >= (itemsMax - itemDispAmnt)) {
-			itemScrollRight.stop(true, true).animate({
+			itemScrollRight.animate({
 				opacity: this.options.disabledOpacity
 			}, 'medium');
 			itemIndex = itemsMax - itemDispAmnt;
 		} else {
-			itemScrollRight.stop(true, true).animate({
+			itemScrollRight.animate({
 				opacity: this.options.enabledOpacity
 			}, 'medium');
 		}
