@@ -74,10 +74,10 @@
 					background-size: contain;
 					background-position: center;
 					background-repeat: no-repeat;
-					.inner-dimension {
+					&.inner-dimension {
 						background-image: url("../img/feature-icons/dimension-inner.svg");
 					}
-					.outer-dimension {
+					&.outer-dimension {
 						background-image: url("../img/feature-icons/dimension-outer.svg");
 					}
 				}
