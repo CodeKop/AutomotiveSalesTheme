@@ -3,7 +3,7 @@
   <meta itemprop="position" content="{$position}" />
   <article class="product-miniature js-product-miniature card my-md-4 mx-md-2 m-2 border-0" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemprop="item" itemscope itemtype="http://schema.org/Product">
     <div class="thumbnail-container">
-      {json_encode($product)}
+      {json_encode($product.features)}
       {block name='product_thumbnail'}
         {if $product.cover}
           {assign var='coverImage' value=Product::getCover($product->id)}
