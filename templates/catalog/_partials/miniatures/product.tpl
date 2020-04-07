@@ -3,7 +3,6 @@
   <meta itemprop="position" content="{$position}" />
   <article class="product-miniature js-product-miniature card my-md-4 mx-md-2 m-2 border-0" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemprop="item" itemscope itemtype="http://schema.org/Product">
     <div class="thumbnail-container">
-      {json_encode($product.features)}
       {block name='product_thumbnail'}
         {if $product.cover}
           {assign var='coverImage' value=Product::getCover($product->id)}
@@ -78,13 +77,15 @@
         {block name='product_features'}
         <div class="product-features">
           {foreach from=$product.features item=feature}
-            <div id="product-feature-{$feature.id_feature}" class="product-feature">            
+            <div id="product-feature-{$feature.id_feature}" class="product-feature"
+                title="{$feature.name}">
               <div class="feature-icon
                 {if $feature.name === "Inner Dimension"}
                   inner-dimension
                 {elseif $feature.name === "Outer Dimension"}
                   outer-dimension
                 {/if}"></div>
+              <div class="feature-value">{$feature.value}
             </div>
           {/foreach}
         </div>
