@@ -7,16 +7,7 @@
 .product-accessories,
 .product-miniature {
 	.products {
-		// 		display: flex;
 		flex-wrap: wrap;
-		// 		justify-content: flex-start;
-		// 		margin: -12px;
-
-		// 		> div {
-		//       margin: 12px;
-		// 			min-width: $product-min-width;
-		// 			flex: 1;
-		// 		}
 	}
 
 	.product-miniature {
@@ -67,6 +58,19 @@
 			}
 
 			.product-price-and-shipping {
+			}
+
+			.product-features {
+				.product-feature .feature-icon {
+					&.inner-dimension {
+						width: 1.5em;
+						height: 1.5em;
+						background-image: url('../img/inner-dimension.svg');
+						background-size: contain;
+						background-position: center;
+						background-repeat: no-repeat;
+					}
+				}
 			}
 		}
 	}
