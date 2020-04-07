@@ -78,7 +78,8 @@
 }
 .product-quantity {
   display: flex;
-  .qty, .add {
+  .qty,
+  .add {
     float: left;
     display: inline-flex;
     margin-bottom: 0.5rem;
@@ -165,7 +166,8 @@
   }
 }
 .has-discount {
-  &.product-price, p {
+  &.product-price,
+  p {
     color: $brand-secondary;
   }
   .discount {
@@ -231,10 +233,10 @@
     left: 0;
     top: 0;
     opacity: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     text-align: center;
     cursor: pointer;
-    @include transition(opacity .7s ease-in-out);
+    @include transition(opacity 0.7s ease-in-out);
     &:hover {
       opacity: 1;
     }
@@ -335,7 +337,7 @@
 
       @include media-breakpoint-down(sm) {
         display: block;
-        padding: 0 .5rem;
+        padding: 0 0.5rem;
       }
     }
   }
@@ -363,14 +365,14 @@
     font-size: 1.125rem;
 
     @include media-breakpoint-down(sm) {
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
     }
   }
   .product-price {
     color: $gray-dark;
     display: block;
     @include media-breakpoint-down(sm) {
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
     }
   }
 
@@ -380,10 +382,10 @@
       color: $gray-dark;
       display: flex;
       justify-content: space-between;
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
       &.product-total {
         background-color: $gray-light;
-        padding: .5rem;
+        padding: 0.5rem;
       }
       &.cart-products-count {
         font-size: 1rem;
@@ -392,7 +394,7 @@
       }
       &.product-tax {
         display: inherit;
-        font-size: .875rem;
+        font-size: 0.875rem;
       }
       .label,
       .value {
@@ -503,9 +505,9 @@
       word-break: normal;
       &:nth-of-type(even) {
         background: $gray-lighter;
-    }
-    text-transform: capitalize;
-    margin-bottom: .5rem;
+      }
+      text-transform: capitalize;
+      margin-bottom: 0.5rem;
     }
   }
 }
@@ -556,9 +558,9 @@
       z-index: 1;
       font-size: $font-size-xs;
       margin-top: 0;
-      &::before{
-        content:"\E30A";
-        font-family: 'Material Icons';
+      &::before {
+        content: "\E30A";
+        font-family: "Material Icons";
         vertical-align: middle;
         margin: 0.3125rem;
       }
@@ -577,7 +579,6 @@
     }
   }
 }
-
 
 .product-customization {
   margin: $extra-large-space 0;
@@ -607,7 +608,7 @@
     position: absolute;
   }
 
-  .customization-message{
+  .customization-message {
     margin-top: 20px;
   }
   .custom-file {
@@ -676,7 +677,7 @@
     background-position: 0.25rem 0.25rem;
     cursor: pointer;
     margin-left: 0.5rem;
-    @include transition(all .2s ease-in);
+    @include transition(all 0.2s ease-in);
     a {
       display: block;
       width: 100%;
