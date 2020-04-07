@@ -62,14 +62,21 @@
 			}
 
 			.product-features {
+				position: absolute;
+				top: 5px;
+				right: 5px;
+
 				.product-feature .feature-icon {
+					width: 4.5em;
+					height: 4.5em;
+					background-size: contain;
+					background-position: center;
+					background-repeat: no-repeat;
 					&.inner-dimension {
-						width: 1.5em;
-						height: 1.5em;
-						background-image: url("../img/inner-dimension.svg");
-						background-size: contain;
-						background-position: center;
-						background-repeat: no-repeat;
+						background-image: url("../img/dimension-inner.svg");
+					}
+					&.outer-dimension {
+						background-image: url("../img/dimension-outer.svg");
 					}
 				}
 			}
