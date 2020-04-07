@@ -11,11 +11,12 @@
 	}
 
 	.product-miniature {
-		border-radius: 20px;
+		border-radius:5px;
 		// border: solid $gray-light;
 		// border-width: 1px 0;
 		box-shadow: none;
-		background-color: white;
+		background-color: transparent;
+		border: 1px solid #e7e7e7;
 		overflow: hidden;
 		//     padding: 1.25em;
 		transition: box-shadow 0.85s;
