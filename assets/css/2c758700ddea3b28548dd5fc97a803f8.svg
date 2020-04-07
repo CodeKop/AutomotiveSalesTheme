@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="96px" height="96px" viewBox="0 0 96 96" id="inner-dimension" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <rect x="0" y="0" width="96" height="96" fill="yellow" />
+        <path class="lower-body background" fill="white" stroke="#999" stroke-width="1px" stroke-linecap="round" stroke-linejoin="butt"
+            d="M12,48 L12,58
+                A36,18 0 0 0 84,58
+                L84,48
+                A36,18 0 0 0 12,48
+                
+                M27,53
+                A24,10 0 0 1 69,53
+                A24,10 0 0 1 27,53" />
+        <path class="upper-outer" fill="transparent" stroke="#d5d5d5" stroke-width="0.5px" stroke-linecap="round" stroke-linejoin="butt"
+            d="M20,48
+                A28,13 0 0 1 76,48
+                A28,13 0 0 1 20,48" />
+        <path class="upper-outer" fill="transparent" stroke="#d5d5d5" stroke-width="0.5px" stroke-linecap="round" stroke-linejoin="butt"
+            d="M15,48
+                A28,13 0 0 1 81,48
+                A28,13 0 0 1 15,48" />
+        <path class="upper-outer" fill="transparent" stroke="#999" stroke-width="1px" stroke-linecap="round" stroke-linejoin="butt"
+            d="M12,48
+                A36,18 0 0 1 84,48
+                A36,18 0 0 1 12,48" />
+        <path class="upper-centre" fill="transparent" stroke="#aa2222" stroke-width="1px" stroke-linecap="round" stroke-linejoin="round"
+            d="M24,48
+                A24,10 0 1 1 72,48
+                A24,10 0 1 1 24,48" />
+    </g>
+</svg>
