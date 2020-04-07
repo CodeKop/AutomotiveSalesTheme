@@ -75,7 +75,7 @@
           {/if}
         {/block}
 
-        {block name='product_features'}
+        {* {block name='product_features'}
         <div class="product-features">
           {foreach from=$products.features item=feature}
             <div id="product-feature-{$feature.id_feature}" class="product-feature">            
@@ -88,7 +88,7 @@
             </div>
           {/foreach}
         </div>
-        {/block}
+        {/block} *}
 
         {block name='product_reviews'}
           {hook h='displayProductListReviews' product=$product}
