@@ -83,10 +83,10 @@
       <div class="product-features">
         {foreach from=$product.features item=feature}
           {if in_array($feature.name, [ "Inner Dimension", "Outer Dimension" ])}
-          <div id="product-feature-{$feature.id_feature}" class="product-feature d-flex align-items-center mb-3"
+          <div id="product-feature-{$feature.id_feature}" class="product-feature d-flex align-items-center justify-content-end mb-3"
               title="{$feature.name}">
             <div class="feature-value d-inline-block">{$feature.value}</div>
-112            <div class="feature-icon fa
+            <div class="feature-icon fa
               {if $feature.name === "Inner Dimension"}
                 inner-dimension
               {elseif $feature.name === "Outer Dimension"}
