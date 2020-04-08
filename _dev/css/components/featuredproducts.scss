@@ -23,8 +23,6 @@
 		.product-thumbnail {
 			> img {
 				width: 100%;
-				border-radius: 8px;
-				transition: 0.35s;
 			}
 		}
 
@@ -56,36 +54,36 @@
 			font-family: Montserrat;
 
 			.product-title {
-				height: 2.3em;
+				max-height: 2.3em;
 			}
 
 			.product-price-and-shipping {
 			}
+		}
 
-			.product-features {
-				position: absolute;
-				top: 5px;
-				right: 5px;
-			}
+		.product-features {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+		}
 
-			.product-features > .product-feature {
-				padding: 0rem 1.5rem;
-				background-color: #fff;
-				border-radius: 100px;
-				@include drop-shadow-y-light;
-			
-				.feature-icon {
-					width: 2.5em;
-					height: 2.5em;
-					background-size: contain;
-					background-position: center;
-					background-repeat: no-repeat;
-					&.inner-dimension {
-						background-image: url("../img/feature-icons/dimension-inner.svg");
-					}
-					&.outer-dimension {
-						background-image: url("../img/feature-icons/dimension-outer.svg");
-					}
+		.product-features > .product-feature {
+			padding: 0rem 1.5rem;
+			background-color: #fff;
+			border-radius: 100px;
+			@include drop-shadow-y-light;
+		
+			.feature-icon {
+				width: 2.5em;
+				height: 2.5em;
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+				&.inner-dimension {
+					background-image: url("../img/feature-icons/dimension-inner.svg");
+				}
+				&.outer-dimension {
+					background-image: url("../img/feature-icons/dimension-outer.svg");
 				}
 			}
 		}
@@ -196,7 +194,7 @@
 	.product-accessories,
 	.product-miniature {
 		.product-miniature {
-			&:hover .product-thumbnail > img {				
+			&:hover {				
 				@include drop-shadow-y-light;
 			}
 		}
