@@ -82,9 +82,7 @@
       {block name='product_features'}
       <div class="product-features">
         {foreach from=$product.features item=feature}
-          {array vars='array("Inner Dimension", "Outer Dimension")'
-            assign='allowed_features'}
-          {if in_array($feature.name, $allowed_features)}
+          {if in_array($feature.name, [ "Inner Dimension", "Outer Dimension" ])}
           <div id="product-feature-{$feature.id_feature}" class="product-feature d-flex align-items-center mb-3"
               title="{$feature.name}">
             <div class="feature-value d-inline-block">{$feature.value}</div>
