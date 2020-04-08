@@ -16,8 +16,11 @@
     }
   }
 }
-.category-list-header {
-
+.category-header {
+    margin-left: -15px;
+    margin-right: -15px;
+    background-color: #fff;
+    box-shadow: 0 3px 10px -5px #777;
 }
 .block-category {
   min-height: 13.75rem;
