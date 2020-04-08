@@ -85,6 +85,10 @@
 	box-shadow: 3px 5px 10px #ddd;
 }
 
+@mixin drop-shadow-y-light {
+	box-shadow: 0 3px 10px #ddd;
+}
+
 @mixin drop-shadow-light-no-overflow {
 	box-shadow: 6px 10px 25px -15px #ddd;
 }
