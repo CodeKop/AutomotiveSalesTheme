@@ -5,7 +5,7 @@
   {include file='_partials/breadcrumb.tpl'}
 
   {block name='category_list_header'}
-	<h2 id="category-list-header" class="h2">{$listing.label}</h2>
+	<h2 id="js-product-list-header" class="category-list-header" class="h2">{$listing.label}</h2>
   {/block}
 </div>
 {/block}
