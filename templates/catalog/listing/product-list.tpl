@@ -1,7 +1,7 @@
 {extends file=$layout}
 
 {block name='category_header'}
-<div class="category-header">
+<div class="category-header d-flex flex-column align-items-center justify-content-center bg-white px-3 py-5">
   {include file='_partials/breadcrumb.tpl'}
 
   {block name='category_list_header'}
