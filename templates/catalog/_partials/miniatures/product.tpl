@@ -7,7 +7,7 @@
         {if $product.cover}
           {assign var='coverImage' value=Product::getCover($product->id)}
           {assign var='coverImageId' value="{$product->id}-{$coverImage.id_image}"}
-          <a href="{$product.url}" class="thumbnail product-thumbnail card-img-top px-md-3 pt-md-3 px-4 pt-4 d-block">
+          <a href="{$product.url}" class="thumbnail product-thumbnail card-img-top d-block">
             <img
               src="{$link->getImageLink($product.link_rewrite, $coverImageId)}"
               alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
@@ -29,14 +29,14 @@
         {/block}
       </div>
 
-      <div class="product-description card-body">
+      <div class="product-description card-body d-flex align-items-center">
         {block name='product_name'}
           {if $page.page_name == 'index'}
-            <h5 class="h5 product-title card-title mb-1" itemprop="name">
+            <h5 class="h5 product-title card-title flex-grow-1" itemprop="name">
               <a href="{$product.url}" itemprop="url" content="{$product.url}">{$product.name}</a>
             </h5>
           {else}
-            <h4 class="h5 product-title card-title mb-1" itemprop="name">
+            <h4 class="h5 product-title card-title flex-grow-1" itemprop="name">
               <a href="{$product.url}" itemprop="url" content="{$product.url}">{$product.name}</a>
             </h4>
           {/if}
@@ -44,7 +44,7 @@
 
         {block name='product_price_and_shipping'}
           {if $product.show_price}
-            <div class="product-price-and-shipping">
+            <div class="product-price-and-shipping ml-3">
               {hook h='displayProductPriceBlock' product=$product type="before_price"}
 
               <span class="price" aria-label="{l s='Price' d='Shop.Theme.Catalog'}">
@@ -74,6 +74,10 @@
           {/if}
         {/block}
 
+        {block name='product_reviews'}
+          {hook h='displayProductListReviews' product=$product}
+        {/block}
+      </div>
         {block name='product_features'}
         <div class="product-features">
           {foreach from=$product.features item=feature}
@@ -90,12 +94,25 @@
             </div>
           {/foreach}
         </div>
-        {/block}
+      {/block}
 
-        {block name='product_reviews'}
-          {hook h='displayProductListReviews' product=$product}
-        {/block}
+      {block name='product_features'}
+      <div class="product-features">
+        {foreach from=$product.features item=feature}
+          <div id="product-feature-{$feature.id_feature}" class="product-feature d-flex align-items-center"
+              title="{$feature.name}">
+            <div class="feature-icon fa
+              {if $feature.name === "Inner Dimension"}
+                inner-dimension
+              {elseif $feature.name === "Outer Dimension"}
+                outer-dimension
+              {/if} d-inline-block">
+            </div>
+            <div class="feature-value d-inline-block">{$feature.value}</div>
+          </div>
+        {/foreach}
       </div>
+      {/block}
 
       {include file='catalog/_partials/product-flags.tpl'}
     </div>
