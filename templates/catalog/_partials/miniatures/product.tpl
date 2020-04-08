@@ -77,14 +77,14 @@
         {block name='product_features'}
         <div class="product-features">
           {foreach from=$product.features item=feature}
-            <div id="product-feature-{$feature.id_feature}" class="product-feature d-inline-block"
+            <div id="product-feature-{$feature.id_feature}" class="product-feature d-flex align-items-center"
                 title="{$feature.name}">
               <div class="feature-icon fa
                 {if $feature.name === "Inner Dimension"}
                   inner-dimension
                 {elseif $feature.name === "Outer Dimension"}
                   outer-dimension
-                {/if}">
+                {/if} d-inline-block">
               </div>
               <div class="feature-value d-inline-block">{$feature.value}</div>
             </div>
