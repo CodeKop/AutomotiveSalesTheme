@@ -23,6 +23,8 @@
 		.product-thumbnail {
 			> img {
 				width: 100%;
+				border-radius: 8px;
+				transition: 0.35s;
 			}
 		}
 
