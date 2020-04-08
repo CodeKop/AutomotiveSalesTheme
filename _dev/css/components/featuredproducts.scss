@@ -72,7 +72,7 @@
 				padding: 0rem 1.5rem;
 				background-color: #fff;
 				border-radius: 100px;
-				box-shadow: @include drop-shadow-y-light;
+				@include drop-shadow-y-light;
 			
 				.feature-icon {
 					width: 2.5em;
