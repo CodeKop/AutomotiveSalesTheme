@@ -24,6 +24,7 @@
 		.product-thumbnail {
 			> img {
 				width: 100%;
+				@include drop-shadow-y-light;
 			}
 		}
 
@@ -68,7 +69,10 @@
 			}
 
 			.product-features > .product-feature {
-				background-color: #fff5;
+				padding: 0rem 1.5rem;
+				background-color: #fff;
+				border-radius: 100px;
+				box-shadow: @include drop-shadow-y-light;
 			
 				.feature-icon {
 					width: 2.5em;
@@ -192,8 +196,9 @@
 	.product-accessories,
 	.product-miniature {
 		.product-miniature {
-			&:hover {
-				@include drop-shadow-light;
+			&:hover .product-thumbnail > img {
+				
+				@include drop-shadow-y-light;
 			}
 		}
 	}
