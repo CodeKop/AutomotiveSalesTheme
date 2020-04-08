@@ -1,6 +1,9 @@
 #header {
+	position: relative;
+	z-index: 99;
 	background: white;
 	color: gray;
+	box-shadow: 0 0 20px #0005;
 
 	.menu {
 		display: inline-block;
