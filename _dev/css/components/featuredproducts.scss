@@ -18,13 +18,11 @@
 		background-color: transparent;
 		border: 1px solid #e7e7e7;
 		overflow: hidden;
-		//     padding: 1.25em;
 		transition: box-shadow 0.85s;
 
 		.product-thumbnail {
 			> img {
 				width: 100%;
-				@include drop-shadow-y-light;
 			}
 		}
 
@@ -196,8 +194,7 @@
 	.product-accessories,
 	.product-miniature {
 		.product-miniature {
-			&:hover .product-thumbnail > img {
-				
+			&:hover .product-thumbnail > img {				
 				@include drop-shadow-y-light;
 			}
 		}
