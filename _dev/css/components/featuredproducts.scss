@@ -19,7 +19,16 @@
 		border: 1px solid #e7e7e7;
 		overflow: hidden;
 		transition: box-shadow 0.85s;
-
+        &:hover {
+            .product-flags,
+            .product-features {
+                transform: translateY(-100%);
+            }
+            .product-description {
+                transform: translateY(100%);
+            }
+        }
+        
 		.product-thumbnail {
 			> img {
 				width: 100%;
@@ -56,7 +65,8 @@
 			left: 0;
 			right: 0;
 			bottom: 0;
-			background-color: #fff5;
+			background-color: #fffe;
+            transition: transform 0.35s;
 
 			.product-title {
 				max-height: 2.3em;
@@ -70,6 +80,7 @@
 			position: absolute;
 			top: 5px;
 			right: 5px;
+            transition: transform 0.35s;
 		}
 
 		.product-features > .product-feature {
@@ -95,6 +106,10 @@
 				}
 			}
 		}
+		
+		.product-flags {
+            transition: transform 0.35s;
+        }
 	}
 }
 
