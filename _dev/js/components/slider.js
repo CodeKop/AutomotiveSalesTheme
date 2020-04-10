@@ -8,28 +8,30 @@ export default class Slider {
             allowSwipe: false,
             swipeOptions: {
                 triggerOnTouchEnd: true,
+                swipeStatus: this.swipeStatus
                 allowPageScroll: "vertical",
                 threshold: 75
             }
         };
         
         this.el = el;
+        this.lastScrollLeft = 0;
         this.options = $.extend({}, baseOptions, options);
     }
     init() {
         var slider = this.el.find('.slider'),
         
-            itemsMax = this.el.find('.slider').data('products'),
-            itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
-            itemDispAmnt = Math.round(slider.width() / itemWidth),
-            
-            itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
-            itemScrollRight = this.el.find('.slider-controls .slider-control-right');
+        itemsMax = this.el.find('.slider').data('products'),
+        itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
+        itemDispAmnt = Math.round(slider.width() / itemWidth),
+        
+        itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
+        itemScrollRight = this.el.find('.slider-controls .slider-control-right');
         
         if (this.options.allowSwipe) {
-            console.log(slider.swipe(swipeOptions));
+            slider.swipe(swipeOptions);
         }
-            
+        
         this.el.find('.slider-controls .slider-control-left').click((e) => {
             var itemWidth = this.el.find('.slider .slider-item').outerWidth(true);
             
@@ -77,7 +79,7 @@ export default class Slider {
         }
         this.updateScroll();
     }
-    updateScroll(itemWidth) {
+    updateScroll() {
         var itemsMax = this.el.find('.slider').data('products'),
         itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
         itemDispAmnt = Math.round(this.el.find('.slider').width() / itemWidth),
@@ -116,6 +118,46 @@ export default class Slider {
             itemScrollRight.animate({
                 opacity: this.options.enabledOpacity
             }, 'medium');
+        }
+        
+        this.lastScrollLeft = this.el.find('.slider').scrollLeft();
+    }
+    swipeStatus(event, phase, direction, distance) {
+        var slider = this.el.find('.slider');
+        
+        if (phase === "move" && (direction === "left" || direction === "right")) {
+            var duration = 0;
+            
+            if (direction === "left") {
+                slider.animate({
+                    scrollLeft: "-=" + distance
+                }, 'medium');
+            } else if (direction === "right") {
+                slider.animate({
+                    scrollLeft: "+=" + distance
+                }, 'medium');
+            }
+        } else if (phase === "cancel") {
+            slider.animate({
+                scrollLeft: this.lastScrollLeft
+            }, 'medium');
+        } else if (phase === "end") {
+            var nearestItemScroll = slider.scrollLeft,
+            itemWidth = slider.children('.slider-tem').outerWidth(true),
+            round = nearestItemScroll % itemWidth,
+            multiplier =  Math.floor(nearestItemScroll / itemWidth);
+            
+            if (mod >= 5) {
+                nearestItemScroll = (multiplier + 1) * itemWidth;
+            } else {
+                nearestItemScroll = multiplier * itemWidth;
+            }
+            
+            slider.animate({
+                scrollleft: nearestItemScroll
+            }, 'medium');
+            
+            this.updateScroll();
         }
     }
 }
