@@ -1631,13 +1631,15 @@ var Slider = (function () {
 
         _classCallCheck(this, Slider);
 
+        this.handleSwipeStatus = this.swipeStatus.bind(this);
+
         var baseOptions = {
             enabledOpacity: 1,
             disabledOpacity: 0,
             allowSwipe: false,
             swipeOptions: {
                 triggerOnTouchEnd: true,
-                swipeStatus: this.swipeStatus,
+                swipeStatus: this.handleSwipeStatus,
                 allowPageScroll: "vertical",
                 threshold: 0
             }
