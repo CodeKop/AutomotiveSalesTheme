@@ -8,7 +8,7 @@ export default class Slider {
             allowSwipe: false,
             swipeOptions: {
                 triggerOnTouchEnd: true,
-                swipeStatus: this.swipeStatus
+                swipeStatus: this.swipeStatus,
                 allowPageScroll: "vertical",
                 threshold: 75
             }
