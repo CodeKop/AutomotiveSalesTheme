@@ -883,7 +883,7 @@ for (var i in _events2['default'].prototype) {
   var productMinitature = new _componentsProductMiniature2['default']();
   var productSelect = new _componentsProductSelect2['default']();
   var searchBar = new _componentsSearchBar2['default']();
-  var featuredSlider = new _componentsSlider2['default'](featuredSliderEl);
+  var featuredSlider = new _componentsSlider2['default'](featuredSliderEl, { allowSwipe: true });
   var brandSlider = new _componentsSlider2['default'](brandSliderEl, { disabledOpacity: 0.4 });
 
   dropDown.init();
@@ -1610,7 +1610,7 @@ module.exports = exports['default'];
 
 
 Object.defineProperty(exports, '__esModule', {
-	value: true
+    value: true
 });
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -1624,178 +1624,187 @@ var _jquery = __webpack_require__(0);
 var _jquery2 = _interopRequireDefault(_jquery);
 
 var Slider = (function () {
-	function Slider(el) {
-		var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+    function Slider(el) {
+        var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
-		_classCallCheck(this, Slider);
+        _classCallCheck(this, Slider);
 
-		var baseOptions = {
-			enabledOpacity: 1,
-			disabledOpacity: 0
-		};
+        var baseOptions = {
+            enabledOpacity: 1,
+            disabledOpacity: 0,
+            allowSwipe: false,
+            swipeOptions: {
+                triggerOnTouchEnd: true,
+                swipeStatus: swipeStatus,
+                allowPageScroll: "vertical",
+                threshold: 75
+            }
+        };
 
-		this.el = el;
-		this.options = _jquery2['default'].extend({}, baseOptions, options);
-	}
+        this.el = el;
+        this.options = _jquery2['default'].extend({}, baseOptions, options);
+    }
 
-	// $(document).ready(() => {
-	//     $('.featured-products .featured-control-left').click((e) => {
-	//         var productWidth = $('.featured-products .products .product-miniature').outerWidth(true);
+    // $(document).ready(() => {
+    //     $('.featured-products .featured-control-left').click((e) => {
+    //         var productWidth = $('.featured-products .products .product-miniature').outerWidth(true);
 
-	//         $('.featured-products .products').animate({
-	//             scrollLeft: '-=' + productWidth
-	//         }, 675, () => {
-	//             updateFeaturedScroll()
-	//         });
-	//     });
-	//     $('.featured-products .featured-control-right').click((e) => {
-	//         var productWidth = $('.featured-products .products .product-miniature').outerWidth(true);
+    //         $('.featured-products .products').animate({
+    //             scrollLeft: '-=' + productWidth
+    //         }, 675, () => {
+    //             updateFeaturedScroll()
+    //         });
+    //     });
+    //     $('.featured-products .featured-control-right').click((e) => {
+    //         var productWidth = $('.featured-products .products .product-miniature').outerWidth(true);
 
-	//         $('.featured-products .products').animate({
-	//             scrollLeft: '+=' + productWidth
-	//         }, 675, () => {
-	//             updateFeaturedScroll()
-	//         });
-	//     });
+    //         $('.featured-products .products').animate({
+    //             scrollLeft: '+=' + productWidth
+    //         }, 675, () => {
+    //             updateFeaturedScroll()
+    //         });
+    //     });
 
-	//     if (productMax <= productDisplayAmnt) {
-	//         featuredScrollLeft.fadeOut(0);
-	//         featuredScrollRight.fadeOut(0);
-	//     } else {
-	//         featuredScrollLeft.fadeIn(0);
-	//         featuredScrollRight.fadeIn(0);
-	//     }
-	//     updateFeaturedScroll();
-	// });
+    //     if (productMax <= productDisplayAmnt) {
+    //         featuredScrollLeft.fadeOut(0);
+    //         featuredScrollRight.fadeOut(0);
+    //     } else {
+    //         featuredScrollLeft.fadeIn(0);
+    //         featuredScrollRight.fadeIn(0);
+    //     }
+    //     updateFeaturedScroll();
+    // });
 
-	// function updateFeaturedScroll() {
-	//     var productMax = $('.featured-products .products').data('products'),
-	//         productWidth = $('.featured-products .products .product-miniature').outerWidth(true),
-	//         productDisplayAmnt = $('.featured-products .products').width() / productWidth,
-	//         productIndex = $('.featured-products .products').scrollLeft() / productWidth,
+    // function updateFeaturedScroll() {
+    //     var productMax = $('.featured-products .products').data('products'),
+    //         productWidth = $('.featured-products .products .product-miniature').outerWidth(true),
+    //         productDisplayAmnt = $('.featured-products .products').width() / productWidth,
+    //         productIndex = $('.featured-products .products').scrollLeft() / productWidth,
 
-	//         featuredScrollLeft = $('.featured-products .featured-control-left'),
-	//         featuredScrollRight = $('.featured-products .featured-control-right');
+    //         featuredScrollLeft = $('.featured-products .featured-control-left'),
+    //         featuredScrollRight = $('.featured-products .featured-control-right');
 
-	//     console.log(productIndex);
+    //     console.log(productIndex);
 
-	//     if (productIndex <= 0) {
-	//         featuredScrollLeft.fadeOut();
-	//     } else {
-	//         featuredScrollLeft.fadeIn();
-	//     }
+    //     if (productIndex <= 0) {
+    //         featuredScrollLeft.fadeOut();
+    //     } else {
+    //         featuredScrollLeft.fadeIn();
+    //     }
 
-	//     if (productIndex >= (productMax - productDisplayAmnt)) {
-	//         featuredScrollRight.fadeOut();
-	//     } else {
-	//         featuredScrollRight.fadeIn();
-	//     }
-	// }
+    //     if (productIndex >= (productMax - productDisplayAmnt)) {
+    //         featuredScrollRight.fadeOut();
+    //     } else {
+    //         featuredScrollRight.fadeIn();
+    //     }
+    // }
 
-	_createClass(Slider, [{
-		key: 'init',
-		value: function init() {
-			var _this = this;
+    _createClass(Slider, [{
+        key: 'init',
+        value: function init() {
+            var _this = this;
 
-			var slider = this.el.find('.slider'),
-			    itemsMax = this.el.find('.slider').data('products'),
-			    itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
-			    itemDispAmnt = Math.round(slider.width() / itemWidth),
-			    itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
-			    itemScrollRight = this.el.find('.slider-controls .slider-control-right');
+            var slider = this.el.find('.slider'),
+                itemsMax = this.el.find('.slider').data('products'),
+                itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
+                itemDispAmnt = Math.round(slider.width() / itemWidth),
+                itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
+                itemScrollRight = this.el.find('.slider-controls .slider-control-right');
 
-			this.el.find('.slider-controls .slider-control-left').click(function (e) {
-				var itemWidth = _this.el.find('.slider .slider-item').outerWidth(true);
+            slider.swipe(swipeOptions);
 
-				_this.el.find('.slider').stop(true, false).animate({
-					scrollLeft: '-=' + itemWidth
-				}, 675, function () {
-					_this.updateScroll();
-				});
-			});
-			itemScrollRight.click(function (e) {
-				var itemWidth = _this.el.find('.slider .slider-item').outerWidth(true);
+            this.el.find('.slider-controls .slider-control-left').click(function (e) {
+                var itemWidth = _this.el.find('.slider .slider-item').outerWidth(true);
 
-				_this.el.find('.slider').stop(true, false).animate({
-					scrollLeft: '+=' + itemWidth
-				}, 675, function () {
-					_this.updateScroll();
-				});
-			});
+                _this.el.find('.slider').stop(true, false).animate({
+                    scrollLeft: '-=' + itemWidth
+                }, 675, function () {
+                    _this.updateScroll();
+                });
+            });
+            itemScrollRight.click(function (e) {
+                var itemWidth = _this.el.find('.slider .slider-item').outerWidth(true);
 
-			this.el.find('.slider').scrollLeft(0);
+                _this.el.find('.slider').stop(true, false).animate({
+                    scrollLeft: '+=' + itemWidth
+                }, 675, function () {
+                    _this.updateScroll();
+                });
+            });
 
-			if (itemsMax <= itemDispAmnt) {
-				itemScrollLeft.animate({
-					opacity: this.options.disabledOpacity
-				}, 0);
-				itemScrollRight.animate({
-					opacity: this.options.disabledOpacity
-				}, 0);
-			} else {
-				// itemScrollLeft.css('visibility', 'visible');
-				// itemScrollLeft.animate({
-				// 	opacity: 1
-				// }, 0);
+            this.el.find('.slider').scrollLeft(0);
 
-				// itemScrollRight.css('visibility', 'visible');
-				// itemScrollRight.animate({
-				// 	opacity: 1
-				// }, 0);
-				itemScrollLeft.animate({
-					opacity: this.options.enabledOpacity
-				}, 0);
-				itemScrollRight.animate({
-					opacity: this.options.enabledOpacity
-				}, 0);
-			}
-			this.updateScroll();
-		}
-	}, {
-		key: 'updateScroll',
-		value: function updateScroll(itemWidth) {
-			var itemsMax = this.el.find('.slider').data('products'),
-			    itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
-			    itemDispAmnt = Math.round(this.el.find('.slider').width() / itemWidth),
-			    itemIndex = Math.round(this.el.find('.slider').scrollLeft() / itemWidth),
-			    itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
-			    itemScrollRight = this.el.find('.slider-controls .slider-control-right');
+            if (itemsMax <= itemDispAmnt) {
+                itemScrollLeft.animate({
+                    opacity: this.options.disabledOpacity
+                }, 0);
+                itemScrollRight.animate({
+                    opacity: this.options.disabledOpacity
+                }, 0);
+            } else {
+                // itemScrollLeft.css('visibility', 'visible');
+                // itemScrollLeft.animate({
+                // 	opacity: 1
+                // }, 0);
 
-			if (itemIndex <= 0) {
-				// itemScrollLeft.animate({
-				// 	opacity: 0
-				// }, 'medium', () => {
-				// 	var _this = itemScrollLeft;
-				// 	_this.css('visibility', 'hidden');
-				// });
-				itemScrollLeft.animate({
-					opacity: this.options.disabledOpacity
-				}, 'medium');
-				itemIndex = 0;
-			} else {
-				// itemScrollLeft.css('visibility', 'visible');
-				// itemScrollLeft.animate({
-				// 	opacity: 1
-				// }, 'medium');
-				itemScrollLeft.animate({
-					opacity: this.options.enabledOpacity
-				}, 'medium');
-			}
+                // itemScrollRight.css('visibility', 'visible');
+                // itemScrollRight.animate({
+                // 	opacity: 1
+                // }, 0);
+                itemScrollLeft.animate({
+                    opacity: this.options.enabledOpacity
+                }, 0);
+                itemScrollRight.animate({
+                    opacity: this.options.enabledOpacity
+                }, 0);
+            }
+            this.updateScroll();
+        }
+    }, {
+        key: 'updateScroll',
+        value: function updateScroll(itemWidth) {
+            var itemsMax = this.el.find('.slider').data('products'),
+                itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
+                itemDispAmnt = Math.round(this.el.find('.slider').width() / itemWidth),
+                itemIndex = Math.round(this.el.find('.slider').scrollLeft() / itemWidth),
+                itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
+                itemScrollRight = this.el.find('.slider-controls .slider-control-right');
 
-			if (itemIndex >= itemsMax - itemDispAmnt) {
-				itemScrollRight.animate({
-					opacity: this.options.disabledOpacity
-				}, 'medium');
-				itemIndex = itemsMax - itemDispAmnt;
-			} else {
-				itemScrollRight.animate({
-					opacity: this.options.enabledOpacity
-				}, 'medium');
-			}
-		}
-	}]);
+            if (itemIndex <= 0) {
+                // itemScrollLeft.animate({
+                // 	opacity: 0
+                // }, 'medium', () => {
+                // 	var _this = itemScrollLeft;
+                // 	_this.css('visibility', 'hidden');
+                // });
+                itemScrollLeft.animate({
+                    opacity: this.options.disabledOpacity
+                }, 'medium');
+                itemIndex = 0;
+            } else {
+                // itemScrollLeft.css('visibility', 'visible');
+                // itemScrollLeft.animate({
+                // 	opacity: 1
+                // }, 'medium');
+                itemScrollLeft.animate({
+                    opacity: this.options.enabledOpacity
+                }, 'medium');
+            }
 
-	return Slider;
+            if (itemIndex >= itemsMax - itemDispAmnt) {
+                itemScrollRight.animate({
+                    opacity: this.options.disabledOpacity
+                }, 'medium');
+                itemIndex = itemsMax - itemDispAmnt;
+            } else {
+                itemScrollRight.animate({
+                    opacity: this.options.enabledOpacity
+                }, 'medium');
+            }
+        }
+    }]);
+
+    return Slider;
 })();
 
 exports['default'] = Slider;
