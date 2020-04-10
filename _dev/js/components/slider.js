@@ -133,11 +133,11 @@ export default class Slider {
             
             if (direction === "left") {
                 slider.animate({
-                    scrollLeft: lastScrollLeft - distance
+                    scrollLeft: this.lastScrollLeft - distance
                 }, 'medium');
             } else if (direction === "right") {
                 slider.animate({
-                    scrollLeft: lastScrollLeft + distance
+                    scrollLeft: this.lastScrollLeft + distance
                 }, 'medium');
             }
         } else if (phase === "cancel") {
