@@ -7,11 +7,12 @@
         {if $product.cover}
           {assign var='coverImage' value=Product::getCover($product->id)}
           {assign var='coverImageId' value="{$product->id}-{$coverImage.id_image}"}
-          <a href="{$product.url}" class="thumbnail product-thumbnail card-img-top d-block">
+          <a href="{$product.url}" class="thumbnail product-thumbnail card-img-top d-block"     draggable="false">
             <img
               src="{$link->getImageLink($product.link_rewrite, $coverImageId)}"
               alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
               data-full-size-image-url="{$product.cover.large.url}"
+              draggable="false"
               />
           </a>
         {else}
