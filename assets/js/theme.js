@@ -1604,10 +1604,256 @@ module.exports = exports['default'];
 
 /***/ }),
 /* 15 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-throw new Error("Module build failed: SyntaxError: /home/randy/Documents/AutomotiveSalesTheme/_dev/js/components/slider.js: Unexpected token (12:16)\n\u001b[0m                triggerOnTouchEnd\u001b[1m:\u001b[22m \u001b[36mtrue\u001b[39m\u001b[1m,\u001b[22m\n                swipeStatus\u001b[1m:\u001b[22m \u001b[36mthis\u001b[39m\u001b[1m.\u001b[22mswipeStatus\n                allowPageScroll\u001b[1m:\u001b[22m \u001b[31m\"vertical\"\u001b[39m\u001b[1m,\u001b[22m\n                threshold\u001b[1m:\u001b[22m \u001b[35m75\u001b[39m\n            \u001b[32m}\u001b[39m\n        \u001b[32m}\u001b[39m\u001b[1m;\u001b[22m\u001b[0m\n    at Parser.pp.raise (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/location.js:24:13)\n    at Parser.pp.unexpected (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/util.js:82:8)\n    at Parser.pp.expect (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/util.js:76:33)\n    at Parser.pp.parseObj (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:596:12)\n    at Parser.pp.parseExprAtom (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:392:19)\n    at Parser.parseExprAtom (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/jsx/index.js:412:22)\n    at Parser.pp.parseExprSubscripts (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:236:19)\n    at Parser.pp.parseMaybeUnary (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:217:19)\n    at Parser.pp.parseExprOps (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:163:19)\n    at Parser.pp.parseMaybeConditional (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:145:19)\n    at Parser.pp.parseMaybeAssign (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:112:19)\n    at Parser.pp.parseObjPropValue (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:652:99)\n    at Parser.parseObjPropValue (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/flow.js:891:13)\n    at Parser.pp.parseObj (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:640:10)\n    at Parser.pp.parseExprAtom (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:392:19)\n    at Parser.parseExprAtom (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/jsx/index.js:412:22)\n    at Parser.pp.parseExprSubscripts (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:236:19)\n    at Parser.pp.parseMaybeUnary (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:217:19)\n    at Parser.pp.parseExprOps (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:163:19)\n    at Parser.pp.parseMaybeConditional (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:145:19)\n    at Parser.pp.parseMaybeAssign (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:112:19)\n    at Parser.pp.parseVar (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:493:24)\n    at Parser.pp.parseVarStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:370:8)\n    at Parser.pp.parseStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:99:19)\n    at Parser.parseStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/flow.js:655:22)\n    at Parser.pp.parseBlock (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:442:21)\n    at Parser.pp.parseFunctionBody (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:747:22)\n    at Parser.parseFunctionBody (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/flow.js:643:20)\n    at Parser.pp.parseMethod (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:717:8)\n    at Parser.parseClassMethod (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/flow.js:852:27)");
+
+
+Object.defineProperty(exports, '__esModule', {
+    value: true
+});
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var Slider = (function () {
+    function Slider(el) {
+        var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+        _classCallCheck(this, Slider);
+
+        var baseOptions = {
+            enabledOpacity: 1,
+            disabledOpacity: 0,
+            allowSwipe: false,
+            swipeOptions: {
+                triggerOnTouchEnd: true,
+                swipeStatus: this.swipeStatus,
+                allowPageScroll: "vertical",
+                threshold: 75
+            }
+        };
+
+        this.el = el;
+        this.lastScrollLeft = 0;
+        this.options = _jquery2['default'].extend({}, baseOptions, options);
+    }
+
+    // $(document).ready(() => {
+    //     $('.featured-products .featured-control-left').click((e) => {
+    //         var productWidth = $('.featured-products .products .product-miniature').outerWidth(true);
+
+    //         $('.featured-products .products').animate({
+    //             scrollLeft: '-=' + productWidth
+    //         }, 675, () => {
+    //             updateFeaturedScroll()
+    //         });
+    //     });
+    //     $('.featured-products .featured-control-right').click((e) => {
+    //         var productWidth = $('.featured-products .products .product-miniature').outerWidth(true);
+
+    //         $('.featured-products .products').animate({
+    //             scrollLeft: '+=' + productWidth
+    //         }, 675, () => {
+    //             updateFeaturedScroll()
+    //         });
+    //     });
+
+    //     if (productMax <= productDisplayAmnt) {
+    //         featuredScrollLeft.fadeOut(0);
+    //         featuredScrollRight.fadeOut(0);
+    //     } else {
+    //         featuredScrollLeft.fadeIn(0);
+    //         featuredScrollRight.fadeIn(0);
+    //     }
+    //     updateFeaturedScroll();
+    // });
+
+    // function updateFeaturedScroll() {
+    //     var productMax = $('.featured-products .products').data('products'),
+    //         productWidth = $('.featured-products .products .product-miniature').outerWidth(true),
+    //         productDisplayAmnt = $('.featured-products .products').width() / productWidth,
+    //         productIndex = $('.featured-products .products').scrollLeft() / productWidth,
+
+    //         featuredScrollLeft = $('.featured-products .featured-control-left'),
+    //         featuredScrollRight = $('.featured-products .featured-control-right');
+
+    //     console.log(productIndex);
+
+    //     if (productIndex <= 0) {
+    //         featuredScrollLeft.fadeOut();
+    //     } else {
+    //         featuredScrollLeft.fadeIn();
+    //     }
+
+    //     if (productIndex >= (productMax - productDisplayAmnt)) {
+    //         featuredScrollRight.fadeOut();
+    //     } else {
+    //         featuredScrollRight.fadeIn();
+    //     }
+    // }
+
+    _createClass(Slider, [{
+        key: 'init',
+        value: function init() {
+            var _this = this;
+
+            var slider = this.el.find('.slider'),
+                itemsMax = this.el.find('.slider').data('products'),
+                itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
+                itemDispAmnt = Math.round(slider.width() / itemWidth),
+                itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
+                itemScrollRight = this.el.find('.slider-controls .slider-control-right');
+
+            if (this.options.allowSwipe) {
+                slider.swipe(swipeOptions);
+            }
+
+            this.el.find('.slider-controls .slider-control-left').click(function (e) {
+                var itemWidth = _this.el.find('.slider .slider-item').outerWidth(true);
+
+                _this.el.find('.slider').stop(true, false).animate({
+                    scrollLeft: '-=' + itemWidth
+                }, 675, function () {
+                    _this.updateScroll();
+                });
+            });
+            itemScrollRight.click(function (e) {
+                var itemWidth = _this.el.find('.slider .slider-item').outerWidth(true);
+
+                _this.el.find('.slider').stop(true, false).animate({
+                    scrollLeft: '+=' + itemWidth
+                }, 675, function () {
+                    _this.updateScroll();
+                });
+            });
+
+            this.el.find('.slider').scrollLeft(0);
+
+            if (itemsMax <= itemDispAmnt) {
+                itemScrollLeft.animate({
+                    opacity: this.options.disabledOpacity
+                }, 0);
+                itemScrollRight.animate({
+                    opacity: this.options.disabledOpacity
+                }, 0);
+            } else {
+                // itemScrollLeft.css('visibility', 'visible');
+                // itemScrollLeft.animate({
+                // 	opacity: 1
+                // }, 0);
+
+                // itemScrollRight.css('visibility', 'visible');
+                // itemScrollRight.animate({
+                // 	opacity: 1
+                // }, 0);
+                itemScrollLeft.animate({
+                    opacity: this.options.enabledOpacity
+                }, 0);
+                itemScrollRight.animate({
+                    opacity: this.options.enabledOpacity
+                }, 0);
+            }
+            this.updateScroll();
+        }
+    }, {
+        key: 'updateScroll',
+        value: function updateScroll() {
+            var itemsMax = this.el.find('.slider').data('products'),
+                itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
+                itemDispAmnt = Math.round(this.el.find('.slider').width() / itemWidth),
+                itemIndex = Math.round(this.el.find('.slider').scrollLeft() / itemWidth),
+                itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
+                itemScrollRight = this.el.find('.slider-controls .slider-control-right');
+
+            if (itemIndex <= 0) {
+                // itemScrollLeft.animate({
+                // 	opacity: 0
+                // }, 'medium', () => {
+                // 	var _this = itemScrollLeft;
+                // 	_this.css('visibility', 'hidden');
+                // });
+                itemScrollLeft.animate({
+                    opacity: this.options.disabledOpacity
+                }, 'medium');
+                itemIndex = 0;
+            } else {
+                // itemScrollLeft.css('visibility', 'visible');
+                // itemScrollLeft.animate({
+                // 	opacity: 1
+                // }, 'medium');
+                itemScrollLeft.animate({
+                    opacity: this.options.enabledOpacity
+                }, 'medium');
+            }
+
+            if (itemIndex >= itemsMax - itemDispAmnt) {
+                itemScrollRight.animate({
+                    opacity: this.options.disabledOpacity
+                }, 'medium');
+                itemIndex = itemsMax - itemDispAmnt;
+            } else {
+                itemScrollRight.animate({
+                    opacity: this.options.enabledOpacity
+                }, 'medium');
+            }
+
+            this.lastScrollLeft = this.el.find('.slider').scrollLeft();
+        }
+    }, {
+        key: 'swipeStatus',
+        value: function swipeStatus(event, phase, direction, distance) {
+            var slider = this.el.find('.slider');
+
+            if (phase === "move" && (direction === "left" || direction === "right")) {
+                var duration = 0;
+
+                if (direction === "left") {
+                    slider.animate({
+                        scrollLeft: "-=" + distance
+                    }, 'medium');
+                } else if (direction === "right") {
+                    slider.animate({
+                        scrollLeft: "+=" + distance
+                    }, 'medium');
+                }
+            } else if (phase === "cancel") {
+                slider.animate({
+                    scrollLeft: this.lastScrollLeft
+                }, 'medium');
+            } else if (phase === "end") {
+                var nearestItemScroll = slider.scrollLeft,
+                    itemWidth = slider.children('.slider-tem').outerWidth(true),
+                    round = nearestItemScroll % itemWidth,
+                    multiplier = Math.floor(nearestItemScroll / itemWidth);
+
+                if (mod >= 5) {
+                    nearestItemScroll = (multiplier + 1) * itemWidth;
+                } else {
+                    nearestItemScroll = multiplier * itemWidth;
+                }
+
+                slider.animate({
+                    scrollleft: nearestItemScroll
+                }, 'medium');
+
+                this.updateScroll();
+            }
+        }
+    }]);
+
+    return Slider;
+})();
+
+exports['default'] = Slider;
+module.exports = exports['default'];
 
 /***/ }),
 /* 16 */
