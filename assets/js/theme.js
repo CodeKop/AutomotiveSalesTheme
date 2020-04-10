@@ -1639,7 +1639,7 @@ var Slider = (function () {
                 triggerOnTouchEnd: true,
                 swipeStatus: this.swipeStatus,
                 allowPageScroll: "vertical",
-                threshold: 75
+                threshold: 0
             }
         };
 
@@ -1715,7 +1715,7 @@ var Slider = (function () {
                 itemScrollRight = this.el.find('.slider-controls .slider-control-right');
 
             if (this.options.allowSwipe) {
-                slider.swipe(this.swipeOptions);
+                slider.swipe(this.options.swipeOptions);
             }
 
             this.el.find('.slider-controls .slider-control-left').click(function (e) {
