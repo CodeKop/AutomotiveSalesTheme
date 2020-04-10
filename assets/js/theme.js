@@ -1825,7 +1825,7 @@ var Slider = (function () {
                     }, 'medium');
                 } else if (direction === "right") {
                     slider.animate({
-                        scrollLeft: lastScrollLeft - distance
+                        scrollLeft: lastScrollLeft + distance
                     }, 'medium');
                 }
             } else if (phase === "cancel") {
