@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'jquery-touchswipe';
 
 export default class Slider {
     constructor(el, options = {}) {
@@ -123,6 +124,7 @@ export default class Slider {
         this.lastScrollLeft = this.el.find('.slider').scrollLeft();
     }
     swipeStatus(event, phase, direction, distance) {
+        console.log(phase);
         var slider = this.el.find('.slider');
         
         if (phase === "move" && (direction === "left" || direction === "right")) {
