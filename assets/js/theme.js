@@ -1623,6 +1623,8 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+__webpack_require__(27);
+
 var Slider = (function () {
     function Slider(el) {
         var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
