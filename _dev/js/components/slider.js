@@ -27,7 +27,9 @@ export default class Slider {
             itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
             itemScrollRight = this.el.find('.slider-controls .slider-control-right');
         
-        slider.swipe(swipeOptions);
+        if (this.options.allowSwipe) {
+            console.log(slider.swipe(swipeOptions));
+        }
             
         this.el.find('.slider-controls .slider-control-left').click((e) => {
             var itemWidth = this.el.find('.slider .slider-item').outerWidth(true);
