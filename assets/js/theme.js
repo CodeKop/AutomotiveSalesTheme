@@ -1711,7 +1711,9 @@ var Slider = (function () {
                 itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
                 itemScrollRight = this.el.find('.slider-controls .slider-control-right');
 
-            slider.swipe(swipeOptions);
+            if (this.options.allowSwipe) {
+                console.log(slider.swipe(swipeOptions));
+            }
 
             this.el.find('.slider-controls .slider-control-left').click(function (e) {
                 var itemWidth = _this.el.find('.slider .slider-item').outerWidth(true);
