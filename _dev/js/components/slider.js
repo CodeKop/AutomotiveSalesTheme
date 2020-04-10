@@ -11,7 +11,7 @@ export default class Slider {
                 triggerOnTouchEnd: true,
                 swipeStatus: this.swipeStatus,
                 allowPageScroll: "vertical",
-                threshold: 75
+                threshold: 0
             }
         };
         
@@ -30,7 +30,7 @@ export default class Slider {
         itemScrollRight = this.el.find('.slider-controls .slider-control-right');
         
         if (this.options.allowSwipe) {
-            slider.swipe(this.swipeOptions);
+            slider.swipe(this.options.swipeOptions);
         }
         
         this.el.find('.slider-controls .slider-control-left').click((e) => {
