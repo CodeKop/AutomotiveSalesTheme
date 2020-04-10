@@ -10,7 +10,7 @@ export default class Slider {
             disabledOpacity: 0,
             allowSwipe: false,
             swipeOptions: {
-                triggerOnTouchEnd: true,
+                triggerOnTouchEnd: false,
                 swipeStatus: this.handleSwipeStatus,
                 allowPageScroll: "vertical",
                 threshold: 0
@@ -126,7 +126,6 @@ export default class Slider {
         this.lastScrollLeft = this.el.find('.slider').scrollLeft();
     }
     swipeStatus(event, phase, direction, distance) {
-        console.log(phase);
         var slider = this.el.find('.slider');
         
         if (phase === "move" && (direction === "left" || direction === "right")) {
@@ -151,7 +150,7 @@ export default class Slider {
             round = nearestItemScroll % itemWidth,
             multiplier =  Math.floor(nearestItemScroll / itemWidth);
             
-            if (mod >= 5) {
+            if (round >= 5) {
                 nearestItemScroll = (multiplier + 1) * itemWidth;
             } else {
                 nearestItemScroll = multiplier * itemWidth;
