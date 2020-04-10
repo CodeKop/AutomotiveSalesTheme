@@ -1713,7 +1713,7 @@ var Slider = (function () {
                 itemScrollRight = this.el.find('.slider-controls .slider-control-right');
 
             if (this.options.allowSwipe) {
-                slider.swipe(swipeOptions);
+                slider.swipe(this.swipeOptions);
             }
 
             this.el.find('.slider-controls .slider-control-left').click(function (e) {
