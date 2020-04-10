@@ -126,11 +126,10 @@ export default class Slider {
         this.lastScrollLeft = this.el.find('.slider').scrollLeft();
     }
     swipeStatus(event, phase, direction, distance) {
+        console.log(phase);
         var slider = this.el.find('.slider');
         
         if (phase === "move" && (direction === "left" || direction === "right")) {
-            var duration = 0;
-            
             if (direction === "left") {
                 slider.animate({
                     scrollLeft: this.lastScrollLeft - distance
