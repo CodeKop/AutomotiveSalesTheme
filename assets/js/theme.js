@@ -2095,10 +2095,10 @@ var Slider = (function () {
     }, {
         key: 'onSwipeStatus',
         value: function onSwipeStatus(event, phase, direction, distance) {
-            console.log("Swipe Triggered");
             var slider = this.el.find('.slider');
 
             if (phase === "move" && (direction === "left" || direction === "right")) {
+                console.log("Swipe Triggered");
                 if (direction === "left") {
                     slider.animate({
                         scrollLeft: this.lastScrollLeft - distance
