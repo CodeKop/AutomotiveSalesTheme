@@ -1922,7 +1922,6 @@ var Slider = (function () {
             swipeOptions: {
                 triggerOnTouchEnd: true,
                 swipeStatus: this.handleSwipe,
-                tap: this.handleTap,
                 allowPageScroll: "vertical",
                 threshold: 150
             }
@@ -1950,7 +1949,7 @@ var Slider = (function () {
             }
 
             slider.find('.product-thumbnail').click(function (e) {
-                if (!(0, _jquery2['default'])(e.target).is((0, _jquery2['default'])(e.currentTarget))) {
+                if (!_this.isMoving) {
                     e.preventDefault();
                 }
             });
@@ -2052,19 +2051,18 @@ var Slider = (function () {
             var slider = this.el.find('.slider');
 
             if (phase === "move" && (direction === "left" || direction === "right")) {
+                this.isMoving = true;
                 if (direction === "left") {
                     slider.scrollLeft(this.lastScrollLeft + distance);
                 } else if (direction === "right") {
                     slider.scrollLeft(this.lastScrollLeft - distance);
                 }
             } else if (phase === "cancel") {
-                console.log("Swipe cancelled");
                 slider.animate({
                     scrollLeft: this.lastScrollLeft
                 }, 'fast');
+                this.isMoving = false;
             } else if (phase === "end") {
-                console.log(event);
-
                 var nearestItemScroll = slider.scrollLeft,
                     itemWidth = slider.children('.slider-tem').outerWidth(true),
                     round = nearestItemScroll % itemWidth,
@@ -2081,25 +2079,8 @@ var Slider = (function () {
                 }, 'fast');
 
                 this.updateScroll();
+                this.isMoving = false;
             }
-        }
-    }, {
-        key: 'onTap',
-        value: function onTap(event, target) {
-            console.log(target);
-            var slider = this.el.find('.slider'),
-                slider_items = slider.find('.slider-item'),
-                item_anchor = undefined;
-
-            if ((0, _jquery2['default'])(target).is(slider_items)) {
-                item_anchor = $target.find('.product-thumbnail');
-            } else if (slider_items.find((0, _jquery2['default'])(target))) {
-                item_anchor = (0, _jquery2['default'])(target).parents(slider_items).find('.product-thumbnail');
-            } else {
-                item_anchor = null;
-            }
-
-            item_anchor.click();
         }
     }]);
 
