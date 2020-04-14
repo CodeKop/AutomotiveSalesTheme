@@ -1920,7 +1920,7 @@ var Slider = (function () {
             disabledOpacity: 0,
             allowSwipe: false,
             swipeOptions: {
-                triggerOnTouchEnd: true,
+                triggerOnTouchEnd: false,
                 swipeStatus: this.handleSwipe,
                 allowPageScroll: "vertical",
                 threshold: 150
@@ -1947,12 +1947,6 @@ var Slider = (function () {
             if (this.options.allowSwipe) {
                 slider.swipe(this.options.swipeOptions);
             }
-
-            slider.find('.product-thumbnail').click(function (e) {
-                if (_this.isMoving) {
-                    e.preventDefault();
-                }
-            });
 
             this.el.find('.slider-controls .slider-control-left').click(function (e) {
                 var itemWidth = _this.el.find('.slider .slider-item').outerWidth(true);
@@ -2051,7 +2045,6 @@ var Slider = (function () {
             var slider = this.el.find('.slider');
 
             if (phase === "move" && (direction === "left" || direction === "right")) {
-                this.isMoving = true;
                 if (direction === "left") {
                     slider.scrollLeft(this.lastScrollLeft + distance);
                 } else if (direction === "right") {
@@ -2061,7 +2054,6 @@ var Slider = (function () {
                 slider.animate({
                     scrollLeft: this.lastScrollLeft
                 }, 'fast');
-                this.isMoving = false;
             } else if (phase === "end") {
                 var nearestItemScroll = slider.scrollLeft,
                     itemWidth = slider.children('.slider-tem').outerWidth(true),
@@ -2079,7 +2071,6 @@ var Slider = (function () {
                 }, 'fast');
 
                 this.updateScroll();
-                this.isMoving = false;
             }
         }
     }]);
