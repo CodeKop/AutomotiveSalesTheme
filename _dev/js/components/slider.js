@@ -142,23 +142,7 @@ export default class Slider {
 
             $(e.target).one("click", (e) => e.preventDefault());
         } else if (phase === "end") {
-            var nearestItemScroll = slider.scrollLeft,
-                itemWidth = slider.children('.slider-tem').outerWidth(true),
-                round = nearestItemScroll % itemWidth,
-                multiplier = Math.floor(nearestItemScroll / itemWidth);
-
-            if (round >= 5) {
-                nearestItemScroll = (multiplier + 1) * itemWidth;
-            } else {
-                nearestItemScroll = multiplier * itemWidth;
-            }
-
             $(e.target).one("click", (e) => e.preventDefault());
-
-            slider.animate({
-                scrollleft: nearestItemScroll
-            }, 'fast');
-
             this.updateScroll();
         }        
     }
