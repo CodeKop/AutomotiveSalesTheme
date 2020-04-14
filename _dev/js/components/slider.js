@@ -3,7 +3,7 @@ import 'jquery-touchswipe';
 
 export default class Slider {
     constructor(el, options = {}) {
-        this.handleSwipe = this.swipe.bind(this);
+        this.handleSwipe = this.onSwipeStatus.bind(this);
         
         let baseOptions = {
             enabledOpacity: 1,
@@ -13,7 +13,7 @@ export default class Slider {
                 triggerOnTouchEnd: false,
                 triggerOnTouchLeave: false,
                 fallbackToMouseEvents: true,
-                swipe: this.handleSwipe,
+                swipeStatus: this.handleSwipe,
                 allowPageScroll: "vertical",
                 threshold: 75,
                 maxTimeThreshold: null,
@@ -129,8 +129,8 @@ export default class Slider {
         
         this.lastScrollLeft = this.el.find('.slider').scrollLeft();
     }
-    swipe(event, phase, direction, distance) {
-        console.log("Swipe Triggere");
+    onSwipeStatus(event, phase, direction, distance) {
+        console.log("Swipe Triggered");
         var slider = this.el.find('.slider');
         
         if (phase === "move" && (direction === "left" || direction === "right")) {
