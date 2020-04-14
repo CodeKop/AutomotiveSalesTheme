@@ -1,5 +1,5 @@
 {block name='product_miniature_item'}
-<div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="col-md-4 col-sm-3 col-12 p-0 slider-item">
+<div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="col-md-4 col-sm-3 col-12 p-md-0 slider-item">
   <meta itemprop="position" content="{$position}" />
   <article class="product-miniature js-product-miniature card my-md-4 mx-md-2 m-2" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemprop="item" itemscope itemtype="http://schema.org/Product">
     <div class="thumbnail-container">
