@@ -2087,6 +2087,7 @@ var Slider = (function () {
     }, {
         key: 'onTap',
         value: function onTap(event, target) {
+            console.log("tappoed");
             var slider = this.el.find('.slider'),
                 slider_items = slider.find('.slider-item'),
                 item_anchor = undefined;
