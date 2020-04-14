@@ -2002,8 +2002,10 @@ var Slider = (function () {
                 slider.swipe(this.options.swipeOptions);
             }
 
-            slider.find('.product-thumbnail > img').on('pointerUp', function (e) {
-                e.stopPropagation();
+            slider.find('.product-thumbnail').click(function (e) {
+                if ((0, _jquery2['default'])(e.target).is((0, _jquery2['default'])(e.currentTarget).children("img"))) {
+                    e.stopPropagation();
+                }
             });
 
             this.el.find('.slider-controls .slider-control-left').click(function (e) {
