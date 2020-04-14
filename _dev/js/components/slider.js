@@ -136,10 +136,13 @@ export default class Slider {
                 slider.scrollLeft(this.lastScrollLeft - distance);
             }
         } else if (phase === "cancel") {
+            console.log("Swipe cancelled");
             slider.animate({
                 scrollLeft: this.lastScrollLeft
             }, 'fast');
         } else if (phase === "end") {
+            console.log(event);
+
             var nearestItemScroll = slider.scrollLeft,
             itemWidth = slider.children('.slider-tem').outerWidth(true),
             round = nearestItemScroll % itemWidth,
