@@ -2002,6 +2002,10 @@ var Slider = (function () {
                 slider.swipe(this.options.swipeOptions);
             }
 
+            slider.find('.product-thumbnail > img').on('pointerUp', function (e) {
+                e.stopPropagation();
+            });
+
             this.el.find('.slider-controls .slider-control-left').click(function (e) {
                 var itemWidth = _this.el.find('.slider .slider-item').outerWidth(true);
 
