@@ -16,7 +16,6 @@ export default class Slider {
                 tap: this.handleTap,
                 allowPageScroll: "vertical",
                 threshold: 75,
-                cancelThreshold: 10,
             },
         };
 
@@ -170,6 +169,7 @@ export default class Slider {
         }
     }
     onTap(event, target) {
+        console.log("Tap Initiated");
         let slider = this.el.find('.slider'),
             slider_item = slider.find('.slider-item'),
             item_anchor;
