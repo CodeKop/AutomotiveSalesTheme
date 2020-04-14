@@ -4,7 +4,7 @@ import 'jquery-touchswipe';
 export default class Slider {
     constructor(el, options = {}) {
         this.handleSwipe = this.onSwipeStatus.bind(this);
-        
+
         let baseOptions = {
             enabledOpacity: 1,
             disabledOpacity: 0,
@@ -14,31 +14,37 @@ export default class Slider {
                 swipeStatus: this.handleSwipe,
                 allowPageScroll: "vertical",
                 threshold: 75,
-                maxTimeThreshold: 1000
+                cancelThreshold: 10,
             },
         };
-        
+
         this.el = el;
         this.lastScrollLeft = 0;
         this.options = $.extend({}, baseOptions, options);
     }
     init() {
         var slider = this.el.find('.slider'),
-        
-        itemsMax = this.el.find('.slider').data('products'),
-        itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
-        itemDispAmnt = Math.round(slider.width() / itemWidth),
-        
-        itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
-        itemScrollRight = this.el.find('.slider-controls .slider-control-right');
-        
+
+            itemsMax = this.el.find('.slider').data('products'),
+            itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
+            itemDispAmnt = Math.round(slider.width() / itemWidth),
+
+            itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
+            itemScrollRight = this.el.find('.slider-controls .slider-control-right');
+
         if (this.options.allowSwipe) {
             slider.swipe(this.options.swipeOptions);
         }
-        
+
+        slider.find('.product-thumbnail').click((e) => {
+            if ($(e.target).is($(e.currentTarget).children("img"))) {
+                e.preventDefault();
+            }
+        });
+
         this.el.find('.slider-controls .slider-control-left').click((e) => {
             var itemWidth = this.el.find('.slider .slider-item').outerWidth(true);
-            
+
             this.el.find('.slider').stop(true, false).animate({
                 scrollLeft: '-=' + itemWidth
             }, 675, () => {
@@ -47,16 +53,16 @@ export default class Slider {
         });
         itemScrollRight.click((e) => {
             var itemWidth = this.el.find('.slider .slider-item').outerWidth(true);
-            
+
             this.el.find('.slider').stop(true, false).animate({
                 scrollLeft: '+=' + itemWidth
             }, 675, () => {
                 this.updateScroll()
             });
         });
-        
+
         this.el.find('.slider').scrollLeft(0);
-        
+
         if (itemsMax <= itemDispAmnt) {
             itemScrollLeft.animate({
                 opacity: this.options.disabledOpacity
@@ -69,7 +75,7 @@ export default class Slider {
             // itemScrollLeft.animate({
             // 	opacity: 1
             // }, 0);
-            
+
             // itemScrollRight.css('visibility', 'visible');
             // itemScrollRight.animate({
             // 	opacity: 1
@@ -85,13 +91,13 @@ export default class Slider {
     }
     updateScroll() {
         var itemsMax = this.el.find('.slider').data('products'),
-        itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
-        itemDispAmnt = Math.round(this.el.find('.slider').width() / itemWidth),
-        itemIndex = Math.round(this.el.find('.slider').scrollLeft() / itemWidth),
-        
-        itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
-        itemScrollRight = this.el.find('.slider-controls .slider-control-right');
-        
+            itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
+            itemDispAmnt = Math.round(this.el.find('.slider').width() / itemWidth),
+            itemIndex = Math.round(this.el.find('.slider').scrollLeft() / itemWidth),
+
+            itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
+            itemScrollRight = this.el.find('.slider-controls .slider-control-right');
+
         if (itemIndex <= 0) {
             // itemScrollLeft.animate({
             // 	opacity: 0
@@ -112,7 +118,7 @@ export default class Slider {
                 opacity: this.options.enabledOpacity
             }, 'medium');
         }
-        
+
         if (itemIndex >= (itemsMax - itemDispAmnt)) {
             itemScrollRight.animate({
                 opacity: this.options.disabledOpacity
@@ -123,13 +129,13 @@ export default class Slider {
                 opacity: this.options.enabledOpacity
             }, 'medium');
         }
-        
+
         this.lastScrollLeft = this.el.find('.slider').scrollLeft();
     }
     onSwipeStatus(event, phase, direction, distance) {
         console.log(phase);
         var slider = this.el.find('.slider');
-        
+
         if (phase === "move" && (direction === "left" || direction === "right")) {
             if (direction === "left") {
                 slider.scrollLeft(this.lastScrollLeft + distance);
@@ -145,20 +151,20 @@ export default class Slider {
             console.log(event);
 
             var nearestItemScroll = slider.scrollLeft,
-            itemWidth = slider.children('.slider-tem').outerWidth(true),
-            round = nearestItemScroll % itemWidth,
-            multiplier =  Math.floor(nearestItemScroll / itemWidth);
-            
+                itemWidth = slider.children('.slider-tem').outerWidth(true),
+                round = nearestItemScroll % itemWidth,
+                multiplier = Math.floor(nearestItemScroll / itemWidth);
+
             if (round >= 5) {
                 nearestItemScroll = (multiplier + 1) * itemWidth;
             } else {
                 nearestItemScroll = multiplier * itemWidth;
             }
-            
+
             slider.animate({
                 scrollleft: nearestItemScroll
             }, 'fast');
-            
+
             this.updateScroll();
         }
     }
