@@ -2095,6 +2095,8 @@ var Slider = (function () {
                 item_anchor = $target.find('.product-thumbnail');
             } else if (slider_items.find((0, _jquery2['default'])(target))) {
                 item_anchor = (0, _jquery2['default'])(target).parents(slider_items).find('.product-thumbnail');
+            } else {
+                item_anchor = null;
             }
 
             item_anchor.click();
