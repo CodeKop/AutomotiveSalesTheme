@@ -1924,7 +1924,7 @@ var Slider = (function () {
                 swipeStatus: this.handleSwipe,
                 tap: this.handleTap,
                 allowPageScroll: "vertical",
-                threshold: 75
+                threshold: 150
             }
         };
 
@@ -2086,7 +2086,7 @@ var Slider = (function () {
     }, {
         key: 'onTap',
         value: function onTap(event, target) {
-            console.log("tappoed");
+            console.log(target);
             var slider = this.el.find('.slider'),
                 slider_items = slider.find('.slider-item'),
                 item_anchor = undefined;
@@ -2098,7 +2098,6 @@ var Slider = (function () {
             }
 
             item_anchor.click();
-            console.log("[ANCHOR]: " + item_anchor);
         }
     }]);
 
