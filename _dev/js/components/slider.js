@@ -3,7 +3,7 @@ import 'jquery-touchswipe';
 
 export default class Slider {
     constructor(el, options = {}) {
-        this.handleSwipeStatus = this.swipeStatus.bind(this);
+        this.handleSwipe = this.swipe.bind(this);
         
         let baseOptions = {
             enabledOpacity: 1,
@@ -11,10 +11,14 @@ export default class Slider {
             allowSwipe: false,
             swipeOptions: {
                 triggerOnTouchEnd: false,
-                swipeStatus: this.handleSwipeStatus,
+                triggerOnTouchLeave: false,
+                fallbackToMouseEvents: true,
+                swipe: this.handleSwipe,
                 allowPageScroll: "vertical",
-                threshold: 0
-            }
+                threshold: 1000,
+                maxTimeThreshold: null,
+                fingers: 'all'
+            },
         };
         
         this.el = el;
@@ -125,24 +129,24 @@ export default class Slider {
         
         this.lastScrollLeft = this.el.find('.slider').scrollLeft();
     }
-    swipeStatus(event, phase, direction, distance) {
-        console.log(phase);
+    swipe(event, phase, direction, distance) {
+        console.log("Swipe Triggere");
         var slider = this.el.find('.slider');
         
         if (phase === "move" && (direction === "left" || direction === "right")) {
             if (direction === "left") {
                 slider.animate({
                     scrollLeft: this.lastScrollLeft - distance
-                }, 'medium');
+                }, 'fast');
             } else if (direction === "right") {
                 slider.animate({
                     scrollLeft: this.lastScrollLeft + distance
-                }, 'medium');
+                }, 'fast');
             }
         } else if (phase === "cancel") {
             slider.animate({
                 scrollLeft: this.lastScrollLeft
-            }, 'medium');
+            }, 'fast');
         } else if (phase === "end") {
             var nearestItemScroll = slider.scrollLeft,
             itemWidth = slider.children('.slider-tem').outerWidth(true),
@@ -157,7 +161,7 @@ export default class Slider {
             
             slider.animate({
                 scrollleft: nearestItemScroll
-            }, 'medium');
+            }, 'fast');
             
             this.updateScroll();
         }
