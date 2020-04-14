@@ -4,7 +4,7 @@ import 'jquery-touchswipe';
 export default class Slider {
     constructor(el, options = {}) {
         this.handleSwipe = this.onSwipeStatus.bind(this);
-        this.handleTap = this.onTap.bind(this);
+        // this.handleTap = this.onTap.bind(this);
 
         let baseOptions = {
             enabledOpacity: 1,
