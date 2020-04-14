@@ -170,6 +170,7 @@ export default class Slider {
         }
     }
     onTap(event, target) {
+        console.log("tappoed");
         let slider = this.el.find('.slider'),
             slider_items = slider.find('.slider-item'),
             item_anchor;
