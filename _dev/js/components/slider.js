@@ -13,7 +13,8 @@ export default class Slider {
                 triggerOnTouchEnd: true,
                 swipeStatus: this.handleSwipe,
                 allowPageScroll: "vertical",
-                threshold: 75
+                threshold: 75,
+                maxTimeThreshold: 1000
             },
         };
         
@@ -129,17 +130,10 @@ export default class Slider {
         var slider = this.el.find('.slider');
         
         if (phase === "move" && (direction === "left" || direction === "right")) {
-            // console.log("Swipe Triggered");
             if (direction === "left") {
                 slider.scrollLeft(this.lastScrollLeft + distance);
-                // slider.animate({
-                //     scrollLeft: this.lastScrollLeft - distance
-                // }, 'fast');
             } else if (direction === "right") {
                 slider.scrollLeft(this.lastScrollLeft - distance);
-                // slider.animate({
-                //     scrollLeft: this.lastScrollLeft + distance
-                // }, 'fast');
             }
         } else if (phase === "cancel") {
             slider.animate({
