@@ -2004,7 +2004,7 @@ var Slider = (function () {
 
             slider.find('.product-thumbnail').click(function (e) {
                 if ((0, _jquery2['default'])(e.target).is((0, _jquery2['default'])(e.currentTarget).children("img"))) {
-                    e.stopPropagation();
+                    e.preventDefault();
                 }
             });
 
