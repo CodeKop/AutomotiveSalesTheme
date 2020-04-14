@@ -1923,8 +1923,7 @@ var Slider = (function () {
                 swipeStatus: this.handleSwipe,
                 allowPageScroll: "vertical",
                 threshold: 75,
-                maxTimeThreshold: 1000,
-                excludedElements: "label, button, input, select, textarea, .noSwipe"
+                maxTimeThreshold: 10
             }
         };
 
