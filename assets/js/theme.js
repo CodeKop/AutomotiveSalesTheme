@@ -1924,7 +1924,7 @@ var Slider = (function () {
                 fallbackToMouseEvents: true,
                 swipe: this.handleSwipe,
                 allowPageScroll: "vertical",
-                threshold: 1000,
+                threshold: 75,
                 maxTimeThreshold: null,
                 fingers: 'all'
             }
