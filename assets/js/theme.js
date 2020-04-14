@@ -2096,6 +2096,7 @@ var Slider = (function () {
     }, {
         key: 'onSwipeStatus',
         value: function onSwipeStatus(event, phase, direction, distance) {
+            console.log(phase);
             var slider = this.el.find('.slider');
 
             if (phase === "move" && (direction === "left" || direction === "right")) {
