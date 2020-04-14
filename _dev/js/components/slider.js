@@ -13,7 +13,6 @@ export default class Slider {
             swipeOptions: {
                 triggerOnTouchEnd: true,
                 swipeStatus: this.handleSwipe,
-                tap: this.handleTap,
                 allowPageScroll: "vertical",
                 threshold: 150,
             },
@@ -38,7 +37,7 @@ export default class Slider {
         }
 
         slider.find('.product-thumbnail').click((e) => {
-            if (!$(e.target).is($(e.currentTarget))) {
+            if (!this.isMoving) {
                 e.preventDefault();
             }
         });
@@ -137,19 +136,18 @@ export default class Slider {
         var slider = this.el.find('.slider');
 
         if (phase === "move" && (direction === "left" || direction === "right")) {
+            this.isMoving = true;
             if (direction === "left") {
                 slider.scrollLeft(this.lastScrollLeft + distance);
             } else if (direction === "right") {
                 slider.scrollLeft(this.lastScrollLeft - distance);
             }
         } else if (phase === "cancel") {
-            console.log("Swipe cancelled");
             slider.animate({
                 scrollLeft: this.lastScrollLeft
             }, 'fast');
+            this.isMoving = false;
         } else if (phase === "end") {
-            console.log(event);
-
             var nearestItemScroll = slider.scrollLeft,
                 itemWidth = slider.children('.slider-tem').outerWidth(true),
                 round = nearestItemScroll % itemWidth,
@@ -166,20 +164,7 @@ export default class Slider {
             }, 'fast');
 
             this.updateScroll();
+            this.isMoving = false;
         }
-    }
-    onTap(event, target) {
-        console.log(target);
-        let slider = this.el.find('.slider'),
-            slider_items = slider.find('.slider-item'),
-            item_anchor;
-
-        if ($(target).is(slider_items)) {
-            item_anchor = $target.find('.product-thumbnail');
-        } else if (slider_items.find($(target))) {
-            item_anchor = $(target).parents(slider_items).find('.product-thumbnail');
-        }
-
-        item_anchor.click();
     }
 }
