@@ -8,6 +8,10 @@
       {block name='hook_home'}
         {$HOOK_HOME nofilter}
       {/block}
+
+      {block name='hook_brands'}
+        {widget name="ps_brandlist"}
+      {/block}
     {/block}
   </section>
 {/block}
