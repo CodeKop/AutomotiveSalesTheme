@@ -129,15 +129,17 @@ export default class Slider {
         var slider = this.el.find('.slider');
         
         if (phase === "move" && (direction === "left" || direction === "right")) {
-            console.log("Swipe Triggered");
+            // console.log("Swipe Triggered");
             if (direction === "left") {
-                slider.animate({
-                    scrollLeft: this.lastScrollLeft - distance
-                }, 'fast');
+                slider.scrollLeft(this.lastScrollLeft + distance);
+                // slider.animate({
+                //     scrollLeft: this.lastScrollLeft - distance
+                // }, 'fast');
             } else if (direction === "right") {
-                slider.animate({
-                    scrollLeft: this.lastScrollLeft + distance
-                }, 'fast');
+                slider.scrollLeft(this.lastScrollLeft - distance);
+                // slider.animate({
+                //     scrollLeft: this.lastScrollLeft + distance
+                // }, 'fast');
             }
         } else if (phase === "cancel") {
             slider.animate({
