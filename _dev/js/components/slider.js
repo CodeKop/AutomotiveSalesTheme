@@ -11,7 +11,7 @@ export default class Slider {
             disabledOpacity: 0,
             allowSwipe: false,
             swipeOptions: {
-                triggerOnTouchEnd: true,
+                triggerOnTouchEnd: false,
                 swipeStatus: this.handleSwipe,
                 allowPageScroll: "vertical",
                 threshold: 150,
@@ -35,12 +35,6 @@ export default class Slider {
         if (this.options.allowSwipe) {
             slider.swipe(this.options.swipeOptions);
         }
-
-        slider.find('.product-thumbnail').click((e) => {
-            if (this.isMoving) {
-                e.preventDefault();
-            }
-        });
 
         this.el.find('.slider-controls .slider-control-left').click((e) => {
             var itemWidth = this.el.find('.slider .slider-item').outerWidth(true);
@@ -136,7 +130,6 @@ export default class Slider {
         var slider = this.el.find('.slider');
 
         if (phase === "move" && (direction === "left" || direction === "right")) {
-            this.isMoving = true;
             if (direction === "left") {
                 slider.scrollLeft(this.lastScrollLeft + distance);
             } else if (direction === "right") {
@@ -146,7 +139,6 @@ export default class Slider {
             slider.animate({
                 scrollLeft: this.lastScrollLeft
             }, 'fast');
-            this.isMoving = false;
         } else if (phase === "end") {
             var nearestItemScroll = slider.scrollLeft,
                 itemWidth = slider.children('.slider-tem').outerWidth(true),
@@ -164,7 +156,6 @@ export default class Slider {
             }, 'fast');
 
             this.updateScroll();
-            this.isMoving = false;
         }
     }
 }
