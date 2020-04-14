@@ -2054,6 +2054,10 @@ var Slider = (function () {
                 slider.animate({
                     scrollLeft: this.lastScrollLeft
                 }, 'fast');
+
+                (0, _jquery2['default'])(e.target).one("click", function (e) {
+                    return e.preventDefault();
+                });
             } else if (phase === "end") {
                 var nearestItemScroll = slider.scrollLeft,
                     itemWidth = slider.children('.slider-tem').outerWidth(true),
