@@ -2086,7 +2086,6 @@ var Slider = (function () {
     }, {
         key: 'onTap',
         value: function onTap(event, target) {
-            console.log("Tap Initiated");
             var slider = this.el.find('.slider'),
                 slider_items = slider.find('.slider-item'),
                 item_anchor = undefined;
@@ -2094,7 +2093,7 @@ var Slider = (function () {
             if ((0, _jquery2['default'])(target).is(slider_items)) {
                 item_anchor = $target.find('.product-thumbnail');
             } else if (slider_items.find((0, _jquery2['default'])(target))) {
-                item_anchor = $target.parents(slider_items).find('.product-thumbnail');
+                item_anchor = (0, _jquery2['default'])(target).parents(slider_items).find('.product-thumbnail');
             }
 
             item_anchor.click();
