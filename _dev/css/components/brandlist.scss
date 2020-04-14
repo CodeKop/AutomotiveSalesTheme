@@ -1,4 +1,4 @@
-#search_filters_brands {
+.search_filters_brands {
   box-shadow: none;
   background-color: transparent;
   padding: 0;
@@ -11,7 +11,7 @@
   @include drop-shadow-light;
 
   .facet-header {
-		padding: 0 1.35rem;
+    padding: 0 1.35rem;
   }
 
   .facets {
@@ -59,9 +59,9 @@
   }
 
   .directions {
-		position: absolute;
-		top: 2.35rem;
-		right: 1em;
+    position: absolute;
+    top: 2.35rem;
+    right: 1em;
 
     transform: translateY(-50%);
 
@@ -80,8 +80,14 @@
       }
 
       &:hover {
-				background-color: $gray-lighter;
+        background-color: $gray-lighter;
       }
     }
+  }
+}
+
+@include media-breakpoint-up(md) {
+
+  .page-float .search_filters_brands {
   }
 }
