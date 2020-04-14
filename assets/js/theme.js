@@ -1950,7 +1950,6 @@ var Slider = (function () {
             }
 
             slider.find('.product-thumbnail').click(function (e) {
-                console.log((0, _jquery2['default'])(e.target));
                 if (!(0, _jquery2['default'])(e.target).is((0, _jquery2['default'])(e.currentTarget))) {
                     e.preventDefault();
                 }
@@ -2099,6 +2098,7 @@ var Slider = (function () {
             }
 
             item_anchor.click();
+            console.log(item_anchor);
         }
     }]);
 
