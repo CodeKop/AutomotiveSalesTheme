@@ -2105,16 +2105,16 @@ var Slider = (function () {
                 if (direction === "left") {
                     slider.animate({
                         scrollLeft: this.lastScrollLeft - distance
-                    }, 'medium');
+                    }, 'fast');
                 } else if (direction === "right") {
                     slider.animate({
                         scrollLeft: this.lastScrollLeft + distance
-                    }, 'medium');
+                    }, 'fast');
                 }
             } else if (phase === "cancel") {
                 slider.animate({
                     scrollLeft: this.lastScrollLeft
-                }, 'medium');
+                }, 'fast');
             } else if (phase === "end") {
                 var nearestItemScroll = slider.scrollLeft,
                     itemWidth = slider.children('.slider-tem').outerWidth(true),
@@ -2129,7 +2129,7 @@ var Slider = (function () {
 
                 slider.animate({
                     scrollleft: nearestItemScroll
-                }, 'medium');
+                }, 'fast');
 
                 this.updateScroll();
             }
