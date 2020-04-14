@@ -38,7 +38,6 @@ export default class Slider {
         }
 
         slider.find('.product-thumbnail').click((e) => {
-            console.log($(e.target));
             if (!$(e.target).is($(e.currentTarget))) {
                 e.preventDefault();
             }
@@ -182,5 +181,6 @@ export default class Slider {
         }
 
         item_anchor.click();
+        console.log(item_anchor);
     }
 }
