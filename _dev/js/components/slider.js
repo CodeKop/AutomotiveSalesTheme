@@ -169,7 +169,6 @@ export default class Slider {
         }
     }
     onTap(event, target) {
-        console.log("Tap Initiated");
         let slider = this.el.find('.slider'),
             slider_items = slider.find('.slider-item'),
             item_anchor;
@@ -177,7 +176,7 @@ export default class Slider {
         if ($(target).is(slider_items)) {
             item_anchor = $target.find('.product-thumbnail');
         } else if (slider_items.find($(target))) {
-            item_anchor = $target.parents(slider_items).find('.product-thumbnail');
+            item_anchor = $(target).parents(slider_items).find('.product-thumbnail');
         }
 
         item_anchor.click();
