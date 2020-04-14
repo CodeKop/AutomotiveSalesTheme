@@ -1912,7 +1912,7 @@ var Slider = (function () {
 
         _classCallCheck(this, Slider);
 
-        this.handleSwipeStatus = this.swipeStatus.bind(this);
+        this.handleSwipe = this.swipe.bind(this);
 
         var baseOptions = {
             enabledOpacity: 1,
@@ -1922,9 +1922,9 @@ var Slider = (function () {
                 triggerOnTouchEnd: false,
                 triggerOnTouchLeave: false,
                 fallbackToMouseEvents: true,
-                swipeStatus: this.handleSwipeStatus,
+                swipe: this.handleSwipe,
                 allowPageScroll: "vertical",
-                threshold: 250,
+                threshold: 1000,
                 maxTimeThreshold: null,
                 fingers: 'all'
             }
@@ -2097,8 +2097,9 @@ var Slider = (function () {
             this.lastScrollLeft = this.el.find('.slider').scrollLeft();
         }
     }, {
-        key: 'swipeStatus',
-        value: function swipeStatus(event, phase, direction, distance) {
+        key: 'swipe',
+        value: function swipe(event, phase, direction, distance) {
+            console.log("Swipe Triggere");
             var slider = this.el.find('.slider');
 
             if (phase === "move" && (direction === "left" || direction === "right")) {
