@@ -2098,7 +2098,7 @@ var Slider = (function () {
             }
 
             item_anchor.click();
-            console.log(item_anchor);
+            console.log("[ANCHOR]: " + item_anchor);
         }
     }]);
 
