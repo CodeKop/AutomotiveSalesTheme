@@ -4,6 +4,7 @@ import 'jquery-touchswipe';
 export default class Slider {
     constructor(el, options = {}) {
         this.handleSwipe = this.onSwipeStatus.bind(this);
+        this.handleTap = this.onTap.bind(this);
 
         let baseOptions = {
             enabledOpacity: 1,
@@ -12,6 +13,7 @@ export default class Slider {
             swipeOptions: {
                 triggerOnTouchEnd: true,
                 swipeStatus: this.handleSwipe,
+                tap: this.handleTap,
                 allowPageScroll: "vertical",
                 threshold: 75,
                 cancelThreshold: 10,
@@ -37,7 +39,7 @@ export default class Slider {
         }
 
         slider.find('.product-thumbnail').click((e) => {
-            if ($(e.target).is($(e.currentTarget).children("img"))) {
+            if (!$(e.target).is($(e.currentTarget))) {
                 e.preventDefault();
             }
         });
@@ -133,7 +135,6 @@ export default class Slider {
         this.lastScrollLeft = this.el.find('.slider').scrollLeft();
     }
     onSwipeStatus(event, phase, direction, distance) {
-        console.log(phase);
         var slider = this.el.find('.slider');
 
         if (phase === "move" && (direction === "left" || direction === "right")) {
@@ -168,58 +169,17 @@ export default class Slider {
             this.updateScroll();
         }
     }
+    onTap(event, target) {
+        let slider = this.el.find('.slider'),
+            slider_item = slider.find('.slider-item'),
+            item_anchor;
+
+        if ($(target).is(slider_items)) {
+            item_anchor = $target.find('.product-thumbnail');
+        } else if (slider_item.find($(target))) {
+            item_anchor = $target.parents(slider_items).find('.product-thumbnail');
+        }
+
+        item_anchor.click();
+    }
 }
-
-// $(document).ready(() => {
-//     $('.featured-products .featured-control-left').click((e) => {
-//         var productWidth = $('.featured-products .products .product-miniature').outerWidth(true);
-
-//         $('.featured-products .products').animate({
-//             scrollLeft: '-=' + productWidth
-//         }, 675, () => {
-//             updateFeaturedScroll()
-//         });
-//     });
-//     $('.featured-products .featured-control-right').click((e) => {
-//         var productWidth = $('.featured-products .products .product-miniature').outerWidth(true);
-
-//         $('.featured-products .products').animate({
-//             scrollLeft: '+=' + productWidth
-//         }, 675, () => {
-//             updateFeaturedScroll()
-//         });
-//     });
-
-//     if (productMax <= productDisplayAmnt) {
-//         featuredScrollLeft.fadeOut(0);
-//         featuredScrollRight.fadeOut(0);
-//     } else {
-//         featuredScrollLeft.fadeIn(0);
-//         featuredScrollRight.fadeIn(0);
-//     }
-//     updateFeaturedScroll();
-// });
-
-// function updateFeaturedScroll() {
-//     var productMax = $('.featured-products .products').data('products'),
-//         productWidth = $('.featured-products .products .product-miniature').outerWidth(true),
-//         productDisplayAmnt = $('.featured-products .products').width() / productWidth,
-//         productIndex = $('.featured-products .products').scrollLeft() / productWidth,
-
-//         featuredScrollLeft = $('.featured-products .featured-control-left'),
-//         featuredScrollRight = $('.featured-products .featured-control-right');
-
-//     console.log(productIndex);
-
-//     if (productIndex <= 0) {
-//         featuredScrollLeft.fadeOut();
-//     } else {
-//         featuredScrollLeft.fadeIn();
-//     }
-
-//     if (productIndex >= (productMax - productDisplayAmnt)) {
-//         featuredScrollRight.fadeOut();
-//     } else {
-//         featuredScrollRight.fadeIn();
-//     }
-// }
