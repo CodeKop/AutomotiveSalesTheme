@@ -2041,7 +2041,7 @@ var Slider = (function () {
         }
     }, {
         key: 'onSwipeStatus',
-        value: function onSwipeStatus(event, phase, direction, distance) {
+        value: function onSwipeStatus(e, phase, direction, distance) {
             var slider = this.el.find('.slider');
 
             if (phase === "move" && (direction === "left" || direction === "right")) {
@@ -2065,6 +2065,10 @@ var Slider = (function () {
                 } else {
                     nearestItemScroll = multiplier * itemWidth;
                 }
+
+                (0, _jquery2['default'])(e.target).one("click", function (e) {
+                    return e.preventDefault();
+                });
 
                 slider.animate({
                     scrollleft: nearestItemScroll
