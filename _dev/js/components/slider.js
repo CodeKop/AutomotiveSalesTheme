@@ -37,7 +37,7 @@ export default class Slider {
         }
 
         slider.find('.product-thumbnail').click((e) => {
-            if (!this.isMoving) {
+            if (this.isMoving) {
                 e.preventDefault();
             }
         });
