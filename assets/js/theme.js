@@ -2093,7 +2093,7 @@ var Slider = (function () {
 
             if ((0, _jquery2['default'])(target).is(slider_items)) {
                 item_anchor = $target.find('.product-thumbnail');
-            } else if (slider_item.find((0, _jquery2['default'])(target))) {
+            } else if (slider_items.find((0, _jquery2['default'])(target))) {
                 item_anchor = $target.parents(slider_items).find('.product-thumbnail');
             }
 
