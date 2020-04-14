@@ -38,6 +38,7 @@ export default class Slider {
         }
 
         slider.find('.product-thumbnail').click((e) => {
+            console.log($(e.target));
             if (!$(e.target).is($(e.currentTarget))) {
                 e.preventDefault();
             }
