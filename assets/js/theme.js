@@ -1922,7 +1922,8 @@ var Slider = (function () {
                 triggerOnTouchEnd: true,
                 swipeStatus: this.handleSwipe,
                 allowPageScroll: "vertical",
-                threshold: 75
+                threshold: 75,
+                maxTimeThreshold: 1000
             }
         };
 
@@ -2098,40 +2099,33 @@ var Slider = (function () {
             var slider = this.el.find('.slider');
 
             if (phase === "move" && (direction === "left" || direction === "right")) {
-                // console.log("Swipe Triggered");
                 if (direction === "left") {
                     slider.scrollLeft(this.lastScrollLeft + distance);
-                    // slider.animate({
-                    //     scrollLeft: this.lastScrollLeft - distance
-                    // }, 'fast');
                 } else if (direction === "right") {
-                        slider.scrollLeft(this.lastScrollLeft - distance);
-                        // slider.animate({
-                        //     scrollLeft: this.lastScrollLeft + distance
-                        // }, 'fast');
-                    }
-            } else if (phase === "cancel") {
-                    slider.animate({
-                        scrollLeft: this.lastScrollLeft
-                    }, 'fast');
-                } else if (phase === "end") {
-                    var nearestItemScroll = slider.scrollLeft,
-                        itemWidth = slider.children('.slider-tem').outerWidth(true),
-                        round = nearestItemScroll % itemWidth,
-                        multiplier = Math.floor(nearestItemScroll / itemWidth);
-
-                    if (round >= 5) {
-                        nearestItemScroll = (multiplier + 1) * itemWidth;
-                    } else {
-                        nearestItemScroll = multiplier * itemWidth;
-                    }
-
-                    slider.animate({
-                        scrollleft: nearestItemScroll
-                    }, 'fast');
-
-                    this.updateScroll();
+                    slider.scrollLeft(this.lastScrollLeft - distance);
                 }
+            } else if (phase === "cancel") {
+                slider.animate({
+                    scrollLeft: this.lastScrollLeft
+                }, 'fast');
+            } else if (phase === "end") {
+                var nearestItemScroll = slider.scrollLeft,
+                    itemWidth = slider.children('.slider-tem').outerWidth(true),
+                    round = nearestItemScroll % itemWidth,
+                    multiplier = Math.floor(nearestItemScroll / itemWidth);
+
+                if (round >= 5) {
+                    nearestItemScroll = (multiplier + 1) * itemWidth;
+                } else {
+                    nearestItemScroll = multiplier * itemWidth;
+                }
+
+                slider.animate({
+                    scrollleft: nearestItemScroll
+                }, 'fast');
+
+                this.updateScroll();
+            }
         }
     }]);
 
