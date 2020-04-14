@@ -15,7 +15,7 @@ export default class Slider {
                 swipeStatus: this.handleSwipe,
                 tap: this.handleTap,
                 allowPageScroll: "vertical",
-                threshold: 75,
+                threshold: 150,
             },
         };
 
@@ -169,7 +169,7 @@ export default class Slider {
         }
     }
     onTap(event, target) {
-        console.log("tappoed");
+        console.log(target);
         let slider = this.el.find('.slider'),
             slider_items = slider.find('.slider-item'),
             item_anchor;
@@ -181,6 +181,5 @@ export default class Slider {
         }
 
         item_anchor.click();
-        console.log("[ANCHOR]: " + item_anchor);
     }
 }
