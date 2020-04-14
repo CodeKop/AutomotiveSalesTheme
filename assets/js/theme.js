@@ -1913,7 +1913,7 @@ var Slider = (function () {
         _classCallCheck(this, Slider);
 
         this.handleSwipe = this.onSwipeStatus.bind(this);
-        this.handleTap = this.onTap.bind(this);
+        // this.handleTap = this.onTap.bind(this);
 
         var baseOptions = {
             enabledOpacity: 1,
