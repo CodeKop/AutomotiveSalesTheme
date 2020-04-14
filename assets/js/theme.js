@@ -1949,7 +1949,7 @@ var Slider = (function () {
             }
 
             slider.find('.product-thumbnail').click(function (e) {
-                if (!_this.isMoving) {
+                if (_this.isMoving) {
                     e.preventDefault();
                 }
             });
