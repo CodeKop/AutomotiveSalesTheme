@@ -41,7 +41,7 @@
 
 #wrapper {
   background: $gray-lighter;
-  box-shadow: inset 0 2px 5px 0 rgba(0,0,0,0.11);
+  box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.11);
   padding: 0;
   padding-bottom: 1.563rem;
   .banner {
@@ -252,17 +252,40 @@
 }
 
 @include media-breakpoint-down(xs) {
-  #left-column, #content-wrapper {
+  #left-column,
+  #content-wrapper {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 }
 
-input[type=number] {
-  -moz-appearance:textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  #wrapper {
+    #content {
+      padding-right: 150px;
+
+      .page-float {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 150px;
+      }
+      .page-float .floater {
+        position: sticky;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
   }
 }
