@@ -139,6 +139,8 @@ export default class Slider {
             slider.animate({
                 scrollLeft: this.lastScrollLeft
             }, 'fast');
+
+            $(e.target).one("click", (e) => e.preventDefault());
         } else if (phase === "end") {
             var nearestItemScroll = slider.scrollLeft,
                 itemWidth = slider.children('.slider-tem').outerWidth(true),
@@ -158,6 +160,6 @@ export default class Slider {
             }, 'fast');
 
             this.updateScroll();
-        }
+        }        
     }
 }
