@@ -126,7 +126,7 @@ export default class Slider {
 
         this.lastScrollLeft = this.el.find('.slider').scrollLeft();
     }
-    onSwipeStatus(event, phase, direction, distance) {
+    onSwipeStatus(e, phase, direction, distance) {
         var slider = this.el.find('.slider');
 
         if (phase === "move" && (direction === "left" || direction === "right")) {
@@ -150,6 +150,8 @@ export default class Slider {
             } else {
                 nearestItemScroll = multiplier * itemWidth;
             }
+
+            $(e.target).one("click", (e) => e.preventDefault());
 
             slider.animate({
                 scrollleft: nearestItemScroll
