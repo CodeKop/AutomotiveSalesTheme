@@ -2088,7 +2088,7 @@ var Slider = (function () {
         value: function onTap(event, target) {
             console.log("Tap Initiated");
             var slider = this.el.find('.slider'),
-                slider_item = slider.find('.slider-item'),
+                slider_items = slider.find('.slider-item'),
                 item_anchor = undefined;
 
             if ((0, _jquery2['default'])(target).is(slider_items)) {
