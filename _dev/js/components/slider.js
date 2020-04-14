@@ -176,7 +176,7 @@ export default class Slider {
 
         if ($(target).is(slider_items)) {
             item_anchor = $target.find('.product-thumbnail');
-        } else if (slider_item.find($(target))) {
+        } else if (slider_items.find($(target))) {
             item_anchor = $target.parents(slider_items).find('.product-thumbnail');
         }
 
