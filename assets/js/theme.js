@@ -1920,7 +1920,7 @@ var Slider = (function () {
             disabledOpacity: 0,
             allowSwipe: false,
             swipeOptions: {
-                triggerOnTouchEnd: false,
+                triggerOnTouchEnd: true,
                 swipeStatus: this.handleSwipe,
                 allowPageScroll: "vertical",
                 threshold: 150
