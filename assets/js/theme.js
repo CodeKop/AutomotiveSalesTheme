@@ -1165,7 +1165,7 @@ for (var i in _events2['default'].prototype) {
   var productSelect = new _componentsProductSelect2['default']();
   var searchBar = new _componentsSearchBar2['default']();
   var featuredSlider = new _componentsSlider2['default'](featuredSliderEl, { allowSwipe: true });
-  var brandSlider = new _componentsSlider2['default'](brandSliderEl, { disabledOpacity: 0.4 });
+  var brandSlider = new _componentsSlider2['default'](brandSliderEl, { disabledOpacity: 0.4, allowSwipe: true });
 
   dropDown.init();
   form.init();
