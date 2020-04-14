@@ -171,7 +171,7 @@ export default class Slider {
     onTap(event, target) {
         console.log("Tap Initiated");
         let slider = this.el.find('.slider'),
-            slider_item = slider.find('.slider-item'),
+            slider_items = slider.find('.slider-item'),
             item_anchor;
 
         if ($(target).is(slider_items)) {
