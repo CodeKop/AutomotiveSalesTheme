@@ -10,14 +10,10 @@ export default class Slider {
             disabledOpacity: 0,
             allowSwipe: false,
             swipeOptions: {
-                triggerOnTouchEnd: false,
-                triggerOnTouchLeave: false,
-                fallbackToMouseEvents: true,
+                triggerOnTouchEnd: true,
                 swipeStatus: this.handleSwipe,
                 allowPageScroll: "vertical",
-                threshold: 75,
-                maxTimeThreshold: null,
-                fingers: 'all'
+                threshold: 75
             },
         };
         
