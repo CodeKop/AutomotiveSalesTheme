@@ -855,7 +855,7 @@ var Slider = (function () {
                 swipeStatus: this.handleSwipe,
                 allowPageScroll: "vertical",
                 threshold: 150,
-                cancelThreshold: 25
+                cancelThreshold: 0
             }
         };
 
@@ -983,14 +983,9 @@ var Slider = (function () {
                     slider.scrollLeft(this.lastScrollLeft - distance);
                 }
             } else if (phase === "cancel") {
-                console.log("Swipe Cancelled");
                 slider.animate({
                     scrollLeft: this.lastScrollLeft
                 }, 'fast');
-
-                (0, _jquery2['default'])(e.target).one("click", function (e) {
-                    return e.preventDefault();
-                });
             } else if (phase === "end") {
                 (0, _jquery2['default'])(e.target).one("click", function (e) {
                     return e.preventDefault();
