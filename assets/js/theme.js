@@ -542,9 +542,41 @@ _prestashop2['default'].blockcart.showModal = function (html) {
 /***/ }),
 
 /***/ 125:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: /home/randy/Documents/AutomotiveSalesTheme/_dev/js/brandlist.js: Unsyntactic continue (16:12)\n\u001b[0m                item\u001b[1m.\u001b[22mremoveData\u001b[34m\u001b[1m(\u001b[22m\u001b[39m\u001b[31m\"rclass\"\u001b[39m\u001b[34m\u001b[1m)\u001b[22m\u001b[39m\u001b[1m;\u001b[22m\n            \u001b[32m}\u001b[39m\u001b[34m\u001b[1m)\u001b[22m\u001b[39m\u001b[1m;\u001b[22m\n            \u001b[36mcontinue\u001b[39m\u001b[1m;\u001b[22m\n        \u001b[32m}\u001b[39m \u001b[36melse\u001b[39m \u001b[32m{\u001b[39m\n            replaitemsces\u001b[1m.\u001b[22mforEach\u001b[34m\u001b[1m(\u001b[22m\u001b[39mitem \u001b[1m=>\u001b[22m \u001b[32m{\u001b[39m\n                item\u001b[1m.\u001b[22maddClass\u001b[34m\u001b[1m(\u001b[22m\u001b[39mitem\u001b[1m.\u001b[22mdata\u001b[34m\u001b[1m(\u001b[22m\u001b[39m\u001b[31m\"rclass\"\u001b[39m\u001b[34m\u001b[1m)\u001b[22m\u001b[39m\u001b[34m\u001b[1m)\u001b[22m\u001b[39m\u001b[1m;\u001b[22m\u001b[0m\n    at Parser.pp.raise (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/location.js:24:13)\n    at Parser.pp.parseBreakContinueStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:200:44)\n    at Parser.pp.parseStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:70:19)\n    at Parser.parseStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/flow.js:655:22)\n    at Parser.pp.parseBlock (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:442:21)\n    at Parser.pp.parseStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:105:19)\n    at Parser.parseStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/flow.js:655:22)\n    at Parser.pp.parseIfStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:268:26)\n    at Parser.pp.parseStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:87:19)\n    at Parser.parseStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/flow.js:655:22)\n    at Parser.pp.parseBlock (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:442:21)\n    at Parser.pp.parseFunctionBody (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:747:22)\n    at Parser.parseFunctionBody (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/flow.js:643:20)\n    at Parser.pp.parseArrowExpression (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:726:8)\n    at Parser.pp.parseExprAtom (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:356:21)\n    at Parser.parseExprAtom (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/jsx/index.js:412:22)\n    at Parser.pp.parseExprSubscripts (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:236:19)\n    at Parser.pp.parseMaybeUnary (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:217:19)\n    at Parser.pp.parseExprOps (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:163:19)\n    at Parser.pp.parseMaybeConditional (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:145:19)\n    at Parser.pp.parseMaybeAssign (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:112:19)\n    at Parser.pp.parseExprListItem (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:801:16)\n    at Parser.parseExprListItem (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/flow.js:819:24)\n    at Parser.pp.parseExprList (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:789:20)\n    at Parser.pp.parseSubscripts (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:270:29)\n    at Parser.pp.parseExprSubscripts (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:240:17)\n    at Parser.pp.parseMaybeUnary (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:217:19)\n    at Parser.pp.parseExprOps (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:163:19)\n    at Parser.pp.parseMaybeConditional (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:145:19)\n    at Parser.pp.parseMaybeAssign (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:112:19)");
+"use strict";
+
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+(0, _jquery2['default'])(document).ready(function () {
+    setupSlider();
+});
+
+function setupSlider() {
+    var brandSliderEl = (0, _jquery2['default'])('.search_filters_brands');
+
+    brandSliderEl.forEach(function (element) {
+        var items = element.find("[data-rclass!='']");
+        if ((0, _jquery2['default'])('.page-float').find((0, _jquery2['default'])(element))) {
+            items.forEach(function (item) {
+                item.removeData("rclass");
+            });
+        } else {
+            replaitemsces.forEach(function (item) {
+                item.addClass(item.data("rclass"));
+                item.removeData("rclass");
+            });
+
+            var brandSlider = new Slider(element, { disabledOpacity: 0.4, allowSwipe: true });
+            brandSlider.init();
+        }
+    });
+}
 
 /***/ }),
 
