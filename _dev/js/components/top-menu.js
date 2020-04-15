@@ -23,7 +23,6 @@ export default class TopMenu extends DropDown {
       let subMenu = $(e.currentTarget).children('.sub-menu');
       subMenu.toggleClass('collapse');
     });
-    $('#_desktop_top_menu > .top-menu').slideUp(0);
     $('#menu-icon').on('click', function () {
       $('#mobile_top_menu_wrapper').toggleClass('d-flex d-none');
       self.toggleMobileMenu();
@@ -56,12 +55,6 @@ export default class TopMenu extends DropDown {
         _this.addClass('d-md-none');
       }
     });
-    // this.el.on('click', (e) => {
-    //   if (this.el.parent().hasClass('mobile')) {
-    //     return;
-    //   }
-    //   e.stopPropagation();
-    // });
     prestashop.on('responsive update', function (event) {
       $('.js-sub-menu').removeAttr('style');
       self.toggleMobileMenu();
