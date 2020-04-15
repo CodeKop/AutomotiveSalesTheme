@@ -542,41 +542,9 @@ _prestashop2['default'].blockcart.showModal = function (html) {
 /***/ }),
 
 /***/ 125:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-(0, _jquery2['default'])(document).ready(function () {
-    setupSlider();
-});
-
-function setupSlider() {
-    var brandSliderEl = (0, _jquery2['default'])('.search_filters_brands');
-
-    brandSliderEl.each(function (_, element) {
-        var items = element.find("[data-rclass!='']");
-        if ((0, _jquery2['default'])('.page-float').find((0, _jquery2['default'])(element))) {
-            items.forEach(function (item) {
-                item.removeData("rclass");
-            });
-        } else {
-            replaitemsces.forEach(function (item) {
-                item.addClass(item.data("rclass"));
-                item.removeData("rclass");
-            });
-
-            var brandSlider = new Slider(element, { disabledOpacity: 0.4, allowSwipe: true });
-            brandSlider.init();
-        }
-    });
-}
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/home/randy/Documents/AutomotiveSalesTheme/_dev/js/brandlist.js'");
 
 /***/ }),
 
@@ -9912,6 +9880,7 @@ for (var i in _events2['default'].prototype) {
   var form = new _componentsForm2['default']();
   var topMenuEl = (0, _jquery2['default'])('.js-top-menu ul[data-depth="0"]');
   var featuredSliderEl = (0, _jquery2['default'])('.featured-products-list');
+  var brandSliderEl = (0, _jquery2['default'])('.search_filters_brands');
 
   var dropDown = new _componentsDropDown2['default'](dropDownEl);
   var topMenu = new _componentsTopMenu2['default'](topMenuEl);
@@ -9919,6 +9888,7 @@ for (var i in _events2['default'].prototype) {
   var productSelect = new _componentsProductSelect2['default']();
   var searchBar = new _componentsSearchBar2['default']();
   var featuredSlider = new _componentsSlider2['default'](featuredSliderEl, { allowSwipe: true });
+  var brandSlider = new _componentsSlider2['default'](element, { disabledOpacity: 0.4, allowSwipe: true });
 
   dropDown.init();
   form.init();
@@ -9927,6 +9897,7 @@ for (var i in _events2['default'].prototype) {
   productSelect.init();
   searchBar.init();
   featuredSlider.init();
+  brandSlider.init();
 
   (0, _jquery2['default'])('.carousel[data-touch="true"]').swipe({
     swipe: function swipe(event, direction, distance, duration, fingerCount, fingerData) {
@@ -9946,7 +9917,7 @@ for (var i in _events2['default'].prototype) {
 /***/ 9:
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n}\n^\n      Invalid CSS after \"}\": expected \"}\", was \"\"\n      in /home/randy/Documents/AutomotiveSalesTheme/_dev/css/theme.scss (line 275, column 2)\n    at runLoaders (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/webpack/lib/NormalModule.js:192:19)\n    at /home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.done [as callback] (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/neo-async/async.js:8067:18)\n    at options.error (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ })
 
