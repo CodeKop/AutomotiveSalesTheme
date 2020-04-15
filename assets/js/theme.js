@@ -1091,6 +1091,8 @@ __webpack_require__(23);
 
 // import './featured-products';
 
+__webpack_require__(125);
+
 __webpack_require__(11);
 
 __webpack_require__(18);
@@ -1141,6 +1143,8 @@ __webpack_require__(19);
 
 __webpack_require__(20);
 
+__webpack_require__(126);
+
 __webpack_require__(12);
 
 var _jquery = __webpack_require__(0);
@@ -1157,7 +1161,6 @@ for (var i in _events2['default'].prototype) {
   var form = new _componentsForm2['default']();
   var topMenuEl = (0, _jquery2['default'])('.js-top-menu ul[data-depth="0"]');
   var featuredSliderEl = (0, _jquery2['default'])('.featured-products-list');
-  var brandSliderEl = (0, _jquery2['default'])('#search_filters_brands');
 
   var dropDown = new _componentsDropDown2['default'](dropDownEl);
   var topMenu = new _componentsTopMenu2['default'](topMenuEl);
@@ -1165,7 +1168,6 @@ for (var i in _events2['default'].prototype) {
   var productSelect = new _componentsProductSelect2['default']();
   var searchBar = new _componentsSearchBar2['default']();
   var featuredSlider = new _componentsSlider2['default'](featuredSliderEl, { allowSwipe: true });
-  var brandSlider = new _componentsSlider2['default'](brandSliderEl, { disabledOpacity: 0.4, allowSwipe: true });
 
   dropDown.init();
   form.init();
@@ -1174,7 +1176,6 @@ for (var i in _events2['default'].prototype) {
   productSelect.init();
   searchBar.init();
   featuredSlider.init();
-  brandSlider.init();
 
   (0, _jquery2['default'])('.carousel[data-touch="true"]').swipe({
     swipe: function swipe(event, direction, distance, duration, fingerCount, fingerData) {
@@ -9882,6 +9883,117 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 __webpack_require__(8);
 module.exports = __webpack_require__(9);
 
+
+/***/ }),
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */,
+/* 114 */,
+/* 115 */,
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */
+/***/ (function(module, exports) {
+
+"use strict";
+throw new Error("Module build failed: SyntaxError: /home/randy/Documents/AutomotiveSalesTheme/_dev/js/brandlist.js: Unsyntactic continue (20:12)\n\u001b[0m                item\u001b[1m.\u001b[22mremoveData\u001b[34m\u001b[1m(\u001b[22m\u001b[39m\u001b[31m\"rclass\"\u001b[39m\u001b[34m\u001b[1m)\u001b[22m\u001b[39m\u001b[1m;\u001b[22m\n            \u001b[32m}\u001b[39m\u001b[34m\u001b[1m)\u001b[22m\u001b[39m\u001b[1m;\u001b[22m\n            \u001b[36mcontinue\u001b[39m\u001b[1m;\u001b[22m\n        \u001b[32m}\u001b[39m \u001b[36melse\u001b[39m \u001b[32m{\u001b[39m\n            replaces\u001b[1m.\u001b[22mforEach\u001b[34m\u001b[1m(\u001b[22m\u001b[39mitem \u001b[1m=>\u001b[22m \u001b[32m{\u001b[39m\n                item\u001b[1m.\u001b[22maddClass\u001b[34m\u001b[1m(\u001b[22m\u001b[39mitem\u001b[1m.\u001b[22mdata\u001b[34m\u001b[1m(\u001b[22m\u001b[39m\u001b[31m\"rclass\"\u001b[39m\u001b[34m\u001b[1m)\u001b[22m\u001b[39m\u001b[34m\u001b[1m)\u001b[22m\u001b[39m\u001b[1m;\u001b[22m\u001b[0m\n    at Parser.pp.raise (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/location.js:24:13)\n    at Parser.pp.parseBreakContinueStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:200:44)\n    at Parser.pp.parseStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:70:19)\n    at Parser.parseStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/flow.js:655:22)\n    at Parser.pp.parseBlock (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:442:21)\n    at Parser.pp.parseStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:105:19)\n    at Parser.parseStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/flow.js:655:22)\n    at Parser.pp.parseIfStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:268:26)\n    at Parser.pp.parseStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:87:19)\n    at Parser.parseStatement (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/flow.js:655:22)\n    at Parser.pp.parseBlock (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/statement.js:442:21)\n    at Parser.pp.parseFunctionBody (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:747:22)\n    at Parser.parseFunctionBody (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/flow.js:643:20)\n    at Parser.pp.parseArrowExpression (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:726:8)\n    at Parser.pp.parseExprAtom (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:356:21)\n    at Parser.parseExprAtom (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/jsx/index.js:412:22)\n    at Parser.pp.parseExprSubscripts (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:236:19)\n    at Parser.pp.parseMaybeUnary (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:217:19)\n    at Parser.pp.parseExprOps (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:163:19)\n    at Parser.pp.parseMaybeConditional (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:145:19)\n    at Parser.pp.parseMaybeAssign (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:112:19)\n    at Parser.pp.parseExprListItem (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:801:16)\n    at Parser.parseExprListItem (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/plugins/flow.js:819:24)\n    at Parser.pp.parseExprList (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:789:20)\n    at Parser.pp.parseSubscripts (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:270:29)\n    at Parser.pp.parseExprSubscripts (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:240:17)\n    at Parser.pp.parseMaybeUnary (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:217:19)\n    at Parser.pp.parseExprOps (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:163:19)\n    at Parser.pp.parseMaybeConditional (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:145:19)\n    at Parser.pp.parseMaybeAssign (/home/randy/Documents/AutomotiveSalesTheme/_dev/node_modules/babylon/lib/parser/expression.js:112:19)");
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function initiateReplace(excluded) {
+    $("[data-r*]");
+}
 
 /***/ })
 /******/ ]);
