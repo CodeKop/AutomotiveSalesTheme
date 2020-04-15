@@ -854,7 +854,8 @@ var Slider = (function () {
                 triggerOnTouchEnd: true,
                 swipeStatus: this.handleSwipe,
                 allowPageScroll: "vertical",
-                threshold: 150
+                threshold: 150,
+                cancelThreshold: 25
             }
         };
 
