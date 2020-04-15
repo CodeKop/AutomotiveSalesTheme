@@ -9933,10 +9933,6 @@ for (var i in _events2['default'].prototype) {
   searchBar.init();
   featuredSlider.init();
 
-  if ((0, _jquery2['default'])('.page-floater').length == 1 && (0, _jquery2['default'])('.page-floater').is(':visible')) {
-    (0, _jquery2['default'])('#content').addClass('right-float');
-  }
-
   (0, _jquery2['default'])('.carousel[data-touch="true"]').swipe({
     swipe: function swipe(event, direction, distance, duration, fingerCount, fingerData) {
       if (direction == 'left') {
