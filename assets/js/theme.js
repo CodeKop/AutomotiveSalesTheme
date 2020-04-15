@@ -1921,8 +1921,8 @@ var Slider = (function () {
                 triggerOnTouchEnd: true,
                 swipeStatus: this.handleSwipe,
                 allowPageScroll: "vertical",
-                threshold: 150,
-                cancelThreshold: 0
+                threshold: 75,
+                cancelThreshold: threshold
             }
         };
 
