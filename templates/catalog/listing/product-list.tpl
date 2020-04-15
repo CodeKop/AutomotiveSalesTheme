@@ -1,21 +1,13 @@
 {extends file=$layout}
 
-{block name='category_header'}
-<div class="category-header d-flex flex-column align-items-center justify-content-center bg-white px-3 mb-3">
-  {include file='_partials/breadcrumb.tpl'}
-
-  {block name='category_list_header'}
-	<h2 id="js-product-list-header" class="category-list-header" class="h2">{$listing.label}</h2>
-  {/block}
-</div>
-{/block}
-
 {block name='breadcrumb'}{/block}
 
 {block name='content'}
   <section id="main">
 
-    {block name='product_list_header'}{/block}
+    {block name='product_list_header'}
+	    <h2 id="js-product-list-header" class="category-list-header" class="h2">{$listing.label}</h2>
+    {/block}
 
     <section id="products">
       {if $listing.products|count}
