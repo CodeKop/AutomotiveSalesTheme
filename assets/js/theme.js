@@ -560,7 +560,7 @@ var _jquery2 = _interopRequireDefault(_jquery);
 function setupSlider() {
     var brandSliderEl = (0, _jquery2['default'])('.search_filters_brands');
 
-    brandSliderEl.forEach(function (element) {
+    brandSliderEl.each(function (_, element) {
         var items = element.find("[data-rclass!='']");
         if ((0, _jquery2['default'])('.page-float').find((0, _jquery2['default'])(element))) {
             items.forEach(function (item) {
