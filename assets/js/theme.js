@@ -1922,7 +1922,7 @@ var Slider = (function () {
                 swipeStatus: this.handleSwipe,
                 allowPageScroll: "vertical",
                 threshold: 75,
-                cancelThreshold: threshold
+                cancelThreshold: 75
             }
         };
 
