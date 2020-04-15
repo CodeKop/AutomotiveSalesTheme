@@ -22,8 +22,6 @@ import Slider from './components/slider';
 import prestashop from 'prestashop';
 import EventEmitter from 'events';
 
-import './brandlist';
-
 import './lib/bootstrap-filestyle.min';
 import './lib/jquery.scrollbox.min';
 
