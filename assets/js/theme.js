@@ -9849,10 +9849,6 @@ __webpack_require__(4);
 
 __webpack_require__(23);
 
-// import './featured-products';
-
-__webpack_require__(125);
-
 __webpack_require__(11);
 
 __webpack_require__(18);
@@ -9898,6 +9894,8 @@ var _prestashop2 = _interopRequireDefault(_prestashop);
 var _events = __webpack_require__(26);
 
 var _events2 = _interopRequireDefault(_events);
+
+__webpack_require__(125);
 
 __webpack_require__(19);
 
