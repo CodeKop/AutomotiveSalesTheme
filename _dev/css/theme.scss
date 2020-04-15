@@ -42,8 +42,7 @@
 #wrapper {
   background: $gray-lighter;
   box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.11);
-  padding: 0;
-  padding-bottom: 1.563rem;
+  padding: 1.563rem 0;
   .banner {
     margin-bottom: 1.5rem;
     display: block;
@@ -107,9 +106,6 @@
   }
 }
 /*** FOOTER ***/
-#footer {
-  padding-top: 2.5rem;
-}
 
 /*** Responsive part ***/
 @include media-breakpoint-down(md) {
@@ -270,5 +266,6 @@ input[type="number"] {
 
 @include media-breakpoint-up(md) {
   #wrapper {
+    padding: 1.563
   }
 }
