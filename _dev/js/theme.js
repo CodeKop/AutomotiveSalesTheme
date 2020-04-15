@@ -38,7 +38,7 @@ $(document).ready(() => {
   const form = new Form();
   let topMenuEl = $('.js-top-menu ul[data-depth="0"]');
   let featuredSliderEl = $('.featured-products-list');
-  let brandSliderEl = $('#search_filters_brands');
+  let brandSliderEl = $('#search-filters-brands');
 
   let dropDown = new DropDown(dropDownEl);
   let topMenu = new TopMenu(topMenuEl);
