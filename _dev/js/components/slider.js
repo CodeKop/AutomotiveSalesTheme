@@ -15,6 +15,7 @@ export default class Slider {
                 swipeStatus: this.handleSwipe,
                 allowPageScroll: "vertical",
                 threshold: 150,
+                cancelThreshold: 0
             },
         };
 
@@ -139,8 +140,6 @@ export default class Slider {
             slider.animate({
                 scrollLeft: this.lastScrollLeft
             }, 'fast');
-
-            $(e.target).one("click", (e) => e.preventDefault());
         } else if (phase === "end") {
             $(e.target).one("click", (e) => e.preventDefault());
             this.updateScroll();

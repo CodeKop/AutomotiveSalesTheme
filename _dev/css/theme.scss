@@ -271,21 +271,5 @@ input[type="number"] {
 @include media-breakpoint-up(md) {
   #wrapper {
     #content {
-      padding-right: 150px;
-
-      .page-float {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 150px;
-      }
-      .page-float .floater {
-        position: sticky;
-        top: 0;
-        right: 0;
-        bottom: 0;
-      }
-    }
   }
 }

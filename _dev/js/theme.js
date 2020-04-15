@@ -5,7 +5,6 @@ import 'bootstrap-touchspin';
 import 'jquery-touchswipe';
 
 import './responsive';
-// import './featured-products';
 import './checkout';
 import './customer';
 import './listing';
@@ -23,6 +22,8 @@ import Slider from './components/slider';
 import prestashop from 'prestashop';
 import EventEmitter from 'events';
 
+import './brandlist';
+
 import './lib/bootstrap-filestyle.min';
 import './lib/jquery.scrollbox.min';
 
@@ -39,7 +40,7 @@ $(document).ready(() => {
   const form = new Form();
   let topMenuEl = $('.js-top-menu ul[data-depth="0"]');
   let featuredSliderEl = $('.featured-products-list');
-  let brandSliderEl = $('#search_filters_brands');
+  let brandSliderEl = $('.search_filters_brands');
 
   let dropDown = new DropDown(dropDownEl);
   let topMenu = new TopMenu(topMenuEl);
@@ -47,7 +48,7 @@ $(document).ready(() => {
   let productSelect = new ProductSelect();
   let searchBar = new SearchBar();
   let featuredSlider = new Slider(featuredSliderEl, { allowSwipe: true });
-  let brandSlider = new Slider(brandSliderEl, { disabledOpacity: 0.4, allowSwipe: true });
+  let brandSlider = new Slider(element, { disabledOpacity: 0.4, allowSwipe: true });
 
   dropDown.init();
   form.init();

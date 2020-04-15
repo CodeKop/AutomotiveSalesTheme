@@ -1,4 +1,4 @@
-.search_filters_brands {
+.search-filters-brands {
   box-shadow: none;
   background-color: transparent;
   padding: 0;
@@ -87,7 +87,4 @@
 }
 
 @include media-breakpoint-up(md) {
-
-  .page-float .search_filters_brands {
-  }
 }
