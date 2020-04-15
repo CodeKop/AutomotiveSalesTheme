@@ -6,11 +6,11 @@
       {if $display_link_brand}</a>{/if}
     </h1>
     {include file="module:ps_brandlist/views/templates/_partials/$brand_display_type.tpl" brands=$brands}
-    <div class="directions slider-controls">
-      <div class="brand-direction-left slider-control-left">
+    <div class="directions" data-rclass="slider-controls">
+      <div class="brand-direction-left" data-rclass="slider-control-left">
         <i class="fa fa-chevron-left"></i>
       </div>
-      <div class="brand-direction-right slider-control-right">
+      <div class="brand-direction-right" data-rclass="slider-control-right">
         <i class="fa fa-chevron-right"></i>
       </div>
     </div>
