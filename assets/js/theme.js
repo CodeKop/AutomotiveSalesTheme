@@ -982,6 +982,7 @@ var Slider = (function () {
                     slider.scrollLeft(this.lastScrollLeft - distance);
                 }
             } else if (phase === "cancel") {
+                console.log("Swipe Cancelled");
                 slider.animate({
                     scrollLeft: this.lastScrollLeft
                 }, 'fast');
