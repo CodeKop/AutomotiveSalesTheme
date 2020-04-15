@@ -1,10 +1,10 @@
-<div class="container">
+{* <div class="container">
   <div class="row">
     {block name='hook_footer_before'}
       {hook h='displayFooterBefore'}
     {/block}
   </div>
-</div>
+</div> *}
 <div class="footer-container">
   <div class="container">
     <div class="row">
