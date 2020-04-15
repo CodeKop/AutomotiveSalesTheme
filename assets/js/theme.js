@@ -9880,7 +9880,7 @@ for (var i in _events2['default'].prototype) {
   var form = new _componentsForm2['default']();
   var topMenuEl = (0, _jquery2['default'])('.js-top-menu ul[data-depth="0"]');
   var featuredSliderEl = (0, _jquery2['default'])('.featured-products-list');
-  var brandSliderEl = (0, _jquery2['default'])('.search_filters_brands');
+  var brandSliderEl = (0, _jquery2['default'])('#search_filters_brands');
 
   var dropDown = new _componentsDropDown2['default'](dropDownEl);
   var topMenu = new _componentsTopMenu2['default'](topMenuEl);
@@ -9888,7 +9888,7 @@ for (var i in _events2['default'].prototype) {
   var productSelect = new _componentsProductSelect2['default']();
   var searchBar = new _componentsSearchBar2['default']();
   var featuredSlider = new _componentsSlider2['default'](featuredSliderEl, { allowSwipe: true });
-  var brandSlider = new _componentsSlider2['default'](element, { disabledOpacity: 0.4, allowSwipe: true });
+  var brandSlider = new _componentsSlider2['default'](brandSliderEl, { disabledOpacity: 0.4, allowSwipe: true });
 
   dropDown.init();
   form.init();
