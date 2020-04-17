@@ -38,19 +38,29 @@ export default class Slider {
         }
 
         this.el.find('.slider-controls .slider-control-left').click((e) => {
-            var itemWidth = this.el.find('.slider .slider-item').outerWidth(true);
+            var itemWidth = this.el.find('.slider .slider-item').outerWidth(true)
+            	scrollAmnt = itemWidth;
+
+            if (slider.scrollLeft() % itemWidth > 0) {
+				scrollAmnt = slider.scrollLeft() % itemWidth;
+            }
 
             this.el.find('.slider').stop(true, false).animate({
-                scrollLeft: '-=' + itemWidth
+                scrollLeft: '-=' + scrollAmnt;
             }, 675, () => {
                 this.updateScroll()
             });
         });
         itemScrollRight.click((e) => {
-            var itemWidth = this.el.find('.slider .slider-item').outerWidth(true);
+            var itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
+            	scrollAmnt = itemWidth;
+
+            if (slider.scrollLeft() % itemWidth > 0) {
+				scrollAmnt = slider.scrollLeft() % itemWidth;
+            }
 
             this.el.find('.slider').stop(true, false).animate({
-                scrollLeft: '+=' + itemWidth
+                scrollLeft: '+=' + scrollAmnt;
             }, 675, () => {
                 this.updateScroll()
             });
