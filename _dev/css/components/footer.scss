@@ -18,7 +18,11 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;		
+		align-items: center;	
+		
+		a {
+			color: $dark;
+		}
 	}
 	> .appbar-item.active {
 		color: $brand-primary;
