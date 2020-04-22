@@ -1,5 +1,19 @@
+d-flex flex-column justify-content-center align-items-center
+
 .footer-appbar {
-	> .active {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 65px;
+
+	> .appbar-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	> .appbar-item.active {
 		color: $brand-primary;
 	}
 }
