@@ -1,6 +1,5 @@
-d-flex flex-column justify-content-center align-items-center
-
-.footer-appbar {
+/* Footer appbar styles */
+#footer .footer-appbar {
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -18,8 +17,7 @@ d-flex flex-column justify-content-center align-items-center
 	}
 }
 
-
-
+/* Main footer styles */
 .block-contact {
 	color: $gray;
 	font-size: $footer-font-size-normal;
