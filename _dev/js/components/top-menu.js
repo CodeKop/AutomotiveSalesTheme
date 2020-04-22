@@ -19,9 +19,6 @@ export default class TopMenu extends DropDown {
         //     });
         //   }
       }
-
-      let subMenu = $(e.currentTarget).children('.sub-menu');
-      subMenu.toggleClass('collapse');
     });
     $('#menu-icon').on('click', function () {
       $('#mobile_top_menu_wrapper').toggleClass('d-flex d-none');
@@ -37,22 +34,6 @@ export default class TopMenu extends DropDown {
         if ($(e.target).is('.collapse-icons .fa')) {
           e.preventDefault();
         }
-      }
-    });
-    $('#_desktop_top_menu > .menu-header').click((e) => {
-      // $(e.currentTarget).siblings('.top-menu').slideToggle();
-      var _this = $(e.currentTarget).siblings('.top-menu');
-      _this.toggleClass('d-md-flex d-md-none');
-    });
-    $(window).click((e) => {
-      var target = $(e.target),
-        dropdown = $('#_desktop_top_menu.js-top-menu');
-
-      if ((target !== dropdown) && (dropdown.has(target).length == 0)) {
-        // dropdown.children(".top-menu").slideUp();
-        var _this = dropdown.children(".top-menu");
-        _this.removeClass('d-md-flex');
-        _this.addClass('d-md-none');
       }
     });
     prestashop.on('responsive update', function (event) {
