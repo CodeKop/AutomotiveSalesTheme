@@ -46,6 +46,6 @@
     {/if}
   </div>
   <div id="user-info-modal" class="modal">
-    {render file='customer/_partials/login-form.tpl' ui=$login_form}
+    {* {render file='customer/_partials/login-form.tpl' ui=$login_form} *}
   </div>
 </div>
