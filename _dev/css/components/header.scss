@@ -1,4 +1,76 @@
+#header {
+    background-color: white;
+}
 
+// #header {
+//     .logo {
+//         width: auto;
+//     }
+//     .header-top {
+//         .search-widget {
+//             min-width: inherit;
+//         }
+//     }
+// }
+
+// #header {
+//     background: $gray-light;
+//     .header-top {
+//         background: white;
+//     }
+//     .header-nav {
+//         background: white;
+//         color: $gray-darker;
+//         .top-logo {
+//             padding-top: 11px;
+//             a {
+//                 img {
+//                     max-height: 50px;
+//                     max-width: 100%;
+//                 }
+//             }
+//         }
+//         .right-nav {
+//             flex-direction: column;
+//         }
+//         .user-info {
+//             text-align: left;
+//             margin-left: 0;
+//             .logged {
+//                 color: $brand-primary;
+//             }
+//         }
+//         .blockcart {
+//             margin-left: 0;
+//             background: inherit;
+//             &.active {
+//                 margin-left: 0.5rem;
+//             }
+//             &.inactive {
+//                 .cart-products-count {
+//                     display: none;
+//                 }
+//             }
+//         }
+//     }
+//     .header-top {
+//         // background: $gray-light;
+//         padding-top: 0;
+//         padding-bottom: 0;
+//         a[data-depth="0"] {
+//             color: $gray-darker;
+//         }
+//         .search-widget {
+//             width: 100%;
+//         }
+//     }
+//     &.is-open {
+//         background-color: white;
+//         .header-top {
+//             background-color: white;
+//         }
+//     }
+// }
 
 // #header {
 // 	position: relative;
@@ -65,7 +137,7 @@
 // 			transform: translateY(-50%);
 
 // 			display: flex;
-			
+
 // 			&.-left {
 // 				left: 0;
 // 				flex-direction: row;
@@ -144,7 +216,7 @@
 // 			}
 
 // 			ul.collapse {
-// 				margin: 0;	
+// 				margin: 0;
 // 			}
 // 			ul.collapse li {
 // 				display: inline-block;
