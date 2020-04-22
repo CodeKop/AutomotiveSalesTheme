@@ -6,7 +6,7 @@
 
 {block name='header_top'}
   <div class="header-top">
-    <div class="container p-0">
+    <div class="container-fluid">
       <div class="d-md-none d-flex align-items-center text-sm-center mobile">
         <div class="float-left float-md-none" id="menu-icon">
           <i class="fa-lg fa fa-bars m-3"></i>
@@ -44,7 +44,7 @@
 
 {block name='header_nav'}
   <nav class="header-nav m-0">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row d-none d-md-flex no-gutters position-relative">
         <div class="col-md-7 col-12 d-flex align-items-center">
           {hook h='displayBar1'}
