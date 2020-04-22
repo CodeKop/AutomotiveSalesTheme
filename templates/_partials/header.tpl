@@ -8,12 +8,14 @@
   <div class="header-top">
     <div class="container-fluid">
       <div class="d-md-none d-flex align-items-center text-sm-center mobile">
-        <div class="float-left float-md-none" id="menu-icon">
-          <i class="fa-lg fa fa-bars m-3"></i>
+        <div id="menu-icon">
+          <i class="fa fa-bars fa-lg fa-fw"></i>
         </div>
-        <div class="flex-grow-1 top-logo" id="_mobile_logo"></div>
-        <div class="float-md-none" id="_mobile_user_info"></div>
-        <div class="float-md-none" id="_mobile_cart"></div>
+        <div class="flex-grow-1 top-logo my-1" id="_mobile_logo"></div>
+        <div id="search-icon">
+          <i class="fa fa-search fa-lg fa-fw"></i>
+        </div>
+        {* <div id="_mobile_cart"></div> *}
       </div>
 
        <div class="row no-gutters align-items-center">
