@@ -1,3 +1,11 @@
+.footer-appbar {
+	> .active {
+		color: $brand-primary;
+	}
+}
+
+
+
 .block-contact {
 	color: $gray;
 	font-size: $footer-font-size-normal;
@@ -133,7 +141,7 @@
 .instagram {
 	background-image: url(../img/instagram.svg);
 }
-.footer-container {
+.footer-main {
 	padding-top: $medium-space;
 	overflow: hidden;
 	box-shadow: 2px 2px 11px 0px rgba(0, 0, 0, 0.3);
@@ -164,7 +172,7 @@
 		padding-bottom: 0.625rem;
 		border-bottom: 1px solid $gray-lighter;
 	}
-	.footer-container {
+	.footer-main {
 		box-shadow: none;
 		margin-top: 0;
 		.wrapper {
