@@ -1,5 +1,16 @@
 #header {
     background-color: white;
+
+    .header-top {
+        > div {
+            margin: 0 0.35rem;
+        }
+
+        .fa {
+            display :block;
+            font-size: 1.25em;
+        }
+    }
 }
 
 // #header {
