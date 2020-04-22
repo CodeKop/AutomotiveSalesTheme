@@ -46,7 +46,7 @@ export default class Slider {
             }
 
             this.el.find('.slider').stop(true, false).animate({
-                scrollLeft: '-=' + scrollAmnt;
+                scrollLeft: '-=' + scrollAmnt
             }, 675, () => {
                 this.updateScroll()
             });
