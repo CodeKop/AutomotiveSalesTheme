@@ -5,7 +5,7 @@
     {/block}
   </div>
 </div> *}
-<div class="footer-appbar d-flex d-md-none align-items-flex-end">
+<div class="footer-appbar d-flex d-md-none align-items-flex-end bg-white shadow">
   <div id="home-icon" class="appbar-item">
     <a class="{if $urls.current_url === $urls.pages.index}active{/if}"
       href="{$urls.pages.index}">
@@ -25,7 +25,7 @@
       <i class="fa fa-phone fa-flip-horizontal"></i>
     </a>
   </div>
-  <div id="_mobile_user_info"></div>
+  <div id="_mobile_user_info" class="appbar-item"></div>
 </div>
 <div class="footer-main">
   <div class="container">
