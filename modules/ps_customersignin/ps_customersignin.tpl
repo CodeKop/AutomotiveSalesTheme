@@ -41,11 +41,17 @@
         title="{l s='Log or register to your customer account' d='Shop.Theme.Customeraccount'}"
         rel="nofollow"
       >
-        <span class="d-none d-md-block">{l s='Login / Register' d='Shop.Theme.Actions'}</span>
+        <span class="d-none d-md-block">{l s='Login' d='Shop.Theme.Actions'}</span>
+      </a>
+      <h5>/</h5>    
+      <a
+        class="text-center text-dark px-3 py-2"
+        href="{$urls.pages.register}"
+        title="{l s='Log or register to your customer account' d='Shop.Theme.Customeraccount'}"
+        rel="nofollow"
+      >
+        <span class="d-none d-md-block">{l s='Register' d='Shop.Theme.Actions'}</span>
       </a>
     {/if}
-  </div>
-  <div id="user-info-modal" class="modal">
-    {* {render file='customer/_partials/login-form.tpl' ui=$login_form} *}
   </div>
 </div>
