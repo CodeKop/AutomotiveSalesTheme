@@ -21,17 +21,9 @@
           {hook h='displayNav1'}
         </div>
         <div class="col-md-12 d-none d-md-block" id="_desktop_logo">
-            {if $page.page_name == 'index'}
-              <h1>
-                <a href="{$urls.base_url}">
-                  <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
-                </a>
-              </h1>
-            {else}
-                <a href="{$urls.base_url}">
-                  <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
-                </a>
-            {/if}
+          <a href="{$urls.base_url}" class="d-block">
+            <img class="logo w-100" src="{$shop.logo}" alt="{$shop.name}">
+          </a>
         </div>
         <div class="d-none d-md-flex col-md-4 col-sm-12">
           {hook h='displayNav2'}
