@@ -5,48 +5,8 @@
 }
 
 #_desktop_top_menu {
-  position: relative;
-
-  .menu-header {
-    padding: $small-space $medium-space;
-    margin: $small-space 0;
-    position: relative;
-    border-radius: 5px;
-
-    background-color: #ffffff;
-
-    cursor: pointer;
-    color: black;
-    transition: background 0.8s;
-
-    .menu-header-text {
-      position: relative;
-      font-family: Montserrat;
-      text-transform: uppercase;
-      font-size: 1em;
-      line-height: 1em;
-      vertical-align: middle;
-    }
-
-    .menu-header-icon {
-      width: 1em;
-      height: 1em;
-      font-size: 0.825em;
-      line-height: 1em;
-      vertical-align: middle;
-    }
-
-    &:hover {
-      background-color: #f2f2f2;
-    }
-  }
-
   #top-menu {
-    display: inline-block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 100;
+    display: block;
     padding: $small-space 0;
     background-color: white;
     min-width: 100%;
