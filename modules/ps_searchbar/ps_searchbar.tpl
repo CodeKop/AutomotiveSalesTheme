@@ -1,5 +1,5 @@
 <!-- Block search module TOP -->
-<div id="search_widget" class="search-widget" data-search-controller-url="{$search_controller_url}">	
+<div id="_desktop_search_widget" class="search-widget" data-search-controller-url="{$search_controller_url}">	
 	<form method="get" action="{$search_controller_url}">
 		<input type="hidden" name="controller" value="search">
 
