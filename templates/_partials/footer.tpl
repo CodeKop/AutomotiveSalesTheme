@@ -7,7 +7,7 @@
 </div> *}
 <div class="footer-appbar d-flex d-md-none align-items-flex-end bg-white shadow">
   <div id="home-icon" class="appbar-item">
-    {$page.page_name}
+    {json_encode($page)}
     <a class="{if $page.page_name === 'index'}active{/if}"
       href="{$urls.pages.index}">
       <i class="fa fa-home fa-lg fa-fw"></i>
