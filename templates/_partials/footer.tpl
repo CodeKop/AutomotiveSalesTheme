@@ -8,7 +8,7 @@
 <div class="footer-appbar d-flex d-md-none align-items-flex-end bg-white shadow">
   <div id="home-icon" class="appbar-item">
     <a href="{$urls.pages.index}">
-      <i class="fa fa-home fa-lg fa-fw"></i>
+      <i class="material-icons">&#e88a;</i>
       <span class="small">Home</span>
     </a>
   </div>
