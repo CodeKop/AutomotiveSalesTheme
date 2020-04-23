@@ -14,14 +14,17 @@
 	> .appbar-item {
 		flex: 1;
 		height: 100%;
-	}
-	> .appbar-item a {
-		color: $dark;
 
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		a {
+			width: 100%;
+			height: 100%;
+			color: $dark;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	> .appbar-item.active {
 		color: $brand-primary;
