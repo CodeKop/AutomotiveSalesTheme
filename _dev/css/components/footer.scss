@@ -1,5 +1,5 @@
 #footer {
-	padding-bottom: 3rem;
+	padding-bottom: 3.5rem;
 }
 
 /* Footer appbar styles */
@@ -8,21 +8,20 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	height: 3rem;
+	height: 3.5rem;
 	z-index: 99;
 
 	> .appbar-item {
 		flex: 1;
 		height: 100%;
+	}
+	> .appbar-item a {
+		color: $dark;
 
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;	
-		
-		a {
-			color: $dark;
-		}
+		align-items: center;
 	}
 	> .appbar-item.active {
 		color: $brand-primary;
@@ -186,8 +185,8 @@
 }
 .links {
 	.links-title {
-    font-size: $footer-font-size-header;
-    text-transform: uppercase;
+		font-size: $footer-font-size-header;
+		text-transform: uppercase;
 	}
 }
 
