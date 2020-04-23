@@ -7,30 +7,28 @@
 </div> *}
 <div class="footer-appbar d-flex d-md-none align-items-flex-end bg-white shadow">
   <div id="home-icon" class="appbar-item">
-    {json_encode($page)}
-    <a class="{if $page.page_name === 'index'}active{/if}"
-      href="{$urls.pages.index}">
+    <a href="{$urls.pages.index}">
       <i class="fa fa-home fa-lg fa-fw"></i>
       <span class="small">Home</span>
     </a>
   </div>
   <div id="contact-icon" class="appbar-item">
-    <a class="{if $page.page_name === 'contact'}active{/if}"
-      href="{$urls.pages.contact}">
+    <a href="{$urls.pages.contact}">
       <i class="fa fa-phone fa-flip-horizontal"></i>
       <span class="small">Contact Us</span>
     </a>
   </div>
   <div id="_mobile_cart" class="appbar-item"></div>
   <div id="about-icon" class="appbar-item">
-    <a class="{if $page.page_name === 'about-us'}active{/if}"
-    href="{$urls.pages.cms}">
+    <a href="{$urls.pages.cms}">
       <i class="fa fa-phone fa-flip-horizontal"></i>
       <span class="small">About Us</span>
     </a>
   </div>
   <div id="_mobile_user_info" class="appbar-item"></div>
 </div>
+
+
 <div class="footer-main">
   <div class="container">
     <div class="row">
