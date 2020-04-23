@@ -7,22 +7,26 @@
 </div> *}
 <div class="footer-appbar d-flex d-md-none align-items-flex-end bg-white shadow">
   <div id="home-icon" class="appbar-item">
-    <a class="{if $urls.current_url === $urls.pages.index}active{/if}"
+    {$page.page_name . ' - ' . $urls.pages.index}
+    <a class="{if $page.page_name === 'index'}active{/if}"
       href="{$urls.pages.index}">
       <i class="fa fa-home fa-lg fa-fw"></i>
+      <span class="small">Home</span>
     </a>
   </div>
   <div id="contact-icon" class="appbar-item">
-    <a class="{if $urls.current_url === $urls.pages.contact}active{/if}"
+    <a class="{if $page.page_name === 'contact'}active{/if}"
       href="{$urls.pages.contact}">
       <i class="fa fa-phone fa-flip-horizontal"></i>
+      <span class="small">Contact Us</span>
     </a>
   </div>
   <div id="_mobile_cart" class="appbar-item"></div>
   <div id="about-icon" class="appbar-item">
-    <a class="{if $urls.current_url === $urls.pages.cms}active{/if}"
+    <a class="{if $page.page_name === 'about-us'}active{/if}"
     href="{$urls.pages.cms}">
       <i class="fa fa-phone fa-flip-horizontal"></i>
+      <span class="small">About Us</span>
     </a>
   </div>
   <div id="_mobile_user_info" class="appbar-item"></div>
