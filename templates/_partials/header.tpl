@@ -12,8 +12,8 @@
           <i class="fa fa-bars fa-lg fa-fw"></i>
         </div>
         <div class="flex-grow-1 top-logo my-1" id="_mobile_logo"></div>
-        <div id="search-icon">
-          <i class="fa fa-search fa-lg fa-fw"></i>
+        <div id="menu-icon">
+          <i class="fa fa-blank fa-lg fa-fw"></i>
         </div>
         {* <div id="_mobile_cart"></div> *}
       </div>
@@ -48,6 +48,7 @@
         </div>
       </div>
 
+      <div id="_mobile_search_widget"></div>
       <div id="mobile_top_menu_wrapper" class="row d-none d-md-none flex-column">
         <div class="js-top-menu mobile border px-0 py-3 mb-3" id="_mobile_top_menu"></div>
         <div class="js-top-menu-bottom">
