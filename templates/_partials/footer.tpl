@@ -8,20 +8,20 @@
 <div class="footer-appbar d-flex d-md-none align-items-flex-end bg-white shadow">
   <div id="home-icon" class="appbar-item">
     <a href="{$urls.pages.index}">
-      <i class="material-icons">&#e88a;</i>
+      <i class="material-icons">&#xe88a;</i>
       <span class="small">Home</span>
     </a>
   </div>
   <div id="contact-icon" class="appbar-item">
     <a href="{$urls.pages.contact}">
-      <i class="fa fa-phone fa-flip-horizontal"></i>
+      <i class="material-icons">&#xe0cf;</i>
       <span class="small">Contact Us</span>
     </a>
   </div>
   <div id="_mobile_cart" class="appbar-item"></div>
   <div id="about-icon" class="appbar-item">
     <a href="{$urls.pages.cms}">
-      <i class="fa fa-phone fa-flip-horizontal"></i>
+      <i class="material-icons">&#xe7fd;</i>
       <span class="small">About Us</span>
     </a>
   </div>
