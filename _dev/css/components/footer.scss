@@ -259,6 +259,10 @@
 	}
 }
 @include media-breakpoint-up(md) {
+	#footer {
+		padding-bottom: 0;
+	}
+
 	.links .collapse {
 		display: inherit;
 	}
