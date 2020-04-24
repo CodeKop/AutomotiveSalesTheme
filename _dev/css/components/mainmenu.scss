@@ -1,9 +1,24 @@
+/* Mobile First styles */
 .top-menu {
   margin-bottom: 0;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
+@include media-breakpoint-up(md) {
+  #_mobile_top_menu {
+    .category {
+      width: 100%;
+    }
+
+    .category .dropdown-item {
+      padding: $small-space $medium-space;
+    }
+  }
+}
+
+/* Desktop First Styles */
 #_desktop_top_menu {
   #top-menu {
     display: block;
@@ -49,15 +64,5 @@
     min-width: 3rem;
     border: none;
     border-radius: 0;
-  }
-}
-
-#_mobile_top_menu {
-  .category {
-    width: 100%;
-  }
-
-  .category .dropdown-item {
-    padding: $small-space $medium-space;
   }
 }
