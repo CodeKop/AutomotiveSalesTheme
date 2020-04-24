@@ -1,4 +1,6 @@
+/* Mobile first styes */
 #footer {
+	padding: 0;
 	padding-bottom: 3.5rem;
 }
 
@@ -31,6 +33,12 @@
 	}
 }
 
+#footer .footer-main {
+	padding: 0;
+	overflow: hidden;
+}
+
+/* Desktop first styles */
 /* Main footer styles */
 .block-contact {
 	color: $gray;
@@ -168,12 +176,6 @@
 	background-image: url(../img/instagram.svg);
 }
 .footer-main {
-	padding-top: $medium-space;
-	overflow: hidden;
-	box-shadow: 2px 2px 11px 0px rgba(0, 0, 0, 0.3);
-
-	font-family: Montserrat;
-	font-size: $footer-font-size-normal;
 	li {
 		margin-bottom: 0.3125rem;
 	}
@@ -261,6 +263,11 @@
 @include media-breakpoint-up(md) {
 	#footer {
 		padding-bottom: 0;
+	}
+
+	#footer .footer-main {
+		padding-top: 1.25rem;
+		box-shadow: 2px 2px 11px 0px rgba(0, 0, 0, 0.3);
 	}
 
 	.links .collapse {
