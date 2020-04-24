@@ -2,6 +2,26 @@
   @include search-box;
 }
 
+/* Mobile first styles */
+#_mobile_search_widget {
+  padding: $extra-small-space $small-space;
+
+  form {
+    width: 100%;
+    display: flex;
+  }
+  
+  input[name="s"] {
+    flex: 1;
+  }
+
+  button[type="submit"] {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+/* Desktop first styles */
 .header-nav {
   .search-widget {
     display: inline-block;
