@@ -63,7 +63,6 @@ global_settings:
       displayBar1:
         - ps_mainmenu
       displayBar2:
-        - ps_searchbar
         - ps_languageselector
         - ps_currencyselector
       displayHome:
