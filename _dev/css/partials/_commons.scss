@@ -517,22 +517,3 @@ textarea {
 	box-sizing: content-box;
 	text-align: center;
 }
-
-/* Only display _mobile_ in mobile and
- * only dispaly _desktop_ in desktop.
- * I know it's unnecessary. \(*-*)/
- */
-*[id^="_mobile_"] {
-	display: auto;
-}
-*[id^="_desktop_"] {
-	display: none;
-}
-@include media-breakpoint-up(md) {
-	*[id^="_desktop_"] {
-		display: auto;
-	}
-	*[id^="_mobile_"] {
-		display: none;
-	}
-}
