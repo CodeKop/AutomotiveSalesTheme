@@ -39,11 +39,12 @@
   }
 
   .sub-menu {
-    border-left: $small-space solid darken($primary, 0.5);
+    border-left: $small-space solid $gray-light-second;
     background-color: $gray-light;
   }
 }
 @include media-breakpoint-up(md) {
+
 }
 
 /* Desktop First Styles */
