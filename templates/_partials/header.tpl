@@ -9,11 +9,11 @@
     <div class="container-fluid">
       <div class="d-md-none d-flex align-items-center text-sm-center mobile">
         <div id="menu-icon">
-          <i class="fa fa-bars fa-lg fa-fw"></i>
+          <i class="material-icons">&#xe5d2;</i>
         </div>
         <div class="flex-grow-1 top-logo my-3 my-md-0" id="_mobile_logo"></div>
-        <div id="menu-icon">
-          <i class="fa fa-blank fa-lg fa-fw"></i>
+        <div id="blank-icon">
+          <i class="material-icons"></i>
         </div>
         {* <div id="_mobile_cart"></div> *}
       </div>
