@@ -12,6 +12,10 @@
             font-size: 1.25em;
         }
     }
+
+    &.is-open {
+        border-bottom: none;
+    }
 }
 
 @include media-breakpoint-up(md) {
