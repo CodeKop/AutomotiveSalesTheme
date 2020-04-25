@@ -10,18 +10,18 @@
   .navbar-toggler {
     &[data-toggle="collapse"] {
       .add {
-        display: block;
+        display: none;
       }
       .remove {
-        display: none;
+        display: block;
       }
     }
     &[data-toggle="collapse"].collapsed {
       .add {
-        display: none;
+        display: block;
       }
       .remove {
-        display: block;
+        display: none;
       }
     }
 
