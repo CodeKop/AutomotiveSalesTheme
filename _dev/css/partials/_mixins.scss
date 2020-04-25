@@ -4,7 +4,7 @@
 		width: 100%;
 		display: flex;
 		align-items: center;
-		padding: 0 $medium-space;
+		padding: 0 $small-space;
 		border: $input-btn-border-width solid $input-border-color;
 
 		input[name="s"],
@@ -24,13 +24,14 @@
 			padding: 0;
 			font-size: 1.25em;
 			margin-left: $medium-space;
-		
+
 			i {
-			  font-size: 1em;
-			  line-height: 1em;
-			  color: inherit;
+				display: block;
+				font-size: 1em;
+				line-height: 1em;
+				color: inherit;
 			}
-		  }
+		}
 	}
 }
 
