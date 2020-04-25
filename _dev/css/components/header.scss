@@ -1,6 +1,6 @@
 #header {
     background-color: white;
-    border-bottom: 1px solid $gray-lighter;
+    border-bottom: 1px solid $gray-light-second;
 
     .header-top {
         .mobile > div {
@@ -14,11 +14,14 @@
     }
 
     &.is-open {
-        border-bottom: none;
+        border-bottom-width: 0;
     }
 }
 
 @include media-breakpoint-up(md) {
+    #header.is-open {
+        border-bottom-width: 1px;
+    }
 }
 
 // #header {
