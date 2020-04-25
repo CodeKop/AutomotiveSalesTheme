@@ -5,36 +5,6 @@
 /* Mobile first styles */
 #_mobile_search_widget {
   border-top: 1px solid $gray-light;
-
-  form {
-    width: 100%;
-    display: flex;
-    padding: 0 $medium-space;
-  }
-
-  input[name="s"],
-  button[type="submit"] {
-    border: none;
-    border-radius: 0;
-    background-color: transparent;
-  }
-  
-  input[name="s"] {
-    padding: $small-space 0;
-    flex: 1;
-  }
-
-  button[type="submit"] {
-    padding: 0;
-    font-size: 1.25em;
-    margin-left: $medium-space;
-
-    i {
-      font-size: 1em;
-      line-height: 1em;
-      color: inherit;
-    }
-  }
 }
 
 @include media-breakpoint-up(md) {
