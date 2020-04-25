@@ -19,15 +19,15 @@
       </div>
 
        <div class="row align-items-center flex-nowrap d-none d-md-flex">
-          <div class="col-3 d-flex align-items-center">
+          <div class="col-4 d-flex align-items-center">
             {hook h='displayNav1'}
           </div>
-          <div class="col-6" id="_desktop_logo">
+          <div class="col-4" id="_desktop_logo">
             <a href="{$urls.base_url}" class="d-block">
               <img class="logo w-100" src="{$shop.logo}" alt="{$shop.name}">
             </a>
           </div>
-          <div class="col-3 d-flex flex-row-reverse align-items-center">
+          <div class="col-4 d-flex flex-row-reverse align-items-center">
             {hook h='displayNav2'}
           </div>
       </div>
@@ -48,7 +48,7 @@
         </div>
       </div>
 
-      <div id="_mobile_search_widget" class="row"></div>
+      <div id="_mobile_search_widget"></div>
       <div id="mobile_top_menu_wrapper" class="row d-none d-md-none flex-column">
         <div class="js-top-menu mobile border px-0 py-3 mb-3" id="_mobile_top_menu"></div>
         <div class="js-top-menu-bottom">
