@@ -14,19 +14,20 @@
 
   input[name="s"],
   button[type="submit"] {
-    padding: $small-space 0;
     border: none;
     border-radius: 0;
     background-color: transparent;
   }
   
   input[name="s"] {
+    padding: $small-space 0;
     flex: 1;
   }
 
   button[type="submit"] {
     padding: 0;
     font-size: 1.25em;
+    margin-left: $medium-space;
 
     i {
       font-size: 1em;
