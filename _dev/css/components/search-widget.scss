@@ -2,10 +2,10 @@
   @include search-box;
 }
 
-#header .search-widget {
+.header-nav .search-widget {
   border-top: 1px solid $gray-light;
-  form {
-    padding: $medium-space 0;
+  form input {
+    padding: 0 $small-space;
   }
 }
 
