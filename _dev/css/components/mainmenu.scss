@@ -7,12 +7,17 @@
 }
 
 #_mobile_top_menu {
+  .navbar-toggler-icon {
+    font-size: 1em;
+    vertical-align: middle;
+  }
+
   .category {
     width: 100%;
   }
 
   .category .dropdown-item {
-    padding: $small-space $medium-space;
+    padding: $extra-small-space $small-space;
   }
 }
 @include media-breakpoint-up(md) {
