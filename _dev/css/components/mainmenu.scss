@@ -39,7 +39,7 @@
   }
 
   .sub-menu {
-    border-left: $small-space solid $gray-light-second;
+    border-left: $small-space solid lighten($primary, 0.75);
     background-color: $gray-light;
   }
 }
