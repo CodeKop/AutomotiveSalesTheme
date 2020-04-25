@@ -2138,9 +2138,12 @@ var TopMenu = (function (_DropDown) {
           //   }
         }
       });
-      (0, _jquery2['default'])('#_mobile_top_menu .navbar-toggler').click(function (e) {
-        e.preventDefault();
-        e.stopPropagation();
+      (0, _jquery2['default'])('#_mobile_top_menu .category > a').click(function (e) {
+        var toggler = (0, _jquery2['default'])(e.currentTarget).children('.navbar-toggler');
+
+        if ((0, _jquery2['default'])(e.target).is(toggler) || toggler.find((0, _jquery2['default'])(e.target))) {
+          e.preventDefault();
+        }
       });
       (0, _jquery2['default'])('#menu-icon').on('click', function () {
         (0, _jquery2['default'])('#mobile_top_menu_wrapper').toggleClass('d-flex d-none');
