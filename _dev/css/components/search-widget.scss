@@ -4,15 +4,20 @@
 
 /* Mobile first styles */
 #_mobile_search_widget {
-  padding: $extra-small-space $small-space;
+  border-top: 1px solid $gray-light;
 
   form {
     width: 100%;
     display: flex;
+    padding: 0 $medium-space;
+  }
+
+  input[name="s"],
+  button[type="submit"] {
+    padding: $small-space 0;
   }
   
   input[name="s"] {
-    padding: $extra-small-space $small-space;
     flex: 1;
   }
 
