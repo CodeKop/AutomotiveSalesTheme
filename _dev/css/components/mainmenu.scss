@@ -48,50 +48,50 @@
 }
 
 /* Desktop First Styles */
-#_desktop_top_menu {
-  #top-menu {
-    display: block;
-    padding: $small-space 0;
-    background-color: white;
-    min-width: 100%;
-    z-index: 99;
-    // box-shadow: 0 3px 5px rgba(0, 0, 0, 0.11);
-    @include drop-shadow-light-no-overflow;
-    // border-radius: 0 0 5px 5px;
-    flex-wrap: wrap;
-    align-items: stretch;
+// #_desktop_top_menu {
+//   #top-menu {
+//     display: block;
+//     padding: $small-space 0;
+//     background-color: white;
+//     min-width: 100%;
+//     z-index: 99;
+//     // box-shadow: 0 3px 5px rgba(0, 0, 0, 0.11);
+//     @include drop-shadow-light-no-overflow;
+//     // border-radius: 0 0 5px 5px;
+//     flex-wrap: wrap;
+//     align-items: stretch;
 
-    li > a {
-      display: block;
-      padding: $small-space $medium-space;
-      transition: background 0.25s, box-shadow 0.25s;
-      padding-right: calc(1.25rem + 20px);
-    }
-    li > a .menu-icon {
-      position: absolute;
-      right: 1.25rem;
-    }
-    li > a:hover {
-      background-color: #f1f1f1;
-      color: initial;
-    }
+//     li > a {
+//       display: block;
+//       padding: $small-space $medium-space;
+//       transition: background 0.25s, box-shadow 0.25s;
+//       padding-right: calc(1.25rem + 20px);
+//     }
+//     li > a .menu-icon {
+//       position: absolute;
+//       right: 1.25rem;
+//     }
+//     li > a:hover {
+//       background-color: #f1f1f1;
+//       color: initial;
+//     }
 
-    ul {
-      height: 100%;
-    }
-  }
+//     ul {
+//       height: 100%;
+//     }
+//   }
 
-  .top-menu .js-sub-menu {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 100%;
-    margin: 0;
-    padding: $small-space 0;
-    background-color: white;
-    @include drop-shadow-light-no-overflow-with-inset;
-    min-width: 3rem;
-    border: none;
-    border-radius: 0;
-  }
-}
+//   .top-menu .js-sub-menu {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 100%;
+//     margin: 0;
+//     padding: $small-space 0;
+//     background-color: white;
+//     @include drop-shadow-light-no-overflow-with-inset;
+//     min-width: 3rem;
+//     border: none;
+//     border-radius: 0;
+//   }
+// }
