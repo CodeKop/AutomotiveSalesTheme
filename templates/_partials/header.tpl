@@ -15,7 +15,6 @@
         <div id="blank-icon">
           <i class="material-icons"></i>
         </div>
-        {* <div id="_mobile_cart"></div> *}
       </div>
 
        <div class="row align-items-center flex-nowrap d-none d-md-flex">
@@ -48,7 +47,9 @@
         </div>
       </div>
 
-      <div id="_mobile_search_widget"></div>
+      <div class="row d-block d-md-none">
+        {hook h='displaySearch'}
+      </div>
       <div id="mobile_top_menu_wrapper" class="row d-none d-md-none flex-column">
         <div class="js-top-menu mobile border px-0 py-3 mb-3" id="_mobile_top_menu"></div>
         <div class="js-top-menu-bottom">
