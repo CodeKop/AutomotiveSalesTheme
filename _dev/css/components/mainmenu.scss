@@ -6,6 +6,10 @@
   flex-direction: column;
 }
 
+#menu-icons {
+  cursor: pointer;
+}
+
 #_mobile_top_menu {
   .navbar-toggler {
     &[data-toggle="collapse"][aria-expanded="true"] {
