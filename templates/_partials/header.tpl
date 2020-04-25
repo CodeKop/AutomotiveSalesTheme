@@ -27,7 +27,7 @@
               <img class="logo w-100" src="{$shop.logo}" alt="{$shop.name}">
             </a>
           </div>
-          <div class="col-3 d-flex align-items-center">
+          <div class="col-3 d-flex flex-row-reverse align-items-center">
             {hook h='displayNav2'}
           </div>
       </div>
