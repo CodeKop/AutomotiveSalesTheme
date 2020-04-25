@@ -8,7 +8,7 @@
 
 #_mobile_top_menu {
   .navbar-toggler {
-    [data-toggle="collapse"] {
+    &[data-toggle="collapse"] {
       .add {
         display: block;
       }
@@ -16,7 +16,7 @@
         display: none;
       }
     }
-    [data-toggle="collapse"].collapsed {
+    &[data-toggle="collapse"].collapsed {
       .add {
         display: none;
       }
