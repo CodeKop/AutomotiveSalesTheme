@@ -2138,6 +2138,10 @@ var TopMenu = (function (_DropDown) {
           //   }
         }
       });
+      (0, _jquery2['default'])('#_mobile_top_menu .navbar-toggler').click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      });
       (0, _jquery2['default'])('#menu-icon').on('click', function () {
         (0, _jquery2['default'])('#mobile_top_menu_wrapper').toggleClass('d-flex d-none');
         self.toggleMobileMenu();
