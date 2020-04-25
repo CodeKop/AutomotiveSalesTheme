@@ -20,9 +20,12 @@ export default class TopMenu extends DropDown {
         //   }
       }
     });
-    $('#_mobile_top_menu .navbar-toggler').click((e) => {
-      e.preventDefault();
-      e.stopPropagation();
+    $('#_mobile_top_menu .category > a').click((e) => {
+      var toggler = $(e.currentTarget).children('.navbar-toggler');
+
+      if ($(e.target).is(toggler) || toggler.find($(e.target))) {
+        e.preventDefault();
+      }
     });
     $('#menu-icon').on('click', function () {
       $('#mobile_top_menu_wrapper').toggleClass('d-flex d-none');
