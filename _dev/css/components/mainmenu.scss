@@ -8,7 +8,7 @@
 
 #_mobile_top_menu {
   .navbar-toggler {
-    &[data-toggle="collapse"] {
+    &[data-toggle="collapse"][aria-expanded="true"] {
       .add {
         display: none;
       }
@@ -16,7 +16,7 @@
         display: block;
       }
     }
-    &[data-toggle="collapse"].collapsed {
+    &[data-toggle="collapse"][aria-expanded="false"] {
       .add {
         display: block;
       }
@@ -39,7 +39,7 @@
   }
 
   .sub-menu {
-    border-left: $small-space solid transparentize($primary, 0.5);
+    border-left: $small-space solid darken($primary, 0.5);
     background-color: $gray-light;
   }
 }
