@@ -1,6 +1,6 @@
 #header {
     background-color: white;
-    border-bottom: 1px solid $gray-dark;
+    border-bottom: 1px solid $gray-lighter;
 
     .header-top {
         .mobile > div {
@@ -19,9 +19,6 @@
 }
 
 @include media-breakpoint-up(md) {
-    #header {
-        border-color: $gray-light;
-    }
 }
 
 // #header {
