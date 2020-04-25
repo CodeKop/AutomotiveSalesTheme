@@ -5,20 +5,20 @@
 {/block}
 
 {block name='header_top'}
-  <div class="header-top">
+  <div class="header-top py-2">
     <div class="container-fluid">
       <div class="d-md-none d-flex align-items-center text-sm-center mobile">
         <div id="menu-icon">
           <i class="material-icons">&#xe5d2;</i>
         </div>
-        <div class="flex-grow-1 top-logo my-3 my-md-0" id="_mobile_logo"></div>
+        <div class="flex-grow-1 top-logo" id="_mobile_logo"></div>
         <div id="blank-icon">
           <i class="material-icons"></i>
         </div>
         {* <div id="_mobile_cart"></div> *}
       </div>
 
-       <div class="row no-gutters align-items-center flex-nowrap d-none d-md-flex">
+       <div class="row align-items-center flex-nowrap d-none d-md-flex">
           <div class="col-3 d-flex align-items-center">
             {hook h='displayNav1'}
           </div>
