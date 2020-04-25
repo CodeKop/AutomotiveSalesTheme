@@ -10,17 +10,15 @@
                 href="{$node.url}" data-depth="{$depth}"
                 {if $node.open_in_new_window} target="_blank" {/if}
               >
+                {$node.label}
                 {if $node.children|count}
                   {* Cannot use page identifier as we can have the same page several times *}
                   {assign var=_expand_id value=10|mt_rand:100000}
-                  <span class="menu-icon">
-                    <span data-target="#top_sub_menu_{$_expand_id}" data-toggle="collapse" class="navbar-toggler collapse-icons d-md-none">
-                      <i class="fa fa-chevron-down add"></i>
-                      <i class="fa fa-chevron-up remove"></i>
-                    </span>
+                  <span data-target="#top_sub_menu_{$_expand_id}" data-toggle="collapse" class="navbar-toggler collapse-icons d-md-none">
+                    <i class="material-icons add">&#xe313;</i>
+                    <i class="material-icons remove">&#xe316;</i>
                   </span>
                 {/if}
-                {$node.label}
               </a>
               {if $node.children|count}
               <div class="{if $depth === 0}popover sub-menu js-sub-menu collapse{else}collapse{/if}" id="top_sub_menu_{$_expand_id}">
