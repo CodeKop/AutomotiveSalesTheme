@@ -10,14 +10,16 @@
                 href="{$node.url}" data-depth="{$depth}"
                 {if $node.open_in_new_window} target="_blank" {/if}
               >
-                {$node.label}
+                <span class="navbar-text">{$node.label}</span>
                 {if $node.children|count}
                   {* Cannot use page identifier as we can have the same page several times *}
                   {assign var=_expand_id value=10|mt_rand:100000}
-                  <span data-target="#top_sub_menu_{$_expand_id}" data-toggle="collapse" class="navbar-toggler collapse-icons d-md-none">
-                    <i class="material-icons add">&#xe313;</i>
-                    <i class="material-icons remove">&#xe316;</i>
-                  </span>
+                  <button data-toggle="collapse" data-target="#top_sub_menu_{$_expand_id}"
+                     aria-expanded="false" aria-label="Show {$node.label} children"
+                     class="navbar-toggler collapse-icons d-md-none">
+                    <i class="material-icons navbar-toggler-icon add">&#xe145;</i>
+                    <i class="material-icons navbar-toggler-icon remove">&#xe15b;</i>
+                  </button>
                 {/if}
               </a>
               {if $node.children|count}
