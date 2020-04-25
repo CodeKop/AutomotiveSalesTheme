@@ -7,9 +7,28 @@
 }
 
 #_mobile_top_menu {
-  .navbar-toggler-icon {
-    font-size: 1em;
-    vertical-align: middle;
+  .navbar-toggler {
+    [data-toggle="collapse"] {
+      .add {
+        display: block;
+      }
+      .remove {
+        display: none;
+      }
+    }
+    [data-toggle="collapse"].collapsed {
+      .add {
+        display: none;
+      }
+      .remove {
+        display: block;
+      }
+    }
+
+    .navbar-toggler-icon {
+      font-size: 1em;
+      vertical-align: middle;
+    }
   }
 
   .category {
