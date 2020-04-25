@@ -6,16 +6,16 @@
   flex-direction: column;
 }
 
-@include media-breakpoint-up(md) {
-  #_mobile_top_menu {
-    .category {
-      width: 100%;
-    }
-
-    .category .dropdown-item {
-      padding: $small-space $medium-space;
-    }
+#_mobile_top_menu {
+  .category {
+    width: 100%;
   }
+
+  .category .dropdown-item {
+    padding: $small-space $medium-space;
+  }
+}
+@include media-breakpoint-up(md) {
 }
 
 /* Desktop First Styles */
