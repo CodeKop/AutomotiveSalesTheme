@@ -20,6 +20,10 @@ export default class TopMenu extends DropDown {
         //   }
       }
     });
+    $('#_mobile_top_menu .navbar-toggler').click((e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
     $('#menu-icon').on('click', function () {
       $('#mobile_top_menu_wrapper').toggleClass('d-flex d-none');
       self.toggleMobileMenu();
