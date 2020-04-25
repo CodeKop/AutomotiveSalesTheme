@@ -523,14 +523,14 @@ textarea {
  * I know it's unnecessary. \(*-*)/
  */
 *[id^="_mobile_"] {
-	display: initial;
+	display: auto;
 }
 *[id^="_desktop_"] {
 	display: none;
 }
 @include media-breakpoint-up(md) {
 	*[id^="_desktop_"] {
-		display: initial;
+		display: auto;
 	}
 	*[id^="_mobile_"] {
 		display: none;
