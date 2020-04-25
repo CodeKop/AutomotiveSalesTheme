@@ -18,18 +18,18 @@
         {* <div id="_mobile_cart"></div> *}
       </div>
 
-       <div class="row no-gutters align-items-center">
-        <div class="d-none d-md-flex col-md-4 col-sm-12">
-          {hook h='displayNav1'}
-        </div>
-        <div class="col-md-12 d-none d-md-block" id="_desktop_logo">
-          <a href="{$urls.base_url}" class="d-block">
-            <img class="logo w-100" src="{$shop.logo}" alt="{$shop.name}">
-          </a>
-        </div>
-        <div class="d-none d-md-flex col-md-4 col-sm-12">
-          {hook h='displayNav2'}
-        </div>
+       <div class="row no-gutters align-items-center flex-nowrap d-none d-md-flex">
+          <div class="col-3 d-flex align-items-center">
+            {hook h='displayNav1'}
+          </div>
+          <div class="col-6" id="_desktop_logo">
+            <a href="{$urls.base_url}" class="d-block">
+              <img class="logo w-100" src="{$shop.logo}" alt="{$shop.name}">
+            </a>
+          </div>
+          <div class="col-3 d-flex align-items-center">
+            {hook h='displayNav2'}
+          </div>
       </div>
     </div>
   </div>
@@ -40,10 +40,10 @@
   <nav class="header-nav m-0">
     <div class="container-fluid">
       <div class="row d-none d-md-flex no-gutters position-relative">
-        <div class="col-md-7 col-12 d-flex align-items-center">
+        <div class="col-7 d-flex align-items-center">
           {hook h='displayBar1'}
         </div>
-        <div class="col-md-5 right-nav d-flex flex-row-reverse align-items-center position-static">
+        <div class="col-5 d-flex flex-row-reverse align-items-center">
           {hook h='displayBar2'}
         </div>
       </div>
