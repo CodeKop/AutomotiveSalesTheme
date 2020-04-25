@@ -1,44 +1,36 @@
 @mixin search-box {
 	form {
 		position: relative;
-		display: inline-block;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		padding: 0 $medium-space;
+		border: $input-btn-border-width solid $input-border-color;
 
-		.search-input {
-			input[type="text"] {
-				border: none;
-				min-width: 255px;
-				padding: 1.45rem;
-				color: $gray;
-				line-height: 1em;
-				border: $input-btn-border-width solid $input-border-color;
-
-				&:focus {
-					color: $gray-darker;
-					background: white;
-					+ button .search {
-						color: $brand-primary;
-					}
-				}
-			}
-		}
-
-		.search-submit {
-			position: absolute;
-			right: 0;
-			display: inline-block;
-			background: none;
+		input[name="s"],
+		button[type="submit"] {
 			border: none;
-			padding: $small-space;
-			color: $gray;
-
-			i {
-				font-size: 0.875em;
-			}
-
-			.search:hover {
-				color: $brand-primary;
-			}
+			border-radius: 0;
+			background-color: transparent;
 		}
+
+		input[name="s"] {
+			padding: $small-space 0;
+			flex: 1;
+			line-height: 1em;
+		}
+
+		button[type="submit"] {
+			padding: 0;
+			font-size: 1.25em;
+			margin-left: $medium-space;
+		
+			i {
+			  font-size: 1em;
+			  line-height: 1em;
+			  color: inherit;
+			}
+		  }
 	}
 }
 
@@ -93,6 +85,5 @@
 	box-shadow: 6px 10px 25px -15px #ddd;
 }
 @mixin drop-shadow-light-no-overflow-with-inset {
-	box-shadow: 6px 10px 25px -15px #ddd,
-		inset 5px 0 10px -10px #999;
+	box-shadow: 6px 10px 25px -15px #ddd, inset 5px 0 10px -10px #999;
 }
