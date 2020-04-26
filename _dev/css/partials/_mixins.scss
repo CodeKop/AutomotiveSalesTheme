@@ -6,7 +6,8 @@
 		align-items: center;
 		padding: 0 $medium-space;
 		border: $input-btn-border-width solid $input-border-color;
-		background: $gray-light;
+		background: $gray-lighter;
+		border-radius: 5px;
 		color: $gray;
 
 		input[name="s"],
