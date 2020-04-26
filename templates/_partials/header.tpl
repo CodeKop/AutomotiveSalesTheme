@@ -15,16 +15,16 @@
         <div id="_mobile_user_info"></div>
       </div>
 
-       <div class="row align-items-center flex-nowrap d-none d-md-flex">
-          <div class="col-4 d-flex align-items-center nav-left">
+       <div class="row align-items-center d-none d-md-flex flex-nowrap">
+          <div class="col-3 d-flex align-items-center nav-left">
             {hook h='displayNav1'}
           </div>
-          <div class="col-4" id="_desktop_logo">
+          <div class="col-6" id="_desktop_logo">
             <a href="{$urls.base_url}" class="d-block">
               <img class="logo w-100" src="{$shop.logo}" alt="{$shop.name}">
             </a>
           </div>
-          <div class="col-4 d-flex flex-row-reverse align-items-center nav-right">
+          <div class="col-3 d-flex flex-row-reverse align-items-center nav-right">
             {hook h='displayNav2'}
           </div>
       </div>
@@ -37,10 +37,10 @@
   <nav class="header-nav m-0">
     <div class="container-fluid">
       <div class="row d-none d-md-flex no-gutters position-relative">
-        <div class="col-7 d-flex align-items-center">
+        <div class="col-auto flex-grow-1 d-flex align-items-end">
           {hook h='displayBar1'}
         </div>
-        <div class="col-5 d-flex flex-row-reverse align-items-center">
+        <div class="col-auto d-flex flex-row-reverse align-items-center">
           {hook h='displayBar2'}
         </div>
       </div>
