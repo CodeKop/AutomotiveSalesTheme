@@ -6,6 +6,8 @@
   border-top: 1px solid $gray-light;
   form {
     border-radius: 0;
+    border-left-width: 0;
+    border-right-width: 0;
   }
 }
 
