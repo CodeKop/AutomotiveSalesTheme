@@ -23,7 +23,8 @@
                 {/if}
               </a>
               {if $node.children|count}
-              <div class="{if $depth === 0}sub-menu js-sub-menu collapse{else}collapse{/if}" id="top_sub_menu_{$_expand_id}">
+              {if $depth == 0}{assign var=isCategorised value=$node.children.children|count}{/if}
+              <div class="{if $depth === 0}submenu js-sub-menu collapse{else}collapse{/if} navbar" id="top_sub_menu_{$_expand_id}">
                 {menu nodes=$node.children depth=$node.depth parent=$node}
               </div>
               {/if}
@@ -33,7 +34,8 @@
     {/if}
 {/function}
 
-<div class="menu js-top-menu d-none d-md-inline-block h-100" id="_desktop_top_menu">    
+<div class="menu js-top-menu d-none d-md-inline-block:" id="_desktop_top_menu">    
+  {json_encode($menu.children)}
   {menu nodes=$menu.children}
   <div class="clearfix"></div>
 </div>
