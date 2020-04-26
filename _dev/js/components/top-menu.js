@@ -20,6 +20,14 @@ export default class TopMenu extends DropDown {
         //   }
       }
     });
+    this.el.find('.submenu').each((e) => {
+      var target = $(e.currentTarget),
+        targetDepth = 3;
+
+        if (target.find(`[data-depth="${targetDepth}"]`).length) {
+          target.addClass('submenu--full');
+        }
+    });
     $('#_mobile_top_menu .category > a').click((e) => {
       var toggler = $(e.currentTarget).children('.navbar-toggler');
 
