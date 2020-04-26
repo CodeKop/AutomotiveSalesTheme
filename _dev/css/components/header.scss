@@ -13,13 +13,20 @@
 
         .nav-left > div,
         .nav-right > div {
+            margin: 0 $extra-small-space;
+        }
+        .nav-left > div {
+            border-left: 1px solid $gray-lighter;
             &:first-child {
                 border-left-width: 0;
                 margin-left: 0;
             }
-            & + div {
-                border-left: 1px solid $gray-lighter;
-                margin: 0 $extra-small-space;
+        }
+        .nav-right > div {
+            border-right: 1px solid $gray-lighter;
+            &:first-child {
+                border-right-width: 0;
+                margin-right: 0;
             }
         }
     }
