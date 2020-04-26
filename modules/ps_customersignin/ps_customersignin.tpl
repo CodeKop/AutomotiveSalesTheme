@@ -1,5 +1,5 @@
 <div id="_desktop_user_info">
-  <div class="user-info">
+  <div class="user-info d-none d-md-inline-flex">
     {if $logged}      
       {* If the user is logged in then show user name. *}
       <a
@@ -36,22 +36,31 @@
       </div>
     {else}
       <a
-        class="text-center text-dark px-3 py-2"
+        class="text-center text-dark"
         href="{$my_account_url}"
         title="{l s='Log or register to your customer account' d='Shop.Theme.Customeraccount'}"
         rel="nofollow"
       >
-        <span class="d-none d-md-block">{l s='Login' d='Shop.Theme.Actions'}</span>
+        <span>{l s='Login' d='Shop.Theme.Actions'}</span>
       </a>
-      <h5>/</h5>    
+      <p class="m-0 mx-2">/</p>
       <a
-        class="text-center text-dark px-3 py-2"
+        class="text-center text-dark"
         href="{$urls.pages.register}"
         title="{l s='Log or register to your customer account' d='Shop.Theme.Customeraccount'}"
         rel="nofollow"
       >
-        <span class="d-none d-md-block">{l s='Register' d='Shop.Theme.Actions'}</span>
+        <span>{l s='Register' d='Shop.Theme.Actions'}</span>
       </a>
     {/if}
+  </div>
+
+  <div class="user-info mobile d-flex d-md-none">
+    <a class="text-center" href="{$my_account_url}"
+        title="{l s='Log or register to your customer account' d='Shop.Theme.Customeraccount'}"
+        rel="nofollow"
+      >
+      <i class="material-icons">&#xe851;</i>
+    </a>
   </div>
 </div>
