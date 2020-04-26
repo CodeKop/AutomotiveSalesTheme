@@ -33,7 +33,7 @@
     {/if}
 {/function}
 
-<div class="menu js-top-menu d-none d-md-inline-block:" id="_desktop_top_menu">    
+<div class="menu js-top-menu d-none d-md-inline-block" id="_desktop_top_menu">    
   {json_encode($menu.children)}
   {menu nodes=$menu.children}
   <div class="clearfix"></div>
