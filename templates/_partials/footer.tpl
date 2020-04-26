@@ -20,7 +20,7 @@
   </div>
   <div id="_mobile_cart" class="appbar-item"></div>
   <div id="about-icon" class="appbar-item">
-    <a href="{$link->getCMSLink('about-us')}">
+    <a href="{$link->getCMSLink('About us')}">
       <i class="material-icons">&#xe922;</i>
       <span class="small">About Us</span>
     </a>
