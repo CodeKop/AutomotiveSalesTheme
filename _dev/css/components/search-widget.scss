@@ -1,4 +1,5 @@
 .search-widget {
+  width: 100%;
   @include search-box;
 }
 
@@ -18,6 +19,7 @@
   #header .search-widget {
     input {
       padding: $small-space 0;
+      min-width: 0;
     }
     button[type="submit"] {
       font-size: 0.8rem;
