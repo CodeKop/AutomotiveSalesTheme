@@ -21,7 +21,7 @@
   <div id="_mobile_cart" class="appbar-item"></div>
   <div id="about-icon" class="appbar-item">
     <a href="{$urls.pages.cms}">
-      <i class="material-icons">&#xe7fd;</i>
+      <i class="material-icons">&#xe922;</i>
       <span class="small">About Us</span>
     </a>
   </div>
