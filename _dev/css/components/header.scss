@@ -1,6 +1,5 @@
 #header {
     background-color: white;
-    border-bottom: 1px solid $gray-light-second;
 
     .header-top {
         .mobile > div {
@@ -12,15 +11,11 @@
             font-size: 1.25em;
         }
     }
-
-    &.is-open {
-        border-bottom-width: 0;
-    }
 }
 
 @include media-breakpoint-up(md) {
-    #header.is-open {
-        border-bottom-width: 1px;
+    #header {
+        border-bottom: 1px solid $gray-light-second;
     }
 }
 
