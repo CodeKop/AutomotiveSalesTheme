@@ -2,7 +2,7 @@
   @include search-box;
 }
 
-.header-top .search-widget {
+#header .mobile .search-widget {
   border-top: 1px solid $gray-light;
   form {
     border-radius: 0;
@@ -15,7 +15,7 @@
 }
 
 @include media-breakpoint-up(md) {
-  .header-nav .search-widget {
+  #header .search-widget {
     input {
       padding: $small-space 0;
     }
