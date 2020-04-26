@@ -8,13 +8,6 @@
     border-radius: 0;
     border-left-width: 0;
     border-right-width: 0;
-
-    input {
-      padding: $small-space 0;
-    }
-    button[type="submit"] {
-      font-size: 0.8rem;
-    }
   }
   form:focus-within {
     box-shadow: none;
@@ -22,7 +15,13 @@
 }
 
 @include media-breakpoint-up(md) {
-  #header .search-widget {
+  .header-top .search-widget {
+    input {
+      padding: $small-space 0;
+    }
+    button[type="submit"] {
+      font-size: 0.8rem;
+    }
   }
 }
 
