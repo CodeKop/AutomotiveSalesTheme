@@ -16,7 +16,7 @@
       </div>
 
        <div class="row align-items-center flex-nowrap d-none d-md-flex">
-          <div class="col-4 d-flex align-items-center">
+          <div class="col-4 d-flex align-items-center nav-left">
             {hook h='displayNav1'}
           </div>
           <div class="col-4" id="_desktop_logo">
@@ -24,7 +24,7 @@
               <img class="logo w-100" src="{$shop.logo}" alt="{$shop.name}">
             </a>
           </div>
-          <div class="col-4 d-flex flex-row-reverse align-items-center">
+          <div class="col-4 d-flex flex-row-reverse align-items-center nav-right">
             {hook h='displayNav2'}
           </div>
       </div>
