@@ -1,57 +1,91 @@
-#_desktop_cart {
-    display: inline-block;
-    
-    a.main {
-        display: inline-block;
-    }
+@include media-breakpoint-up(md) {
+	.shopping-cart {
+		> a {
+			position: relative;
 
-	.icon-container {
-		float: left;
-		height: 100%;
-
-		i.fa {
-			font-size: 1.5em;
-			line-height: 1em;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
-	}
 
-	.content-container {
-		display: block;
-		overflow: hidden;
-		padding: 0 0.8em;
-		font-family: Roboto;
-
-		span {
+		.amount {
 			display: block;
-		}
-
-		.caption {
-			text-transform: uppercase;
-			font-size: 0.8em;
-			letter-spacing: 0.3em;
-			margin-bottom: 0.15rem;
-			color: #6c757d;
-		}
-
-		.value {
-            color: #000;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 1rem;
+			height: 1rem;
+			padding: .125rem;
+			transform: translate(50%, -50%);
+			
+			line-height: 1.25;
+			font-size: .8rem;
+			background-color: $success;
+			color: white;
+			border-radius: 100px;
+			text-align: center;
+			box-sizing: content-box;
+			font-family: sans-serif;
+			box-shadow: .0625rem .0625rem .1875 $gray-light-second;
 		}
 	}
 }
 
-/* Alterations */
-.header-top .nav-user.-right {
-	#_desktop_cart {
-		height: 100%;
-        vertical-align: top;
-        padding: 0.6rem 1.5rem;
-        border-radius: 5px;
-        border: 0.5px double transparent;
-        transition: box-shadow 0.5s, border 0.5s;
 
-        &:hover {
-			box-shadow: 0 0 100px #DDD;
-            border-color: $brand-primary;
-        }
-    }
-}
+// #_desktop_cart {
+//     display: inline-block;
+    
+//     a.main {
+//         display: inline-block;
+//     }
+
+// 	.icon-container {
+// 		float: left;
+// 		height: 100%;
+
+// 		i.fa {
+// 			font-size: 1.5em;
+// 			line-height: 1em;
+// 		}
+// 	}
+
+// 	.content-container {
+// 		display: block;
+// 		overflow: hidden;
+// 		padding: 0 0.8em;
+// 		font-family: Roboto;
+
+// 		span {
+// 			display: block;
+// 		}
+
+// 		.caption {
+// 			text-transform: uppercase;
+// 			font-size: 0.8em;
+// 			letter-spacing: 0.3em;
+// 			margin-bottom: 0.15rem;
+// 			color: #6c757d;
+// 		}
+
+// 		.value {
+//             color: #000;
+// 		}
+// 	}
+// }
+
+// /* Alterations */
+// .header-top .nav-user.-right {
+// 	#_desktop_cart {
+// 		height: 100%;
+//         vertical-align: top;
+//         padding: 0.6rem 1.5rem;
+//         border-radius: 5px;
+//         border: 0.5px double transparent;
+//         transition: box-shadow 0.5s, border 0.5s;
+
+//         &:hover {
+// 			box-shadow: 0 0 100px #DDD;
+//             border-color: $brand-primary;
+//         }
+//     }
+// }
