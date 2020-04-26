@@ -42,6 +42,10 @@
 		box-shadow: 0 0 0 3px $brand-primary-lighter;
 		outline: none;
 		color: $gray-darker;
+
+		button[type="submit"] {
+			color: $primary;
+		}
 	}
 }
 
