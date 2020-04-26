@@ -14,16 +14,17 @@
         .nav-left > div,
         .nav-right > div {
             padding: 0 $extra-small-space;
+            border: solid $gray-light-second;
         }
         .nav-left > div {
-            border-left: 1px solid $gray-lighter;
+            border-width: 0 0 0 1px;
             &:first-child {
                 border-left-width: 0;
                 padding-left: 0;
             }
         }
         .nav-right > div {
-            border-right: 1px solid $gray-lighter;
+            border-width: 0 1px 0 0;
             &:first-child {
                 border-right-width: 0;
                 padding-right: 0;
