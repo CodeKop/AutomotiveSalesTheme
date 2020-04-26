@@ -59,7 +59,6 @@
       title="{l s='Log or register to your customer account' d='Shop.Theme.Customeraccount'}"
       rel="nofollow"
     >
-    <i class="material-icons">&#xe851;</i>
+    <i class="material-icons">&#xe853;</i>
   </a>
-  </div>
 </div>
