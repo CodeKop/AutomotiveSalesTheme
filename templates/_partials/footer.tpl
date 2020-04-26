@@ -25,7 +25,6 @@
       <span class="small">About Us</span>
     </a>
   </div>
-  <div id="_mobile_user_info" class="appbar-item"></div>
 </div>
 
 
