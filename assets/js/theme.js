@@ -2138,6 +2138,14 @@ var TopMenu = (function (_DropDown) {
           //   }
         }
       });
+      this.el.find('.submenu').each(function (e) {
+        var target = (0, _jquery2['default'])(e.currentTarget),
+            targetDepth = 3;
+
+        if (target.find('[data-depth="' + targetDepth + '"]').length) {
+          target.addClass('submenu--full');
+        }
+      });
       (0, _jquery2['default'])('#_mobile_top_menu .category > a').click(function (e) {
         var toggler = (0, _jquery2['default'])(e.currentTarget).children('.navbar-toggler');
 
