@@ -55,12 +55,11 @@
     {/if}
   </div>
 
-  <div class="user-info mobile d-flex d-md-none">
-    <a class="text-center" href="{$my_account_url}"
-        title="{l s='Log or register to your customer account' d='Shop.Theme.Customeraccount'}"
-        rel="nofollow"
-      >
-      <i class="material-icons">&#xe851;</i>
-    </a>
+  <a class="user-info mobile d-flex d-md-none text-center" href="{$my_account_url}"
+      title="{l s='Log or register to your customer account' d='Shop.Theme.Customeraccount'}"
+      rel="nofollow"
+    >
+    <i class="material-icons">&#xe851;</i>
+  </a>
   </div>
 </div>
