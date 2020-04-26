@@ -4,8 +4,8 @@
 
 .header-nav .search-widget {
   border-top: 1px solid $gray-light;
-  form input {
-    padding: 0 $small-space;
+  form {
+    border-radius: 0;
   }
 }
 
