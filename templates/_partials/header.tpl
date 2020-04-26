@@ -45,7 +45,7 @@
         </div>
       </div>
 
-      <div class="row d-block d-md-none">
+      <div class="row d-block d-md-none mobile">
         {hook h='displaySearch'}
       </div>
       <div id="mobile_top_menu_wrapper" class="row d-none d-md-none flex-column">
