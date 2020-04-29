@@ -36,7 +36,7 @@
 {block name='header_nav'}
   <nav class="header-nav m-0">
     <div class="container-fluid">
-      <div class="row d-none d-md-flex no-gutters position-relative">
+      <div class="row d-none d-md-flex position-relative">
         <div class="col-auto flex-grow-1 d-flex align-items-end">
           {hook h='displayBar1'}
         </div>
