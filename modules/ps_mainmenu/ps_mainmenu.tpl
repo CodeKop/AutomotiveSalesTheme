@@ -29,7 +29,7 @@
                 {/if}
               </a>
               {if $node.children|count}
-              <div class="{if $depth === 0}submenu js-sub-menu collapse {/if}navbar" id="top_sub_menu_{$_expand_id}">
+              <div class="{if $depth === 0}submenu js-sub-menu {/if}navbar" id="top_sub_menu_{$_expand_id}">
                 {menu nodes=$node.children depth=$node.depth parent=$node}
               </div>
               {/if}
