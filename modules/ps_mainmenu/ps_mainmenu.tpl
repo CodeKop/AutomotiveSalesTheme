@@ -15,15 +15,17 @@
                   {* Cannot use page identifier as we can have the same page several times *}
                   {assign var=_expand_id value=10|mt_rand:100000}
                   <button data-toggle="collapse" data-target="#top_sub_menu_{$_expand_id}"
-                     aria-expanded="false" aria-label="Show {$node.label} children"
+                     aria-expanded="false" aria-label="Show {$node.label} items"
                      class="navbar-toggler collapse-icons d-md-none">
                     <i class="material-icons navbar-toggler-icon add">&#xe145;</i>
                     <i class="material-icons navbar-toggler-icon remove">&#xe15b;</i>
                   </button>
-                  <button aria-label="Show {$node.label} children"
-                     class="navbar-toggler collapse-icons d-none d-md-block">
-                    <i class="material-icons navbar-toggler-icon">&#xe145;</i>
+
+                  {if $depth == 0}
+                  <span class="d-none d-md-block">
+                    <i class="material-icons">&#xe313;</i>
                   </button>
+                  {/if}
                 {/if}
               </a>
               {if $node.children|count}
