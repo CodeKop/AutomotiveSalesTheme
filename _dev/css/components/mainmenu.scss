@@ -51,7 +51,7 @@
   #top-menu {
     flex-direction: row;
 
-    > .category > .submenu {
+    .submenu {
       position: absolute;
       top: 0;
       opacity: 0;
@@ -70,12 +70,18 @@
         font-weight: bold;
       }
     }
+    .submenu .category {
+      width: 100%;
+    }
 
-    > .category:hover > .submenu {
+    > .category:hover .submenu {
       display: flex;
       transition: top .35s, opacity .35s, display 0s linear .35s;
+      opacity: 1;
+      top: 100%;
     }
   }
+
   .category .dropdown-item:hover {
     color: $primary;
   }
