@@ -5,26 +5,28 @@ export default class TopMenu extends DropDown {
   init() {
     let elmtClass;
     let self = this;
-    this.el.find('li').hover((e) => {
-      if (this.el.parent().hasClass('mobile')) {
-        return;
-      }
-      const currentTargetClass = $(e.currentTarget).attr('class');
-      if (elmtClass !== currentTargetClass) {
-        elmtClass = currentTargetClass;
+    // this.el.find('li').hover((e) => {
+    //   if (this.el.parent().hasClass('mobile')) {
+    //     return;
+    //   }
+    //   const currentTargetClass = $(e.currentTarget).attr('class');
+    //   if (elmtClass !== currentTargetClass) {
+    //     elmtClass = currentTargetClass;
 
-        //   if (elmtClass && $(e.target).data('depth') === 0) {
-        //     $(`.${elmtClass} .js-sub-menu > .top-menu`).css({
-        //       top: $(`.${elmtClass}`).height() + $(`.${elmtClass}`).position().top
-        //     });
-        //   }
-      }
-    });
+    //     if (elmtClass && $(e.target).data('depth') === 0) {
+    //       $(`.${elmtClass} .js-sub-menu > .top-menu`).css({
+    //         top: $(`.${elmtClass}`).height() + $(`.${elmtClass}`).position().top
+    //       });
+    //     }
+    //   }
+    // });
     this.el.find('.submenu').each((e) => {
       var target = $(e.currentTarget),
-        targetDepth = 3;
+        parget = $(e.currentTarget).parent('.category'),
+        targetDepth = 2;
 
         if (target.find(`[data-depth="${targetDepth}"]`).length) {
+          parget.addClass('position-static');
           target.addClass('submenu--full');
         }
     });
