@@ -53,14 +53,27 @@
 
     > .category > .submenu {
       position: absolute;
+      top: 0;
+      opacity: 0;
       z-index: 99;
       background-color: white;
-      box-shadow: 3px 5px 10px #ccc,
-        inset 0 10px 5px -5px #0002;
+      box-shadow: 3px 5px 10px #ccc;
+      flex-direction: column;
+      transform: translateX(-50%);
+      transition: top .35s, opacity .35s;
+
+      &.submenu--full {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      &.submenu--full > .top-menu > .category {
+        font-weight: bold;
+      }
     }
 
     > .category:hover > .submenu {
       display: flex;
+      transition: top .35s, opacity .35s, display 0s linear .35s;
     }
   }
   .category .dropdown-item:hover {
