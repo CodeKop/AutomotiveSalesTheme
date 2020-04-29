@@ -20,6 +20,7 @@ export default class TopMenu extends DropDown {
     //     }
     //   }
     // });
+    console.log(this.el.find('.submenu').length);
     this.el.find('.submenu').each((e) => {
       var target = $(e.currentTarget),
         parget = $(e.currentTarget).parent('.category'),
