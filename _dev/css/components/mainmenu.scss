@@ -50,6 +50,7 @@
 @include media-breakpoint-up(md) {
   #top-menu {
     flex-direction: row;
+    align-items: flex-end;
 
     > .category {
       position: relative;
