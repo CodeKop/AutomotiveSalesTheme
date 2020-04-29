@@ -20,6 +20,10 @@
                     <i class="material-icons navbar-toggler-icon add">&#xe145;</i>
                     <i class="material-icons navbar-toggler-icon remove">&#xe15b;</i>
                   </button>
+                  <button aria-label="Show {$node.label} children"
+                     class="navbar-toggler collapse-icons d-none d-md-block">
+                    <i class="material-icons navbar-toggler-icon">&#xe145;</i>
+                  </button>
                 {/if}
               </a>
               {if $node.children|count}
