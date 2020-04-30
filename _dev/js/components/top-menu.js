@@ -26,7 +26,7 @@ export default class TopMenu extends DropDown {
         targetDepth = 2;
 
       console.log(target);
-      console.log(target.find(`.top-menu[data-depth="${targetDepth}"]`).length);
+      console.log(`.top-menu[data-depth="${targetDepth}"]` + ' - ' + target.find(`.top-menu[data-depth="${targetDepth}"]`).length);
       if (target.find(`.top-menu[data-depth="${targetDepth}"]`).length) {
         parget.addClass('position-static');
         target.addClass('submenu--full');
