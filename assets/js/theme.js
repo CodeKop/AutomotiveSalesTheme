@@ -2138,8 +2138,8 @@ var TopMenu = (function (_DropDown) {
       //     }
       //   }
       // });
-      this.el.find('.submenu').each(function () {
-        var target = (0, _jquery2['default'])(_this),
+      this.el.find('.submenu').each(function (index, element) {
+        var target = (0, _jquery2['default'])(element),
             targetDepth = 2;
 
         console.log(target);
