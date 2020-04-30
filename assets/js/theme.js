@@ -2143,7 +2143,7 @@ var TopMenu = (function (_DropDown) {
             targetDepth = 2;
 
         // console.log(target.html());
-        // console.log(target.find(`.top-menu[data-depth="${targetDepth}"]`).length);
+        console.log(target.find('.top-menu[data-depth="' + targetDepth + '"]').length);
         if (target.find('.top-menu[data-depth="' + targetDepth + '"]').length) {
           target.addClass('position-static');
           target.addClass('submenu--full');
