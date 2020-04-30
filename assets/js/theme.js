@@ -2139,14 +2139,11 @@ var TopMenu = (function (_DropDown) {
       //   }
       // });
       this.el.find('.submenu').each(function (e) {
-        var target = (0, _jquery2['default'])(e.currentTarget),
-            parget = (0, _jquery2['default'])(e.currentTarget).parent('.category'),
+        var target = (0, _jquery2['default'])(_this),
             targetDepth = 2;
 
-        console.log(target);
-        console.log(target.find('.top-menu[data-depth="' + targetDepth + '"]').length);
         if (target.find('.top-menu[data-depth="' + targetDepth + '"]').length) {
-          parget.addClass('position-static');
+          target.addClass('position-static');
           target.addClass('submenu--full');
         }
       });
