@@ -22,7 +22,7 @@
                   </button>
 
                   {if $depth == 0}
-                  <span class="d-none d-md-block">
+                  <span class="navbar-icon d-none d-md-block">
                     <i class="material-icons">&#xe313;</i>
                   </button>
                   {/if}
