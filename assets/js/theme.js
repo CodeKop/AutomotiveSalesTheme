@@ -2143,7 +2143,8 @@ var TopMenu = (function (_DropDown) {
             parget = (0, _jquery2['default'])(e.currentTarget).parent('.category'),
             targetDepth = 2;
 
-        console.log(target + '\n' + target.find('.top-menu[data-depth="' + targetDepth + '"]').length);
+        console.log(target);
+        console.log(target.find('.top-menu[data-depth="' + targetDepth + '"]').length);
         if (target.find('.top-menu[data-depth="' + targetDepth + '"]').length) {
           parget.addClass('position-static');
           target.addClass('submenu--full');
