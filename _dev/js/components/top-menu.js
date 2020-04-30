@@ -20,17 +20,16 @@ export default class TopMenu extends DropDown {
     //     }
     //   }
     // });
-    console.log(this.el.find('.submenu').length);
     this.el.find('.submenu').each((e) => {
       var target = $(e.currentTarget),
         parget = $(e.currentTarget).parent('.category'),
         targetDepth = 2;
 
-        console.log(target.find(`.top-menu[data-depth="${targetDepth}"]`).length);
-        if (target.find(`.top-menu[data-depth="${targetDepth}"]`).length) {
-          parget.addClass('position-static');
-          target.addClass('submenu--full');
-        }
+      console.log(target + '\n' + target.find(`.top-menu[data-depth="${targetDepth}"]`).length);
+      if (target.find(`.top-menu[data-depth="${targetDepth}"]`).length) {
+        parget.addClass('position-static');
+        target.addClass('submenu--full');
+      }
     });
     $('#_mobile_top_menu .category > a').click((e) => {
       var toggler = $(e.currentTarget).children('.navbar-toggler');
