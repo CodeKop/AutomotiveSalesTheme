@@ -37,10 +37,10 @@
   <nav class="header-nav m-0">
     <div class="container-fluid">
       <div class="row d-none d-md-flex position-relative">
-        <div class="col-auto flex-grow-1 d-flex align-items-end">
+        <div class="col-auto flex-grow-1 d-flex align-items-end nav-left">
           {hook h='displayBar1'}
         </div>
-        <div class="col-auto d-flex flex-row-reverse align-items-center">
+        <div class="col-auto d-flex flex-row-reverse align-items-center nav-right">
           {hook h='displayBar2'}
         </div>
       </div>
