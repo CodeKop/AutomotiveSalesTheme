@@ -6,7 +6,7 @@
 
 {block name='header_top'}
   <div class="header-top py-2">
-    <div class="container-fluid">
+    <div class="container">
       <div class="d-md-none d-flex align-items-center text-sm-center mobile">
         <div id="menu-icon">
           <i class="material-icons">&#xe5d2;</i>
@@ -35,7 +35,7 @@
 
 {block name='header_nav'}
   <nav class="header-nav m-0">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row d-none d-md-flex position-relative">
         <div class="col-auto flex-grow-1 d-flex align-items-end nav-left">
           {hook h='displayBar1'}
