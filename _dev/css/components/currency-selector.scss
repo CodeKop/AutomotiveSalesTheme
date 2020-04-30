@@ -1,6 +1,8 @@
 @include media-breakpoint-up(md) {
-    #header .right-nav .currency-selector-wrapper {
-        left: auto;
-        right: 0;
+    .header-nav .nav-right .currency-selector-wrapper {
+        .dropdown-menu {
+            left: auto;
+            right: 0;
+        }
     }
 }
