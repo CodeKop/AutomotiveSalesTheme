@@ -53,8 +53,12 @@
     align-items: flex-end;
 
     .submenu {
-      display: block;
+      display: none;
       position: relative;
+
+      .top-menu {
+        margin-left: $medium-space;
+      }
 
       > .top-menu {
         position: absolute;
@@ -63,6 +67,7 @@
         z-index: 99;
         opacity: 0;
         min-width: 100%;
+        margin: 0;
         padding: calc(#{$small-space} * 1.5) $medium-space;
 
         display: flex;
@@ -99,14 +104,13 @@
     }
 
     .dropdown-item[data-depth="0"] {
+      .navbar-icon {
+        margin-left: $small-space;
+      }
       .material-icons {
         font-size: 1em;
         display: block;
       }
-    }
-
-    .submenu .top-menu {
-      margin-left: $medium-space;
     }
     .submenu .category {
       width: 100%;
