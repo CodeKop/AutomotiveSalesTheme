@@ -20,15 +20,11 @@ export default class TopMenu extends DropDown {
     //     }
     //   }
     // });
-    this.el.find('.submenu').each((e) => {
-      var target = $(e.currentTarget),
-        parget = $(e.currentTarget).parent('.category'),
+    this.el.find('.submenu').each((index, element) => {
+      var target = $(element),
         targetDepth = 2;
 
-      console.log(target.html());
-      console.log(target.find(`.top-menu[data-depth="${targetDepth}"]`).length);
       if (target.find(`.top-menu[data-depth="${targetDepth}"]`).length) {
-        parget.addClass('position-static');
         target.addClass('submenu--full');
       }
     });
