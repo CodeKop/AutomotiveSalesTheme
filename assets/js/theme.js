@@ -2138,13 +2138,12 @@ var TopMenu = (function (_DropDown) {
       //     }
       //   }
       // });
-      console.log(this.el.find('.submenu').length);
       this.el.find('.submenu').each(function (e) {
         var target = (0, _jquery2['default'])(e.currentTarget),
             parget = (0, _jquery2['default'])(e.currentTarget).parent('.category'),
             targetDepth = 2;
 
-        console.log(target.find('.top-menu[data-depth="' + targetDepth + '"]').length);
+        console.log(target + '\n' + target.find('.top-menu[data-depth="' + targetDepth + '"]').length);
         if (target.find('.top-menu[data-depth="' + targetDepth + '"]').length) {
           parget.addClass('position-static');
           target.addClass('submenu--full');
