@@ -94,7 +94,7 @@
           flex-direction: row;
           flex-wrap: wrap;
           align-items: flex-start;
-          margin: 0 -$medium-space;
+          margin: 0 $medium-space*-1;
 
           > .category {
             width: auto;
