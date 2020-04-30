@@ -2142,6 +2142,7 @@ var TopMenu = (function (_DropDown) {
         var target = (0, _jquery2['default'])(_this),
             targetDepth = 2;
 
+        console.log(target.find('.top-menu[data-depth="' + targetDepth + '"]').length);
         if (target.find('.top-menu[data-depth="' + targetDepth + '"]').length) {
           target.addClass('position-static');
           target.addClass('submenu--full');
