@@ -13,7 +13,7 @@
             <figure>
               <img src="{$slide.image_url}" alt="{$slide.legend|escape}">
               {if $slide.title || $slide.description}
-                <figcaption class="carousel-caption d-none d-md-flex">
+                <figcaption class="carousel-caption">
                   <h2 class="display-1 text-uppercase">{$slide.title}</h2>
                   <div class="caption-description">{$slide.description nofilter}</div>
                 </figcaption>
