@@ -14,8 +14,12 @@
               <img src="{$slide.image_url}" alt="{$slide.legend|escape}">
               {if $slide.title || $slide.description}
                 <figcaption class="carousel-caption">
-                  <h2 class="display-1 text-uppercase">{$slide.title}</h2>
-                  <div class="caption-description">{$slide.description nofilter}</div>
+                  <h2 class="display-2 text-uppercase">{$slide.title}</h2>
+                  <div class="caption-description d-none d-md-block">{$slide.description nofilter}</div>
+                  <div class="caption-cta d-block d-md-none">
+                    <span>Explore</span>
+                    <i class="material-icons">&#xe5c8;</i>
+                  </div>
                 </figcaption>
               {/if}
             </figure>
