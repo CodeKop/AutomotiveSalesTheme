@@ -1,4 +1,33 @@
+#carousel {
+  .carousel-indicators {
+    > li {
+      width: 10px;
+      height: 10px;
+      border-radius: 100px;
+      border: 2px solid transparent;
+    }
+    > li.active {
+      border-color: white;
+    }
+  }
 
+  .carousel-inner {
+    margin: 0;
+
+    .carousel-item a {
+      display: inline-block;
+    }
+    .carousel-item a figure {
+      margin: 0;
+
+      > img {
+        height: 28vw;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
 
 /* #carousel {
   margin-bottom: 2.3rem;
