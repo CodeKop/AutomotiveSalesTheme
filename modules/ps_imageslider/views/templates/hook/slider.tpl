@@ -21,7 +21,7 @@
                   <a href="{$slide.url}" class="caption-cta d-block d-md-none">
                     <span>Explore</span>
                     <i class="material-icons btn-icon">&#xe5c8;</i>
-                  </div>
+                  </a>
                 </figcaption>
               {/if}
             </figure>
