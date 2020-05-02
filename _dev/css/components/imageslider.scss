@@ -1,4 +1,6 @@
 #carousel {
+  margin-bottom: $medium-space;
+
   .carousel-indicators {
     > li {
       width: 10px;
@@ -27,7 +29,7 @@
         object-fit: cover;
         object-position: center;
       }
-      
+
       .carousel-caption {
         top: 15%;
       }
@@ -51,8 +53,10 @@
 
 @include media-breakpoint-up(md) {
   #carousel {
-    .carousel-item figure > img {
-      height: 30vw;
+    .carousel-inner {
+      .carousel-item a figure > img {
+        height: 30vw;
+      }
     }
   }
 }
