@@ -14,11 +14,13 @@
               <img src="{$slide.image_url}" alt="{$slide.legend|escape}">
               {if $slide.title || $slide.description}
                 <figcaption class="carousel-caption">
-                  <h2 class="display-2 text-uppercase">{$slide.title}</h2>
+                  {if $slide.title}<h2 class="display-2 text-uppercase">{$slide.title}</h2>{/if}
+                  {if $slide.description}
                   <div class="caption-description d-none d-md-block">{$slide.description nofilter}</div>
-                  <div class="caption-cta d-block d-md-none">
+                  {/if}
+                  <a href="{$slide.url}" class="caption-cta d-block d-md-none">
                     <span>Explore</span>
-                    <i class="material-icons">&#xe5c8;</i>
+                    <i class="material-icons btn-icon">&#xe5c8;</i>
                   </div>
                 </figcaption>
               {/if}
