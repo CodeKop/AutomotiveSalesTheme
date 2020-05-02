@@ -1,6 +1,10 @@
 #carousel {
   margin-bottom: $medium-space;
 
+  p {
+    color: white;
+  }
+
   .carousel-indicators {
     > li {
       width: 10px;
@@ -35,6 +39,17 @@
       }
       .carousel-caption .caption-cta {
         @include button-primary;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .carousel-caption .carousel-description {
+        background-color: #0002;
+        border-radius: 10px;
+        padding: $small-space $medium-space;
+        box-shadow: 0 0 15px #0002;
       }
 
       &::after {
