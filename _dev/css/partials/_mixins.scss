@@ -49,26 +49,27 @@
 	}
 }
 
-@mixin button--primary {
+@mixin button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-family: Montserrat;
-	color: white;
 	margin: 0;
+	padding: $small-space $medium-space;
+	border-radius: 5px;
+}
+@mixin button--primary {
+	@include button;
+	color: white;
 
 	@include drop-shadow-light;
 	background-color: $primary;
-	padding: $small-space $medium-space;
-	border-radius: 5px;
-
 	transition: box-shadow 0.35s;
 
 	span,
 	.btn_text {
 		color: inherit;
 		line-height: 1;
-
 	}
 
 	.btn_icon {
@@ -81,46 +82,12 @@
 
 	@include media-breakpoint-up(md) {
 		&:hover {
-			box-shadow: 0 0 0 3px lighten($primary, .3);
+			box-shadow: 0 0 0 3px lighten($primary, 0.3);
 		}
 	}
-
-	// background-color: $brand-primary;
-	// text-transform: uppercase;
-	// border-radius: 0.25rem;
-	// font-weight: 600;
-	// padding: $small-space $medium-space;
-
-	// display: flex;
-	// justify-content: center;
-	// align-items: center;
-
-	// color: white;
-	// border: none;
-	// @include drop-shadow;
-
-	// .btn_icon {
-	// 	color: white;
-	// 	font-size: 1.25em;
-	// }
-
-	// &.btn--left-icon .btn_icon {
-	// 	margin-left: $small-space;
-	// }
-	// &.btn--right-icon .btn_icon {
-	// 	margin-right: $small-space;
-	// }
-
-	// &:focus {
-	// 	box-shadow: 0 0 0 0.25rem lighten($brand-primary, 50%);
-	// }
-
-	// &:hover {
-	// 	box-shadow: 0 0 0 0.35rem lighten($brand-primary, 50%);
-	// 	background-color: $brand-primary;
-	// }
 }
 @mixin button--tertiary {
+	@include button;
 	background-color: transparent;
 	border: 2px solid $primary;
 	color: $gray-dark;
