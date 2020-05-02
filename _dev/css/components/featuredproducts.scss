@@ -166,7 +166,7 @@
         font-size: 1.25rem;
         line-height: 1;
 
-        .fa {
+        .btn-icon {
             font-size: 0.8em;
             line-height: 1;
             padding: 0;
@@ -244,7 +244,7 @@
         }
 
         .all-product-link {
-            position: relative;
+            position: static;
 
             &::before {
                 content: none;
