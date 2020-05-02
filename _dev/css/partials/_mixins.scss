@@ -53,9 +53,11 @@
 	background-color: $brand-primary;
 	color: white;
 	border: none;
+	@include drop-shadow;
 
 	.btn-icon {
 		color: white;
+		margin-left: $small-space;
 	}
 
 	&:focus {
@@ -77,11 +79,11 @@
 }
 
 @mixin drop-shadow {
-	box-shadow: 3px 5px 25px #aaa;
+	box-shadow: 3px 5px 25px #0005;
 }
 
 @mixin drop-shadow-light {
-	box-shadow: 3px 5px 25px #ddd;
+	box-shadow: 3px 5px 25px #0002;
 }
 
 @mixin drop-shadow-small {
