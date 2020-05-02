@@ -11,7 +11,7 @@
       height: 10px;
       border-radius: 100%;
       opacity: 1;
-      background-color: #777;
+      background-color: #fff7;
     }
     > li.active {
       background-color: #fff;
@@ -48,10 +48,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: $small-space $medium-space;
+        border-radius: 5px;
       }
 
       .carousel-caption .caption-description {
-        background-color: #0002;
+        background-color: #0004;
         border-radius: 10px;
         padding: $small-space $medium-space;
         box-shadow: 0 0 15px #0002;
