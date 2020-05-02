@@ -120,10 +120,14 @@
 	// 	background-color: $brand-primary;
 	// }
 }
-@mixin button--outer {
+@mixin button--tertiary {
 	background-color: transparent;
-	border: 2px solid $gray-dark;
+	border: 2px solid $primary;
 	color: $gray-dark;
+
+	&:hover {
+		color: $gray-dark;
+	}
 }
 
 @mixin box-shadow {
