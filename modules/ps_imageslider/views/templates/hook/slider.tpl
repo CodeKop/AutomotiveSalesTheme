@@ -18,9 +18,9 @@
                   {if $slide.description}
                   <div class="caption-description d-none d-md-block">{$slide.description nofilter}</div>
                   {/if}
-                  <button href="{$slide.url}" class="caption-cta d-flex d-md-none">
+                  <button href="{$slide.url}" class="btn btn--primary caption-cta d-flex d-md-none">
                     <span>Explore</span>
-                    <i class="material-icons btn-icon">&#xe5c8;</i>
+                    <i class="material-icons btn_icon">&#xe5c8;</i>
                   </button>
                 </figcaption>
               {/if}
