@@ -72,22 +72,22 @@ button:focus {
 }
 
 .btn-tertiary {
-	@extend .btn-secondary;
-	background-color: #f7f7f7;
-	text-transform: lowercase;
-	color: $gray;
-	box-shadow: 0.0625rem 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.1);
-	padding: 0.25rem;
-	margin: 0.25rem 0;
-	font-weight: 400;
-	font-size: $font-size-sm;
-	.fa {
-		font-size: $base-font-size;
-	}
-	&:hover {
-		box-shadow: 0.0625rem 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.2);
-		border: $input-btn-border-width solid rgba(35, 35, 35, 0.2);
-	}
+	@include button-tertiary;
+	// background-color: #f7f7f7;
+	// text-transform: lowercase;
+	// color: $gray;
+	// box-shadow: 0.0625rem 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.1);
+	// padding: 0.25rem;
+	// margin: 0.25rem 0;
+	// font-weight: 400;
+	// font-size: $font-size-sm;
+	// .fa {
+	// 	font-size: $base-font-size;
+	// }
+	// &:hover {
+	// 	box-shadow: 0.0625rem 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.2);
+	// 	border: $input-btn-border-width solid rgba(35, 35, 35, 0.2);
+	// }
 }
 .btn-unstyle {
 	background-color: transparent;
