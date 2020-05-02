@@ -65,17 +65,12 @@ button:focus {
 	color: $gray-darker;
 }
 .btn-primary,
-.btn-secondary {
-	@include box-shadow-light;
-	@include button-primary;
-	text-transform: uppercase;
-	border-radius: .25rem;
-	font-weight: 600;
-	padding: 0.5rem 1.25rem;
-	.fa {
-		margin-right: $small-space;
-	}
+.btn-secondary,
+.btn--primary,
+.btn--secondary {
+	@include button--primary;
 }
+
 .btn-tertiary {
 	@extend .btn-secondary;
 	background-color: #f7f7f7;
