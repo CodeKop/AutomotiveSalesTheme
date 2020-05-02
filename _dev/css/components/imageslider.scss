@@ -36,6 +36,10 @@
 
       .carousel-caption {
         top: 15%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       .carousel-caption .caption-cta {
         @include button-primary;
