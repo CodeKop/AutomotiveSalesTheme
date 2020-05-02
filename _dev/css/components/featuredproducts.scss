@@ -153,49 +153,6 @@
             transform: translateX(8px) translateY(-50%) skew(-15deg);
         }
     }
-
-    .all-product-link {
-        position: absolute;
-        top: 0.5rem;
-        right: 0;
-        display: block;
-        margin: 0;
-
-        font-family: Montserrat;
-        font-weight: lighter;
-        font-size: 1.25rem;
-        line-height: 1;
-
-        .btn-icon {
-            font-size: 0.8em;
-            line-height: 1;
-            padding: 0;
-            vertical-align: top;
-            margin-left: 4px;
-            transition: transform 0.35s;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: calc(100%);
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: #a22;
-            transition: width 0.35s;
-        }
-
-        &:hover {
-            .fa {
-                transform: translateX(4px);
-            }
-
-            &::before {
-                width: 100%;
-            }
-        }
-    }
 }
 
 @include media-breakpoint-up(md) {
@@ -223,6 +180,37 @@
                 background-color: #fffe;
             }
         }
+
+        .all-product-link {
+            position: absolute;
+            top: 0.5rem;
+            right: 0;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: calc(100%);
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: #a22;
+                transition: width 0.35s;
+            }
+
+            .btn_icon {
+                transition: transform 0.35s;
+            }
+
+            &:hover {
+                .btn_icon {
+                    transform: translateX($small-space);
+                }
+
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
@@ -240,14 +228,6 @@
                     white-space: nowrap;
                     overflow: hidden;
                 }
-            }
-        }
-
-        .all-product-link {
-            position: static;
-
-            &::before {
-                content: none;
             }
         }
     }
