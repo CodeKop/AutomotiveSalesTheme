@@ -59,7 +59,6 @@
 	border-radius: 5px;
 }
 @mixin button--primary {
-	@include button;
 	color: white;
 
 	@include drop-shadow-light;
@@ -87,7 +86,6 @@
 	}
 }
 @mixin button--tertiary {
-	@include button;
 	background-color: transparent;
 	border: 2px solid $primary;
 	color: $gray-dark;
