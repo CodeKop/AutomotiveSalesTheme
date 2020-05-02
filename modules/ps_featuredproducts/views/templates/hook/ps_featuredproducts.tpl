@@ -11,9 +11,9 @@
     {include file="catalog/_partials/productlist.tpl" products=$products cssClass="row"}
   </div>
   <div class="row">
-    <a class="all-product-link text-center h4" href="{$allProductsLink}">
+    <a class="all-product-link btn btn--primary text-center h4" href="{$allProductsLink}">
       <span>{l s='All products' d='Shop.Theme.Catalog'}</span>
-      <i class="material-icons btn-icon">&#xe315;</i>
+      <i class="material-icons btn_icon">&#xe315;</i>
     </a>
   </div>
 </section>
