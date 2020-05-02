@@ -69,6 +69,11 @@
 		background-color: $brand-primary;
 	}
 }
+@mixin button-outer {
+	background-color: transparent;
+	border: 2px solid $gray-dark;
+	color: $gray-dark;
+}
 
 @mixin box-shadow {
 	box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
