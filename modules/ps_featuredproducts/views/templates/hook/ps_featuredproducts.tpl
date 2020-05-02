@@ -10,7 +10,10 @@
 
     {include file="catalog/_partials/productlist.tpl" products=$products cssClass="row"}
   </div>
-  <a class="all-product-link float-right float-md-none text-right h4" href="{$allProductsLink}">
-    {l s='All products' d='Shop.Theme.Catalog'}<i class="fa fa-chevron-right"></i>
-  </a>
+  <div class="row">
+    <a class="all-product-link text-center h4" href="{$allProductsLink}">
+      <span>{l s='All products' d='Shop.Theme.Catalog'}</span>
+      <i class="material-icons btn-icon">&#xe315;</i>
+    </a>
+  </div>
 </section>
