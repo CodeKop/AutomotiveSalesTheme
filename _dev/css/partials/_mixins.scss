@@ -139,19 +139,19 @@
 }
 
 @mixin drop-shadow-light {
-	box-shadow: 3px 5px 25px #0002;
+	box-shadow: 3px 5px 25px #0003;
 }
 
 @mixin drop-shadow-small {
-	box-shadow: 3px 5px 10px #aaa;
+	box-shadow: 3px 5px 10px #0005;
 }
 
 @mixin drop-shadow-small-light {
-	box-shadow: 3px 5px 10px #ddd;
+	box-shadow: 3px 5px 10px #0003;
 }
 
 @mixin drop-shadow-y-light {
-	box-shadow: 0 3px 10px #ddd;
+	box-shadow: 0 3px 10px #0003;
 }
 
 @mixin drop-shadow-light-no-overflow {
