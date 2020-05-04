@@ -15,7 +15,7 @@
         <div id="_mobile_user_info"></div>
       </div>
 
-       <div class="row align-items-center d-none d-md-flex flex-nowrap">
+       <div class="row no-gutters align-items-center d-none d-md-flex flex-nowrap">
           <div class="col-3 d-flex align-items-center nav-left">
             {hook h='displayNav1'}
           </div>
