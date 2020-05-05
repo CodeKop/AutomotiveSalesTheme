@@ -57,8 +57,14 @@
 	margin: 0;
 	padding: $small-space $medium-space;
 	border-radius: 5px;
+
+	@include media-breakpoint-up(md) {
+		&:hover {
+			box-shadow: 0 0 0 3px lighten($primary, 0.3);
+		}
+	}
 }
-@mixin button--primary {
+@mixin button-primary {
 	color: white;
 
 	@include drop-shadow-light;
@@ -78,14 +84,8 @@
 	&:hover {
 		color: #fff;
 	}
-
-	@include media-breakpoint-up(md) {
-		&:hover {
-			box-shadow: 0 0 0 3px lighten($primary, 0.3);
-		}
-	}
 }
-@mixin button--tertiary {
+@mixin button-tertiary {
 	background-color: transparent;
 	border: 2px solid $primary;
 	color: $gray-dark;
