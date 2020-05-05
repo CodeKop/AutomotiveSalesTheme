@@ -189,12 +189,13 @@
             position: absolute;
             top: 0.5rem;
             right: 0;
+            padding: 0;
 
             &::before {
                 content: "";
                 position: absolute;
-                top: calc(100% - $small-space);
-                left: $medium-space;
+                top: 100%;
+                left: 0;
                 width: 0;
                 height: 2px;
                 background-color: #a22;
@@ -211,7 +212,7 @@
                 }
 
                 &::before {
-                    width: calc(100% - $medium-space*2);
+                    width: 100%;
                 }
             }
         }
