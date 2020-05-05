@@ -7,7 +7,7 @@
     {block name='page_header_container'}
       {block name='page_title' hide}
         <header class="page-header">
-          <h1>{$smarty.block.child}</h1>
+          <h1 class="text-center">{$smarty.block.child}</h1>
         </header>
       {/block}
     {/block}
