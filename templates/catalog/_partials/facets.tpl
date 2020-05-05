@@ -7,7 +7,7 @@
     {block name='facets_clearall_button'}
       {if $activeFilters|count}
         <div id="_desktop_search_filters_clear_all" class="d-none d-md-block clear-all-wrapper">
-          <button data-search-url="{$clear_all_link}" class="btn btn-tertiary js-search-filters-clear-all">
+          <button data-search-url="{$clear_all_link}" class="btn btn--tertiary js-search-filters-clear-all">
             <i class="fa fa-times"></i>
             {l s='Clear all' d='Shop.Theme.Actions'}
           </button>
