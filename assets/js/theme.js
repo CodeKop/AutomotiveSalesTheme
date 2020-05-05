@@ -1123,10 +1123,6 @@ var _componentsSearchBar = __webpack_require__(15);
 
 var _componentsSearchBar2 = _interopRequireDefault(_componentsSearchBar);
 
-var _componentsSlider = __webpack_require__(16);
-
-var _componentsSlider2 = _interopRequireDefault(_componentsSlider);
-
 var _prestashop = __webpack_require__(1);
 
 var _prestashop2 = _interopRequireDefault(_prestashop);
@@ -1154,16 +1150,12 @@ for (var i in _events2['default'].prototype) {
   var dropDownEl = (0, _jquery2['default'])('.js-dropdown');
   var form = new _componentsForm2['default']();
   var topMenuEl = (0, _jquery2['default'])('.js-top-menu ul[data-depth="0"]');
-  var featuredSliderEl = (0, _jquery2['default'])('.featured-products-list');
-  var brandSliderEl = (0, _jquery2['default'])('#search-filters-brands');
 
   var dropDown = new _componentsDropDown2['default'](dropDownEl);
   var topMenu = new _componentsTopMenu2['default'](topMenuEl);
   var productMinitature = new _componentsProductMiniature2['default']();
   var productSelect = new _componentsProductSelect2['default']();
   var searchBar = new _componentsSearchBar2['default']();
-  var featuredSlider = new _componentsSlider2['default'](featuredSliderEl, { allowSwipe: true });
-  var brandSlider = new _componentsSlider2['default'](brandSliderEl, { disabledOpacity: 0.4, allowSwipe: true });
 
   dropDown.init();
   form.init();
@@ -1171,8 +1163,12 @@ for (var i in _events2['default'].prototype) {
   productMinitature.init();
   productSelect.init();
   searchBar.init();
-  featuredSlider.init();
-  brandSlider.init();
+
+  if (_prestashop2['default'].configuration.is_catalog) {
+    (0, _jquery2['default'])("*[id^='_(desktop|mobile)_cart']").each(function (idx, el) {
+      el.remove();
+    });
+  }
 
   (0, _jquery2['default'])('.carousel[data-touch="true"]').swipe({
     swipe: function swipe(event, direction, distance, duration, fingerCount, fingerData) {
@@ -1882,203 +1878,7 @@ exports['default'] = SearchBar;
 module.exports = exports['default'];
 
 /***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, '__esModule', {
-    value: true
-});
-
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-__webpack_require__(4);
-
-var Slider = (function () {
-    function Slider(el) {
-        var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-        _classCallCheck(this, Slider);
-
-        this.handleSwipe = this.onSwipeStatus.bind(this);
-        // this.handleTap = this.onTap.bind(this);
-
-        var baseOptions = {
-            enabledOpacity: 1,
-            disabledOpacity: 0,
-            allowSwipe: false,
-            swipeOptions: {
-                triggerOnTouchEnd: true,
-                swipeStatus: this.handleSwipe,
-                allowPageScroll: "vertical",
-                threshold: 75,
-                cancelThreshold: 75
-            }
-        };
-
-        this.el = el;
-        this.lastScrollLeft = 0;
-        this.options = _jquery2['default'].extend({}, baseOptions, options);
-    }
-
-    _createClass(Slider, [{
-        key: 'init',
-        value: function init() {
-            var _this = this;
-
-            var slider = this.el.find('.slider'),
-                itemsMax = this.el.find('.slider').data('products'),
-                itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
-                itemDispAmnt = Math.round(slider.width() / itemWidth),
-                itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
-                itemScrollRight = this.el.find('.slider-controls .slider-control-right');
-
-            if (this.options.allowSwipe) {
-                slider.swipe(this.options.swipeOptions);
-            }
-
-            this.el.find('.slider-controls .slider-control-left').click(function (e) {
-                var itemWidth = _this.el.find('.slider .slider-item').outerWidth(true);
-                scrollAmnt = itemWidth;
-
-                if (slider.scrollLeft() % itemWidth > 0) {
-                    scrollAmnt = slider.scrollLeft() % itemWidth;
-                }
-
-                _this.el.find('.slider').stop(true, false).animate({
-                    scrollLeft: '-=' + scrollAmnt
-                }, 675, function () {
-                    _this.updateScroll();
-                });
-            });
-            itemScrollRight.click(function (e) {
-                var itemWidth = _this.el.find('.slider .slider-item').outerWidth(true),
-                    scrollAmnt = itemWidth;
-
-                if (slider.scrollLeft() % itemWidth > 0) {
-                    scrollAmnt = slider.scrollLeft() % itemWidth;
-                }
-
-                _this.el.find('.slider').stop(true, false).animate({
-                    scrollLeft: '+=' + scrollAmnt
-                }, 675, function () {
-                    _this.updateScroll();
-                });
-            });
-
-            this.el.find('.slider').scrollLeft(0);
-
-            if (itemsMax <= itemDispAmnt) {
-                itemScrollLeft.animate({
-                    opacity: this.options.disabledOpacity
-                }, 0);
-                itemScrollRight.animate({
-                    opacity: this.options.disabledOpacity
-                }, 0);
-            } else {
-                // itemScrollLeft.css('visibility', 'visible');
-                // itemScrollLeft.animate({
-                // 	opacity: 1
-                // }, 0);
-
-                // itemScrollRight.css('visibility', 'visible');
-                // itemScrollRight.animate({
-                // 	opacity: 1
-                // }, 0);
-                itemScrollLeft.animate({
-                    opacity: this.options.enabledOpacity
-                }, 0);
-                itemScrollRight.animate({
-                    opacity: this.options.enabledOpacity
-                }, 0);
-            }
-            this.updateScroll();
-        }
-    }, {
-        key: 'updateScroll',
-        value: function updateScroll() {
-            var itemsMax = this.el.find('.slider').data('products'),
-                itemWidth = this.el.find('.slider .slider-item').outerWidth(true),
-                itemDispAmnt = Math.round(this.el.find('.slider').width() / itemWidth),
-                itemIndex = Math.round(this.el.find('.slider').scrollLeft() / itemWidth),
-                itemScrollLeft = this.el.find('.slider-controls .slider-control-left'),
-                itemScrollRight = this.el.find('.slider-controls .slider-control-right');
-
-            if (itemIndex <= 0) {
-                // itemScrollLeft.animate({
-                // 	opacity: 0
-                // }, 'medium', () => {
-                // 	var _this = itemScrollLeft;
-                // 	_this.css('visibility', 'hidden');
-                // });
-                itemScrollLeft.animate({
-                    opacity: this.options.disabledOpacity
-                }, 'medium');
-                itemIndex = 0;
-            } else {
-                // itemScrollLeft.css('visibility', 'visible');
-                // itemScrollLeft.animate({
-                // 	opacity: 1
-                // }, 'medium');
-                itemScrollLeft.animate({
-                    opacity: this.options.enabledOpacity
-                }, 'medium');
-            }
-
-            if (itemIndex >= itemsMax - itemDispAmnt) {
-                itemScrollRight.animate({
-                    opacity: this.options.disabledOpacity
-                }, 'medium');
-                itemIndex = itemsMax - itemDispAmnt;
-            } else {
-                itemScrollRight.animate({
-                    opacity: this.options.enabledOpacity
-                }, 'medium');
-            }
-
-            this.lastScrollLeft = this.el.find('.slider').scrollLeft();
-        }
-    }, {
-        key: 'onSwipeStatus',
-        value: function onSwipeStatus(e, phase, direction, distance) {
-            var slider = this.el.find('.slider');
-
-            if (phase === "move" && (direction === "left" || direction === "right")) {
-                if (direction === "left") {
-                    slider.scrollLeft(this.lastScrollLeft + distance);
-                } else if (direction === "right") {
-                    slider.scrollLeft(this.lastScrollLeft - distance);
-                }
-            } else if (phase === "cancel") {
-                slider.animate({
-                    scrollLeft: this.lastScrollLeft
-                }, 'fast');
-            } else if (phase === "end") {
-                (0, _jquery2['default'])(e.target).one("click", function (e) {
-                    return e.preventDefault();
-                });
-                this.updateScroll();
-            }
-        }
-    }]);
-
-    return Slider;
-})();
-
-exports['default'] = Slider;
-module.exports = exports['default'];
-
-/***/ }),
+/* 16 */,
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
