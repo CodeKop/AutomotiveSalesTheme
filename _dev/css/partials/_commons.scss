@@ -72,11 +72,11 @@ button:focus {
 .btn-secondary,
 .btn--primary,
 .btn--secondary {
-	@include button--primary;
+	@include button-primary;
 }
 
-.btn-tertiary {
-	@include button--tertiary;
+.btn--tertiary {
+	@include button-tertiary;
 }
 .btn-unstyle {
 	background-color: transparent;
