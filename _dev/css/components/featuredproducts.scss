@@ -153,6 +153,10 @@
             transform: translateX(8px) translateY(-50%) skew(-15deg);
         }
     }
+
+    .all-product-link {
+        margin: 0 auto;
+    }
 }
 
 @include media-breakpoint-up(md) {
@@ -189,8 +193,8 @@
             &::before {
                 content: "";
                 position: absolute;
-                top: calc(100%);
-                left: 0;
+                top: calc(100% - $small-space);
+                left: $medium-space;
                 width: 0;
                 height: 2px;
                 background-color: #a22;
@@ -207,7 +211,7 @@
                 }
 
                 &::before {
-                    width: 100%;
+                    width: calc(100% - $medium-space*2);
                 }
             }
         }
