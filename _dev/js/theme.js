@@ -17,7 +17,6 @@ import ProductMinitature from './components/product-miniature';
 import ProductSelect from './components/product-select';
 import TopMenu from './components/top-menu';
 import SearchBar from './components/search-bar';
-import Slider from './components/slider';
 
 import prestashop from 'prestashop';
 import EventEmitter from 'events';
@@ -37,16 +36,12 @@ $(document).ready(() => {
   let dropDownEl = $('.js-dropdown');
   const form = new Form();
   let topMenuEl = $('.js-top-menu ul[data-depth="0"]');
-  let featuredSliderEl = $('.featured-products-list');
-  let brandSliderEl = $('#search-filters-brands');
 
   let dropDown = new DropDown(dropDownEl);
   let topMenu = new TopMenu(topMenuEl);
   let productMinitature = new ProductMinitature();
   let productSelect = new ProductSelect();
   let searchBar = new SearchBar();
-  let featuredSlider = new Slider(featuredSliderEl, { allowSwipe: true });
-  let brandSlider = new Slider(brandSliderEl, { disabledOpacity: 0.4, allowSwipe: true });
 
   dropDown.init();
   form.init();
@@ -54,8 +49,12 @@ $(document).ready(() => {
   productMinitature.init();
   productSelect.init();
   searchBar.init();
-  featuredSlider.init();
-  brandSlider.init();
+
+  if(prestashop.configuration.is_catalog) {
+    $("*[id^='_(desktop|mobile)_cart']").each((idx, el) => {
+      el.remove();
+    });
+  }
 
   $('.carousel[data-touch="true"]').swipe({
     swipe(event, direction, distance, duration, fingerCount, fingerData) {
