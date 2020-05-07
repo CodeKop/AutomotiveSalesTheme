@@ -11467,7 +11467,7 @@ for (var i in _events2['default'].prototype) {
     });
   }
 
-  var swiper = new _swiper2['default']('.slider-container', {
+  var swiper = new _swiper2['default']('.swiper-container', {
     slidesPerView: 1,
     spaceBetween: 10,
 
