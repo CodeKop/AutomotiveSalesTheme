@@ -35,6 +35,7 @@
     "roboto-fontface": "^0.10.0",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.14.0",
+    "swiper": "^5.3.8",
     "tether": "^1.1.1",
     "typeface-montserrat": "0.0.75",
     "typeface-nova-mono": "^0.0.72",
