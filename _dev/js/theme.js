@@ -3,6 +3,7 @@ import 'bootstrap/dist/js/bootstrap.min';
 import 'flexibility';
 import 'bootstrap-touchspin';
 import 'jquery-touchswipe';
+import Swiper from 'swiper';
 
 import './responsive';
 import './checkout';
@@ -50,11 +51,26 @@ $(document).ready(() => {
   productSelect.init();
   searchBar.init();
 
-  if(prestashop.configuration.is_catalog) {
+  if (prestashop.configuration.is_catalog) {
     $("*[id^='_(desktop|mobile)_cart']").each((idx, el) => {
       el.remove();
     });
   }
+
+  var swiper = new Swiper(
+    '.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+
+    breakpoints: {
+      576: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 4
+      }
+    }
+  });
 
   $('.carousel[data-touch="true"]').swipe({
     swipe(event, direction, distance, duration, fingerCount, fingerData) {
