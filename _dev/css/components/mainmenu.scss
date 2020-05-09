@@ -59,6 +59,10 @@
       .top-menu {
         margin-left: $medium-space;
       }
+      .top-menu[data-depth="0"] > li:hover {
+        background-color: #dfdfdf;
+        border-radius: 12px;
+      }
       .top-menu[data-depth="1"] {
         position: absolute;
         top: 5px;
@@ -68,6 +72,7 @@
         min-width: 100%;
         margin: 0;
         padding: ($small-space * 1.5) $medium-space;
+        border: 2px solid #ccc;
 
         display: flex;
         flex-direction: column;
