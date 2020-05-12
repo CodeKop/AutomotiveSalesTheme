@@ -19,7 +19,7 @@
           <div class="col-3 d-flex align-items-center nav-left">
             {hook h='displayNav1'}
           </div>
-          <div class="col-6" id="_desktop_logo">
+          <div class="col-6 px-4" id="_desktop_logo">
             <a href="{$urls.base_url}" class="d-block">
               <img class="logo w-100" src="{$shop.logo}" alt="{$shop.name}">
             </a>
