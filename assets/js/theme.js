@@ -952,58 +952,63 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 // "inherit" EventEmitter
 for (var i in _events2['default'].prototype) {
-  _prestashop2['default'][i] = _events2['default'].prototype[i];
+	_prestashop2['default'][i] = _events2['default'].prototype[i];
 }
 
 (0, _jquery2['default'])(document).ready(function () {
-  var dropDownEl = (0, _jquery2['default'])('.js-dropdown');
-  var form = new _componentsForm2['default']();
-  var topMenuEl = (0, _jquery2['default'])('.js-top-menu ul[data-depth="0"]');
+	var dropDownEl = (0, _jquery2['default'])('.js-dropdown');
+	var form = new _componentsForm2['default']();
+	var topMenuEl = (0, _jquery2['default'])('.js-top-menu ul[data-depth="0"]');
 
-  var dropDown = new _componentsDropDown2['default'](dropDownEl);
-  var topMenu = new _componentsTopMenu2['default'](topMenuEl);
-  var productMinitature = new _componentsProductMiniature2['default']();
-  var productSelect = new _componentsProductSelect2['default']();
-  var searchBar = new _componentsSearchBar2['default']();
+	var dropDown = new _componentsDropDown2['default'](dropDownEl);
+	var topMenu = new _componentsTopMenu2['default'](topMenuEl);
+	var productMinitature = new _componentsProductMiniature2['default']();
+	var productSelect = new _componentsProductSelect2['default']();
+	var searchBar = new _componentsSearchBar2['default']();
 
-  dropDown.init();
-  form.init();
-  topMenu.init();
-  productMinitature.init();
-  productSelect.init();
-  searchBar.init();
+	dropDown.init();
+	form.init();
+	topMenu.init();
+	productMinitature.init();
+	productSelect.init();
+	searchBar.init();
 
-  if (_prestashop2['default'].configuration.is_catalog) {
-    (0, _jquery2['default'])("*[id^='_(desktop|mobile)_cart']").each(function (idx, el) {
-      el.remove();
-    });
-  }
+	if (_prestashop2['default'].configuration.is_catalog) {
+		(0, _jquery2['default'])("*[id^='_(desktop|mobile)_cart']").each(function (idx, el) {
+			el.remove();
+		});
+	}
 
-  var swiper = new _swiper2['default']('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 10,
+	var swiper = new _swiper2['default']('.swiper-container', {
+		navigation: {
+			nextEl: '.swiper-btn-next',
+			prevEl: '.swiper-btn-prev'
+		},
 
-    breakpoints: {
-      576: {
-        slidesPerView: 2
-      },
-      768: {
-        slidesPerView: 4
-      }
-    }
-  });
+		slidesPerView: 1,
+		spaceBetween: 10,
 
-  (0, _jquery2['default'])('.carousel[data-touch="true"]').swipe({
-    swipe: function swipe(event, direction, distance, duration, fingerCount, fingerData) {
-      if (direction == 'left') {
-        (0, _jquery2['default'])(this).carousel('next');
-      }
-      if (direction == 'right') {
-        (0, _jquery2['default'])(this).carousel('prev');
-      }
-    },
-    allowPageScroll: 'vertical'
-  });
+		breakpoints: {
+			576: {
+				slidesPerView: 2
+			},
+			768: {
+				slidesPerView: 4
+			}
+		}
+	});
+
+	(0, _jquery2['default'])('.carousel[data-touch="true"]').swipe({
+		swipe: function swipe(event, direction, distance, duration, fingerCount, fingerData) {
+			if (direction == 'left') {
+				(0, _jquery2['default'])(this).carousel('next');
+			}
+			if (direction == 'right') {
+				(0, _jquery2['default'])(this).carousel('prev');
+			}
+		},
+		allowPageScroll: 'vertical'
+	});
 });
 
 /***/ }),
