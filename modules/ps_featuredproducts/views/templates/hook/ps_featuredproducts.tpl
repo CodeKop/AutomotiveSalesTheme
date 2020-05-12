@@ -1,8 +1,8 @@
-<section class="featured-products position-relative mb-4 clearfix swiper-container">
+<section class="featured-products position-relative mb-4 clearfix">
   <h2 class="h2 products-section-title text-uppercase text-md-left text-center">
     {l s='Popular Products' d='Shop.Theme.Catalog'}
   </h2>
-  <div class="featured-products-list swiper-wrapper position-relative">
+  <div class="featured-products-list swiper-container position-relative">
     <a class="swiper-button-prev" href="#prodcarousel" role="button" data-slide="prev">
       <span class="swiper-button-prev-icon" aria-hidden="true"><i class="material-icons">&#xe314;</i></span>
       <span class="sr-only">Previous</span>
