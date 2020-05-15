@@ -103,7 +103,6 @@
 .featured-products {
     .products {
         flex-wrap: nowrap;
-        overflow: hidden;
         margin: 0;
     }
 
@@ -187,6 +186,7 @@
             }
 
             .btn_icon {
+                font-size: 1.25em;
                 transition: transform 0.35s;
             }
 
