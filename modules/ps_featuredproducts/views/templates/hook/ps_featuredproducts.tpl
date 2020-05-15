@@ -20,7 +20,7 @@
     {include file="catalog/_partials/productlist.tpl" products=$products cssClass="swiper-wrapper row" itemCssClass="swiper-slide"}
   </div>
   <div class="row">
-    <a class="all-product-link text-center h4" href="{$allProductsLink}">
+    <a class="all-product-link text-center h6" href="{$allProductsLink}">
       <span>{l s='All products' d='Shop.Theme.Catalog'}</span>
       <i class="material-icons btn_icon">&#xe315;</i>
     </a>
