@@ -17,7 +17,7 @@
       <div class="featured-control-right slider-control-right"><i class="fa fa-chevron-right"></i></div>
     </div> *}
 
-    {include file="catalog/_partials/productlist.tpl" products=$products cssClass="swiper-wrapper row" itemCssClass="swiper-slide"}
+    {include file="productlist.tpl" products=$products}
   </div>
   <div class="row">
     <a class="all-product-link text-center h6" href="{$allProductsLink}">
