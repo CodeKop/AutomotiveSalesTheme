@@ -986,7 +986,7 @@ for (var i in _events2['default'].prototype) {
 		},
 
 		slidesPerView: 1,
-		spaceBetween: 10,
+		spaceBetween: 0,
 
 		breakpoints: {
 			576: {
