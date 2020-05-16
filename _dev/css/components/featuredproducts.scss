@@ -11,6 +11,8 @@
     }
 
     .product-miniature {
+        width: 100%;
+
         border-radius: 5px;
         // border: solid $gray-light;
         // border-width: 1px 0;
@@ -56,7 +58,12 @@
             transition: transform 0.35s;
 
             .product-title {
+                height: 1.5em;
                 max-height: 2.3em;
+
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
 
             .product-price-and-shipping {
@@ -139,12 +146,25 @@
     }
 }
 
+@include media-breakpoint-up(sm) {
+    #products,
+    .featured-products,
+    .product-accessories,
+    .product-miniature {
+        .product-miniature {
+            width: 50%;
+        }
+    }
+}
+
 @include media-breakpoint-up(md) {
     #products,
     .featured-products,
     .product-accessories,
     .product-miniature {
         .product-miniature {
+            width: 25%;
+
             &:hover {
                 .product-flags {
                     transform: translateY(calc(-100% - 15px));
@@ -162,6 +182,14 @@
                 right: 0;
                 bottom: 0;
                 background-color: #fffe;
+
+                .product-title {
+                    height: auto;
+
+                    text-overflow: none;
+                    white-space: unset;
+                    overflow: hidden;
+                }
             }
         }
 
@@ -197,25 +225,6 @@
 
                 &::before {
                     width: 100%;
-                }
-            }
-        }
-    }
-}
-
-@include media-breakpoint-down(md) {
-    #products,
-    .featured-products,
-    .product-accessories,
-    .product-miniature {
-        .product-miniature {
-            .product-description {
-                .product-title {
-                    height: 1.5em;
-
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
                 }
             }
         }
