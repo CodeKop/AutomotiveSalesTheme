@@ -1,4 +1,4 @@
-<section class="featured-products position-relative mb-4 clearfix">
+<section class="featured-products container mb-4 clearfix">
   <h2 class="h2 products-section-title text-uppercase text-md-left text-center">
     {l s='Popular Products' d='Shop.Theme.Catalog'}
   </h2>
