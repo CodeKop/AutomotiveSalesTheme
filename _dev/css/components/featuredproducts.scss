@@ -10,9 +10,11 @@
         flex-wrap: wrap;
     }
 
-    .product-miniature {
+    .swiper-slide {
         width: 100%;
+    }
 
+    .product-miniature {
         border-radius: 5px;
         // border: solid $gray-light;
         // border-width: 1px 0;
@@ -151,7 +153,7 @@
     .featured-products,
     .product-accessories,
     .product-miniature {
-        .product-miniature {
+        .swiper-slide {
             width: 50%;
         }
     }
@@ -162,9 +164,11 @@
     .featured-products,
     .product-accessories,
     .product-miniature {
-        .product-miniature {
+        .swiper-slide {
             width: 25%;
+        }
 
+        .product-miniature {
             &:hover {
                 .product-flags {
                     transform: translateY(calc(-100% - 15px));
