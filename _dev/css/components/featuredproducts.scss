@@ -134,11 +134,11 @@
         // border: 1px solid #ccc;
         cursor: pointer;
         // box-shadow: 0 0 20px #AAA;
-        transition: border .35s, background 0.35s, transform .35s;
+        transition: border 0.35s, background 0.35s, transform 0.35s, border-radius 0.35s;
         z-index: 9;
 
         .swiper-button-icon {
-            transition: transform .35s;
+            transition: transform 0.35s;
         }
 
         .material-icons {
@@ -207,13 +207,25 @@
             }
         }
 
-        .swiper-button-prev:hover,
+        .swiper-button-prev:hover {
+            background-color: $primary;
+            box-shadow: -3px -3px 0 $inverse;
+            transform: translateY(-50%) rotate(-45deg);
+            border-radius: 8px 8px 100px;
+
+            .swiper-button-icon {
+                color: white;
+                transform: rotate(45deg);
+            }
+        }
         .swiper-button-next:hover {
             background-color: $primary;
             box-shadow: -3px 3px 0 $inverse;
             transform: translateY(-50%) rotate(45deg);
-        
+            border-radius: 8px 100px 8px 8px;
+
             .swiper-button-icon {
+                color: white;
                 transform: rotate(-45deg);
             }
         }
