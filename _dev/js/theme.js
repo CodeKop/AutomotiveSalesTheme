@@ -71,7 +71,10 @@ $(document).ready(() => {
 				slidesPerView: 2
 			},
 			768: {
-				slidesPerView: 4
+				slidesPerView: 3
+			},
+			1200: {
+				sliderPerView: 4
 			}
 		}
 	});
