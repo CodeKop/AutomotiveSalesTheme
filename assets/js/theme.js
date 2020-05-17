@@ -1750,29 +1750,7 @@ var TopMenu = (function (_DropDown) {
 
       var elmtClass = undefined;
       var self = this;
-      // this.el.find('li').hover((e) => {
-      //   if (this.el.parent().hasClass('mobile')) {
-      //     return;
-      //   }
-      //   const currentTargetClass = $(e.currentTarget).attr('class');
-      //   if (elmtClass !== currentTargetClass) {
-      //     elmtClass = currentTargetClass;
 
-      //     if (elmtClass && $(e.target).data('depth') === 0) {
-      //       $(`.${elmtClass} .js-sub-menu > .top-menu`).css({
-      //         top: $(`.${elmtClass}`).height() + $(`.${elmtClass}`).position().top
-      //       });
-      //     }
-      //   }
-      // });
-      this.el.find('.submenu').each(function (index, element) {
-        var target = (0, _jquery2['default'])(element),
-            targetDepth = 2;
-
-        if (target.find('.top-menu[data-depth="' + targetDepth + '"]').length) {
-          target.addClass('submenu--full');
-        }
-      });
       (0, _jquery2['default'])('#_mobile_top_menu .category > a').click(function (e) {
         var toggler = (0, _jquery2['default'])(e.currentTarget).children('.navbar-toggler');
 
