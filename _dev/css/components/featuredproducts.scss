@@ -220,7 +220,7 @@
         }
         .swiper-button-next:hover {
             background-color: $primary;
-            box-shadow: -3px 3px 0 $inverse;
+            box-shadow: -3px 3px 0 $primary-inverse;
             transform: translateY(-50%) rotate(45deg);
             border-radius: 8px 100px 8px 8px;
 
