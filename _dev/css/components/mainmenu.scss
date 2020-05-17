@@ -85,28 +85,23 @@
 
     .submenu {
       display: none;
-      position: relative;
 
-      .top-menu {
-        margin-left: $medium-space;
-      }
+      position: absolute;
+      top: 5px;
+      left: 0;
+      z-index: 99;
+      opacity: 0;
+      min-width: 100%;
+
+      background-color: white;
+      box-shadow: 3px 5px 18px #0005;
+
       .top-menu[data-depth="1"] {
-        position: absolute;
-        top: 5px;
-        left: 0;
-        z-index: 99;
-        opacity: 0;
-        min-width: 100%;
         margin: 0;
         padding: ($small-space * 1.5) $medium-space;
 
         display: flex;
         flex-direction: column;
-
-        background-color: white;
-        box-shadow: 3px 5px 18px #0005;
-
-        transition: top 0.35s, opacity 0.35s;
       }
     }
 
@@ -143,12 +138,7 @@
     .menu--item:hover {
       > .submenu {
         display: block;
-
-        > .top-menu {
-          opacity: 1;
-          top: 100%;
-          transition: top 0.35s, opacity 0.35s;
-        }
+        top: 100%;
       }
     }
     .menu--item .dropdown-item:hover {
