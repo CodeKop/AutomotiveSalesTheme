@@ -146,7 +146,7 @@
     }
   }
 
-  .top-menu[data-depth="0"] > .menu--item:hover {
+  > .menu--item:hover {
     > .dropdown-item {
       background-color: #0007;
     }
