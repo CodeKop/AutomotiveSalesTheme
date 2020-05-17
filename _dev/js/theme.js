@@ -74,7 +74,7 @@ $(document).ready(() => {
 				slidesPerView: 3
 			},
 			1200: {
-				sliderPerView: 4
+				slidesPerView: 4
 			}
 		}
 	});
