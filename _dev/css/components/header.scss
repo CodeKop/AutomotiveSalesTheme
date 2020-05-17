@@ -46,6 +46,17 @@ a {
         .header-nav {
             background-color: $primary;
             color: white;
+
+            .dropdown {
+                color: white;
+
+                &:hover .expand-more {
+                    color: white;
+                }
+                &:hover > i {
+                    color: white;
+                }
+            }
         }
     }
 }
