@@ -7,7 +7,7 @@ $gray-lighter: #f6f6f6;
 $gray-lighter-second: #F7F7F7;
 $brand-primary: #aa2222;
 $primary: $brand-primary;
-$inverse: complement($primary);
+$primary-inverse: complement($primary);
 $brand-primary-light: lighten($brand-primary, 20%);
 $brand-primary-lighter: lighten($brand-primary, 40%);
 $brand-primary-dark: darken($brand-primary, 20%);
