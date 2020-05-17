@@ -58,6 +58,18 @@
 	padding: $small-space $medium-space;
 	border-radius: 5px;
 
+	.btn_text {
+		font-size: 1em;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.btn_icon {
+		font-size: 1.25em;
+		line-height: 1;
+		vertical-align: middle;
+		margin-left: $small-space;
+	}
+
 	@include media-breakpoint-up(md) {
 		&:hover {
 			box-shadow: 0 0 0 3px lighten($primary, 0.3);
@@ -77,10 +89,6 @@
 		line-height: 1;
 	}
 
-	.btn_icon {
-		margin-left: $small-space;
-	}
-
 	&:hover {
 		color: #fff;
 	}
@@ -88,6 +96,7 @@
 @mixin button-tertiary {
 	background-color: transparent;
 	border: 2px solid $primary;
+	border-radius: .325rem;
 	color: $gray-dark;
 
 	&:hover {
