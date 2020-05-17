@@ -266,6 +266,7 @@
   }
 }
 .block-categories {
+  font-family: Monsterrat;
   @include drop-shadow-small-light;
   border-top: 5px solid $primary;
   border-radius: 0 0 8px 8px;
@@ -289,7 +290,35 @@
         margin-bottom: $small-space;
       }
     }
-    li .navbar-toggler {
+    li[data-depth="0"] > a {
+      width: 100%;
+      display: inline-block;
+      padding-bottom: 0.1875rem;
+      font-weight: bold;
+    }
+    li:not([data-depth="0"]):not([data-depth="1"]) {
+      padding-left: 0.3125rem;
+      &::before {
+        content: "-";
+        margin-right: 0.3125rem;
+      }
+    }
+  }
+  a {
+    color: $gray-darker;
+  }
+  .category-text {
+    display: flex;
+    padding: $small-space 0;
+
+    > a {
+      flex: 1;
+      padding: 0;
+    }
+    .navbar-toggler {
+      padding: 0;
+      cursor: pointer;
+
       &[data-toggle="collapse"][aria-expanded="true"] {
         .add {
           display: none;
@@ -311,70 +340,30 @@
         vertical-align: middle;
 
         display: block;
-        font-size: 0.825rem;
+        font-size: 1rem;
         padding: 0.15rem;
       }
     }
-    li[data-depth="0"] > a {
-      width: 100%;
-      display: inline-block;
-      padding-bottom: 0.1875rem;
-      font-weight: bold;
-    }
-    li:not([data-depth="0"]):not([data-depth="1"]) {
-      padding-left: 0.3125rem;
-      &::before {
-        content: "-";
-        margin-right: 0.3125rem;
-      }
-    }
-  }
-  a {
-    color: $gray-darker;
-  }
-  .navbar-toggler {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 0;
-    cursor: pointer;
-    &[aria-expanded="true"] {
-      .add {
-        display: none;
-      }
-      .remove {
-        display: block;
-      }
-    }
-    .add,
-    .remove {
-      &:hover {
-        color: $brand-primary;
-      }
-    }
-    .remove {
-      display: none;
-    }
-  }
-  .arrows {
-    .arrow-right,
-    .arrow-down {
-      font-size: $font-size-sm;
-      cursor: pointer;
-      margin-left: 2px;
-      &:hover {
-        color: $brand-primary;
-      }
-    }
-    .arrow-down {
-      display: none;
-    }
-    &[aria-expanded="true"] {
-      .arrow-right {
-        display: none;
+    .arrows {
+      .arrow-right,
+      .arrow-down {
+        font-size: 1.25em;
+        cursor: pointer;
+        margin-left: 2px;
+        &:hover {
+          color: $brand-primary;
+        }
       }
       .arrow-down {
-        display: inline-block;
+        display: none;
+      }
+      &[aria-expanded="true"] {
+        .arrow-right {
+          display: none;
+        }
+        .arrow-down {
+          display: inline-block;
+        }
       }
     }
   }
