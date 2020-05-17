@@ -142,12 +142,14 @@
         background-color: #0007;
         color: white;
       }
+      > .submenu {
+        top: 100%;
+      }
     }
 
     .menu--item:hover {
       > .submenu {
         display: block;
-        top: 100%;
       }
     }
     .menu--item .dropdown-item:hover {
