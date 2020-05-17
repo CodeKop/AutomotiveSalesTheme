@@ -99,13 +99,11 @@
         min-width: 100%;
         margin: 0;
         padding: ($small-space * 1.5) $medium-space;
-        border: 2px solid #ccc;
 
         display: flex;
         flex-direction: column;
 
         background-color: white;
-        border-radius: 12px;
         box-shadow: 3px 5px 18px #0005;
 
         transition: top 0.35s, opacity 0.35s;
@@ -140,7 +138,8 @@
       transition: display 0s linear 0.35s;
       > .top-menu {
         opacity: 1;
-        top: calc(100% - 8px);
+        top: 100%;
+        max-height: calc(100vh - 100%);
         transition: top 0.35s, opacity 0.35s;
       }
     }
@@ -148,6 +147,7 @@
     > .menu--item:hover {
       > .dropdown-item {
         background-color: #0007;
+        color: white;
       }
     }
     .menu--item .dropdown-item:hover {
