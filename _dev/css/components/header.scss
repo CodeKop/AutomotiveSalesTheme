@@ -1,5 +1,7 @@
 #header {
     background-color: white;
+    font-family: Montserrat;
+    box-shadow: 0 10px -5px $primary-inverse;
 
     .header-top {
         .mobile > div {
@@ -30,6 +32,10 @@
                 padding-right: 0;
             }
         }
+    }
+
+    .header-nav {
+        background-color: $primary;
     }
 }
 a {
