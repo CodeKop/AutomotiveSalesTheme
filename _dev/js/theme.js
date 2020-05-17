@@ -70,7 +70,7 @@ $(document).ready(() => {
 			576: {
 				slidesPerView: 2
 			},
-			768: {
+			992: {
 				slidesPerView: 3
 			},
 			1200: {
