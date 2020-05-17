@@ -144,14 +144,14 @@
         transition: top 0.35s, opacity 0.35s;
       }
     }
-  }
 
-  > .menu--item:hover {
-    > .dropdown-item {
-      background-color: #0007;
+    > .menu--item:hover {
+      > .dropdown-item {
+        background-color: #0007;
+      }
     }
-  }
-  .menu--item .dropdown-item:hover {
-    color: darken($primary, 0.5);
+    .menu--item .dropdown-item:hover {
+      color: darken($primary, 0.5);
+    }
   }
 }
