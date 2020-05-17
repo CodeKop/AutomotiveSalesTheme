@@ -6,7 +6,11 @@ export default class TopMenu extends DropDown {
     let elmtClass;
     let self = this;
 
-    $('#_mobile_top_menu .category > a').click((e) => {
+    $('.top-menu[data-depth="1"]').css('max-height', () => {
+      return 'calc(100vh - ' + $(this).offsetTop() + 'px)'
+    });
+
+    $('#_mobile_top_menu .menu--item > a').click((e) => {
       var toggler = $(e.currentTarget).children('.navbar-toggler');
 
       if ($(e.target).is(toggler) || toggler.find($(e.target))) {
@@ -17,14 +21,14 @@ export default class TopMenu extends DropDown {
       $('#mobile_top_menu_wrapper').toggleClass('d-flex d-none');
       self.toggleMobileMenu();
     });
-    $('.js-top-menu .category').mouseleave(() => {
+    $('.js-top-menu .menu--item').mouseleave(() => {
       if (this.el.parent().hasClass('mobile')) {
         return;
       }
     });
-    $('.js-top-menu .category').click((e) => {
+    $('.js-top-menu .menu--item').click((e) => {
       if (this.el.parent().hasClass('mobile')) {
-        if ($(e.target).is('.collapse-icons .fa')) {
+        if ($(e.target).is('.navbar-toggler .navbar-toggler-icon')) {
           e.preventDefault();
         }
       }
