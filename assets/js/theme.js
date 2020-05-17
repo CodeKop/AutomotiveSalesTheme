@@ -981,8 +981,8 @@ for (var i in _events2['default'].prototype) {
 
 	var swiper = new _swiper2['default']('.swiper-container', {
 		navigation: {
-			nextEl: '.swiper-btn-next',
-			prevEl: '.swiper-btn-prev'
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
 		},
 
 		slidesPerView: 1,
@@ -993,7 +993,10 @@ for (var i in _events2['default'].prototype) {
 				slidesPerView: 2
 			},
 			768: {
-				slidesPerView: 4
+				slidesPerView: 3
+			},
+			1200: {
+				sliderPerView: 4
 			}
 		}
 	});
