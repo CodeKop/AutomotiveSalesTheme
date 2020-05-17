@@ -21,7 +21,7 @@
   </div>
   <div class="row">
     <a class="all-product-link text-center h6" href="{$allProductsLink}">
-      <span>{l s='All products' d='Shop.Theme.Catalog'}</span>
+      <span class="btn_text">{l s='All products' d='Shop.Theme.Catalog'}</span>
       <i class="material-icons btn_icon">&#xe315;</i>
     </a>
   </div>
