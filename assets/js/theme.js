@@ -992,7 +992,7 @@ for (var i in _events2['default'].prototype) {
 			576: {
 				slidesPerView: 2
 			},
-			768: {
+			992: {
 				slidesPerView: 3
 			},
 			1200: {
