@@ -54,7 +54,7 @@
   .dropdown-item > .navbar-text {
     padding: 0;
   }
-  .dropdown-item[data-depth="1"] + .submenu {
+  .dropdown-item[data-depth="1"] + .submenu > .top-menu {
     position: relative;
 
     &::before {
