@@ -269,7 +269,8 @@
 }
 .block-categories {
   @include drop-shadow-small-light;
-  border-radius: 8px;
+  border-top: 5px solid $primary;
+  border-radius: 0 0 8px 8px;
   padding: 1.563rem 1.25rem;
   background: white;
   margin-bottom: 1.563rem;
@@ -291,7 +292,26 @@
       }
     }
     li .navbar-toggler {
-      .fa {
+      &[data-toggle="collapse"][aria-expanded="true"] {
+        .add {
+          display: none;
+        }
+        .remove {
+          display: block;
+        }
+      }
+      &[data-toggle="collapse"][aria-expanded="false"] {
+        .add {
+          display: block;
+        }
+        .remove {
+          display: none;
+        }
+      }
+
+      .navbar-toggler-icon {
+        vertical-align: middle;
+
         display: block;
         font-size: 0.825rem;
         padding: 0.15rem;

@@ -8,9 +8,10 @@
             {if $depth===0}
               <a href="{$node.link}">{$node.name}</a>
               {if $node.children}
-                <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}">
-                  <i class="fa fa-plus add"></i>
-                  <i class="fa fa-minus remove"></i>
+                <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}"
+                  aria-expanded="false" aria-label="Show {$node.name} children">
+                  <i class="material-icons navbar-toggler-icon add">&#xe145;</i>
+                  <i class="material-icons navbar-toggler-icon remove">&#xe15b;</i>
                 </div>
                 <div class="collapse" id="exCollapsingNavbar{$node.id}">
                   {categories nodes=$node.children depth=$depth+1}
@@ -19,9 +20,10 @@
             {else}
               <a class="category-sub-link" href="{$node.link}">{$node.name}</a>
               {if $node.children}
-                <span class="arrows" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}">
-                  <i class="fa fa-chevron-right arrow-right">&#xE315;</i>
-                  <i class="fa fa-chevron-down arrow-down">&#xE313;</i>
+                <span class="arrows" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}"
+                  aria-expanded="false" aria-label="Show {$node.name} children">
+                  <i class="material-icons arrow-right">&#xE315;</i>
+                  <i class="material-icons arrow-down">&#xE313;</i>
                 </span>
                 <div class="collapse" id="exCollapsingNavbar{$node.id}">
                   {categories nodes=$node.children depth=$depth+1}
