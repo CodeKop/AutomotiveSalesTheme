@@ -129,7 +129,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        border-radius: 0.5rem;
+        border-radius: 0.5rem 0 0 0.5rem;
         padding: 0.95rem;
 
         background-color: $gray-lighter;
@@ -161,6 +161,7 @@
     }
 
     .all-product-link {
+        @include button;
         @include button-tertiary;
         margin: 0 auto;
     }
@@ -254,13 +255,12 @@
             }
 
             .btn_icon {
-                font-size: 1.25em;
                 transition: transform 0.35s;
             }
 
             &:hover {
                 .btn_icon {
-                    transform: translateX($small-space);
+                    transform: translateX($extra-small-space);
                 }
 
                 &::before {
