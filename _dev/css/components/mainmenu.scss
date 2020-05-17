@@ -153,7 +153,8 @@
       }
     }
     .menu--item .dropdown-item:hover {
-      color: darken($primary, 0.5);
+      color: darken($primary, 0.7);
+      background-color: $gray-light;
     }
   }
 }
