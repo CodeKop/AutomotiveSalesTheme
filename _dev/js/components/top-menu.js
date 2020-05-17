@@ -5,29 +5,7 @@ export default class TopMenu extends DropDown {
   init() {
     let elmtClass;
     let self = this;
-    // this.el.find('li').hover((e) => {
-    //   if (this.el.parent().hasClass('mobile')) {
-    //     return;
-    //   }
-    //   const currentTargetClass = $(e.currentTarget).attr('class');
-    //   if (elmtClass !== currentTargetClass) {
-    //     elmtClass = currentTargetClass;
 
-    //     if (elmtClass && $(e.target).data('depth') === 0) {
-    //       $(`.${elmtClass} .js-sub-menu > .top-menu`).css({
-    //         top: $(`.${elmtClass}`).height() + $(`.${elmtClass}`).position().top
-    //       });
-    //     }
-    //   }
-    // });
-    this.el.find('.submenu').each((index, element) => {
-      var target = $(element),
-        targetDepth = 2;
-
-      if (target.find(`.top-menu[data-depth="${targetDepth}"]`).length) {
-        target.addClass('submenu--full');
-      }
-    });
     $('#_mobile_top_menu .category > a').click((e) => {
       var toggler = $(e.currentTarget).children('.navbar-toggler');
 
