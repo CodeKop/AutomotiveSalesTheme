@@ -1754,7 +1754,11 @@ var TopMenu = (function (_DropDown) {
       var elmtClass = undefined;
       var self = this;
 
-      (0, _jquery2['default'])('#_mobile_top_menu .category > a').click(function (e) {
+      (0, _jquery2['default'])('.top-menu[data-depth="1"]').css('max-height', function () {
+        return 'calc(100vh - ' + (0, _jquery2['default'])(_this).offsetTop() + 'px)';
+      });
+
+      (0, _jquery2['default'])('#_mobile_top_menu .menu--item > a').click(function (e) {
         var toggler = (0, _jquery2['default'])(e.currentTarget).children('.navbar-toggler');
 
         if ((0, _jquery2['default'])(e.target).is(toggler) || toggler.find((0, _jquery2['default'])(e.target))) {
@@ -1765,14 +1769,14 @@ var TopMenu = (function (_DropDown) {
         (0, _jquery2['default'])('#mobile_top_menu_wrapper').toggleClass('d-flex d-none');
         self.toggleMobileMenu();
       });
-      (0, _jquery2['default'])('.js-top-menu .category').mouseleave(function () {
+      (0, _jquery2['default'])('.js-top-menu .menu--item').mouseleave(function () {
         if (_this.el.parent().hasClass('mobile')) {
           return;
         }
       });
-      (0, _jquery2['default'])('.js-top-menu .category').click(function (e) {
+      (0, _jquery2['default'])('.js-top-menu .menu--item').click(function (e) {
         if (_this.el.parent().hasClass('mobile')) {
-          if ((0, _jquery2['default'])(e.target).is('.collapse-icons .fa')) {
+          if ((0, _jquery2['default'])(e.target).is('.navbar-toggler .navbar-toggler-icon')) {
             e.preventDefault();
           }
         }
