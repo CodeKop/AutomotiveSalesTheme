@@ -39,7 +39,7 @@ a {
 
 @include media-breakpoint-up(md) {
     #header {
-        box-shadow: 0 10px -5px $primary-inverse;
+        box-shadow: 0 10px 0 -5px $primary-inverse;
         position: relative;
         z-index: 1;
 
