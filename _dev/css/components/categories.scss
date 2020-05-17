@@ -19,8 +19,7 @@
 .block-category {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 13.75rem;
+  align-items: flex-start;
   margin-bottom: 1.563rem;
 
   .block-category-inner {
@@ -43,8 +42,6 @@
     }
   }
   .category-cover {
-    float: right;
-    border-radius: 500px;
     overflow: hidden;
     width: 141px;
     height: 180px;
