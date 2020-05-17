@@ -4,11 +4,11 @@
   </h2>
   <div class="featured-products-list swiper-container position-relative">
     <a class="swiper-button-prev" href="#prodcarousel" role="button" data-slide="prev">
-      <span class="swiper-button-prev-icon" aria-hidden="true"><i class="material-icons">&#xe314;</i></span>
+      <span class="swiper-button-icon" aria-hidden="true"><i class="material-icons">&#xe314;</i></span>
       <span class="sr-only">Previous</span>
     </a>
     <a class="swiper-button-next" href="#prodcarousel" role="button" data-slide="next">
-      <span class="swiper-button-next-icon" aria-hidden="true"><i class="material-icons">&#xe315;</i></span>
+      <span class="swiper-button-icon" aria-hidden="true"><i class="material-icons">&#xe315;</i></span>
       <span class="sr-only">Next</span>
     </a>
 
