@@ -97,7 +97,6 @@
 
       .top-menu[data-depth="1"] {
         margin: 0;
-        padding: ($small-space * 1.5) $medium-space;
 
         display: flex;
         flex-direction: column;
@@ -119,14 +118,25 @@
     .submenu .menu--item {
       width: 100%;
 
-      .dropdown-item {
-        padding: ($small-space / 2) 0;
-      }
       .dropdown-item .navbar-text {
         padding: 0;
       }
     }
 
+    .top-menu[data-depth="1"] {
+      .dropdown-item {
+        padding: ($small-space * 1.5) $medium-space;
+      }
+      .submenu {
+        left: 100%;
+        top: 0;
+        height: 100%;
+      }
+    }
+
+    > .menu--item {
+      position: relative;
+    }
     > .menu--item:hover {
       > a.dropdown-item {
         background-color: #0007;
