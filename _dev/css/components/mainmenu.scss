@@ -133,21 +133,20 @@
       }
     }
 
-    > .menu--item:hover .submenu {
-      display: block;
-      transition: display 0s linear 0.35s;
-      > .top-menu {
-        opacity: 1;
-        top: 100%;
-        max-height: calc(100vh - 100%);
-        transition: top 0.35s, opacity 0.35s;
-      }
-    }
-
     > .menu--item:hover {
       > a.dropdown-item {
         background-color: #0007;
         color: white;
+      }
+
+      > .submenu {
+        display: block;
+
+        > .top-menu {
+          opacity: 1;
+          top: 100%;
+          transition: top 0.35s, opacity 0.35s;
+        }
       }
     }
     .menu--item .dropdown-item:hover {
