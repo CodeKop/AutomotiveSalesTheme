@@ -59,8 +59,8 @@ $(document).ready(() => {
 
 	var swiper = new Swiper('.swiper-container', {
 		navigation: {
-			nextEl: '.swiper-btn-next',
-			prevEl: '.swiper-btn-prev'
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
 		},
 
 		slidesPerView: 1,
