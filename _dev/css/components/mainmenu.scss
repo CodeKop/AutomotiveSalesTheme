@@ -42,24 +42,21 @@
     padding: $extra-small-space $small-space;
   }
 
-  .dropdown-item[data-depth="0"] {
-    border-bottom: 1px solid $primary;
-  }
   .dropdown-item[data-depth="0"] + .submenu {
+    border-top: 1px solid $primary;
+  }
+  .submenu > .top-menu {
+    margin-left: 8px;
     border: solid $primary;
     border-width: 0 0 1px 1px;
     background-color: $gray-light;
   }
-  .submenu {
-    margin-left: 8px;
-
-    .navbar-text {
-      padding: 0;
-    }
+  .dropdown-item > .navbar-text {
+    padding: 0;
   }
   .dropdown-item[data-depth="1"] + .submenu {
     position: relative;
-    
+
     &::before {
       content: "";
       position: absolute;
