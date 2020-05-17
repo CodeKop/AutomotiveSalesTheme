@@ -134,12 +134,15 @@
 
 @include media-breakpoint-up(lg) {
     .product-container {
-        width: 33%;
+        width: 33.33%;
     }
 }
 
 @include media-breakpoint-up(xl) {
     .product-container {
         width: 25%;
+    }
+    .layout-left-column .product-container {
+        width: 33.33%;
     }
 }
