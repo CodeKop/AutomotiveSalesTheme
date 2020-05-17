@@ -138,7 +138,9 @@
         background-color: #0007;
         color: white;
       }
+    }
 
+    .menu--item:hover {
       > .submenu {
         display: block;
 
