@@ -996,7 +996,7 @@ for (var i in _events2['default'].prototype) {
 				slidesPerView: 3
 			},
 			1200: {
-				sliderPerView: 4
+				slidesPerView: 4
 			}
 		}
 	});
