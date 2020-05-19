@@ -50,6 +50,7 @@
     border: solid $primary;
     border-width: 0 0 0 1px;
     background-color: $gray-light;
+    overflow: scroll;
 
     &[data-depth="1"] {
       border-width: 0 0 1px 1px;
@@ -162,10 +163,13 @@
     }
 
     .menu--item.link {
+      margin: 0 .25rem;
+      
       > .dropdown-item {
         margin: .5rem 0;
         padding: 0 .75rem;
         justify-content: center;
+        color: white;
         background-color: white;
         border-radius: 100px;
         box-shadow: 1px 1px 3px #0005;
