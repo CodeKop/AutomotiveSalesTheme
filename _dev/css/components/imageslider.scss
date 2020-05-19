@@ -12,9 +12,12 @@
       border-radius: 100%;
       opacity: 1;
       background-color: #fff7;
+      border: 5px solid white;
+      box-shadow: 0 2px 0 $gray-darker;
     }
     > li.active {
-      background-color: #fff;
+      background-color: $primary;
+      border-color: $primary-inverse;
     }
   }
 
