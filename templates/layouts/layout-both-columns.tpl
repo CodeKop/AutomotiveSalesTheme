@@ -31,13 +31,15 @@
       <section id="wrapper">
         {hook h="displayWrapperTop"}
         <div class="container-fluid">
-          <div class="row">
+          <div class="row no-gutters">
             {block name='category_header'}{/block}
           
             {block name='breadcrumb'}
               {include file='_partials/breadcrumb.tpl'}
             {/block}
+					</div>
 
+					<div class="row">
             {block name="left_column"}
               <div id="left-column" class="col-12 col-sm-4 col-md-3 float-md-left">
                 {if $page.page_name == 'product'}
