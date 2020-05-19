@@ -7,7 +7,7 @@ export default class TopMenu extends DropDown {
     let self = this;
 
     $('.top-menu[data-depth="1"]').css('max-height', () => {
-      return 'calc(100vh - ' + $(this).offsetTop() + 'px)'
+      return 'calc(100vh - ' + this.offsetTop() + 'px)'
     });
 
     $('#_mobile_top_menu .menu--item > a').click((e) => {
