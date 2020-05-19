@@ -1,0 +1,22 @@
+#cms.cmd-id-4 {
+    .page-header {
+        height: 30vh;
+        margin-top: 0.7815rem;
+        padding: $medium-space 0;
+        background-image: url(url("https://lh5.googleusercontent.com/proxy/T8_jQGMzBsl3RxMI3Q22Q_94bEoJxQSerL0BE7iIvMvlxMgMpzWH1S78mDgG9uEhH_qWkw-BwQHz5C-XcmqVc6ZQ_xYyQQlyUPM3vPuweGAtxr-rwX1f7l7I71Pd5nNEuhuL7CZKv_RlfLNpx_ufjdYK3Pygka72PLXEMRx5sB2Rsg=w203-h152-k-no"));
+        background-size: cover;
+        margin: 0;
+    }
+
+    #content {
+        background-color: transparent;
+    }
+
+    .bg-founding {
+        background-image: url('../img/be-logo_thumb - 300.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        filter: blur(5px);
+    }
+}
