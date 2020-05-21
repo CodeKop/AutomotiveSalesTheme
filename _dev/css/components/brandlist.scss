@@ -1,13 +1,8 @@
 #search-filters-brands {
   box-shadow: none;
   background-color: transparent;
-  padding: 0;
-  padding-bottom: 1.85rem;
-  margin: 0;
+  padding: $extra-small-space 0;
   font-family: Montserrat;
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 1.35rem 0;
 
   .facet-header {
     padding: 0 1.35rem;
@@ -55,17 +50,9 @@
         object-fit: contain;
       }
     }
-  }
 
-  .directions {
-    position: absolute;
-    top: 2.35rem;
-    right: 1em;
-
-    transform: translateY(-50%);
-
-    .brand-direction-left,
-    .brand-direction-right {
+    .swiper-button-prev,
+    .swiper-button-next {
       display: inline-block;
       background-color: white;
       border-radius: 50px;
@@ -74,7 +61,7 @@
       transition: box-shadow 0.45s;
       cursor: pointer;
 
-      .fa {
+      i {
         display: block;
       }
 
@@ -82,6 +69,14 @@
         background-color: $gray-lighter;
       }
     }
+  }
+
+  .directions {
+    position: absolute;
+    top: 2.35rem;
+    right: 1em;
+
+    transform: translateY(-50%);
   }
 }
 
