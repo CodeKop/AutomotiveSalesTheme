@@ -33,6 +33,28 @@ for (var i in EventEmitter.prototype) {
 	prestashop[i] = EventEmitter.prototype[i];
 }
 
+let swiperOptions = {
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev'
+	},
+
+	slidesPerView: 1,
+	spaceBetween: 0,
+
+	breakpoints: {
+		576: {
+			slidesPerView: 2
+		},
+		992: {
+			slidesPerView: 3
+		},
+		1200: {
+			slidesPerView: 4
+		}
+	}
+};
+
 $(document).ready(() => {
 	let dropDownEl = $('.js-dropdown');
 	const form = new Form();
@@ -57,26 +79,12 @@ $(document).ready(() => {
 		});
 	}
 
-	var swiper = new Swiper('.swiper-container', {
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev'
-		},
-
-		slidesPerView: 1,
-		spaceBetween: 0,
-
-		breakpoints: {
-			576: {
-				slidesPerView: 2
-			},
-			992: {
-				slidesPerView: 3
-			},
-			1200: {
-				slidesPerView: 4
-			}
+	$('.swiper-container').each(() => {
+		if ($(this).hasClass('looped')) {
+			swiperOptions['looped'] = true;
 		}
+
+		new Swiper(this, swiperOptions);
 	});
 
 	$('.carousel[data-touch="true"]').swipe({
