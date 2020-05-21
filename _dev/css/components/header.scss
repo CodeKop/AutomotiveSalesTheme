@@ -41,7 +41,7 @@ a {
     #header {
         box-shadow: 0 10px 0 -5px $primary-inverse;
         position: relative;
-        z-index: 9;
+        z-index: 99;
 
         .header-nav {
             background-color: $primary;
