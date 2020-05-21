@@ -52,7 +52,7 @@ $(document).ready(() => {
 	searchBar.init();
 
 	if (prestashop.configuration.is_catalog) {
-		$("*[id^='_(desktop|mobile)_cart']").each((idx, el) => {
+		$("*[id^='_desktop_cart'],*[id^='_desktop_cart']").each((idx, el) => {
 			el.remove();
 		});
 	}
