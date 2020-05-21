@@ -1,4 +1,4 @@
-<div class="facets-scroll swiper-container">
+<div class="facets-scroll swiper-container looped">
   <ul class="facets swiper-wrapper" data-products="{count($brands)}">
     {foreach from=$brands item=brand name=brand_list}
       {if $smarty.foreach.brand_list.iteration <= $text_list_nb}
