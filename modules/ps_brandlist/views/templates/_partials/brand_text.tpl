@@ -7,6 +7,16 @@
             <img class="facet-image" src="{$urls.img_manu_url}{$brand['image']}-medium_default.jpg" />
             <span class="facet-text text-dark">{$brand['name']}</span>
           </a>
+
+          <script type="application/ld+json">
+          {literal}{{/literal}
+            "@context": "https://schema.org",
+            "@type": "Brand",
+            "logo": "{$urls.img_manu_url}{$brand['image']}-medium_default.jpg",
+            "url": "{$brand['link']}",
+            "name": {$brand['name']}
+          {literal}}{/literal}
+          </script>
         </li>
       {/if}
     {/foreach}
