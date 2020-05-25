@@ -20,12 +20,10 @@
                     <i class="material-icons navbar-toggler-icon add">&#xe145;</i>
                     <i class="material-icons navbar-toggler-icon remove">&#xe15b;</i>
                   </button>
-
-                  {if $depth == 0}
+                  
                   <span class="navbar-icon d-none d-md-block">
                     <i class="material-icons">&#xe313;</i>
                   </button>
-                  {/if}
                 {/if}
               </a>
               {if $node.children|count}
