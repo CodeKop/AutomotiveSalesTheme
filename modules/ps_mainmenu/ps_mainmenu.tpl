@@ -22,7 +22,9 @@
                   </button>
                   
                   <span class="navbar-icon d-none d-md-block">
-                    <i class="material-icons">&#xe314;</i>
+                    <i class="material-icons">
+                      {if $depth == '1'}&#xe313;{/elseif $depth >= '2'}&#xe315;{/if}
+                    </i>
                   </button>
                 {/if}
               </a>
