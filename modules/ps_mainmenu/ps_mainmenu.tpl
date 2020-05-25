@@ -22,7 +22,7 @@
                   </button>
                   
                   <span class="navbar-icon d-none d-md-block">
-                    <i class="material-icons">&#xe313;</i>
+                    <i class="material-icons">&#xe314;</i>
                   </button>
                 {/if}
               </a>
