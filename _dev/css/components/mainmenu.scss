@@ -172,11 +172,11 @@
     }
 
     .menu--item:hover {
-      .dropdown-item {
+      > .dropdown-item {
         color: darken($brand-primary, .7);
         background-color: $gray-light;
       }
-      .dropdown-item[data-depth="1"] {
+      > .dropdown-item[data-depth="1"] {
         background-color: #ffffff;
       }
 
