@@ -93,6 +93,7 @@
       left: 0;
       z-index: 99;
       min-width: 100%;
+      height: 100%;
 
       box-shadow: 3px 5px 18px #0005;
       
@@ -110,10 +111,6 @@
 
     .dropdown-item {
       cursor: pointer;
-    }
-    .dropdown-item[data-depth="0"] {
-      color: inherit;
-      font-weight: bold;
 
       .navbar-icon {
         margin-left: $small-space;
@@ -122,6 +119,10 @@
         font-size: 1em;
         display: block;
       }
+    }
+    .dropdown-item[data-depth="0"] {
+      color: inherit;
+      font-weight: bold;
     }
     .submenu .menu--item {
       width: 100%;
@@ -132,6 +133,8 @@
     }
 
     .dropdown-item[data-depth="0"] + .submenu {
+      height: auto;
+
       &::before {
         content: "";
         position: absolute;
