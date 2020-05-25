@@ -57,6 +57,7 @@
     }
   }
   .dropdown-item > .navbar-text {
+    flex: 1;
     padding: 0;
   }
   .dropdown-item[data-depth="1"] + .submenu > .top-menu {
