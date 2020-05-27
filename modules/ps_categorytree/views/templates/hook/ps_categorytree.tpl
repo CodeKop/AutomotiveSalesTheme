@@ -51,12 +51,20 @@
   <ul class="category-top-menu">
     <li><a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a></li>
     
-    <li class="category-return">
-      {assign var="parent" value=Category::getCategoryInformation($category.id_parent)}
-      <a href="">
-        <span>{json_encode($parent)}</span>
-      </a>
-    </li>
-    <li>{categories nodes=$categories.children}</li>
+    {if $category.level_depth >= 3}
+      <li class="category-return">
+        {assign var="parent" value=Category::getCategoryInformation($category.id_parent)}
+        <a href="">
+          <span>{json_encode($parent)}</span>
+        </a>
+      </li>
+    {/if}
+    {if $categories.children|count}
+      <li>{categories nodes=$categories.children}</li>
+    {else}
+      <li>
+        There are no subcategories to display.
+      </li>
+    {/if}
   </ul>
 </div>
