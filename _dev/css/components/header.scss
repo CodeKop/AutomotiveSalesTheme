@@ -39,7 +39,7 @@ a {
 
 @include media-breakpoint-up(md) {
     #header {
-        box-shadow: 0 ($extra-small-space * 2) 0 - ($extra-small-space) $primary-inverse;
+        box-shadow: 0 ($extra-small-space * 2) 0 (-$extra-small-space) $primary-inverse;
         position: relative;
         z-index: 99;
 
@@ -50,11 +50,11 @@ a {
             .dropdown {
                 color: white;
 
-                &:hover .expand-more {
-                    color: white;
+                .expand-more {
+                    color: inherit;
                 }
-                &:hover i {
-                    color: white;
+                i {
+                    color: inherit;
                 }
             }
         }
