@@ -3,6 +3,11 @@
   {strip}
     {if $nodes|count}
       <ul class="category-sub-menu">
+        {if $depth === 0}
+          <li class="category-return">
+            {json_encode($node)}
+          </li>
+        {/if}
         {foreach from=$nodes item=node}
           <li data-depth="{$depth}">
             {if $depth===0}
