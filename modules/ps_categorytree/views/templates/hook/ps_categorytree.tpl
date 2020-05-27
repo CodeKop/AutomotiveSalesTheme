@@ -5,7 +5,7 @@
       <ul class="category-sub-menu">
         {if $depth === 0}
           <li class="category-return">
-            {json_encode($node)}
+            {json_encode($nodes)}
           </li>
         {/if}
         {foreach from=$nodes item=node}
