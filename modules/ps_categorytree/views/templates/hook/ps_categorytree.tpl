@@ -3,11 +3,6 @@
   {strip}
     {if $nodes|count}
       <ul class="category-sub-menu">
-        {if $depth === 0}
-          <li class="category-return">
-            {json_encode($nodes)}
-          </li>
-        {/if}
         {foreach from=$nodes item=node}
           <li data-depth="{$depth}">
             {if $depth===0}
@@ -55,6 +50,13 @@
 <div class="block-categories d-none d-md-block">
   <ul class="category-top-menu">
     <li><a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a></li>
+    
+    <li class="category-return">
+      <a href="{$node.link}">
+        <i class="material-icons">&#xe314;</i>
+        <span>{$node.name}</span>
+      </a>
+    </li>
     <li>{categories nodes=$categories.children}</li>
   </ul>
 </div>
