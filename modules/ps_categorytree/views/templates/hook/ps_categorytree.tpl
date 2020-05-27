@@ -55,7 +55,7 @@
       <li class="category-return">
         {assign var="parent" value=Category::getCategoryInformation($category.id_parent)}
         <a href="">
-          <span>{json_encode($parent)}</span>
+          <span>{$category.id_parent}, {json_encode($parent)}</span>
         </a>
       </li>
     {/if}
