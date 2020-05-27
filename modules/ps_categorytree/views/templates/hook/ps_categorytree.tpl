@@ -52,6 +52,7 @@
     <li><a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a></li>
     
     <li class="category-return">
+      {json_encode($category)}
       <a href="{$category.link}">
         <i class="material-icons">&#xe314;</i>
         <span>{$category.name}</span>
