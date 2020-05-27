@@ -53,9 +53,9 @@
     
     {if $category.level_depth >= 3}
       <li class="category-return">
-        {assign var="parent" value=Category::getCategoryInformation([$category.id_parent])}
-        <a href="">
-          <span>{$category.id_parent}, {json_encode($parent)}</span>
+        {assign var="parent" value=Category::getCategoryInformation([$category.id_parent])[$category.id_parent]}
+        <a href="{$urls.pages.category}">
+          <span>{$parent.name}</span>
         </a>
       </li>
     {/if}
