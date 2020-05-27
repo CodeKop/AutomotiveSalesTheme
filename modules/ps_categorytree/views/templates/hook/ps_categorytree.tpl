@@ -53,10 +53,6 @@
     
     <li class="category-return">
       {json_encode($category)}
-      <a href="{$category.link}">
-        <i class="material-icons">&#xe314;</i>
-        <span>{$category.name}</span>
-      </a>
     </li>
     <li>{categories nodes=$categories.children}</li>
   </ul>
