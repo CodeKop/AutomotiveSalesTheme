@@ -52,7 +52,10 @@
     <li><a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a></li>
     
     <li class="category-return">
-      {json_encode($category)}
+      {assign name="parent" value=Category::getCategoryInformation($category.id_parent)}
+      <a href="">
+        <span>{json_encode($parent)}</span>
+      </a>
     </li>
     <li>{categories nodes=$categories.children}</li>
   </ul>
