@@ -52,9 +52,9 @@
     <li><a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a></li>
     
     <li class="category-return">
-      <a href="{$node.link}">
+      <a href="{$category.link}">
         <i class="material-icons">&#xe314;</i>
-        <span>{$node.name}</span>
+        <span>{$category.name}</span>
       </a>
     </li>
     <li>{categories nodes=$categories.children}</li>
