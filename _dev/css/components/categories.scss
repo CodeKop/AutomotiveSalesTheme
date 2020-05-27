@@ -266,7 +266,7 @@
   }
 }
 .block-categories {
-  font-family: Monsterrat;
+  font-family: Montserrat;
   @include drop-shadow-small-light;
   border-top: 5px solid $primary;
   border-radius: 0 0 8px 8px;
@@ -287,8 +287,7 @@
       font-size: $font-size-sm;
     }
     li {
-      border: solid #ddd;
-      border-width: 1px 0;
+      border-bottom: 1px solid #ddd;
       position: relative;
       &[data-depth="1"] {
         margin-bottom: $small-space;
