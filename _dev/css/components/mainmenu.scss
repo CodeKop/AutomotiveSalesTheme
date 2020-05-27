@@ -133,19 +133,6 @@
     }
 
     .dropdown-item[data-depth="0"] + .submenu {
-      &::before {
-        content: "";
-        position: absolute;
-        top: $extra-small-space;
-        left: calc(50% - $extra-small-space);
-
-        width: 0;
-        height: 0;
-        border-left: $extra-small-space solid #ffffff;
-        border-right: $extra-small-space solid #ffffff;
-        border-bottom: $extra-small-space solid transparent;
-      }
-
       .top-menu {
         padding: $extra-small-space 0;
       }
