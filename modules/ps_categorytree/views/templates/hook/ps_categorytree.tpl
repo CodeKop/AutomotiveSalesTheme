@@ -55,6 +55,7 @@
       <li class="category-return">
         {assign var="parent" value=Category::getCategoryInformation([$category.id_parent])}
         <a href="{$urls.pages.category}">
+          <i class="material-icons">&#xe314;</i>
           <span>{$parent[$category.id_parent].name}</span>
         </a>
       </li>
