@@ -48,7 +48,9 @@ a {
             color: white;
 
             .dropdown {
-                color: white;
+                button[data-toggle="dropdown"] {
+                    color: white;
+                }
 
                 .expand-more {
                     color: inherit;
