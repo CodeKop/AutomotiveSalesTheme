@@ -95,11 +95,11 @@
       min-width: 100%;
 
       box-shadow: 3px 5px 18px #0005;
-      overflow: auto;
       
       .top-menu {
         background-color: #ffffff;
         height: 100%;
+        overflow-y: auto;
       }
       .top-menu[data-depth="1"] {
         display: flex;
