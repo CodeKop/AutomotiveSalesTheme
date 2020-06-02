@@ -49,17 +49,18 @@
 
 <div class="block-categories d-none d-md-block">
   <ul class="category-top-menu">
-    <li><a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a></li>
-    
     {if $category.level_depth >= 3}
       <li class="category-return">
         {assign var="parent" value=Category::getCategoryInformation([$category.id_parent])}
-        <a href="{$urls.pages.category}">
+        <a href="{$parent->getLink()}">
           <i class="material-icons">&#xe314;</i>
           <span>{$parent[$category.id_parent].name}</span>
         </a>
       </li>
     {/if}
+
+    <li><a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a></li>
+    
     {if $categories.children|count}
       <li>{categories nodes=$categories.children}</li>
     {else}
