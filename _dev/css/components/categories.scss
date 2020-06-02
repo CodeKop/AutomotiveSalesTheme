@@ -304,6 +304,20 @@
         margin-right: 0.3125rem;
       }
     }
+    li.category-return > a {
+      display: flex;
+      align-items:center;
+      padding-bottom: $medium-space * 1.5;
+
+      i {
+        font-size: 1em;
+        margin-right: $small-space;
+      }
+      span {
+        font-size: 1em;
+        line-height: 1;
+      }
+    }
   }
   a {
     color: $gray-darker;
