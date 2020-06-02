@@ -51,10 +51,10 @@
   <ul class="category-top-menu">
     {if $category.level_depth >= 3}
       <li class="category-return">
-        {assign var="parent" value=Category::getCategoryInformation([$category.id_parent])}
+        {assign var="parent" value=new Category([$category.id_parent])}
         <a href="{$parent->getLink()}">
           <i class="material-icons">&#xe314;</i>
-          <span>{$parent[$category.id_parent].name}</span>
+          <span>{$parent->getName()}</span>
         </a>
       </li>
     {/if}
