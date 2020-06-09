@@ -1,5 +1,5 @@
 <div id="_desktop_user_info">
-  <div class="user-info d-none d-md-inline-flex">
+  <div class="user-info d-none d-md-inline-flex flex-wrap">
     {if $logged}      
       {* If the user is logged in then show user name. *}
       <a
