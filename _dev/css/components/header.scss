@@ -43,6 +43,19 @@ a {
         position: relative;
         z-index: 99;
 
+        height: 165px;
+        display: flex;
+        flex-direction: column;
+
+        .header-top {
+            flex: 1;
+
+            .container,
+            .row {
+                height: 100%;
+            }
+        }
+
         .header-nav {
             background-color: $primary;
             color: white;
