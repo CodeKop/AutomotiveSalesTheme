@@ -43,32 +43,28 @@
       }
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-      display: inline-block;
-      background-color: white;
-      border-radius: 50px;
-      padding: 0.5em;
-      border: 1px solid #ccc;
-      transition: box-shadow 0.45s;
-      cursor: pointer;
+    .directions {
+      display: flex;
+      justify-content: space-between;
 
-      i {
-        display: block;
-      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        background-color: white;
+        border-radius: 50px;
+        padding: 0.5em;
+        border: 1px solid #ccc;
+        transition: box-shadow 0.45s;
+        cursor: pointer;
 
-      &:hover {
-        background-color: $gray-lighter;
+        i {
+          display: block;
+        }
+
+        &:hover {
+          background-color: $gray-lighter;
+        }
       }
     }
-  }
-
-  .directions {
-    position: absolute;
-    top: 2.35rem;
-    right: 1em;
-
-    transform: translateY(-50%);
   }
 }
 
