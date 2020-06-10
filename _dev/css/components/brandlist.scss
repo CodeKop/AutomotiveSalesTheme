@@ -16,7 +16,6 @@
 
     .facet-label {
       width: 240px;
-      height: 150px;
       padding: 10px 18px 23px;
       text-align: center;
 
@@ -33,20 +32,13 @@
       }
 
       .facet-text {
-        position: absolute;
-        top: calc(100% - 1px);
-        left: 10%;
-        right: 10%;
-        transform: translateY(-50%);
         background-color: #ffffff;
-        border: 1px solid #ddd;
-        border-radius: 8px;
         padding: 0.55rem 1.15rem;
       }
 
       .facet-image {
         width: 100%;
-        height: 100%;
+        height: 100px;
         object-fit: contain;
       }
     }
