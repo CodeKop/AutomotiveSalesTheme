@@ -42,27 +42,27 @@
         object-fit: contain;
       }
     }
+  }
 
-    .directions {
-      display: flex;
-      justify-content: space-between;
+  .facets + .directions {
+    display: flex;
+    justify-content: space-between;
 
-      .swiper-button-prev,
-      .swiper-button-next {
-        background-color: white;
-        border-radius: 50px;
-        padding: 0.5em;
-        border: 1px solid #ccc;
-        transition: box-shadow 0.45s;
-        cursor: pointer;
+    .swiper-button-prev,
+    .swiper-button-next {
+      background-color: white;
+      border-radius: 50px;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      transition: box-shadow 0.45s;
+      cursor: pointer;
 
-        i {
-          display: block;
-        }
+      i {
+        display: block;
+      }
 
-        &:hover {
-          background-color: $gray-lighter;
-        }
+      &:hover {
+        background-color: $gray-lighter;
       }
     }
   }
