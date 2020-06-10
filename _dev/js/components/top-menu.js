@@ -6,8 +6,10 @@ export default class TopMenu extends DropDown {
     let elmtClass;
     let self = this;
 
-    $('.top-menu[data-depth="1"]').css('max-height', () => {
-      return 'calc(100vh - ' + this.offsetTop + 'px)'
+    $('#top-menu .dropdown-item + .submenu').each((idx, el) => {
+      $(el).addClass('d-block');
+      $(el).css('max-height', 'calc(100vh - ' + $(el).offset().top + 'px)');
+      $(el).removeClass('d-block');
     });
 
     $('#_mobile_top_menu .menu--item > a').click((e) => {
