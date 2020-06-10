@@ -1,4 +1,8 @@
 <div class="facets-scroll swiper-container looped">
+  <div class="swiper-button-prev" role="button">
+    <i class="material-icons">&#xe314;</i>
+  </div>
+  
   <ul class="facets swiper-wrapper" data-products="{count($brands)}">
     {foreach from=$brands item=brand name=brand_list}
       {if $smarty.foreach.brand_list.iteration <= $text_list_nb}
@@ -14,7 +18,7 @@
             "@type": "Brand",
             "logo": "{$urls.img_manu_url}{$brand['image']}-medium_default.jpg",
             "url": "{$brand['link']}",
-            "name": {$brand['name']}
+            "name": "{$brand['name']}"
           {literal}}{/literal}
           </script>
         </li>
@@ -22,9 +26,6 @@
     {/foreach}
   </ul>
 
-  <div class="swiper-button-prev" role="button">
-    <i class="material-icons">&#xe314;</i>
-  </div>
   <div class="swiper-button-next" role="button">
     <i class="material-icons">&#xe315;</i>
   </div>
