@@ -79,11 +79,13 @@ $(document).ready(() => {
 		});
 	}
 
+	console.log(swiperOptions);
 	$('.swiper-container').each((idx, el) => {
 		if ($(el).hasClass('looped')) {
 			swiperOptions['looped'] = true;
 		}
 
+		console.log(swiperOptions);
 		new Swiper(el, swiperOptions);
 	});
 
