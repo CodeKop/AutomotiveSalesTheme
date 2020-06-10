@@ -31,10 +31,14 @@
     </ul>
     <div class="direction" aria-label="{l s='Carousel buttons' d='Shop.Theme.Global'}">
       <a class="left carousel-control carousel-control-prev" href="#carousel" role="button" data-slide="prev" aria-label="{l s='Previous' d='Shop.Theme.Global'}">
-        <span class="carousel-control-icon carousel-control-prev-icon" aria-label="Previous"></span>
+        <span class="carousel-control-icon carousel-control-prev-icon" aria-label="Previous">
+          <i class="material-icons">&#xe314;</i>
+        </span>
       </a>
       <a class="right carousel-control carousel-control-next" href="#carousel" role="button" data-slide="next" aria-label="{l s='Next' d='Shop.Theme.Global'}">
-        <span class="carousel-control-icon carousel-control-next-icon" aria-label="Next"></span>
+        <span class="carousel-control-icon carousel-control-next-icon" aria-label="Next">
+          <i class="material-icons">&#xe315;</i>
+        </span>
       </a>
     </div>
   </div>
