@@ -39,6 +39,7 @@ let swiperOptions = {
 		prevEl: '.swiper-button-prev'
 	},
 
+	watchOverflow: true,
 	slidesPerView: 1,
 	spaceBetween: 0,
 
@@ -82,7 +83,7 @@ $(document).ready(() => {
 	console.log(swiperOptions);
 	$('.swiper-container').each((idx, el) => {
 		if ($(el).hasClass('looped')) {
-			swiperOptions['looped'] = true;
+			swiperOptions['loop'] = true;
 		}
 
 		console.log(swiperOptions);
