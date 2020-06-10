@@ -22,11 +22,10 @@
     {/foreach}
   </ul>
 
-  <div class="direction">
+  <div class="directions">
     <div class="swiper-button-prev" role="button">
       <i class="material-icons">&#xe314;</i>
     </div>
-    <div class="d-lg"></div>
     <div class="swiper-button-next" role="button">
       <i class="material-icons">&#xe315;</i>
     </div>
