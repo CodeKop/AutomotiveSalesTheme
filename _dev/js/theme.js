@@ -79,12 +79,12 @@ $(document).ready(() => {
 		});
 	}
 
-	$('.swiper-container').each(() => {
-		if ($(this).hasClass('looped')) {
+	$('.swiper-container').each((idx, el) => {
+		if ($(el).hasClass('looped')) {
 			swiperOptions['looped'] = true;
 		}
 
-		new Swiper(this, swiperOptions);
+		new Swiper(el, swiperOptions);
 	});
 
 	$('.carousel[data-touch="true"]').swipe({
