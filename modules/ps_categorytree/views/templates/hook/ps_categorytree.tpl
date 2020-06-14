@@ -49,10 +49,10 @@
 
 <div class="block-categories d-none d-md-block">
   <ul class="category-top-menu">
-    {json_encode($category)}
     {if $category.level_depth >= 3}
       <li class="category-return">
-        {assign var="parent" value=Category}
+        {assign var="parent" value=Category::getCategoryInformation($category.id_parent)}
+        {json_encode($parent)}
         <a href="{$parent->getLink()}">
           <i class="material-icons">&#xe314;</i>
           <span>{$parent->getName()}</span>
