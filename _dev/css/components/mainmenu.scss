@@ -105,8 +105,6 @@
         display: flex;
         flex-direction: column;
         margin: 0;
-
-        background-color: $gray-light;
       }
     }
 
@@ -139,7 +137,7 @@
       }
 
       .dropdown-item {
-        padding: $extra-small-space $medium-space;
+        padding: $small-space $medium-space;
       }
       .submenu {
         left: 100%;
@@ -165,9 +163,6 @@
       > .dropdown-item {
         color: darken($brand-primary, .7);
         background-color: $gray-light;
-      }
-      > .dropdown-item[data-depth="1"] {
-        background-color: #ffffff;
       }
 
       > .submenu {
