@@ -53,10 +53,10 @@
       <li class="category-return">
         {assign var="parent" value=Category::getCategoryInformation($category.id_parent)}
         {json_encode($parent)}
-        <a href="{$parent->getLink()}">
+        {* <a href="{$parent->getLink()}">
           <i class="material-icons">&#xe314;</i>
           <span>{$parent->getName()}</span>
-        </a>
+        </a> *}
       </li>
     {/if}
 
