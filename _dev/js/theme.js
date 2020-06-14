@@ -43,6 +43,10 @@ let swiperOptions = {
 	slidesPerView: 1,
 	spaceBetween: 0,
 
+	autoplay: {
+		delay: 650
+	},
+
 	breakpoints: {
 		576: {
 			slidesPerView: 2
