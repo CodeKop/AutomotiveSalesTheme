@@ -72,8 +72,8 @@
         background-color: $white;
       }
 
-      &:active {
-        margin-top: 2px;
+      &:focus {
+        transform: translateY(2px);
         box-shadow: 0 0;
       }
     }
