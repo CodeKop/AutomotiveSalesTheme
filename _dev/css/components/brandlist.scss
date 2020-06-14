@@ -51,6 +51,7 @@
     right: $small-space;
     border-radius: 8px;
     color: $white;
+    font-size: 0;
 
     .swiper-button-prev,
     .swiper-button-next {
@@ -59,6 +60,8 @@
       box-shadow: 0 2px 0 $primary-inverse;
       transition: all 0.45s;
       cursor: pointer;
+
+      display: inline-block;
 
       i {
         display: block;
