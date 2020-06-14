@@ -42,7 +42,7 @@ let swiperOptions = {
 	watchOverflow: true,
 	slidesPerView: 1,
 	spaceBetween: 0,
-	speed: 350,
+	speed: 1350,
 
 	breakpoints: {
 		576: {
