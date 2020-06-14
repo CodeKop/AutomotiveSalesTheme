@@ -3,10 +3,6 @@
   background-color: transparent;
   padding: $extra-small-space 0;
 
-  &:hover .directions {
-    opacity: 1;
-  }
-
   .facet-header {
     padding: 0 1.35rem;
     text-transform: capitalize;
@@ -24,6 +20,7 @@
     display: flex;
     flex-direction: row;
     margin: 0;
+    transition-timing-function: linear;
 
     .facet-label {
       width: 240px;
@@ -52,16 +49,16 @@
     position: absolute;
     top: $small-space;
     right: $small-space;
-    opacity: 0;
     transition: opacity 0.35s;
-    background-color: white;
-    border-radius: 100px;
-    box-shadow: 0 3px 10px #0003;
-
+    border-radius: 8px;
+    color: $white;
+    
     .swiper-button-prev,
     .swiper-button-next {
-      padding: 0.5em;
-      transition: box-shadow 0.45s;
+      padding: $extra-small-space;
+      background-color: $brand-primary;
+      box-shadow: 0 2px 0 $primary-inverse;
+      transition: all .45s;
       cursor: pointer;
 
       i {
@@ -69,11 +66,33 @@
       }
 
       &:hover {
-        background-color: $gray-lighter;
+        color: $primary;
+        background-color: $white;
       }
+
+      &:active {
+        margin-top: 2px;
+        box-shadow: 0 0;
+      }
+    }
+
+    .swiper-button-prev {
+      border-radius: 8px 0 0 8px;
+    }
+    .swiper-button-next {
+      border-radius: 0 8px 8px 0;
     }
   }
 }
 
 @include media-breakpoint-up(md) {
+  #search-filters-brands {
+    &:hover .directions {
+      opacity: 1;
+    }
+
+    .facets + .directions {
+      opacity: 0;
+    }
+  }
 }
