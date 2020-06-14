@@ -40,21 +40,11 @@ let swiperOptions = {
 	},
 
 	watchOverflow: true,
-	slidesPerView: 1,
+	slidesPerView: 'auto',
+	freeMode: true,
 	spaceBetween: 0,
-	speed: 1350,
-
-	breakpoints: {
-		576: {
-			slidesPerView: 2
-		},
-		992: {
-			slidesPerView: 3
-		},
-		1200: {
-			slidesPerView: 4
-		}
-	}
+	speed: 3000,
+	navigatorSpeed: 350
 };
 
 $(document).ready(() => {
@@ -86,19 +76,20 @@ $(document).ready(() => {
 
 		if (looped) {
 			swiperOptions['loop'] = true;
+			swiperOptions['autoplay'] = {
+				delay: 0
+			};
 		}
 
-		let swiper = new Swiper(el, swiperOptions);
+		var swiper = new Swiper(el, swiperOptions);
 
 		if (looped) {
-			infinite(swiper);
+			$(el).hover(() => {
+				swiper.autoplay.stop();
+			}, () => {
+				swiper.autoplay.start();
+			});
 		}
-
-		$(el).hover(() => {
-			swiper.slideReset();
-		}, () => {
-			infinite();
-		});
 	});
 
 	$('.carousel[data-touch="true"]').swipe({
@@ -113,13 +104,3 @@ $(document).ready(() => {
 		allowPageScroll: 'vertical',
 	});
 });
-
-function infinite(swiper) {
-	swiper.slideTo(swiper.slides.length);
-	swiper.once('transitionEnd', function () {
-		swiper.slideTo(swiper.params.slidesPerView, 0, false);
-		setTimeout(function () {
-			infinite(swiper);
-		}, 0);
-	});
-}
