@@ -61,7 +61,9 @@
       </li>
     {/if}
 
-    <li><a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a></li>
+    <li class="category-title">
+      <a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a>
+    </li>
     
     {if $categories.children|count}
       <li>{categories nodes=$categories.children}</li>
