@@ -42,10 +42,7 @@ let swiperOptions = {
 	watchOverflow: true,
 	slidesPerView: 1,
 	spaceBetween: 0,
-
-	autoplay: {
-		delay: 650
-	},
+	speed: 350,
 
 	breakpoints: {
 		576: {
@@ -84,14 +81,24 @@ $(document).ready(() => {
 		});
 	}
 
-	console.log(swiperOptions);
 	$('.swiper-container').each((idx, el) => {
-		if ($(el).hasClass('looped')) {
+		let looped = $(el).hasClass('looped');
+
+		if (looped) {
 			swiperOptions['loop'] = true;
 		}
 
-		console.log(swiperOptions);
-		new Swiper(el, swiperOptions);
+		let swiper = new Swiper(el, swiperOptions);
+
+		if (looped) {
+			infinite(swiper);
+		}
+
+		$(el).hover(() => {
+			swiper.slideReset();
+		}, () => {
+			infinite();
+		});
 	});
 
 	$('.carousel[data-touch="true"]').swipe({
@@ -106,3 +113,13 @@ $(document).ready(() => {
 		allowPageScroll: 'vertical',
 	});
 });
+
+function infinite(swiper) {
+	swiper.slideTo(swiper.slides.length);
+	swiper.once('transitionEnd', function () {
+		swiper.slideTo(swiper.params.slidesPerView, 0, false);
+		setTimeout(function () {
+			infinite(swiper);
+		}, 0);
+	});
+}
