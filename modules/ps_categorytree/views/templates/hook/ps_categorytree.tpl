@@ -50,19 +50,19 @@
 <div class="block-categories d-none d-md-block">
   <ul class="category-top-menu">
     {assign var="parent" value=Category::getCategoryInformation($category.id_parent)}
-    {Link::getUrlSmarty([
+    {assign var="parent_link" value=Link::getUrlSmarty([
       'entity' => 'category',
       'id' => $category.id_parent 
     ])}
-    {json_encode($categories)}
+    {$category.id_parent}
     {json_encode($category)}
     {json_encode($parent)}
     {if $category.level_depth >= 3}
       <li class="category-return">
-        {* <a href="{$parent->getLink()}">
+        <a href="{$parent_link}">
           <i class="material-icons">&#xe314;</i>
           <span>{$parent->getName()}</span>
-        </a> *}
+        </a>
       </li>
     {/if}
 
