@@ -54,13 +54,11 @@
       'entity' => 'category',
       'id' => $category.id_parent 
     ])}
-    {json_encode($category)}
-    {json_encode($parent)}
     {if $category.level_depth >= 3}
       <li class="category-return">
         <a href="{$parent_link}">
           <i class="material-icons">&#xe314;</i>
-          <span>{$parent->getName()}</span>
+          <span>{$parent[$category.id_parent].name}</span>
         </a>
       </li>
     {/if}
