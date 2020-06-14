@@ -50,6 +50,7 @@
 <div class="block-categories d-none d-md-block">
   <ul class="category-top-menu">
     {assign var="parent" value=Category::getCategoryInformation($category.id_parent)}
+    {json_encode($categories)}
     {json_encode($category)}
     {json_encode($parent)}
     {if $category.level_depth >= 3}
