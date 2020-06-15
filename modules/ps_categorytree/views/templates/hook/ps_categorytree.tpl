@@ -68,9 +68,9 @@
     </li>
     
     {if $categories.children|count}
-      <li class="tree">{categories nodes=$categories.children}</li>
+      <li class="category-tree">{categories nodes=$categories.children}</li>
     {else}
-      <li class="tree empty">
+      <li class="category-tree empty">
         There are no subcategories to display.
       </li>
     {/if}
