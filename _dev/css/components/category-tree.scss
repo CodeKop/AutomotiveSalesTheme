@@ -17,10 +17,12 @@
 
         > .category-return {
             padding: $small-space $medium-space;
-            background-color: $white;
+            padding-bottom: 0;
+            background-color: $primary;
 
             a {
                 display: block;
+                clear: $white;
             }
 
             i {
@@ -38,14 +40,15 @@
 
         > .category-title {
             padding: $small-space $medium-space;
-            background-color: $white;
+            background-color: $primary;
             position: relative;
-            box-shadow: 0 3px 3px -1px transparentize($primary, 0.65);
-            border-radius: 0 0 65px;
+            box-shadow: 0 3px 3px -1px transparentize($primary-inverse, 0.85);
+            border-radius: 0 0 25% / 0 0 50%;
 
             a {
                 display: block;
                 margin: 0;
+                color: $white;
             }
         }
 
@@ -67,7 +70,6 @@
                 border: solid #f0f0f0;
                 border-width: 0 1px 1px 1px;
                 padding: $small-space $medium-space;
-                padding-bottom: 0;
 
                 &:hover {
                     border-color: $primary;
@@ -80,7 +82,7 @@
 
             &[data-depth="0"] {
                 li {
-                    padding-left: $small-space;
+                    padding-left: $extra-small-space * 1.5;
                 }
 
                 > .category-text {
