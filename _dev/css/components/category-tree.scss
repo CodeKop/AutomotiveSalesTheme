@@ -79,6 +79,9 @@
                     }
                 }
             }
+            .category-text + .collapse.show {
+				margin-bottom: $small-space;
+            }
 
             &[data-depth="0"] {
                 li {
@@ -90,10 +93,6 @@
                     font-weight: bold;
                 }
             }
-            &[data-depth="1"] {
-                margin-bottom: $small-space;
-            }
-
             &:not([data-depth="0"]):not([data-depth="1"]) {
                 padding-left: 0.3125rem;
                 &::before {
