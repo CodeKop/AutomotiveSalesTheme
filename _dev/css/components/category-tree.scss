@@ -1,0 +1,175 @@
+.block-categories {
+    @include drop-shadow-small-light;
+    font-family: Montserrat;
+    border: 2px solid $primary;
+    box-shadow: 0 6px 0 -3px #2aa;
+    border-radius: 0 0 8px 8px;
+    padding: $medium-space;
+    background: white;
+    margin-bottom: 1.563rem;
+
+    a {
+        color: $gray-darker;
+    }
+
+    .category-top-menu {
+        margin: 0;
+
+        > .category-return {
+            padding: $small-space $medium-space;
+            background-color: $white;
+
+            a {
+                display: block;
+            }
+
+            i {
+                font-size: 1.5em;
+                float: left;
+                margin-right: $small-space;
+            }
+
+            span {
+                display: block;
+                font-size: 1em;
+                line-height: 1.5;
+            }
+        }
+
+        > .category-title {
+            padding: $small-space $medium-space;
+            padding-top: 0;
+            background-color: $white;
+            position: relative;
+            box-shadow: 0 3px 3px -1px #0001;
+
+            a {
+                display: block;
+                margin: 0;
+            }
+        }
+
+        .tree {
+            background-color: $gray-lighter-second;
+        }
+    }
+
+    .category-sub-menu {
+        margin-top: $small-space;
+
+        .category-sub-link {
+            font-size: $font-size-sm;
+        }
+
+        li {
+            display: block;
+            position: relative;
+            > .category-text {
+                border: solid #0000000f;
+                border-width: 0 1px 1px 1px;
+                padding: $small-space $medium-space;
+
+                &:hover {
+                    border-color: $primary;
+                    color: $primary;
+                }
+            }
+
+            &[data-depth="0"] {
+                li {
+                    padding-left: $small-space;
+                }
+
+                > .category-text {
+                    border-width: 1px;
+                    font-weight: bold;
+                }
+            }
+            &[data-depth="1"] {
+                margin-bottom: $small-space;
+            }
+
+            &:not([data-depth="0"]):not([data-depth="1"]) {
+                padding-left: 0.3125rem;
+                &::before {
+                    content: "-";
+                    margin-right: 0.3125rem;
+                }
+            }
+        }
+        li.category-return > a {
+            padding-bottom: $medium-space * 1.5;
+
+            i {
+                font-size: 1.5em;
+                margin-right: $small-space;
+            }
+            span {
+                font-size: 1em;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    .category-text {
+        display: flex;
+        align-items: center;
+        padding: $extra-small-space 0;
+
+        > a {
+            flex: 1;
+            padding: 0;
+        }
+        .navbar-toggler {
+            padding: 0;
+            cursor: pointer;
+
+            &[data-toggle="collapse"][aria-expanded="true"] {
+                .add {
+                    display: none;
+                }
+                .remove {
+                    display: block;
+                }
+            }
+            &[data-toggle="collapse"][aria-expanded="false"] {
+                .add {
+                    display: block;
+                }
+                .remove {
+                    display: none;
+                }
+            }
+
+            .navbar-toggler-icon {
+                vertical-align: middle;
+
+                display: block;
+                font-size: 1rem;
+                padding: 0.15rem;
+            }
+        }
+        .arrows {
+            .arrow-right,
+            .arrow-down {
+                font-size: 1.25em;
+                cursor: pointer;
+                margin-left: 2px;
+                &:hover {
+                    color: $brand-primary;
+                }
+            }
+            .arrow-down {
+                display: none;
+            }
+            &[aria-expanded="true"] {
+                .arrow-right {
+                    display: none;
+                }
+                .arrow-down {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
