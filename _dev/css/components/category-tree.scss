@@ -41,12 +41,17 @@
             padding-top: 0;
             background-color: $white;
             position: relative;
-            box-shadow: 0 3px 3px -1px transparentize($primary, .65);
+            box-shadow: 0 3px 3px -1px transparentize($primary, 0.65);
+            border-radius: 0 0 65px;
 
             a {
                 display: block;
                 margin: 0;
             }
+        }
+
+        > .category-tree {
+            padding: $medium-space;
         }
     }
 
@@ -58,14 +63,18 @@
         li {
             display: block;
             position: relative;
+
             > .category-text {
-                border: solid #0000000f;
+                border: solid #f0f0f0;
                 border-width: 0 1px 1px 1px;
                 padding: $small-space $medium-space;
 
                 &:hover {
                     border-color: $primary;
-                    color: $primary;
+
+                    a {
+                        color: $primary;
+                    }
                 }
             }
 
