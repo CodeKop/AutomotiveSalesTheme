@@ -56,8 +56,8 @@
     ])}
     {if $category.level_depth >= 3}
       <li class="category-return">
-        <a href="{$parent_link}">
-          <i class="material-icons">&#xe314;</i>
+        <a href="{$parent_link}" title="Go to parent category">
+          <i class="material-icons">&#xe5c4;</i>
           <span>{$parent[$category.id_parent].name}</span>
         </a>
       </li>
@@ -68,9 +68,9 @@
     </li>
     
     {if $categories.children|count}
-      <li>{categories nodes=$categories.children}</li>
+      <li class="tree">{categories nodes=$categories.children}</li>
     {else}
-      <li>
+      <li class="tree empty">
         There are no subcategories to display.
       </li>
     {/if}
