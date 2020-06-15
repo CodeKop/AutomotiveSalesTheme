@@ -3,10 +3,10 @@
     font-family: Montserrat;
     border: 2px solid $primary;
     box-shadow: 0 6px 0 -3px #2aa;
-    border-radius: 0 0 8px 8px;
-    padding: $medium-space;
-    background: white;
+    border-radius: 8px;
+    background: $gray-lighter-second;
     margin-bottom: 1.563rem;
+    overflow: hidden;
 
     a {
         color: $gray-darker;
@@ -41,22 +41,16 @@
             padding-top: 0;
             background-color: $white;
             position: relative;
-            box-shadow: 0 3px 3px -1px #0001;
+            box-shadow: 0 3px 3px -1px transparentize($primary, .65);
 
             a {
                 display: block;
                 margin: 0;
             }
         }
-
-        .tree {
-            background-color: $gray-lighter-second;
-        }
     }
 
     .category-sub-menu {
-        margin-top: $small-space;
-
         .category-sub-link {
             font-size: $font-size-sm;
         }
