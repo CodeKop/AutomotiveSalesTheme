@@ -12,7 +12,7 @@
           <i class="material-icons">&#xe5d2;</i>
         </div>
         <div class="flex-grow-1 top-logo" id="_mobile_logo"></div>
-        <div id="_mobile_user_info"></div>
+        <div id="_mobile_cart"></div>
       </div>
 
        <div class="row no-gutters align-items-center d-none d-md-flex flex-nowrap">
