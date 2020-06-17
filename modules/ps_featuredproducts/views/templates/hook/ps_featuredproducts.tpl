@@ -1,4 +1,4 @@
-<section class="featured-products container mb-4 clearfix">
+<section class="featured-products py-5 clearfix">
   <h2 class="h2 products-section-title text-uppercase text-md-left text-center">
     {l s='Popular Products' d='Shop.Theme.Catalog'}
   </h2>
@@ -19,10 +19,8 @@
 
     {include file="catalog/_partials/productlist.tpl" products=$products cssClass="swiper-wrapper row" itemCssClass="swiper-slide"}
   </div>
-  <div class="row">
-    <a class="all-product-link text-center h6" href="{$allProductsLink}">
-      <span class="btn_text">{l s='All products' d='Shop.Theme.Catalog'}</span>
-      <i class="material-icons btn_icon">&#xe315;</i>
-    </a>
-  </div>
+  <a class="all-product-link text-center h6" href="{$allProductsLink}">
+    <span class="btn_text">{l s='All products' d='Shop.Theme.Catalog'}</span>
+    <i class="material-icons btn_icon">&#xe315;</i>
+  </a>
 </section>
