@@ -43,14 +43,30 @@ let swiperOptions = {
 let featuredSwiperOptions = {
 	spaceBetween: 0,
 	speed: 350,
-	slidesPerView: 'auto',
+
+	slidesPerView: 1,
 	spaceBetween: 0,
+
+	breakpoints: {
+		576: {
+			slidesPerView: 2
+		},
+		768: {
+			slidesPerView: 3
+		},
+		992: {
+			slidesPerView: 4
+		},
+		1200: {
+			slidesPerView: 5
+		}
+	}
 };
 let brandSwiperOptions = {
 	slidesPerView: 'auto',
 	freeMode: true,
 	spaceBetween: 0,
-	speed: 3000,
+	speed: 3250,
 	loop: true,
 
 	autoplay: {
