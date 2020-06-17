@@ -21,6 +21,6 @@
   </div>
   <a class="all-product-link h6" href="{$allProductsLink}">
     <span class="btn_text">{l s='All products' d='Shop.Theme.Catalog'}</span>
-    <i class="material-icons btn_icon ml-3">&#xe5c8;</i>
+    <i class="material-icons btn_icon ml-2">&#xe5c8;</i>
   </a>
 </section>
