@@ -38,13 +38,24 @@ let swiperOptions = {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev'
 	},
-
 	watchOverflow: true,
+};
+let featuredSwiperOptions = {
+	spaceBetween: 0,
+	speed: 350,
+	slidesPerView: 'auto',
+	spaceBetween: 0,
+};
+let brandSwiperOptions = {
 	slidesPerView: 'auto',
 	freeMode: true,
 	spaceBetween: 0,
 	speed: 3000,
-	navigatorSpeed: 350
+	loop: true,
+
+	autoplay: {
+		delay: 0
+	}
 };
 
 $(document).ready(() => {
@@ -72,18 +83,19 @@ $(document).ready(() => {
 	}
 
 	$('.swiper-container').each((idx, el) => {
-		let looped = $(el).hasClass('looped');
+		let options;
 
-		if (looped) {
-			swiperOptions['loop'] = true;
-			swiperOptions['autoplay'] = {
-				delay: 0
-			};
+		if ($(el).hasClass('featured-products-list')) {
+			options = $.extend(true, {}, swiperOptions, featuredSwiperOptions);
+		} else if ($(el).hasClass('facets-scroll')) {
+			options = $.extend(true, {}, swiperOptions, brandSwiperOptions);
+		} else {
+			options = swiperOptions;
 		}
 
 		var swiper = new Swiper(el, swiperOptions);
 
-		if (looped) {
+		if ($(el).hasClass('facets-scroll')) {
 			$(el).hover(() => {
 				swiper.autoplay.stop();
 			}, () => {
