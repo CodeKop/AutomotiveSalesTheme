@@ -50,7 +50,8 @@
     }
 
     .all-product-link {
-        display: flex;
+        display: inline-block;
+        display: inline-flex;
         justify-content: center;
         align-items: center;
         font-size: 1rem;
