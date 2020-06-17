@@ -1,5 +1,5 @@
-<section class="featured-products py-5 clearfix">
-  <h2 class="h2 products-section-title text-capitalize text-center">
+<section class="featured-products py-5 clearfix text-center">
+  <h2 class="h2 products-section-title text-capitalize">
     {l s='Popular Products' d='Shop.Theme.Catalog'}
   </h2>
   <div class="featured-products-list swiper-container position-relative">
