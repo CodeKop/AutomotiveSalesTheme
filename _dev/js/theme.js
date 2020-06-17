@@ -109,7 +109,7 @@ $(document).ready(() => {
 			options = swiperOptions;
 		}
 
-		var swiper = new Swiper(el, swiperOptions);
+		var swiper = new Swiper(el, options);
 
 		if ($(el).hasClass('facets-scroll')) {
 			$(el).hover(() => {
