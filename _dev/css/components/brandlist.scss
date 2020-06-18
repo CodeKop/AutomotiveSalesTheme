@@ -1,7 +1,7 @@
 #search-filters-brands {
   padding: $medium-space;
   background-color: white;
-  box-shadow: 0 0 25px #0000001a;
+  box-shadow: 0 0 25px #00000007;
 
   .facet-header {
     text-transform: capitalize;
@@ -19,7 +19,7 @@
     margin: 0;
 
     .facet-label {
-      padding: 0 $medium-space;
+      padding: $small-space;
       text-align: center;
       flex-shrink: 0;
 
