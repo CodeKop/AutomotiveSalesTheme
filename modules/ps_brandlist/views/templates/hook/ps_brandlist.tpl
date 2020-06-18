@@ -1,5 +1,5 @@
 {if $brands}
-<div id="search-filters-brands" class="position-relative container">
+<div id="search-filters-brands" class="position-relative container-fluid">
     <h1 class="h3 text-capitalise facet-header">
       {if $display_link_brand}<a href="{$page_link}" class="text-dark" title="{l s='Brands' d='Shop.Theme.Catalog'}">{/if}
         {l s='Our Brands' d='Shop.Theme.Catalog'}
