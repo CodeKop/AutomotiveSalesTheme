@@ -47,15 +47,8 @@
         transition: transform 0.35s;
 
         .product-title {
-            height: 1.5em;
+            height: 2.4em;
             max-height: 2.3em;
-
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
-        .product-price-and-shipping {
         }
     }
 
@@ -71,7 +64,7 @@
         background-color: #fff;
         border-radius: 100px;
         @include drop-shadow-y-light;
-        &::first-child {
+        &:first-child {
             margin-top: 0 !important;
         }
 
@@ -105,29 +98,9 @@
     .product-miniature {
         &:hover {
             box-shadow: 0 3px 25px #0001;
-            border-color: white;
 
             .product-flags {
                 transform: translateY(calc(-100% - 15px));
-            }
-            .product-description {
-                transform: translateY(100%);
-            }
-        }
-
-        .product-description {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #fffe;
-
-            .product-title {
-                height: auto;
-
-                text-overflow: none;
-                white-space: unset;
-                overflow: hidden;
             }
         }
     }
