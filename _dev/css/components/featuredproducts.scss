@@ -6,7 +6,28 @@
         margin: 0;
     }
 
+    .product-section-title {
+        position: relative;
+        margin: 0;
+        padding-bottom: 1rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 4rem);
+            right: calc(50% - 4rem);
+
+            width: 8rem;
+            height: 3px;
+            background-color: $primary;
+            border-radius: 100px 100px 0 0;
+        }
+    }
+
     .featured-products-list {
+        border-top: 1px solid $gray-light-second;
+        border-radius: 8px;
         padding: 0 8px;
         overflow: hidden;
     }
@@ -39,10 +60,10 @@
     }
 
     .swiper-button-prev {
-        left: 0;
+        left: $large-space;
     }
     .swiper-button-next {
-        right: 0;
+        right: $large-space;
     }
 
     .all-product-link {
