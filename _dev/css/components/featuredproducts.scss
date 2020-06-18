@@ -6,7 +6,7 @@
         margin: 0;
     }
 
-    .product-section-title {
+    .products-section-title {
         position: relative;
         margin: 0;
         padding-bottom: 1rem;
@@ -39,6 +39,7 @@
         top: 50%;
         transform: translateY(-50%);
         padding: 0.95rem;
+        box-shadow: 0 2px 3px #0005;
 
         background-color: $white;
         border-radius: 100px;
