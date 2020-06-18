@@ -33,13 +33,13 @@
       <div class="product-description card-body d-flex align-items-center">
         {block name='product_name'}
           {if $page.page_name == 'index'}
-            <h5 class="h5 product-title card-title flex-grow-1" itemprop="name">
+            <h6 class="h6 product-title card-title flex-grow-1" itemprop="name">
               <a href="{$product.url}" itemprop="url" content="{$product.url}">{$product.name}</a>
-            </h5>
+            </h6>
           {else}
-            <h4 class="h5 product-title card-title flex-grow-1" itemprop="name">
+            <h6 class="h6 product-title card-title flex-grow-1" itemprop="name">
               <a href="{$product.url}" itemprop="url" content="{$product.url}">{$product.name}</a>
-            </h4>
+            </h6>
           {/if}
         {/block}
 
