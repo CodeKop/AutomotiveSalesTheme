@@ -43,6 +43,7 @@ let swiperOptions = {
 let featuredSwiperOptions = {
 	spaceBetween: 0,
 	speed: 350,
+	loop: true,
 
 	slidesPerView: 1,
 	spaceBetween: 0,
@@ -60,17 +61,6 @@ let featuredSwiperOptions = {
 		1200: {
 			slidesPerView: 5
 		}
-	}
-};
-let brandSwiperOptions = {
-	slidesPerView: 'auto',
-	freeMode: true,
-	spaceBetween: 0,
-	speed: 3250,
-	loop: true,
-
-	autoplay: {
-		delay: 0
 	}
 };
 
@@ -103,21 +93,11 @@ $(document).ready(() => {
 
 		if ($(el).hasClass('featured-products-list')) {
 			options = $.extend(true, {}, swiperOptions, featuredSwiperOptions);
-		} else if ($(el).hasClass('facets-scroll')) {
-			options = $.extend(true, {}, swiperOptions, brandSwiperOptions);
 		} else {
 			options = swiperOptions;
 		}
 
 		var swiper = new Swiper(el, options);
-
-		if ($(el).hasClass('facets-scroll')) {
-			$(el).hover(() => {
-				swiper.autoplay.stop();
-			}, () => {
-				swiper.autoplay.start();
-			});
-		}
 	});
 
 	$('.carousel[data-touch="true"]').swipe({
