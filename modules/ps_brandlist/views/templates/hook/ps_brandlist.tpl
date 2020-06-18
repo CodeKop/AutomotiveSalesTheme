@@ -1,8 +1,8 @@
 {if $brands}
 <div id="search-filters-brands" class="position-relative container">
-    <h1 class="h3 text-capitalise facet-header">
+    <h1 class="h3 text-center facet-header">
       {if $display_link_brand}<a href="{$page_link}" class="text-dark" title="{l s='Brands' d='Shop.Theme.Catalog'}">{/if}
-        {l s='We stock top quality brands that suit your needs.' d='Shop.Theme.Catalog'}
+        {l s='We stock Top Quality Brands that suit Your Needs.' d='Shop.Theme.Catalog'}
       {if $display_link_brand}</a>{/if}
     </h1>
     {include file="module:ps_brandlist/views/templates/_partials/$brand_display_type.tpl" brands=$brands}
