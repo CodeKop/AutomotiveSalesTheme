@@ -30,14 +30,14 @@
         {/block}
       </div>
 
-      <div class="product-description card-body d-flex align-items-center">
+      <div class="product-description card-body">
         {block name='product_name'}
           {if $page.page_name == 'index'}
-            <h6 class="h6 product-title card-title flex-grow-1" itemprop="name">
+            <h6 class="h6 product-title card-title" itemprop="name">
               <a href="{$product.url}" itemprop="url" content="{$product.url}">{$product.name}</a>
             </h6>
           {else}
-            <h6 class="h6 product-title card-title flex-grow-1" itemprop="name">
+            <h6 class="h6 product-title card-title" itemprop="name">
               <a href="{$product.url}" itemprop="url" content="{$product.url}">{$product.name}</a>
             </h6>
           {/if}
@@ -45,7 +45,7 @@
 
         {block name='product_price_and_shipping'}
           {if $product.show_price}
-            <div class="product-price-and-shipping ml-3">
+            <div class="product-price-and-shipping">
               {hook h='displayProductPriceBlock' product=$product type="before_price"}
 
               <span class="price" aria-label="{l s='Price' d='Shop.Theme.Catalog'}">
