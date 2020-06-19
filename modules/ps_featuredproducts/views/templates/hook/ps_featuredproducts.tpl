@@ -1,4 +1,4 @@
-<section class="featured-products py-3 clearfix text-center container">
+<section class="featured-products py-3 clearfix text-center container-fluid">
   <h2 class="h2 products-section-title text-capitalize">
     {l s='Popular Products' d='Shop.Theme.Catalog'}
   </h2>
