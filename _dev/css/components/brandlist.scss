@@ -1,5 +1,5 @@
 #search-filters-brands {
-  padding: $medium-space;
+  padding: $medium-space 0;
   background-color: white;
   box-shadow: 0 0 25px #00000007;
 
@@ -26,6 +26,9 @@
   .facets-scroll {
     position: relative;
     overflow: hidden;
+    padding: 0 $medium-space;
+    border-top: 1px solid $gray-light;
+    border-radius: 8px;
   }
 
   .facets {
