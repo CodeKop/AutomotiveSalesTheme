@@ -14,6 +14,7 @@
     .product-thumbnail {
         border-radius: 15px;
         box-shadow: 0 5px 15px #0002;
+        overflow: hidden;
 
         > img {
             width: 100%;
@@ -47,7 +48,6 @@
     }
 
     .product-description {
-        background-color: #fff;
         transition: transform 0.35s;
 
         .product-title {
@@ -70,6 +70,7 @@
         padding: 0rem 1.5rem;
         background-color: #fff;
         border-radius: 100px;
+
         @include drop-shadow-y-light;
         &:first-child {
             margin-top: 0 !important;
