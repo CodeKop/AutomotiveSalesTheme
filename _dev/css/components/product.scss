@@ -7,13 +7,12 @@
     border-radius: 15px;
     box-shadow: none;
     background-color: transparent;
-    border: 1px solid #e7e7e7;
-    overflow: hidden;
-    transition: box-shadow 0.85s;
+    transition: box-shadow 0.35s, background .35s;
 
     .product-thumbnail {
         border-radius: 15px;
         box-shadow: 0 5px 15px #0002;
+        transition: box-shadow 0.35s;
         overflow: hidden;
 
         > img {
@@ -48,8 +47,6 @@
     }
 
     .product-description {
-        transition: transform 0.35s;
-
         .product-title {
             height: 2.4em;
             max-height: 2.3em;
@@ -106,7 +103,7 @@
     .product-miniature {
         &:hover {
             background-color: $white;
-            box-shadow: 0 3px 25px #0001;
+            box-shadow: 0 3px 25px #0002;
 
             .product-thumbnail {
                 box-shadow: none;
