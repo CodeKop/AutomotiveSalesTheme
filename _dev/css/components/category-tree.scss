@@ -32,10 +32,14 @@
                 font-size: 1em;
                 line-height: 1.5;
             }
+
+            & + .category-title {
+                padding-top: $small-space;
+            }
         }
 
         > .category-title {
-            padding: $small-space $medium-space $medium-space $medium-space;
+            padding: $medium-space;
             position: relative;
 
             a {
