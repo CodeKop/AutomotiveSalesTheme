@@ -1,5 +1,6 @@
 <div id="js-product-list-top" class="row products-selection">
   <div class="col-md-6 d-none d-md-flex total-products">
+    {json_encode($listing)}
     {if $listing.pagination.total_items > 1}
       <p>{l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
     {elseif $listing.pagination.total_items > 0}
@@ -8,7 +9,6 @@
   </div>
   <div class="col-md-6">
     <div class="row sort-by-row">
-
       {block name='sort_by'}
         {include file='catalog/_partials/sort-orders.tpl' sort_orders=$listing.sort_orders}
       {/block}
