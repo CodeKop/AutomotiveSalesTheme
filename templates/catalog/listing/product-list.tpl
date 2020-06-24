@@ -1,12 +1,10 @@
 {extends file=$layout}
 
 {block name='category_header'}
-  <h2 id="js-product-list-header" class="category-list-header" class="h2">{$listing.label}</h2>
+  <h2 id="js-product-list-header" class="category-list-header flex-grow-1" class="h2">{$listing.label}</h2>
   
   {block name='product_list_top'}
-    <div class="row">
-      {include file='catalog/_partials/products-top.tpl' listing=$listing}
-    </div>
+    {include file='catalog/_partials/products-top.tpl' listing=$listing}
   {/block}
 {/block}
 
