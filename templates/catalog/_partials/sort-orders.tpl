@@ -1,4 +1,4 @@
-<span class="col-sm-3 col-md-3 d-none d-md-block sort-by">{l s='Sort by:' d='Shop.Theme.Global'}</span>
+{* <span class="col-sm-3 col-md-3 d-none d-md-block sort-by">{l s='Sort by:' d='Shop.Theme.Global'}</span> *}
 <div class="{if !empty($listing.rendered_facets)}col-sm-9 col-8{else}col-sm-12 col-12{/if} col-md-9 products-sort-order dropdown">
   <button
     class="btn-unstyle select-title"
@@ -7,8 +7,11 @@
     data-toggle="dropdown"
     aria-haspopup="true"
     aria-expanded="false">
-    {if isset($listing.sort_selected)}{$listing.sort_selected}{else}{l s='Select' d='Shop.Theme.Actions'}{/if}
-    <i class="fa fa-caret-down float-right"></i>
+    {if isset($listing.sort_selected)}
+      <span class="text-muted mr-3">{l s='Sort by:' d='Shop.Theme.Global'}</span>
+      {$listing.sort_selected}
+    {else}{l s='Select' d='Shop.Theme.Actions'}{/if}
+    <i class="material-icons">&#xe313;</i>
   </button>
   <div class="dropdown-menu">
     {foreach from=$listing.sort_orders item=sort_order}
