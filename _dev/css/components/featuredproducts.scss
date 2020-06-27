@@ -9,7 +9,7 @@
     .products-section-title {
         position: relative;
         margin: 0;
-        padding-bottom: 1rem;
+        padding-bottom: $small-space;
 
         &::after {
             content: "";
@@ -25,33 +25,21 @@
         }
     }
 
-    .featured-products-list {
-        border-top: 1px solid $gray-light-second;
-        border-radius: 8px;
-        padding: 0 8px;
-        overflow: hidden;
-    }
-
     .swiper-button-prev,
     .swiper-button-next {
         display: inline-block;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        padding: 0.95rem;
-        box-shadow: 0 2px 3px #0005;
-
-        background-color: $white;
-        border-radius: 100px;
         cursor: pointer;
         z-index: 9;
 
         .swiper-button-icon {
             display: block;
-            transition: transform 0.35s;
+            background-color: $gray-lighter;
         }
 
-        .material-icons {
+        .swiper-button-icon > i {
             display: block;
         }
     }
@@ -61,10 +49,10 @@
     }
 
     .swiper-button-prev {
-        left: $large-space;
+        left: 0;
     }
     .swiper-button-next {
-        right: $large-space;
+        right: 0;
     }
 
     .all-product-link {
