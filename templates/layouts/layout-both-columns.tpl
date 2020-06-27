@@ -28,18 +28,20 @@
         {include file='_partials/notifications.tpl'}
       {/block}
 
-      <section id="wrapper">
+      <section id="wrapper" class="border-bottom">
         {hook h="displayWrapperTop"}
         <div class="container-fluid">
-          <div class="row no-gutters flex-column border-bottom">
-            {block name='breadcrumb'}
-              {include file='_partials/breadcrumb.tpl'}
-            {/block}
+          <div class="row flex-column border-bottom">
+            <div class="col-12">
+              {block name='breadcrumb'}
+                {include file='_partials/breadcrumb.tpl'}
+              {/block}
+            </div>
           </div>
 
 					<div class="row">
             {block name="left_column"}
-              <div id="left-column" class="col-12 col-sm-4 col-md-3 float-md-left">
+              <div id="left-column" class="col-12 col-sm-4 col-md-3 float-md-left border-right">
                 {if $page.page_name == 'product'}
                   {hook h='displayLeftColumnProduct'}
                 {else}
@@ -59,7 +61,7 @@
             {/block}
 
             {block name="right_column"}
-              <div id="right-column" class="col-12 col-sm-4 col-md-3 float-md-right">
+              <div id="right-column" class="col-12 col-sm-4 col-md-3 float-md-right border-left">
                 {if $page.page_name == 'product'}
                   {hook h='displayRightColumnProduct'}
                 {else}
