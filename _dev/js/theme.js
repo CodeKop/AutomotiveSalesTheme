@@ -58,6 +58,9 @@ let featuredSwiperOptions = {
 		992: {
 			slidesPerView: 4
 		},
+		1200: {
+			slidesPerView: 'auto'
+		}
 	}
 };
 
