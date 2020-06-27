@@ -6,7 +6,7 @@ export default class TopMenu extends DropDown {
     let elmtClass;
     let self = this;
 
-    $('#top-menu .dropdown-item + .submenu').each((idx, el) => {
+    $('#top-menu .dropdown-item[data-depth="0"] + .submenu').each((idx, el) => {
       $(el).addClass('d-block');
       $(el).css('max-height', 'calc(100vh - ' + $(el).offset().top + 'px)');
       $(el).removeClass('d-block');
