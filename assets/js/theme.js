@@ -1830,7 +1830,7 @@ var TopMenu = (function (_DropDown) {
       var elmtClass = undefined;
       var self = this;
 
-      (0, _jquery2['default'])('#top-menu .dropdown-item + .submenu').each(function (idx, el) {
+      (0, _jquery2['default'])('#top-menu .dropdown-item[data-depth="0"] + .submenu').each(function (idx, el) {
         (0, _jquery2['default'])(el).addClass('d-block');
         (0, _jquery2['default'])(el).css('max-height', 'calc(100vh - ' + (0, _jquery2['default'])(el).offset().top + 'px)');
         (0, _jquery2['default'])(el).removeClass('d-block');
