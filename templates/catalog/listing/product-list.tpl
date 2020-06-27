@@ -3,7 +3,7 @@
 {block name='content'}
   <section id="main">
     {block name='product_list_header'}
-      <h2 id="js-product-list-header" class="category-list-header flex-grow-1" class="h2">{$listing.label}</h2>
+      <h2 id="js-product-list-header" class="category-list-header h2 flex-grow-1">{$listing.label}</h2>
     {/block}
 
     {block name="subcategory_list"}
@@ -19,7 +19,7 @@
         {/block}
 
         {block name='product_list_active_filters'}
-          <div id="" class="d-none d-md-block">
+          <div class="d-none d-md-block">
             {$listing.rendered_active_filters nofilter}
           </div>
         {/block}
