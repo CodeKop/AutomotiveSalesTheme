@@ -1,6 +1,6 @@
 <section class="featured-products container-fluid border-bottom">
-  <div class="featured-products py-3 text-center container border-left border-right">
-    <div class="row">
+  <div class="featured-products py-3 container border-left border-right">
+    <div class="row justify-content-center border-bottom">
       <h2 class="h2 products-section-title text-capitalize">
         {l s='Popular Products' d='Shop.Theme.Catalog'}
       </h2>
@@ -19,7 +19,7 @@
         {include file="catalog/_partials/productlist.tpl" products=$products cssClass="swiper-wrapper row" itemCssClass="swiper-slide"}
       </div>
     </div>
-    <div class="row">
+    <div class="row border-top justify-content-center border-top">
       <a class="all-product-link h6" href="{$allProductsLink}">
         <span class="btn_text">{l s='All products' d='Shop.Theme.Catalog'}</span>
         <i class="material-icons btn_icon ml-2">&#xe5c8;</i>
