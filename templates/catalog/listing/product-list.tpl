@@ -2,9 +2,11 @@
 
 {block name='content'}
   <section id="main">
-    {block name='product_list_header'}
-      <h2 id="js-product-list-header" class="category-list-header h2 flex-grow-1">{$listing.label}</h2>
-    {/block}
+    <div class="row">
+      {block name='product_list_header'}
+        <h2 id="js-product-list-header" class="category-list-header h2 flex-grow-1">{$listing.label}</h2>
+      {/block}
+    </div>
 
     {block name="subcategory_list"}
       {isset($subcategories)} is the value for $subcategories.
