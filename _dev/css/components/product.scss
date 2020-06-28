@@ -2,20 +2,15 @@
     width: 100%;
     flex-shrink: 0;
     max-width: 300px;
+    position: relative;
 }
 
 .product-miniature {
-    border-radius: 15px;
     box-shadow: none;
     background-color: transparent;
-    border: none;
     transition: box-shadow 0.35s, background .35s;
 
     .product-thumbnail {
-        border-radius: 15px;
-        box-shadow: 0 5px 10px #00000017;
-        background-color: $white;
-        transition: box-shadow 0.35s;
         overflow: hidden;
 
         > img {
@@ -100,6 +95,12 @@
 }
 
 @include media-breakpoint-up(md) {
+    .product-container {
+        &:hover {
+            z-index: 9;
+        }
+    }
+
     .product-miniature {
         &:hover {
             background-color: $white;
