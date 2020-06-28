@@ -32,7 +32,7 @@
         {hook h="displayWrapperTop"}
         <div class="container-fluid">
           <div class="row flex-column border-bottom">
-            <div class="col-12">
+            <div class="col-12 py-3">
               {block name='breadcrumb'}
                 {include file='_partials/breadcrumb.tpl'}
               {/block}
@@ -41,7 +41,7 @@
 
 					<div class="row">
             {block name="left_column"}
-              <div id="left-column" class="col-12 col-sm-4 col-md-3 float-md-left border-right">
+              <div id="left-column" class="col-12 col-sm-4 col-md-3 float-md-left border-right py-3">
                 {if $page.page_name == 'product'}
                   {hook h='displayLeftColumnProduct'}
                 {else}
