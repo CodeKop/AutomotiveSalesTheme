@@ -1,5 +1,5 @@
 {block name='product_miniature_item'}
-<div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="product-container py-2 px-1{if !empty($pCssClass)} {$pCssClass}{/if}">
+<div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="product-container p-1{if !empty($pCssClass)} {$pCssClass}{/if}">
   <meta itemprop="position" content="{$position}" />
   <article class="product-miniature js-product-miniature card h-100 border" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemprop="item" itemscope itemtype="http://schema.org/Product">
     <div class="thumbnail-container">
