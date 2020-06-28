@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="row border-top justify-content-center border-top pt-2">
-      <a class="all-product-link h6" href="{$allProductsLink}">
+      <a class="all-product-link" href="{$allProductsLink}">
         <span class="btn_text">{l s='All products' d='Shop.Theme.Catalog'}</span>
         <i class="material-icons btn_icon ml-2">&#xe5c8;</i>
       </a>
