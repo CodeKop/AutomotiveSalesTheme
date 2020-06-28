@@ -1,4 +1,4 @@
-<div id="js-product-list-header">
+<div id="js-product-list-header" class="row no-gutters border">
     {if $listing.pagination.items_shown_from == 1}
         <div class="block-category">
             <div class="block-category-inner">
