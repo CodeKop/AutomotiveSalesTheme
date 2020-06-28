@@ -59,6 +59,11 @@
             border-top: 1px solid $gray-light;
             border-radius: 8px;
             overflow: hidden;
+
+            &.empty {
+                padding: $small-space $medium-space;
+                text-align: center;
+            }
         }
     }
 
