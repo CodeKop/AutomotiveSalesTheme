@@ -2,28 +2,28 @@
 
 {block name='content'}
   <section id="main">
-    <div class="row no-gutters border">
-      {block name='product_list_header'}
+    {block name='product_list_header'}
+      <div class="row no-gutters border">
         <h2 id="js-product-list-header" class="category-list-header h2 flex-grow-1">{$listing.label}</h2>
-      {/block}
-    </div>
+      </div>
+    {/block}
 
-    <div class="row no-gutters">
-      {block name="subcategory_list"}
-        {isset($subcategories)} is the value for $subcategories.
+    {block name="subcategory_list"}
+      <div class="row no-gutters">
+        {json_encode($subcategories)}
         {if isset($subcategories) && $subcategories|@count > 0}
           {include file='catalog/_partials/subcategories.tpl' subcategories=$subcategories}
         {/if}
-      {/block}
-    </div>
+      </div>
+    {/block}
 
-    <section id="products" class="row">
+    <section id="products">
       {if $listing.products|count}
-        <div id="js-product-list-top" class="row no-gutters border-bottom">
-          {block name='product_list_top'}
+        {block name='product_list_top'}
+          <div id="js-product-list-top" class="row border-bottom products-selection">
             {include file='catalog/_partials/products-top.tpl' listing=$listing}
-          {/block}
-        </div>
+          </div>
+        {/block}
 
         {block name='product_list_active_filters'}
           <div class="d-none d-md-block">
