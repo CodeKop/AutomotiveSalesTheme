@@ -16,11 +16,11 @@
     }
   }
 }
-.block-category {
+#js-product-list-header {
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-bottom: 1.563rem;
+  justify-content: center;
+  align-items: center;
 
   .block-category-inner {
     flex: 1;
@@ -51,7 +51,7 @@
 }
 .products-selection {
   align-items: center;
-  
+
   .sort-by-row {
     display: flex;
     align-items: center;
@@ -409,7 +409,7 @@
     display: none;
   }
 
-  .block-category {
+  #js-product-list-header {
     min-height: 0;
     margin-bottom: 0;
   }
