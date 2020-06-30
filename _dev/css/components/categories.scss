@@ -82,7 +82,7 @@
 
     .products-sort-order {
       > .dropdown-menu {
-        top: calc(100% + $spacer-2);
+        top: calc(100% + #{$spacer-2});
       }
     }
   }
@@ -147,8 +147,9 @@
   .dropdown-menu {
     left: auto;
     right: 0;
-    border: 1px solid #dee2e6;
     margin: 0;
+    border: 1px solid #dee2e6;
+    border-radius: 0;
   }
   .dropdown-menu a:hover {
     background-color: $gray-light;
