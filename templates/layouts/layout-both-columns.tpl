@@ -41,7 +41,7 @@
 
 					<div class="row">
             {block name="left_column"}
-              <div id="left-column" class="col-12 col-sm-4 col-md-3 float-md-left border-right py-3">
+              <div id="left-column" class="col-12 col-sm-4 col-md-3">
                 {if $page.page_name == 'product'}
                   {hook h='displayLeftColumnProduct'}
                 {else}
@@ -61,7 +61,7 @@
             {/block}
 
             {block name="right_column"}
-              <div id="right-column" class="col-12 col-sm-4 col-md-3 float-md-right border-left">
+              <div id="right-column" class="col-12 col-sm-4 col-md-3">
                 {if $page.page_name == 'product'}
                   {hook h='displayRightColumnProduct'}
                 {else}
