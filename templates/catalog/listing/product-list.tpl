@@ -1,12 +1,10 @@
 {extends file=$layout}
 
 {block name='content'}
-<section id="main">
+<section id="main" class="container-fluid">
     {block name='product_list_header'}
-    <div class="row no-gutters category-list-header">
-        {block name="product_list_header_inner"}
-        <h2 id="js-product-list-header" class="h2 flex-grow-1">{$listing.label}</h2>
-        {/block}
+    <div id="js-product-list-header" class="category-list-header row no-gutters h2">
+        {$listing.label}
     </div>
     {/block}
 
@@ -18,7 +16,7 @@
     </div>
     {/block}
 
-    <section id="products" class="container row flex-column">
+    <section id="products" class="row flex-column">
         {if $listing.products|count}
         {block name='product_list_top'}
         <div id="js-product-list-top" class="row no-gutters border-bottom products-selection pb-1">
