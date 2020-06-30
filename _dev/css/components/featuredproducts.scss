@@ -1,103 +1,122 @@
 .featured-products {
-    position: relative;
+  position: relative;
+  border-bottom: 1px solid $base-border-color;
 
-    .products {
-        flex-wrap: nowrap;
-        margin: 0;
-    }
+  > .container {
+    border-left: 1px solid $base-border-color;
+    border-right: 1px solid $base-border-color;
 
-    .products-section-title {
-        position: relative;
-        margin: 0;
-        padding-bottom: $small-space;
+    padding-top: $spacer-3;
+    padding-bottom: $spacer-3;
+  }
 
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: calc(50% - 4rem);
-            right: calc(50% - 4rem);
+  .products {
+    flex-wrap: nowrap;
+    margin: 0;
+  }
 
-            width: 8rem;
-            height: 3px;
-            background-color: $primary;
-            border-radius: 100px 100px 0 0;
-        }
-    }
+  .products-section-title {
+    border-bottom: 1px solid $base-border-color;
 
-    .featured-products-list {
-        overflow: hidden;
-    }
+    > h2 {
+      position: relative;
+      margin: 0;
+      padding-bottom: $medium-space;
+      text-transform: capitalize;
 
-    .swiper-button-prev,
-    .swiper-button-next {
-        display: inline-block;
+      &::after {
+        content: "";
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-        z-index: 9;
+        bottom: 0;
+        left: calc(50% - 4rem);
+        right: calc(50% - 4rem);
 
-        .swiper-button-icon {
-            display: block;
-            background-color: $gray-lighter;
-            padding: $medium-space $small-space;
-        }
+        width: 8rem;
+        height: 3px;
+        background-color: $primary;
+        border-radius: 100px 100px 0 0;
+      }
+    }
+  }
 
-        .swiper-button-icon > i {
-            display: block;
-        }
+  .featured-products-list {
+    overflow: hidden;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 9;
+
+    .swiper-button-icon {
+      display: block;
+      background-color: $gray-lighter;
+      padding: $medium-space $small-space;
     }
 
-    .swiper-button-disabled {
-        display: none;
+    .swiper-button-icon > i {
+      display: block;
     }
+  }
 
-    .swiper-button-prev {
-        left: 0;
-    }
-    .swiper-button-next {
-        right: 0;
-    }
+  .swiper-button-disabled {
+    display: none;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .products-section-link {
+    border-top: 1px solid $base-border-color;
+    padding-top: $sapcer-2;
 
     .all-product-link {
+      display: inline-block; // Fallback
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+
+      > .btn_text {
         display: inline-block;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1rem;
+        vertical-align: middle;
+        font-size: 1em;
+        line-height: 1.5;
+      }
 
-        > .btn_text {
-            display: inline-block;
-            vertical-align: middle;
-            font-size: 1em;
-            line-height: 1.5;
-        }
-
-        > .btn_icon {
-            display: inline-block;
-            vertical-align: middle;
-            font-size: 1.5em;
-        }
+      > .btn_icon {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.5em;
+      }
     }
+  }
 }
 
 @include media-breakpoint-up(md) {
-    .featured-products {
-        .all-product-link {
-            .btn_icon {
-                transition: transform 0.35s;
-            }
+  .featured-products {
+    .all-product-link {
+      .btn_icon {
+        transition: transform 0.35s;
+      }
 
-            &:hover {
-                .btn_icon {
-                    transform: translateX($extra-small-space);
-                }
-
-                &::before {
-                    width: 100%;
-                }
-            }
+      &:hover {
+        .btn_icon {
+          transform: translateX($extra-small-space);
         }
+
+        &::before {
+          width: 100%;
+        }
+      }
     }
+  }
 }
