@@ -74,4 +74,11 @@ $enable-responsive-font-sizes: true;
 $carousel-control-icon-width: $large-space;
 
 // Copy Bootstrap Vars
-$spacers-3: 1rem;
+$__spacer-base: 1rem;
+
+$spacers-0: 0;
+$spacers-1: $__spacer-base / 4;
+$spacers-2: $__spacer-base / 2;
+$spacers-3: $__spacer-base;
+$spacers-4: $__spacer-base * 1.5;
+$spacers-5: $__spacer-base * 3;
