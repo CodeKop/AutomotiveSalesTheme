@@ -1,4 +1,4 @@
-<div class="col-md-6 links">
+<div class="col-md-6 links border-right py-md-3">
   <div class="row">
   {foreach $linkBlocks as $linkBlock}
     <div class="col-md-6 wrapper">
