@@ -8,7 +8,7 @@
   <div class="d-md-none text-right up">
     <a href="#header" class="btn btn-secondary">
       {l s='Back to top' d='Shop.Theme.Actions'}
-      <i class="fa fa-chevron-up"></i>
+      <i class="material-icons">&#xe316;</i>
     </a>
   </div>
 </div>
