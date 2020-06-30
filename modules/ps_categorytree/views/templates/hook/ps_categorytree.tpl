@@ -46,7 +46,7 @@
 
 <div class="block-categories d-none d-md-block border">
     {if !isset($category)}
-    {assign var="category" value=Category::getCategoryInformation([$currentCategory])}
+    {assign var="category" value=Category::getCategoryInformation([4])}
     {/if}
 
     {json_encode($category)}
