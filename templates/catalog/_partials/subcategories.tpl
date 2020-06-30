@@ -1,6 +1,6 @@
-<div id="js-product-subcategories">
+<div id="js-product-subcategories" class="row no-gutters">
     {foreach from=$subcategories item="sub"}
-      <div class="category-subcategory col-6 col-sm-4" title={$sub.name}>
+      <div class="category-subcategory col-4 col-sm-3 col-md-2" title={$sub.name}>
         <div class="sub-thumbnail">
           <img src="{$sub.image.small.url}" height="{$sub.image.small.height}" />
         </div>
@@ -8,5 +8,5 @@
           <h4 class="sub-info-title" data-marquee>{$sub.name}</h4>
         </div>
       </div>
-    {/foreach}}
+    {/foreach}
 </div>
