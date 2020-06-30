@@ -49,8 +49,10 @@
     {assign var="category" value=Category::getCategoryInformation([$currentCategory])}
     {/if}
 
+    {json_encode($category)}
+
     <ul class="category-top-menu">
-        {if isset($category) && $category|count}
+        {* {if isset($category) && $category|count}
         {assign var="parent" value=Category::getCategoryInformation([$category.id_parent])}
         {assign var="parent_link" value=Link::getUrlSmarty([
         'entity' => 'category',
@@ -64,7 +66,7 @@
             </a>
         </li>
         {/if}
-        {/if}
+        {/if} *}
 
         <li class="category-title">
             <a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a>
