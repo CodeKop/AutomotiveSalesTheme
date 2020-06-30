@@ -46,14 +46,14 @@
 
 <div class="block-categories d-none d-md-block border">
     {if !isset($category)}
-    {assign var="category" value=Category::getCategoryInformation([$currentCategory])}
-    {assign var="category" value=$category[$currentCategory]}
+    {assign var="category" value=Category:getCategories(sqlFilter='id_category = ' + $currentCategory)}
+    {* {assign var="category" value=$category[$currentCategory]} *}
     {/if}
 
     {json_encode($category)}
 
     <ul class="category-top-menu">
-        {if isset($category) && $category|count}
+        {* {if isset($category) && $category|count}
         {if Category::categoryExists($category.id_parent)}
         {assign var="parent" value=Category::getCategoryInformation([$category.id_parent])}
         {assign var="parent_link" value=Link::getUrlSmarty([
@@ -67,7 +67,7 @@
             </a>
         </li>
         {/if}
-        {/if}
+        {/if} *}
 
         <li class="category-title">
             <a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a>
