@@ -1,4 +1,4 @@
-<div class="block-contact col-md-3 links wrapper border-right py-md-3">
+<div class="block-contact col-md-3 links wrapper py-md-3">
   <div class="d-none d-md-block">
     <div class="block-contact-title">
       <p class="h3 text-uppercase block-contact-title">{l s='Store information' d='Shop.Theme.Global'}</p>

@@ -9,7 +9,7 @@
 <div class="footer-main">
   <div class="container-fluid">
     <div class="container">
-      <div class="row border-left">
+      <div class="row footer-row-main">
         {block name='hook_footer'}
           {hook h='displayFooter'}
         {/block}
