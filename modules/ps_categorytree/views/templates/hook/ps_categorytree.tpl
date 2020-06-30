@@ -49,26 +49,25 @@
 
 <div class="block-categories d-none d-md-block border">
   {if !isset($category)}
-    {assign var="category" value=Category::getCategoryInformation([$currentCategory.value])}
+    {assign var="category" value=Category::getCategoryInformation([$currentCategory])}
   {/if}
-  <span>Current Categorie's Value is: {json_encode($currentCategory)}</span>
 
-  {* {debug} *}
-
-  {* <ul class="category-top-menu">
-    {assign var="parent" value=Category::getCategoryInformation([$category.id_parent])}
-    {assign var="parent_link" value=Link::getUrlSmarty([
-      'entity' => 'category',
-      'id' => $category.id_parent
-    ])}
-    {if $category.level_depth >= 3}
-      <li class="category-return">
-        <a href="{$parent_link}" title="Go to parent category">
-          <i class="material-icons">&#xe5c4;</i>
-          <span>{$parent[$category.id_parent].name}</span>
-        </a>
-      </li>
-    {/if}
+  <ul class="category-top-menu">
+    {if isset($category) && $category|count}
+      {assign var="parent" value=Category::getCategoryInformation([$category.id_parent])}
+      {assign var="parent_link" value=Link::getUrlSmarty([
+        'entity' => 'category',
+        'id' => $category.id_parent
+      ])}
+      {if $category.level_depth >= 3}
+        <li class="category-return">
+          <a href="{$parent_link}" title="Go to parent category">
+            <i class="material-icons">&#xe5c4;</i>
+            <span>{$parent[$category.id_parent].name}</span>
+          </a>
+        </li>
+      {/if}
+  {/if}
 
     <li class="category-title">
       <a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a>
@@ -81,5 +80,5 @@
         There are no subcategories to display.
       </li>
     {/if}
-  </ul> *}
+  </ul>
 </div>
