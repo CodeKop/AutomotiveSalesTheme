@@ -53,7 +53,7 @@
   {/if}
   {$currentCategory.value}
 
-  {debug}
+  {* {debug} *}
 
   {* <ul class="category-top-menu">
     {assign var="parent" value=Category::getCategoryInformation([$category.id_parent])}
