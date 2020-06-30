@@ -50,6 +50,8 @@
       flex-shrink: 0;
 
       > a {
+        display: block;
+        height: 100%;
         overflow: hidden;
       }
 
@@ -57,6 +59,7 @@
         display: none;
         background-color: #ffffff;
         padding: 0.55rem 1.15rem;
+        color: $gray-dark;
       }
 
       .facet-image {
