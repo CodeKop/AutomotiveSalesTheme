@@ -51,6 +51,7 @@
   {if !isset($category)}
     {assign var="category" value=Category::getCategoryInformation([$currentCategory.value])}
   {/if}
+  {$currentCategory.value}
 
   {debug}
 
