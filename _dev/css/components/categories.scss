@@ -1,23 +1,5 @@
 // MOBILES FIRST STYLES
-#products {
-  color: gray;
-
-  .products-select {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-  }
-
-  .card {
-    box-shadow: none;
-    background-color: inherit;
-  }
-
-  .back-to-top {
-    // Keeping here JIC ('just-in-case').
-  }
-}
-
+// Category Information ('Header')
 #js-product-list-header {
   border: 1px solid $base-border-color;
   width: 100%;
@@ -28,6 +10,22 @@
 
   .block-category-inner {
     padding: $spacer-3;
+
+    #category-description {
+      p,
+      strong {
+        font-weight: 400;
+        color: $gray;
+      }
+      p {
+        color: $gray-darker;
+        margin-bottom: 0;
+        word-break: break-word;
+        &:first-child {
+          margin-bottom: $medium-space;
+        }
+      }
+    }
   }
 
   @include media-breakpoint-up(md) {
@@ -37,6 +35,7 @@
   }
 }
 
+// Category Subcategories
 #js-product-list-subcategories {
   border: solid $base-border-color;
   border-width: 0 1px 1px 1px;
@@ -67,47 +66,40 @@
   }
 }
 
-// DESKTOP FIRST STYLES
-.category-list-header {
-  #js-product-list-header {
-    width: 100%;
+// Product Container
+#products {
+  color: gray;
 
-    .block-category-inner {
-      flex: 1;
-      text-align: center;
+  padding-top: $spacer-3;
+  padding-bottom: $spacer-3;
 
-      #category-description {
-        p,
-        strong {
-          font-weight: 400;
-          color: $gray;
-        }
-        p {
-          color: $gray-darker;
-          margin-bottom: 0;
-          word-break: break-word;
-          &:first-child {
-            margin-bottom: $medium-space;
-          }
-        }
-      }
-    }
-    .category-cover {
-      overflow: hidden;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
+  #js-product-list-top {
+    border-top: 1px solid $base-border-color;
+    border-bottom: 1px solid $base-border-color;
+
+    padding-top: $spacer-2;
+    padding-bottom: $spacer-2;
   }
-}
-#js-product-subcategories {
-}
-.products-selection {
-  .product-sort-col {
+
+  // Common Styles in Product Container
+  .products-select {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    justify-content: space-between;
   }
+
+  .card {
+    box-shadow: none;
+    background-color: inherit;
+  }
+
+  .back-to-top {
+    // Keeping here JIC ('just-in-case').
+  }
+}
+
+// DESKTOP FIRST STYLES
+.products-selection {
   .sort-by {
     white-space: normal;
     word-break: break-word;
@@ -419,13 +411,6 @@
   .products-sort-order {
     .select-title {
       margin-left: 0;
-    }
-  }
-  .products-selection {
-    h1 {
-      padding-top: 0;
-      text-align: center;
-      margin-bottom: 1rem;
     }
   }
   #prices-drop #content-wrapper,
