@@ -83,6 +83,7 @@
     .products-sort-order {
       > .dropdown-menu {
         top: calc(100% + #{$spacer-2});
+        z-index: 9;
       }
     }
   }
