@@ -1,5 +1,4 @@
-
-<div id="block_myaccount_infos" class="col-md-3 links wrapper">
+<div id="block_myaccount_infos" class="col-md-3 links wrapper border-right py-md-3">
   <p class="h3 myaccount-title d-none d-md-block">
     <a class="text-uppercase" href="{$urls.pages.my_account}" rel="nofollow">
       {l s='Your account' d='Shop.Theme.Customeraccount'}
