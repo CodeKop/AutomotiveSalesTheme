@@ -79,6 +79,12 @@
 
     padding-top: $spacer-2;
     padding-bottom: $spacer-2;
+
+    .products-sort-order {
+      > .dropdown-menu {
+        top: calc(100% + $spacer-2);
+      }
+    }
   }
 
   // Common Styles in Product Container
@@ -142,7 +148,7 @@
     left: auto;
     right: 0;
     border: 1px solid #dee2e6;
-    margin: 0 15px;
+    margin: 0;
   }
   .dropdown-menu a:hover {
     background-color: $gray-light;
@@ -154,7 +160,7 @@
       box-shadow: 0 3px 5px #0001;
     }
     .dropdown-menu {
-      box-shadow: 0 3px 10px #0002;
+      box-shadow: 0 3px 10px #0001;
     }
   }
 }
