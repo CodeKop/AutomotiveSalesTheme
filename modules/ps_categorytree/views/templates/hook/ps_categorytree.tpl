@@ -49,7 +49,7 @@
 
 <div class="block-categories d-none d-md-block border">
   {if !isset($category)}
-    {assign var="category" value=Category::getCategoryInformation([$currentCategory.value]) scope=scope}}
+    {assign var="category" value=Category::getCategoryInformation([$currentCategory.value])}
   {/if}
 
   <ul class="category-top-menu">
