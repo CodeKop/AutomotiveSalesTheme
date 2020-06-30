@@ -18,24 +18,21 @@
   }
 }
 
-.category-list-header {
+#js-product-list-header {
   border: 1px solid $base-border-color;
+  width: 100%;
 
-  #js-product-list-header {
-    width: 100%;
+  .category-cover {
+    display: none;
+  }
 
+  .block-category-inner {
+    padding: $spacer-3;
+  }
+
+  @include media-breakpoint-up(md) {
     .category-cover {
-      display: none;
-    }
-
-    .block-category-inner {
-      padding: $spacer-3;
-    }
-
-    @include media-breakpoint-up(md) {
-      .category-cover {
-        display: block;
-      }
+      display: block;
     }
   }
 }
