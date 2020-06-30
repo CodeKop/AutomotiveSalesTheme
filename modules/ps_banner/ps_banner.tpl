@@ -1,5 +1,5 @@
-<a class="banner container-fluid border-bottom" href="{$banner_link}" title="{$banner_desc}">
-  <div class="container py-3 border-left border-right">
+<a class="banner container-fluid" href="{$banner_link}" title="{$banner_desc}">
+  <div class="container">
     {if isset($banner_img)}
       <img src="{$banner_img}" alt="{$banner_desc}" title="{$banner_desc}" class="img-fluid">
     {else}
