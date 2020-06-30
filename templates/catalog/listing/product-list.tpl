@@ -14,10 +14,10 @@
     {/if}
     {/block}
 
-    <section id="products" class="row flex-column">
+    <section id="products" class="d-flex flex-column">
         {if $listing.products|count}
         {block name='product_list_top'}
-        <div id="js-product-list-top" class="row no-gutters border-bottom products-selection pb-1">
+        <div id="js-product-list-top" class="row products-selection align-items-center">
             {include file='catalog/_partials/products-top.tpl' listing=$listing}
         </div>
         {/block}
