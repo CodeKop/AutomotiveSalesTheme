@@ -4,14 +4,16 @@
 <section id="main">
     {block name='product_list_header'}
     <div class="row no-gutters category-list-header">
+        {block name="product_list_header_inner"}
         <h2 id="js-product-list-header" class="h2 flex-grow-1">{$listing.label}</h2>
+        {/block}
     </div>
     {/block}
 
     {block name="subcategory_list"}
     <div class="row no-gutters">
         {if isset($subcategories) && $subcategories|@count > 0}
-          {include file='catalog/_partials/subcategories.tpl' subcategories=$subcategories}
+        {include file='catalog/_partials/subcategories.tpl' subcategories=$subcategories}
         {/if}
     </div>
     {/block}
