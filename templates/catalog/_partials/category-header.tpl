@@ -1,4 +1,4 @@
-<div id="js-product-list-header" class="row align-items-center flex-nowrap">
+<div id="js-product-list-header" class="row no-gutters align-items-center flex-nowrap">
     {if $listing.pagination.items_shown_from == 1}
         {if $category.image.large.url}
             <div class="category-cover mr-3">
