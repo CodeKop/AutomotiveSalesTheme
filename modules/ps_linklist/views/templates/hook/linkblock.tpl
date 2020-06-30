@@ -1,4 +1,4 @@
-<div class="col-md-6 links border-right py-md-3">
+<div class="col-md-6 links">
   <div class="row">
   {foreach $linkBlocks as $linkBlock}
     <div class="col-md-6 wrapper">
@@ -8,8 +8,8 @@
         <span class="h3">{$linkBlock.title}</span>
         <span class="float-right">
           <span class="navbar-toggler collapse-icons">
-            <i class="fa fa-chevron-down add"></i>
-            <i class="fa fa-chevron-up remove"></i>
+            <i class="material-icons add">&#xe313;</i>
+            <i class="material-icons remove">&#xe316;</i>
           </span>
         </span>
       </div>

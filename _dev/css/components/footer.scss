@@ -44,6 +44,9 @@
   /* ps_linklist */
   .links {
     border-right: 1px solid #dee2e6;
+
+    padding-top: $spacer-3;
+    padding-bottom: $spacer-3;
   }
   .links .collapse {
     display: inherit;
