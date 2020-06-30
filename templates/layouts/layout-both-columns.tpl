@@ -31,7 +31,7 @@
       <section id="wrapper" class="border-bottom">
         {hook h="displayWrapperTop"}
         <div class="container-fluid">
-          <div class="row flex-column border-bottom content-before">
+          <div class="row flex-column content-before d-none d-md-block">
             <div class="col-12 py-3">
               {block name='breadcrumb'}
                 {include file='_partials/breadcrumb.tpl'}
