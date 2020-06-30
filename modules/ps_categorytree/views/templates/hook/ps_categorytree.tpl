@@ -47,12 +47,12 @@
   {/strip}
 {/function}
 
-<div class="block-categories d-none d-md-block">
+<div class="block-categories d-none d-md-block border">
   <ul class="category-top-menu">
     {assign var="parent" value=Category::getCategoryInformation([$category.id_parent])}
     {assign var="parent_link" value=Link::getUrlSmarty([
       'entity' => 'category',
-      'id' => $category.id_parent 
+      'id' => $category.id_parent
     ])}
     {if $category.level_depth >= 3}
       <li class="category-return">
@@ -66,7 +66,7 @@
     <li class="category-title">
       <a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a>
     </li>
-    
+
     {if $categories.children|count}
       <li class="category-tree">{categories nodes=$categories.children}</li>
     {else}
