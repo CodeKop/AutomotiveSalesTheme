@@ -17,9 +17,7 @@
     <section id="products" class="d-flex flex-column">
         {if $listing.products|count}
         {block name='product_list_top'}
-        <div id="js-product-list-top" class="row products-selection align-items-center">
-            {include file='catalog/_partials/products-top.tpl' listing=$listing}
-        </div>
+        {include file='catalog/_partials/products-top.tpl' listing=$listing
         {/block}
 
         {block name='product_list_active_filters'}
