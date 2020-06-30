@@ -1,4 +1,4 @@
-<nav class="pagination" {if isset($cssClass)}class="{$cssClass}"{/if}>
+<nav class="pagination" {if isset($cssClass) && $cssClass}class="{$cssClass}" {/if}>
     <div class=" col-md-4">
         {block name='pagination_summary'}
             {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=['%from%' => $pagination.items_shown_from ,'%to%' => $pagination.items_shown_to, '%total%' => $pagination.total_items]}
@@ -32,5 +32,4 @@
         {/if}
         {/block}
     </div>
-
 </nav>
