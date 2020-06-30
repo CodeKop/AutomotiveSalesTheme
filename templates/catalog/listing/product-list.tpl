@@ -9,11 +9,9 @@
     {/block}
 
     {block name="subcategory_list"}
-    <div class="row no-gutters">
-        {if isset($subcategories) && $subcategories|@count > 0}
-        {include file='catalog/_partials/subcategories.tpl' subcategories=$subcategories}
-        {/if}
-    </div>
+    {if isset($subcategories) && $subcategories|@count > 0}
+    {include file='catalog/_partials/subcategories.tpl' subcategories=$subcategories}
+    {/if}
     {/block}
 
     <section id="products" class="row flex-column">
