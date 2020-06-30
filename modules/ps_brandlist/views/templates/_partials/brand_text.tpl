@@ -2,9 +2,9 @@
   {foreach from=$brands item=brand name=brand_list}
     {if $smarty.foreach.brand_list.iteration <= $text_list_nb}
       <li class="facet-label col-4 col-md-auto">
-        <a class="d-block h-100 position-relative" href="{$brand['link']}" title="{$brand['name']}">
+        <a class="position-relative" href="{$brand['link']}" title="{$brand['name']}">
             <img class="facet-image" src="{$urls.img_manu_url}{$brand['image']}-medium_default.jpg" />
-            <span class="facet-text text-dark">{$brand['name']}</span>
+            <span class="facet-text">{$brand['name']}</span>
         </a>
 
         <script type="application/ld+json">
