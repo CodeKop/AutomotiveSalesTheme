@@ -7,6 +7,6 @@
             <div class="sub-info">
                 <h4 class="sub-info-title" data-marquee>{$sub.name}</h4>
             </div>
-    </div>
-{/foreach}
+        </a>
+    {/foreach}
 </div>
