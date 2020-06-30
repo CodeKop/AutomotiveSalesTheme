@@ -10,14 +10,14 @@
     <span class="text-muted mr-2">{l s='Sort by:' d='Shop.Theme.Global'}</span>
     {$listing.sort_selected}
   {else}{l s='Select' d='Shop.Theme.Actions'}{/if}
-  <i class="material-icons">&#xe313;</i>
+  <i class="material-icons ml-1">&#xe313;</i>
 </button>
 <div class="dropdown-menu">
   {foreach from=$listing.sort_orders item=sort_order}
     <a
       rel="nofollow"
       href="{$sort_order.url}"
-      class="select-list ml-1 {['current' => $sort_order.current, 'js-search-link' => true]|classnames}"
+      class="select-list {['current' => $sort_order.current, 'js-search-link' => true]|classnames}"
     >
       {$sort_order.label}
     </a>
