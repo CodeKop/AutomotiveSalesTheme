@@ -20,7 +20,7 @@
     <section id="products">
       {if $listing.products|count}
         {block name='product_list_top'}
-          <div id="js-product-list-top" class="row border-bottom products-selection">
+          <div id="js-product-list-top" class="row border-bottom products-selection pb-3">
             {include file='catalog/_partials/products-top.tpl' listing=$listing}
           </div>
         {/block}
