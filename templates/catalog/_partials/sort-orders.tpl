@@ -7,7 +7,7 @@
   aria-haspopup="true"
   aria-expanded="false">
   {if isset($listing.sort_selected)}
-    <span class="text-muted mr-3">{l s='Sort by:' d='Shop.Theme.Global'}</span>
+    <span class="text-muted mr-2">{l s='Sort by:' d='Shop.Theme.Global'}</span>
     {$listing.sort_selected}
   {else}{l s='Select' d='Shop.Theme.Actions'}{/if}
   <i class="material-icons">&#xe313;</i>
@@ -17,7 +17,7 @@
     <a
       rel="nofollow"
       href="{$sort_order.url}"
-      class="select-list {['current' => $sort_order.current, 'js-search-link' => true]|classnames}"
+      class="select-list ml-1 {['current' => $sort_order.current, 'js-search-link' => true]|classnames}"
     >
       {$sort_order.label}
     </a>
