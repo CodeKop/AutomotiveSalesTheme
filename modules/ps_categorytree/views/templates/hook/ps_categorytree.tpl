@@ -48,8 +48,8 @@
 {/function}
 
 <div class="block-categories d-none d-md-block border">
-  {* {debug} *}
-  <ul class="category-top-menu">
+  {debug}
+  {* <ul class="category-top-menu">
     {assign var="parent" value=Category::getCategoryInformation([$category.id_parent])}
     {assign var="parent_link" value=Link::getUrlSmarty([
       'entity' => 'category',
@@ -75,5 +75,5 @@
         There are no subcategories to display.
       </li>
     {/if}
-  </ul>
+  </ul> *}
 </div>
