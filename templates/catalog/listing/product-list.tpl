@@ -17,7 +17,7 @@
     <section id="products" class="d-flex flex-column">
         {if $listing.products|count}
         {block name='product_list_top'}
-        {include file='catalog/_partials/products-top.tpl' listing=$listing
+        {include file='catalog/_partials/products-top.tpl' listing=$listing}
         {/block}
 
         {block name='product_list_active_filters'}
