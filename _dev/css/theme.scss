@@ -100,10 +100,12 @@
   #left-column,
   #content-wrapper,
   #right-column {
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 
     @include media-breakpoint-up(md) {
-      padding: $spacer-3 0;
+      padding-top: $spacer-3;
+      padding-bottom: $spacer-3;
 
       &#left-column {
         float: left;
