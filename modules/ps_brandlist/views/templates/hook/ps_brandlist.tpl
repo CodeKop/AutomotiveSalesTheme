@@ -1,6 +1,6 @@
 {if $brands}
-<div id="search-filters-brands" class="position-relative container-fluid border-bottom">
-  <div class="container border-left border-right py-3">
+<div id="search-filters-brands" class="position-relative container-fluid">
+  <div class="container">
     <div class="row no-gutters justify-content-center">
       <h1 class="h3 facet-header">
         {if $display_link_brand}<a href="{$page_link}" title="{l s='Brands' d='Shop.Theme.Catalog'}">{/if}
