@@ -46,7 +46,7 @@
 
 <div class="block-categories d-none d-md-block border">
     {if !isset($category)}
-    {assign var="category" value=Category::getCategories(sqlFilter=('id_category = ' + $currentCategor))}
+    {assign var="category" value=Category::getCategories(sqlFilter=('id_category = ' + $currentCategory))}
     {* {assign var="category" value=$category[$currentCategory]} *}
     {/if}
 
