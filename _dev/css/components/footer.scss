@@ -3,7 +3,44 @@
   padding: 0;
   border-top: 2px solid $primary;
   box-shadow: 0 -12px 0 -9px $primary-inverse;
+
+  @include media-breakpoint-up(md) {
+    padding-bottom: 0;
+
+    .footer-main {
+      padding-top: 1.25rem;
+      box-shadow: 2px 2px 11px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer-row-main {
+      border-left: 1px solid #dee2e6;
+    }
+
+    /* ps_customeraccountlinks */
+    #block_myaccount_infos {
+      border-right: 1px solid #dee2e6;
+      padding-top: $spacer-3;
+      padding-bottom: $spacer-3;
+    }
+
+    /* ps_linklist */
+    .links {
+      border-right: 1px solid #dee2e6;
+
+      padding-top: $spacer-3;
+      padding-bottom: $spacer-3;
+    }
+    .links .collapse {
+      display: inherit;
+    }
+
+    /* ps_contactinfo */
+    .block-contact {
+      border-right: 1px solid #dee2e6;
+    }
+  }
 }
+
 #footer .footer-main {
   padding: 0;
   overflow: hidden;
@@ -16,45 +53,6 @@
   .block-contact-title {
     color: $gray-darker;
     font-size: $footer-font-size-header;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  /* Generic Footer */
-  #footer {
-    padding-bottom: 0;
-  }
-
-  #footer .footer-main {
-    padding-top: 1.25rem;
-    box-shadow: 2px 2px 11px 0px rgba(0, 0, 0, 0.3);
-  }
-
-  #footer .footer-row-main {
-    border-left: 1px solid #dee2e6;
-  }
-
-  /* ps_customeraccountlinks */
-  #block_myaccount_infos {
-    border-right: 1px solid #dee2e6;
-    padding-top: $spacer-3;
-    padding-bottom: $spacer-3;
-  }
-
-  /* ps_linklist */
-  .links {
-    border-right: 1px solid #dee2e6;
-
-    padding-top: $spacer-3;
-    padding-bottom: $spacer-3;
-  }
-  .links .collapse {
-    display: inherit;
-  }
-
-  /* ps_contactinfo */
-  .block-contact {
-    border-right: 1px solid #dee2e6;
   }
 }
 
