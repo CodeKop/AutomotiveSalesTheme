@@ -1,10 +1,9 @@
-
-<div class="block-contact col-md-3 links wrapper">
+<div class="block-contact col-md-3 links wrapper border-right py-md-3">
   <div class="d-none d-md-block">
     <div class="block-contact-title">
       <p class="h3 text-uppercase block-contact-title">{l s='Store information' d='Shop.Theme.Global'}</p>
     </div>
-    <div class="block-contact-content" 
+    <div class="block-contact-content">
       {$contact_infos.address.formatted nofilter}
       {if $contact_infos.phone}
         <br>
@@ -46,7 +45,7 @@
       {/if}
     </div>
   </div>
-  <div class="d-md-up">
+  <div class="d-none d-md-block">
     <div class="title mt-4 text-center">
       <a class="h6 d-inline-block bg-primary text-white px-3 py-2 shadow-lg rounded"
         href="{$urls.pages.stores}">{l s='View our Stores' d='Shop.Theme.Global'}</a>
