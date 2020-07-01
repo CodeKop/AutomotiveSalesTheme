@@ -1,53 +1,53 @@
 .contact-rich {
-	color: $gray;
-	margin-bottom: 2rem;
-	word-wrap: break-word;
-	h4 {
-		text-transform: capitalize;
-		color: $black;
-	    margin-bottom: 2rem;
-		font-family: Noto Sans;
-	}
-	.block {
-		height: auto;
-		overflow: hidden;
-		.icon {
-			float: left;
-			width: 3.5rem;
-			i {
-				font-size: 2rem;
-			}
-		}
-		.data {
-			color: $gray-darker;
-			font-size: $font-size-sm;
-			width: auto;
-			overflow: hidden;
-			&.email {
-				padding-top: 0.375rem;
-			}
-		}
-		a[href^="mailto:"] {
-			clear: both;
-			margin-top: 1rem;
+  color: $gray;
+  margin-bottom: 2rem;
+  word-wrap: break-word;
+  h4 {
+    text-transform: capitalize;
+    color: $black;
+    margin-bottom: 2rem;
+    font-family: Noto Sans;
+  }
+  .block {
+    height: auto;
+    overflow: hidden;
+    .icon {
+      float: left;
+      width: 3.5rem;
+      i {
+        font-size: 2rem;
+      }
+    }
+    .data {
+      color: $gray-darker;
+      font-size: $font-size-sm;
+      width: auto;
+      overflow: hidden;
+      &.email {
+        padding-top: 0.375rem;
+      }
+    }
+    a[href^="mailto:"] {
+      clear: both;
+      margin-top: 1rem;
 
-			@include media-breakpoint-up(sm) {
-				font-size: 0.815rem;
-			}
-		}
-	}
+      @include media-breakpoint-up(sm) {
+        font-size: 0.815rem;
+      }
+    }
+  }
 }
 
 .contact-form {
-	background-color: white;
-	border-radius: 8px;
-	@include drop-shadow-small-light;
-	padding: 1.375rem;
-	color: $gray;
-	width: 100%;
-	margin-bottom: 15px;
-	h3 {
-		text-transform: uppercase;
-		color: $gray-darker;
-	}
+  color: $gray;
+  width: 100%;
+  margin-bottom: 15px;
+
+  h3 {
+    text-transform: uppercase;
+    color: $gray-darker;
+  }
+  .alert ul {
+    margin: 0;
+  }
 }
