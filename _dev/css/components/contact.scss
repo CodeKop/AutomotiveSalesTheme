@@ -4,13 +4,15 @@
   h4 {
     text-transform: capitalize;
     color: $black;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+    padding-bottom: $spacer-3;
   }
   .block {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     border-bottom: 1px solid $base-border-color;
+    padding: $spacer-3 0;
 
     height: auto;
     overflow: hidden;
