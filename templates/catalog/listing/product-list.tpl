@@ -3,7 +3,7 @@
 {block name='content'}
 <section id="main" class="container-fluid">
     {block name='product_list_header'}
-    <div id="js-product-list-header" class="category-list-header row no-gutters h2">
+    <div id="js-product-list-header" class="row no-gutters h2">
         {$listing.label}
     </div>
     {/block}
