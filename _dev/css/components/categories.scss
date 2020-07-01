@@ -1,8 +1,11 @@
 // MOBILES FIRST STYLES
 // Category Information ('Header')
 #js-product-list-header {
-  border: 1px solid $base-border-color;
   width: 100%;
+  margin: 0;
+  &.category-list-header {
+    border: 1px solid $base-border-color;
+  }
 
   .category-cover {
     display: none;
