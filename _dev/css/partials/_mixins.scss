@@ -71,7 +71,7 @@
 
 	@include media-breakpoint-up(md) {
 		&:hover {
-			box-shadow: 0 0 0 3px lighten($primary, 0.3);
+			box-shadow: 0 0 0 3px lighten($primary, 0.65);
 		}
 	}
 }
@@ -93,10 +93,12 @@
 	}
 }
 @mixin button-tertiary {
-	background-color: transparent;
-	border: 2px solid $primary;
-	border-radius: .325rem;
-	color: $gray-dark;
+	background-color: $white;
+	color: $brand-primary;
+	border: 2px dashed $primary;
+  border-radius: $extra-small-space;
+  text-shadow: 0 2px 3px #0003;
+  box-shadow: 0 2px 3px #0003;
 
 	&:hover {
 		color: $gray-dark;
