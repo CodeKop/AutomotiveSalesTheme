@@ -84,7 +84,7 @@
 
         </section>
 
-        <footer class="form-footer text-sm-right">
+        <footer class="form-footer row">
             <div class="col-md-9 offset-md-3">
                 <style>
                     input[name=url] {
