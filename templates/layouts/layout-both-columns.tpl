@@ -39,7 +39,7 @@
                         </div>
                     </div>
 
-                    <div class="row no-gutters">
+                    <div class="row">
                         {block name="left_column"}
                         <div id="left-column" class="col-12 col-sm-4 col-md-3">
                             <div class="container-fluid">
