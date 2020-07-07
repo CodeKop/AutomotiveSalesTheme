@@ -1,4 +1,4 @@
-<div id="js-product-list-subcategories" class="row no-gutters">
+<div id="js-product-list-subcategories" class="row">
     {foreach from=$subcategories item="sub"}
         <a href="{$sub.url}" class="category-subcategory col-4 col-sm-3 col-md-2 d-block" title={$sub.name}>
             <div class="sub-thumbnail">
