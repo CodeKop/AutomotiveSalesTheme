@@ -4,10 +4,9 @@
 		width: 100%;
 		display: flex;
 		align-items: center;
-		padding: 0 calc(#{$small-space} * 1.5);
-		border: $input-btn-border-width solid $input-border-color;
+		padding: 0 $spacer-3;
+		border: $input-btn-border-width solid $base-border-color;
 		background: $gray-lighter;
-		border-radius: 5px;
 		color: $gray;
 
 		input[name="s"],
@@ -18,7 +17,7 @@
 		}
 
 		input[name="s"] {
-			padding: calc(#{$small-space} * 1.5) 0;
+			padding: $spacer-3 0;
 			flex: 1;
 			line-height: 1em;
 		}
@@ -26,7 +25,7 @@
 		button[type="submit"] {
 			padding: 0;
 			font-size: 1.25em;
-			margin-left: $small-space;
+			margin-left: $spacer-2;
 
 			i {
 				display: block;
