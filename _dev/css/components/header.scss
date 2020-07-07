@@ -1,5 +1,9 @@
 #header {
     background-color: white;
+    position: relative;
+    z-index: 99;
+    border-bottom: 2px solid $primary;
+    box-shadow: 0 4px 0 -2px $primary-inverse;
 
     .header-top {
         .mobile > div {
@@ -38,10 +42,6 @@ a {
 
 @include media-breakpoint-up(md) {
     #header {
-        box-shadow: 0 ($extra-small-space * 2) 0 ($extra-small-space * -1) $primary-inverse;
-        position: relative;
-        z-index: 99;
-
         .header-top {
             display: block;
 
