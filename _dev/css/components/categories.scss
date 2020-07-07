@@ -2,9 +2,9 @@
 // Category Information ('Header')
 #js-product-list-header {
   width: 100%;
-  margin: 0;
   &.category-list-header {
-    border: 1px solid $base-border-color;
+    border: solid $base-border-color;
+    border-width: 0 0 1px 0;
   }
 
   .category-cover {
@@ -31,9 +31,23 @@
     }
   }
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(sm) {
+    &.category-list-header {
+      border-width: 0 1px 1px 1px;
+    }
+
     .category-cover {
       display: block;
+      margin-right: $spacer-2;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &.category-list-header {
+      border-width: 1px;
+    }
+
+    .category-cover {
+      margin-right: $spacer-3;
     }
   }
 }
@@ -41,7 +55,7 @@
 // Category Subcategories
 #js-product-list-subcategories {
   border: solid $base-border-color;
-  border-width: 0 1px 1px 1px;
+  border-width: 0 0 1px 0;
 
   padding: $spacer-2;
 
@@ -66,6 +80,10 @@
     .sub-info-title {
       margin: 0;
     }
+  }
+
+  @include media-breakpoint-up(sm) {
+    border-width: 0 1px 1px 1px
   }
 }
 
