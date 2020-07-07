@@ -103,24 +103,30 @@
   #right-column {
     padding-top: 0;
     padding-bottom: 0;
-
-    @include media-breakpoint-up(md) {
-      padding-top: $spacer-3;
-      padding-bottom: $spacer-3;
-
-      &#left-column {
-        float: left;
-        border-right: 1px solid $base-border-color;
-      }
-      &#right-column {
-        float: right;
-        border-left: 1px solid $base-border-color;
-      }
-    }
   }
 
   #content-wrapper {
     width: 100%;
+  }
+
+  @include media-breakpoint-up(md) {
+    #left-column,
+    #right-column {
+      padding-top: $spacer-3;
+      padding-bottom: $spacer-3;
+
+      &#left-column {
+        border-right: 1px solid $base-border-color;
+      }
+      &#right-column {
+        border-left: 1px solid $base-border-color;
+      }
+    }
+
+    #content-wrapper.left-column {
+      padding-top: $spacer-3;
+      padding-bottom: $spacer-3;
+    }
   }
 }
 
