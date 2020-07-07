@@ -44,8 +44,7 @@
 {/strip}
 {/function}
 
-<div class="block-categories d-none d-md-block border">
-
+<div class="block-categories d-none d-md-block border row">
     <ul class="category-top-menu">
         {if isset($category) && $category|count}
         {if Category::categoryExists($category.id_parent)}
