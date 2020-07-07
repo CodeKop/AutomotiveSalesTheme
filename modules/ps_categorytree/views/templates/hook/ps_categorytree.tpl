@@ -45,7 +45,7 @@
 {/function}
 
 <div class="row">
-  <div class="block-categories d-none d-md-block border">
+  <div class="block-categories d-none d-md-block flex-fill">
       <ul class="category-top-menu">
           {if isset($category) && $category|count}
           {if Category::categoryExists($category.id_parent)}
@@ -64,7 +64,7 @@
           {/if}
 
           <li class="category-title">
-              <a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a>
+              <a class="h5" href="{$categories.link nofilter}">{$categories.name}</a>
           </li>
 
           {if $categories.children|count}

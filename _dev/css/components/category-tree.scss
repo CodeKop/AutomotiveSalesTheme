@@ -1,5 +1,6 @@
 .block-categories {
-  margin-bottom: 1.563rem;
+  border: 1px solid $base-border-color;
+  margin-bottom: $spacer-3;
   overflow: hidden;
 
   a {
@@ -42,6 +43,7 @@
       a {
         display: block;
         margin: 0;
+        text-transform: uppercase;
       }
 
       &::after {
