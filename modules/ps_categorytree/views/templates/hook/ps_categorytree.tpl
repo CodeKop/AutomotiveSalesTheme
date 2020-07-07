@@ -44,34 +44,36 @@
 {/strip}
 {/function}
 
-<div class="block-categories d-none d-md-block border row">
-    <ul class="category-top-menu">
-        {if isset($category) && $category|count}
-        {if Category::categoryExists($category.id_parent)}
-        {assign var="parent" value=Category::getCategoryInformation([$category.id_parent])}
-        {assign var="parent_link" value=Link::getUrlSmarty([
-        'entity' => 'category',
-        'id' => $category.id_parent
-        ])}
-        <li class="category-return">
-            <a href="{$parent_link}" title="Go to parent category">
-                <i class="material-icons">&#xe5c4;</i>
-                <span>{$parent[$category.id_parent].name}</span>
-            </a>
-        </li>
-        {/if}
-        {/if}
+<div class="row">
+  <div class="block-categories d-none d-md-block border">
+      <ul class="category-top-menu">
+          {if isset($category) && $category|count}
+          {if Category::categoryExists($category.id_parent)}
+          {assign var="parent" value=Category::getCategoryInformation([$category.id_parent])}
+          {assign var="parent_link" value=Link::getUrlSmarty([
+          'entity' => 'category',
+          'id' => $category.id_parent
+          ])}
+          <li class="category-return">
+              <a href="{$parent_link}" title="Go to parent category">
+                  <i class="material-icons">&#xe5c4;</i>
+                  <span>{$parent[$category.id_parent].name}</span>
+              </a>
+          </li>
+          {/if}
+          {/if}
 
-        <li class="category-title">
-            <a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a>
-        </li>
+          <li class="category-title">
+              <a class="text-uppercase h5" href="{$categories.link nofilter}">{$categories.name}</a>
+          </li>
 
-        {if $categories.children|count}
-        <li class="category-tree">{categories nodes=$categories.children}</li>
-        {else}
-        <li class="category-tree empty">
-            There are no subcategories to display.
-        </li>
-        {/if}
-    </ul>
+          {if $categories.children|count}
+          <li class="category-tree">{categories nodes=$categories.children}</li>
+          {else}
+          <li class="category-tree empty">
+              There are no subcategories to display.
+          </li>
+          {/if}
+      </ul>
+  </div>
 </div>
