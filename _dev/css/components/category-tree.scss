@@ -50,7 +50,7 @@
         content: "";
         position: absolute;
         left: $medium-space;
-        bottom: 0;
+        bottom: -1px;
         width: 3rem;
         height: 2px;
         background-color: $primary;
