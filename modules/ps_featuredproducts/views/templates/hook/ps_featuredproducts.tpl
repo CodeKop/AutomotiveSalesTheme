@@ -5,7 +5,7 @@
         </h2>
     </div>
     <div class="row">
-        <div class="featured-products-list swiper-container position-relative">
+        <div class="featured-products-list swiper-container position-relative flex-fill">
             <a class="swiper-button-prev" href="#prodcarousel" role="button" data-slide="prev">
                 <span class="swiper-button-icon border-top border-right border-bottom" aria-hidden="true"><i class="material-icons">&#xe314;</i></span>
                 <span class="sr-only">Previous</span>
