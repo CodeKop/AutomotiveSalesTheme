@@ -1021,6 +1021,7 @@ var featuredSwiperOptions = {
 	spaceBetween: 0,
 	speed: 350,
 	loop: true,
+	centeredSlides: true,
 
 	slidesPerView: 1,
 	spaceBetween: 0,
