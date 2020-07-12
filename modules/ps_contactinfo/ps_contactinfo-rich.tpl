@@ -24,7 +24,7 @@
     {/if}
     {if $contact_infos.email}
         <div class="block">
-            <div class="icon"><i class="material-icons">alternate_email</i></div>
+            <div class="icon"><i class="material-icons">&#xe0be;</i></div>
             <div class="data">
                 {l s='Email us:' d='Shop.Theme.Global'}<br />
                 <a href="mailto:{$contact_infos.email}">{$contact_infos.email}</a>
