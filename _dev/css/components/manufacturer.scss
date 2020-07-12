@@ -27,11 +27,10 @@
   }
 
   .brands-container {
-    padding: $spacer-3;
+    padding: $spacer-1;
 
     .brand-item {
-      padding-top: $spacer-3;
-      padding-bottom: $spacer-3;
+      padding: $spacer-1;
 
       > div {
         background-color: $white;
