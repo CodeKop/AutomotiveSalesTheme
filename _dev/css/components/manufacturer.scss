@@ -41,13 +41,20 @@
         display: block;
       }
 
+      .brand-heading {
+        text-align: center;
+        font-size: $font-size-h3;
+      }
+
       .brand-products {
         padding: $spacer-2;
 
         .product-count {
           position: absolute;
-          top: $spacer-1;
-          right: $spacer-1;
+          top: $spacer-2;
+          right: $spacer-2;
+          padding: 0 $spacer-1;
+          margin: 0;
           background-color: $gray-lighter-second;
           border: 1px solid $gray-light-second;
         }
