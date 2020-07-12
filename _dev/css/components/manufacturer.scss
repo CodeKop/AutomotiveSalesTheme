@@ -2,17 +2,15 @@
   border-left: 1px solid $base-border-color;
   border-right: 1px solid $base-border-color;
 
-  padding-top: $spacer-3;
-  padding-bottom: $spacer-3;
-
   > .row {
     &.page-header {
       border-bottom: 1px solid $base-border-color;
+      padding-top: $spacer-2;
 
       h1 {
         position: relative;
         margin: 0;
-        padding-bottom: $spacer-3;
+        padding-bottom: $spacer-2;
 
         &::after {
           content: "";
@@ -29,9 +27,16 @@
   }
 
   .brands-container {
+    padding: $spacer-3;
+
     .brand-item {
       padding-top: $spacer-3;
       padding-bottom: $spacer-3;
+
+      > div {
+        background-color: $white;
+        border: 1px dashed $gray-light-secondary;
+      }
     }
   }
 }
