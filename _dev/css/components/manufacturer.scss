@@ -36,6 +36,22 @@
         background-color: $white;
         border: 1px dashed $gray-light-second;
       }
+
+      .brand-img {
+        display: block;
+      }
+
+      .brand-products {
+        padding: $spacer-2;
+
+        .product-count {
+          position: absolute;
+          top: $spacer-1;
+          right: $spacer-1;
+          background-color: $gray-lighter-second;
+          border: 1px solid $gray-light-second;
+        }
+      }
     }
   }
 }
