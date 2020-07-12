@@ -8,7 +8,10 @@
             </div>
             <div class="brand-products">
                 <p class="product-count">{$brand.nb_products}</p>
-                <a href="{$brand.url}">{l s='View products' d='Shop.Theme.Actions'}</a>
+                <a href="{$brand.url}" class="product-link">
+                  <i class="material-icons">&#xe8f4;</i>
+                  <span>{l s='View products' d='Shop.Theme.Actions'}</span>
+                </a>
             </div>
         </div>
     </div>
