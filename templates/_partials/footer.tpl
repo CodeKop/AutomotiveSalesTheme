@@ -20,7 +20,7 @@
         {/block}
       </div>
     </div>
-    <div class="row border-top">
+    <div class="row row-copyright">
       <div class="col-md-12">
         <p class="text-sm-center">
           {block name='copyright_link'}
