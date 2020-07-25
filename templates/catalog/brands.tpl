@@ -1,20 +1,19 @@
 {extends file=$layout}
 
 {block name='content'}
-  <section id="main">
-
+<section id="main" class="container">
     {block name='brand_header'}
-      <h1>{l s='Brands' d='Shop.Theme.Catalog'}</h1>
+    <div class="row justify-content-center page-header">
+        <h1>{l s='Brands' d='Shop.Theme.Catalog'}</h1>
+    </div>
     {/block}
 
     {block name='brand_miniature'}
-      <ul>
+    <div class="row brands-container">
         {foreach from=$brands item=brand}
-          {include file='catalog/_partials/miniatures/brand.tpl' brand=$brand}
+        {include file='catalog/_partials/miniatures/brand.tpl' brand=$brand}
         {/foreach}
-      </ul>
+    </div>
     {/block}
-
-  </section>
-
+</section>
 {/block}

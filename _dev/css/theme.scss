@@ -21,6 +21,7 @@
 @import "components/product.scss";
 @import "components/custom-text";
 @import "components/categories";
+@import "components/manufacturer";
 @import "components/products";
 @import "components/cart";
 @import "components/block-reassurance";
@@ -132,9 +133,9 @@
 
 // Main
 #main {
-  .page-header {
-    margin-bottom: 1.563rem;
-  }
+  // .page-header {
+  //   margin-bottom: 1.563rem;
+  // }
 
   .page-content {
     margin: 1.563rem;

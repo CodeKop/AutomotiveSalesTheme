@@ -511,3 +511,33 @@ textarea {
 .col-overflow-2 {
 	width: 175%;
 }
+
+.blockquote {
+	display: flex;
+	align-items: center;
+
+	p {
+		font-size: inherit;
+		color: inherit;
+		font-weight: inherit;
+	}
+
+	.blockquote-icon {
+		font-size: 3em;
+		padding: 10px;
+		margin-right: 5px;
+		background-color: $gray-light;
+
+		> i {
+			font-size: inherit;
+		}
+	}
+
+	.blockquote-main {
+		flex: 1;
+	}
+
+	.blockquote-img {
+		position: absolute;
+	}
+}

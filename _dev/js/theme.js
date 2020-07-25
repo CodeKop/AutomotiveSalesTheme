@@ -43,7 +43,8 @@ let swiperOptions = {
 let featuredSwiperOptions = {
 	spaceBetween: 0,
 	speed: 350,
-	loop: true,
+  loop: true,
+  centeredSlides: true,
 
 	slidesPerView: 1,
 	spaceBetween: 0,
