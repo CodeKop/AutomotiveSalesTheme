@@ -515,6 +515,7 @@ textarea {
 .blockquote {
 	display: flex;
 	align-items: center;
+	margin: 0;
 
 	p {
 		font-size: inherit;
@@ -525,8 +526,10 @@ textarea {
 	.blockquote-icon {
 		font-size: 3em;
 		padding: 10px;
-		margin-right: 5px;
-		background-color: $gray-light;
+		margin-right: $spacer-4;
+		background-color: $white;
+		border-radius: 100px;
+		border: 1px solid $base-border-color;
 
 		> i {
 			font-size: inherit;
